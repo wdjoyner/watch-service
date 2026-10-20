@@ -110,3 +110,9 @@ identical to the ones in the repository, so `git status` stays clean.
 - oil symbols and detail drawings in simple art
 - other SwissLab calibers (2824, 2892, 7750): generalize the turn-script index ranges and
   oil-symbol IDs that are specific to the 6497 files
+
+## License
+
+The code and this repository's own files are released under the MIT License (see `LICENSE`).
+The license does not cover the SwissLab SWF files or any drawing extracted or rendered from
+them: that artwork belongs to ETA / tica international and is not part of this repository.
