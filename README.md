@@ -46,7 +46,21 @@ the SWF:
 
 Manim also needs Cairo, Pango and ffmpeg (see the comment in `requirements.txt`).
 
-## Rendering a step (simple art)
+## Building the full videos
+
+    python build_all.py --disassembly --assembly          # generated art, no SWF needed
+
+This prepares the images, renders all 37 steps of each sequence, and joins them into
+`6497_disassembly_simple.mp4` and `6497_assembly_simple.mp4` (about 5½ minutes each). The steps
+flow into each other, with a "TURN MOVEMENT" card wherever the movement is turned over.
+
+Options: `-q l|m|h` (480p / 720p default / 1080p), `--steps 1-10` (only some steps; the file
+gets a `_partial` suffix), `--skip-prep` (reuse `assets/`), `--art original` (see below).
+Finished clips are kept in `renders/<art>/` and reused, so delete `renders/` after changing
+`swisslab_step.py`, `parts.yaml` or the drawing code. Steps with several separately moving
+screws, or no recorded motion, are shown with a simple fade.
+
+## Rendering a single step (simple art)
 
     python -I tools/prep_assets.py --art simple . 4
     ART=simple STEP=4 manim -qm swisslab_step.py DisassemblyStep
@@ -66,6 +80,9 @@ Put your SWFs somewhere outside the repository, then:
     python -I tools/prep_assets.py /path/to/6497disassem.swf . 4
     STEP=4 manim -qm swisslab_step.py DisassemblyStep
 
+    # or the full videos (6497_disassembly_original.mp4, 6497_assembly_original.mp4):
+    python build_all.py --art original --disassembly /path/to/6497disassem.swf --assembly /path/to/6497assem.swf
+
 The two extraction scripts also rewrite the fact files; on an unchanged SWF they come out
 identical to the ones in the repository, so `git status` stays clean.
 
@@ -78,7 +95,8 @@ identical to the ones in the repository, so `git status` stays clean.
   with `type`, `art` and `geom` for the generated drawings. `type` and `art` are edited by hand;
   `geom` and missing tooth/arm counts are filled in by `tools/measure_parts.py`.
 - `swisslab_step.py`: the Manim scenes `DisassemblyStep` and `AssemblyStep` (env `STEP=n`,
-  `ART=simple|original`)
+  `ART=simple|original`, `CONTINUOUS=1` so the clips join seamlessly)
+- `build_all.py`: renders every step and joins them into one video per sequence
 - `tools/`: the SWF parser and renderer, the extraction and measuring scripts, the art generator
 - `tests/smoke_test.py`: builds disassembly step 4 at 480p in simple art
 

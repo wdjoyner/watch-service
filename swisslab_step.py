@@ -1,14 +1,14 @@
 """One SwissLab step as a Manim scene, driven by steps.json (disassembly) or
 assembly.json (assembly).
 
+    python -I tools/prep_assets.py --art simple . 4                  # generated drawings, no SWF
+    ART=simple STEP=4 manim -qm swisslab_step.py DisassemblyStep
+
     python -I tools/prep_assets.py 6497disassem.swf . 4              # assets/original/step04_*.png
     STEP=4 manim -qm swisslab_step.py DisassemblyStep
 
     python -I tools/prep_assets.py --assembly 6497assem.swf . 35     # assets/original/asm35_*.png
     STEP=35 manim -qm swisslab_step.py AssemblyStep
-
-    python -I tools/prep_assets.py --art simple . 4                  # generated drawings, no SWF
-    ART=simple STEP=4 manim -qm swisslab_step.py DisassemblyStep
 
 ART=original (default) uses ETA/tica's drawings from your SWF, for private use only.
 ART=simple uses the generated placeholder drawings, which can be published.
@@ -29,6 +29,9 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 STEP = int(os.environ.get("STEP", 4))
 ART = os.environ.get("ART", "original")
 ASSETS = os.path.join(HERE, "assets", ART)
+# CONTINUOUS=1 (set by build_all.py): the frame stays on screen and each clip starts exactly
+# where the previous one ended, so the clips join seamlessly into one video
+CONTINUOUS = os.environ.get("CONTINUOUS") == "1"
 SPEED = 0.5            # SwissLab plays at 12 fps; 0.5 = twice as slow, easier to follow
 FPS_SWF = 12
 
@@ -86,6 +89,13 @@ class _StepScene(Scene):
     DATA = "steps.json"
     PREFIX = "step"
     TITLE = "ETA 6497 · disassembly"
+    PART_AT_START = True       # disassembly: the part is in the movement when the step starts
+
+    def end_step(self, leaving=()):
+        """clear this step's text (and anything listed) so the next clip can start clean"""
+        if CONTINUOUS:
+            gone = [self.info] + ([self.extras] if len(self.extras) else []) + list(leaving)
+            self.play(*[FadeOut(m) for m in gone], run_time=0.5)
 
     def setup_step(self):
         data = json.load(open(os.path.join(HERE, self.DATA)))
@@ -127,8 +137,24 @@ class _StepScene(Scene):
         self.part_bbox = meta.get("image_bbox", s["bbox_stage_px"])
         self.highlight_bbox = meta.get("highlight_bbox", s["bbox_stage_px"])
         self.part = stage_image(part_png, self.part_bbox)
-        self.play(FadeIn(window), FadeIn(panel), FadeIn(title), run_time=0.6)
-        self.play(FadeIn(bg), FadeIn(self.partbox), run_time=0.8)
+        self.bg = bg
+        start_with = [bg] + ([self.part] if self.PART_AT_START else [])
+        turned = STEP > 1 and self.steps[STEP - 2]["side_up"] != s["side_up"]
+        if CONTINUOUS:
+            self.add(window, panel, title, self.partbox)
+            if turned:
+                # SwissLab's "TURN MOVEMENT" moment
+                card = T("TURN MOVEMENT", 0.55, INK, "MEDIUM").move_to(window)
+                sub = T(f"{s['side_up'].capitalize()} side up", 0.32, MUTED).next_to(card, DOWN, buff=0.15)
+                self.play(FadeIn(card, scale=0.9), FadeIn(sub), run_time=0.6)
+                self.wait(0.8)
+                self.play(FadeOut(card), FadeOut(sub), run_time=0.4)
+                self.play(*[FadeIn(m) for m in start_with], run_time=0.8)
+            else:
+                self.add(*start_with)
+        else:
+            self.play(FadeIn(window), FadeIn(panel), FadeIn(title), run_time=0.6)
+            self.play(*[FadeIn(m) for m in start_with], FadeIn(self.partbox), run_time=0.8)
         self.play(FadeIn(info, shift=0.1 * UP), run_time=0.6)
         if len(extras):
             self.play(FadeIn(extras), run_time=0.4)
@@ -145,7 +171,6 @@ class DisassemblyStep(_StepScene):
     def construct(self):
         self.setup_step()
         part, s = self.part, self.s
-        self.play(FadeIn(part), run_time=0.3)
         # SwissLab highlight: yellow wash pulsing to 60% inside a red outline (bounds - 2 px)
         x0, y0, x1, y1 = self.highlight_bbox
         hb = [x0 - 2, y0 - 2, x1, y1]
@@ -158,8 +183,15 @@ class DisassemblyStep(_StepScene):
         self.wait(0.3)
         self.play(FadeOut(outline), run_time=0.3)
         self.bring_to_front(part)
-        self.follow_motion()
-        self.wait(1.5)
+        if s["motion"]:
+            self.follow_motion()
+            self.wait(1.5)
+            self.end_step([part])
+        else:
+            # several pieces moving separately (or no recorded motion): lift it out with a fade
+            self.play(FadeOut(part, shift=0.25 * UP), run_time=1.0)
+            self.wait(0.6)
+            self.end_step()
 
 
 class AssemblyStep(_StepScene):
@@ -168,6 +200,7 @@ class AssemblyStep(_StepScene):
     DATA = "assembly.json"
     PREFIX = "asm"
     TITLE = "ETA 6497 · assembly"
+    PART_AT_START = False      # assembly: the part arrives during the step
 
     def construct(self):
         self.setup_step()
@@ -200,8 +233,10 @@ class AssemblyStep(_StepScene):
                     kinds.append(o["type"])
             counts = {k: sum(o["type"] == k for o in s["oil"]) for k in kinds}
             # one line under the panel, so it never covers the part or the detail drawing
-            line = "Oiling:  " + "   ·   ".join(f"{k} ({counts[k]} point{'s' if counts[k] > 1 else ''})" for k in kinds)
-            key = T(line, 0.3, "#ff8a80")
+            items = [f"{k} ({counts[k]} point{'s' if counts[k] > 1 else ''})" for k in kinds]
+            key = T("Oiling:  " + "   ·   ".join(items), 0.3, "#ff8a80")
+            if key.width > (PANEL[2] - PANEL[0]) * K:          # too long: shrink to the panel's width
+                key.scale_to_fit_width((PANEL[2] - PANEL[0]) * K)
             key.move_to(S(PANEL[0], PANEL[3] + 17), aligned_edge=LEFT)
             self.wait(0.3)
             self.play(FadeIn(oil), FadeIn(key, shift=0.1 * UP), run_time=0.8)
@@ -217,3 +252,4 @@ class AssemblyStep(_StepScene):
                 self.remove(part)
                 self.add(rest)
         self.wait(1.5)
+        self.end_step()

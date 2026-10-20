@@ -9,6 +9,7 @@ assets/original/
 # rendered output
 assets/
 media/
+renders/
 *.mp4
 
 # Python
