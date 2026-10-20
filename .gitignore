@@ -1,0 +1,19 @@
+# ETA/tica material: never commit it. Bring your own SWF; everything drawn from it stays local.
+*.swf
+parts/
+parts_assembly/
+contact_sheet.png
+assembly_details_sheet.png
+assets/original/
+
+# rendered output
+assets/
+media/
+*.mp4
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store

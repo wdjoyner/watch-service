@@ -1,0 +1,306 @@
+# ETA 6497 disassembly sequence, extracted from the SwissLab SWF
+# (idea and animation: tica international, www.tica.dk)
+meta:
+  source: "6497disassem.swf (ETA SwissLab, idea and animation: tica international)"
+  stage_px: [799.9, 600.0]
+  fps: 12
+  assembly_note_before_pallet_fork: "In order to test the freedom of gear train, before assembling the pallet fork turn the stem in the winding direction and check that the gear train at the end of its free motion forward turn slightly back before stopping definitively."
+steps:
+  - step: 1
+    part: "Hour wheel"
+    catalog_no: "31.046"
+    side_up: "dial"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [173.75, 276.5, 258.25, 361.0]
+    names: {en: "Hour wheel", de: "Stundenrad", fr: "Roue des heures", it: "Ruota ore", es: "Rueda de horas", da: "Timehjul"}
+    swf: {main_frame: 4, clip_name: "MC31_046", depth: 166, sprite: 160, anim_frames: 19, lift_frames: 0, place_matrix: [1.0, 0.0, 0.0, 1.0, 215.95, 318.7], end_matrix: [1.5, 0.0, 0.0, 1.5, 395.55, 65.8]}
+  - step: 2
+    part: "Driver cannon pinion"
+    catalog_no: "31.080"
+    side_up: "dial"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [201.5, 304.0, 230.25, 333.25]
+    names: {en: "Driver cannon pinion", de: "Mitnehmer-Minutenrohr", fr: "Chaussée entraîneuse", it: "Pignone calzante conduttore", es: "Cañón de minutos arrastrador", da: "Minutrør"}
+    swf: {main_frame: 5, clip_name: "MC31_080", depth: 162, sprite: 156, anim_frames: 24, lift_frames: 0, place_matrix: [1.0, 0.0, 0.0, 1.0, 215.85, 318.65], end_matrix: [1.5, 0.0, 0.0, 1.5, 395.8, 65.0]}
+  - step: 3
+    part: "Screw for balance bridge"
+    catalog_no: "10.058.01"
+    side_up: "bridge"
+    differs_6497_1_vs_2: false
+    note: "MAKE SURE THERE IS NO FORCE ON THE MAIN SPRING !"
+    bbox_stage_px: [240.5, 457.25, 259.0, 475.75]
+    names: {en: "Screw for balance bridge", de: "Schraube für Unruhbrücke", fr: "Vis de pont de balancier", it: "Vite del ponte del bilanciere", es: "Tornillo de puente de volante", da: "Skrue for balancebro"}
+    swf: {main_frame: 75, clip_name: "MC10_058_01", depth: 242, sprite: 302, anim_frames: 18, lift_frames: 0, place_matrix: [1.0, 0.0, 0.0, 1.0, 249.75, 466.45], end_matrix: [2.0, 0.0, 0.0, 2.0, 361.7, -95.75]}
+  - step: 4
+    part: "Balance complete with bridge and ETACHRON system"
+    catalog_no: "BalanceComp"
+    side_up: "bridge"
+    differs_6497_1_vs_2: true
+    bbox_stage_px: [110.5, 352.25, 331.25, 494.25]
+    names: {en: "Balance complete with bridge and ETACHRON system", de: "Unruh vollständig mit Brücke und System ETACHRON", fr: "Balancier complet avec pont et système ETACHRON", it: "Bilanciere completo di ponte e dispositivo ETACHRON", es: "Volante completo con puente y sistema ETACHRON", da: "Komplet balance med bro og ETACHRON system"}
+    swf: {main_frame: 76, clip_name: "MCBalanceComp", depth: 214, sprite: 301, anim_frames: 12, lift_frames: 5, place_matrix: [1.0, 0.0, 0.0, 1.0, 220.85, 423.0], end_matrix: [0.00882, 0.99992, -0.99992, 0.00882, 396.15, -43.7]}
+  - step: 5
+    part: "Screw for pallet bridge"
+    catalog_no: "10.057.01"
+    side_up: "bridge"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [138.25, 377.0, 204.75, 449.75]
+    names: {en: "Screw for pallet bridge", de: "Schraube für Ankerbrücke", fr: "Vis de pont d'ancre", it: "Vite del ponte dell’ancora", es: "Tornillo de puente de áncora", da: "Skrue for ankerbro"}
+    swf: {main_frame: 77, clip_name: "MC10_057_01", depth: 204, sprite: 280, anim_frames: 0, lift_frames: 0, place_matrix: [1.0, 0.0, 0.0, 1.0, 171.5, 413.3], end_matrix: [1.0, 0.0, 0.0, 1.0, 0.0, 0.0]}
+  - step: 6
+    part: "Pallet bridge, jewelled"
+    catalog_no: "10.057.07"
+    side_up: "bridge"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [121.75, 362.5, 228.0, 469.25]
+    names: {en: "Pallet bridge, jewelled", de: "Ankerbrücke, mit Steinen", fr: "Pont d'ancre, empierré", it: "Ponte dell’ancora con rubini", es: "Puente de áncora, empedrado", da: "Ankerbro, stenlejer"}
+    swf: {main_frame: 78, clip_name: "MC10_057_07", depth: 194, sprite: 276, anim_frames: 19, lift_frames: 5, place_matrix: [1.0, 0.0, 0.0, 1.0, 174.55, 415.7], end_matrix: [1.0, 0.0, 0.0, 1.0, 437.4, -33.85]}
+  - step: 7
+    part: "Pallet fork"
+    catalog_no: "40.010"
+    side_up: "bridge"
+    differs_6497_1_vs_2: true
+    bbox_stage_px: [118.25, 366.5, 174.25, 416.25]
+    names: {en: "Pallet fork", de: "Anker", fr: "Ancre", it: "Ancora", es: "Ancora", da: "Anker"}
+    swf: {main_frame: 79, clip_name: "MC40_010", depth: 186, sprite: 271, anim_frames: 25, lift_frames: 6, place_matrix: [1.0, 0.0, 0.0, 1.0, 142.4, 386.4], end_matrix: [-0.13052, 1.29297, -1.29297, -0.13052, 474.85, -2.4]}
+  - step: 8
+    part: "Screw for crown wheel"
+    catalog_no: "31.023.01"
+    side_up: "bridge"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [308.0, 303.25, 339.0, 334.25]
+    names: {en: "Screw for crown wheel", de: "Schraube für Kronrad", fr: "Vis de roue de couronne", it: "Vite della ruota a corona", es: "Tornillo de rueda de corona", da: "Skrue for kronhjul"}
+    swf: {main_frame: 80, clip_name: "MC31_023_01", depth: 153, sprite: 249, anim_frames: 74, lift_frames: 1, place_matrix: [1.0, 0.0, 0.0, 1.0, 323.4, 318.7], end_matrix: [1.5, 0.0, 0.0, 1.5, 288.7, 63.05]}
+  - step: 9
+    part: "Crown wheel"
+    catalog_no: "31.023"
+    side_up: "bridge"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [280.5, 275.75, 366.25, 361.75]
+    names: {en: "Crown wheel", de: "Kronrad", fr: "Roue de couronne", it: "Ruota a corona", es: "Rueda de corona", da: "Kronhjul"}
+    swf: {main_frame: 81, clip_name: "MC31_023", depth: 148, sprite: 242, anim_frames: 23, lift_frames: 0, place_matrix: [1.0, 0.0, 0.0, 1.0, 323.35, 318.55], end_matrix: [1.25002, 0.0, 0.0, 1.25002, 288.8, 64.45]}
+  - step: 10
+    part: "Crown wheel ring"
+    catalog_no: "81.067"
+    side_up: "bridge"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [310.75, 306.0, 336.0, 331.25]
+    names: {en: "Crown wheel ring", de: "Kronradring", fr: "Bague de roue de couronne", it: "Anello della ruota a corona", es: "Anillo de rueda de corona", da: "Ring for kronhjul"}
+    swf: {main_frame: 82, clip_name: "MC81_067", depth: 144, sprite: 236, anim_frames: 18, lift_frames: 0, place_matrix: [1.0, 0.0, 0.0, 1.0, 323.35, 318.65], end_matrix: [2.00002, 0.0, 0.0, 2.00002, 288.45, 64.85]}
+  - step: 11
+    part: "Screw for ratchet wheel"
+    catalog_no: "31.020.01"
+    side_up: "bridge"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [244.0, 222.25, 275.0, 253.25]
+    names: {en: "Screw for ratchet wheel", de: "Schraube für Sperrrad", fr: "Vis de rochet", it: "Vite del rocchetto", es: "Tornillo de rochete", da: "Skrue for spærhjul"}
+    swf: {main_frame: 83, clip_name: "MC31_020_01", depth: 182, sprite: 270, anim_frames: 23, lift_frames: 0, place_matrix: [1.0, 0.0, 0.0, 1.0, 259.5, 237.75], end_matrix: [1.5, 0.0, 0.0, 1.5, 351.1, 146.9]}
+  - step: 12
+    part: "Ratchet wheel"
+    catalog_no: "31.020"
+    side_up: "bridge"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [192.75, 171.0, 326.25, 304.5]
+    names: {en: "Ratchet wheel", de: "Sperrrad", fr: "Rochet", it: "Rocchetto", es: "Rochete", da: "Spærhjul"}
+    swf: {main_frame: 84, clip_name: "MC31_020", depth: 171, sprite: 267, anim_frames: 19, lift_frames: 0, place_matrix: [1.0, 0.0, 0.0, 1.0, 259.4, 237.7], end_matrix: [1.25002, 0.0, 0.0, 1.25002, 351.75, 149.65]}
+  - step: 13
+    part: "Screw for click"
+    catalog_no: "51.120.01"
+    side_up: "bridge"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [178.25, 189.5, 199.75, 210.75]
+    names: {en: "Screw for click", de: "Schraube für Klinke", fr: "Vis de cliquet", it: "Vite del cricco", es: "Tornillo de trinquete", da: "Skrue for spærklinke"}
+    swf: {main_frame: 85, clip_name: "MC51_120_01", depth: 167, sprite: 261, anim_frames: 23, lift_frames: 0, place_matrix: [1.0, 0.0, 0.0, 1.0, 188.95, 200.1], end_matrix: [2.00002, 0.0, 0.0, 2.00002, 422.65, 182.45]}
+  - step: 14
+    part: "Click"
+    catalog_no: "51.120"
+    side_up: "bridge"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [164.0, 175.75, 211.5, 215.75]
+    names: {en: "Click", de: "Klinke", fr: "Cliquet", it: "Cricco", es: "Trinquete", da: "Spærklinke"}
+    swf: {main_frame: 86, clip_name: "MC51_120", depth: 163, sprite: 258, anim_frames: 23, lift_frames: 4, place_matrix: [1.0, 0.0, 0.0, 1.0, 188.4, 199.55], end_matrix: [1.5, 0.0, 0.0, 1.5, 422.4, 183.5]}
+  - step: 15
+    part: "Click spring"
+    catalog_no: "61.080"
+    side_up: "bridge"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [169.25, 176.75, 214.0, 221.25]
+    names: {en: "Click spring", de: "Klinkenfeder", fr: "Ressort de cliquet", it: "Molla del cricco", es: "Muelle de trinquete", da: "Spærfjeder"}
+    swf: {main_frame: 87, clip_name: "MC61_080", depth: 159, sprite: 255, anim_frames: 23, lift_frames: 4, place_matrix: [1.0, 0.0, 0.0, 1.0, 188.65, 199.25], end_matrix: [1.5, 0.0, 0.0, 1.5, 424.4, 184.15]}
+  - step: 16
+    part: "Screw for barrel bridge"
+    catalog_no: "10.041.01"
+    side_up: "bridge"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [131.5, 196.75, 365.0, 405.25]
+    names: {en: "Screw for barrel bridge", de: "Schraube für Federhausbrücke", fr: "Vis de pont de barillet", it: "Vite del ponte del bariletto", es: "Tornillo de puente  de barrilete", da: "Skrue for fjederhusbro"}
+    swf: {main_frame: 88, clip_name: "MC10_041_01", depth: 130, sprite: 232, anim_frames: 0, lift_frames: 0, place_matrix: [1.0, 0.0, 0.0, 1.0, 248.1, 300.85], end_matrix: [1.0, 0.0, 0.0, 1.0, 0.15, 0.2]}
+  - step: 17
+    part: "Barrel bridge, jewelled"
+    catalog_no: "10.041.07"
+    side_up: "bridge"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [121.0, 143.25, 391.5, 420.0]
+    names: {en: "Barrel bridge, jewelled", de: "Federhausbrücke, mit Steinen", fr: "Pont de barillet, empierré", it: "Ponte del bariletto con rubini", es: "Puente de barrilete, empedrado", da: "Fjederhusbro, stenlejer"}
+    swf: {main_frame: 89, clip_name: "MC10_041_07", depth: 126, sprite: 230, anim_frames: 14, lift_frames: 0, place_matrix: [1.0, 0.0, 0.0, 1.0, 256.25, 281.6], end_matrix: [0.5, 0.0, 0.0, 0.5, 357.95, 95.65]}
+  - step: 18
+    part: "Screw for train wheel bridge"
+    catalog_no: "10.048.01"
+    side_up: "bridge"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [67.0, 230.25, 101.75, 397.5]
+    names: {en: "Screw for train wheel bridge", de: "Schraube für Räderwerkbrücke", fr: "Vis de pont de rouage", it: "Vite del ponte del ruotismo", es: "Tornillo de puente de rodaje", da: "Skrue for løbeværksbro"}
+    swf: {main_frame: 90, clip_name: "MC10_048_01", depth: 116, sprite: 221, anim_frames: 0, lift_frames: 0, place_matrix: [1.0, 0.0, 0.0, 1.0, 84.3, 313.8], end_matrix: [1.0, 0.0, 0.0, 1.0, 0.0, 0.0]}
+  - step: 19
+    part: "Train wheel bridge, jewelled"
+    catalog_no: "10.048.07"
+    side_up: "bridge"
+    differs_6497_1_vs_2: true
+    bbox_stage_px: [40.5, 201.5, 182.0, 436.25]
+    names: {en: "Train wheel bridge, jewelled", de: "Räderwerkbrücke, mit Steinen", fr: "Pont de rouage, empierré", it: "Ponte del ruotismo con rubini", es: "Puente de rodaje empedrado", da: "Løbeværksbro, stenlejer"}
+    swf: {main_frame: 91, clip_name: "MC10_048_07", depth: 112, sprite: 217, anim_frames: 19, lift_frames: 0, place_matrix: [1.0, 0.0, 0.0, 1.0, 111.3, 318.85], end_matrix: [0.75, 0.0, 0.0, 0.75, 496.5, 64.35]}
+  - step: 20
+    part: "Centre wheel"
+    catalog_no: "30.015"
+    side_up: "bridge"
+    differs_6497_1_vs_2: true
+    bbox_stage_px: [155.75, 258.25, 276.25, 378.75]
+    names: {en: "Centre wheel", de: "Minutenrad", fr: "Roue de centre", it: "Ruota centro", es: "Rueda de centro", da: "Centrumhjul"}
+    swf: {main_frame: 92, clip_name: "MC30_015", depth: 108, sprite: 208, anim_frames: 24, lift_frames: 0, place_matrix: [1.0, 0.0, 0.0, 1.0, 216.1, 318.6], end_matrix: [1.0, 0.0, 0.0, 1.0, 396.45, 64.85]}
+  - step: 21
+    part: "Barrel"
+    catalog_no: "20.010"
+    side_up: "bridge"
+    differs_6497_1_vs_2: true
+    bbox_stage_px: [175.5, 153.75, 343.25, 321.75]
+    names: {en: "Barrel", de: "Federhaus", fr: "Barillet", it: "Bariletto", es: "Barrilete", da: "Fjederhus"}
+    swf: {main_frame: 93, clip_name: "MC20_010", depth: 100, sprite: 204, anim_frames: 25, lift_frames: 0, place_matrix: [1.0, 0.0, 0.0, 1.0, 259.35, 237.6], end_matrix: [0.84999, 0.0, 0.0, 0.84999, 352.1, 143.0]}
+  - step: 22
+    part: "Second wheel, with long lower pivot"
+    catalog_no: "30.027.13"
+    side_up: "bridge"
+    differs_6497_1_vs_2: true
+    bbox_stage_px: [76.75, 278.0, 157.75, 359.0]
+    names: {en: "Second wheel, with long lower pivot", de: "Sekundenrad, mit langem Zapfen unten", fr: "Roue de seconde, long pivot dessous", it: "Ruota dei secondi, perno lungo sotto", es: "Rueda de segundos, pivote largo abajo", da: "Sekundhjul med lang tap"}
+    swf: {main_frame: 94, clip_name: "MC30_027_13", depth: 94, sprite: 203, anim_frames: 24, lift_frames: 3, place_matrix: [1.0, 0.0, 0.0, 1.0, 117.25, 318.5], end_matrix: [1.5, 0.0, 0.0, 1.5, 494.1, 63.25]}
+  - step: 23
+    part: "Third wheel"
+    catalog_no: "30.025"
+    side_up: "bridge"
+    differs_6497_1_vs_2: true
+    bbox_stage_px: [113.75, 254.0, 197.25, 337.5]
+    names: {en: "Third wheel", de: "Kleinbodenrad", fr: "Roue moyenne", it: "Ruota mediana", es: "Rueda primera", da: "Lille bundhjul"}
+    swf: {main_frame: 95, clip_name: "MC30_025", depth: 86, sprite: 199, anim_frames: 19, lift_frames: 0, place_matrix: [1.0, 0.0, 0.0, 1.0, 155.4, 295.7], end_matrix: [1.5, 0.0, 0.0, 1.5, 456.4, 85.95]}
+  - step: 24
+    part: "Escape wheel"
+    catalog_no: "30.040"
+    side_up: "bridge"
+    differs_6497_1_vs_2: true
+    bbox_stage_px: [81.75, 329.5, 144.75, 392.75]
+    names: {en: "Escape wheel", de: "Hemmungsrad", fr: "Roue d'échappement", it: "Ruota di scappamento", es: "Rueda de escape", da: "Ganghjul"}
+    swf: {main_frame: 96, clip_name: "MC30_040", depth: 81, sprite: 194, anim_frames: 24, lift_frames: 0, place_matrix: [1.0, 0.0, 0.0, 1.0, 113.05, 360.75], end_matrix: [1.5, 0.0, 0.0, 1.5, 499.2, 22.9]}
+  - step: 25
+    part: "Screw for setting lever jumper"
+    catalog_no: "51.090.01"
+    side_up: "dial"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [288.75, 256.5, 305.5, 273.0]
+    names: {en: "Screw for setting lever jumper", de: "Schraube für Winkelhebelraste", fr: "Vis de sautoir de tirette", it: "Vite dello scatto del tiretto", es: "Tornillo de muelle flexible de tirete", da: "Skrue for tirettefjeder"}
+    swf: {main_frame: 6, clip_name: "MC51_090_01", depth: 158, sprite: 152, anim_frames: 23, lift_frames: 0, place_matrix: [1.0, 0.0, 0.0, 1.0, 297.2, 264.7], end_matrix: [2.0, 0.0, 0.0, 2.0, 314.65, 97.25]}
+  - step: 26
+    part: "Setting lever jumper"
+    catalog_no: "51.090"
+    side_up: "dial"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [243.0, 216.5, 366.75, 379.0]
+    names: {en: "Setting lever jumper", de: "Winkelhebelraste", fr: "Sautoir de tirette", it: "Scatto del tiretto", es: "Muelle flexible de tirete", da: "Tirettefjeder"}
+    swf: {main_frame: 7, clip_name: "MC51_090", depth: 152, sprite: 148, anim_frames: 0, lift_frames: 0, place_matrix: [1.0, 0.0, 0.0, 1.0, 329.3, 253.75], end_matrix: [1.0, 0.0, 0.0, 1.0, -19.15, 44.7]}
+  - step: 27
+    part: "Yoke spring"
+    catalog_no: "61.100"
+    side_up: "dial"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [297.5, 219.0, 336.25, 296.25]
+    names: {en: "Yoke spring", de: "Kupplungshebelfeder", fr: "Ressort de bascule", it: "Molla della bascula", es: "Muelle de báscula", da: "Muffelederfjeder"}
+    swf: {main_frame: 8, clip_name: "MC61_100", depth: 135, sprite: 130, anim_frames: 23, lift_frames: 0, place_matrix: [1.0, 0.0, 0.0, 1.0, 331.55, 251.95], end_matrix: [1.0, 0.0, 0.0, 1.0, 282.35, 136.15]}
+  - step: 28
+    part: "Yoke"
+    catalog_no: "51.050"
+    side_up: "dial"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [330.5, 223.5, 359.75, 349.0]
+    names: {en: "Yoke", de: "Kupplungstriebhebel", fr: "Bascule de pignon coulant", it: "Bascula del pignone scorrevole", es: "Báscula de piñón corredizo", da: "Muffeleder"}
+    swf: {main_frame: 9, clip_name: "MC51_050", depth: 131, sprite: 125, anim_frames: 19, lift_frames: 0, place_matrix: [1.0, 0.0, 0.0, 1.0, 346.15, 285.75], end_matrix: [1.0, 0.0, 0.0, 1.0, 267.0, 93.9]}
+  - step: 29
+    part: "Setting wheel"
+    catalog_no: "31.100"
+    side_up: "dial"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [293.25, 299.5, 331.25, 337.5]
+    names: {en: "Setting wheel", de: "Zeigerstellrad", fr: "Renvoi", it: "Rinvio", es: "Rueda de transmisión", da: "Viserstilledriv"}
+    swf: {main_frame: 10, clip_name: "MC31_100", depth: 139, sprite: 133, anim_frames: 19, lift_frames: 0, place_matrix: [1.0, 0.0, 0.0, 1.0, 312.15, 318.55], end_matrix: [1.5, 0.0, 0.0, 1.5, 299.7, 65.3]}
+  - step: 30
+    part: "Intermediate setting wheel"
+    catalog_no: "31.101"
+    side_up: "dial"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [271.25, 276.0, 308.75, 313.5]
+    names: {en: "Intermediate setting wheel", de: "Zwischen-Zeigerstellrad", fr: "Renvoi intermédiaire", it: "Rinvio intermedio", es: "Rueda de transmisión intermedia", da: "Viserstilledriv 1"}
+    swf: {main_frame: 11, clip_name: "MC31_101", depth: 143, sprite: 136, anim_frames: 19, lift_frames: 0, place_matrix: [1.0, 0.0, 0.0, 1.0, 289.9, 294.65], end_matrix: [1.5, 0.0, 0.0, 1.5, 321.95, 88.85]}
+  - step: 31
+    part: "Minute wheel"
+    catalog_no: "31.041"
+    side_up: "dial"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [200.25, 235.75, 279.5, 315.0]
+    names: {en: "Minute wheel", de: "Wechselrad", fr: "Roue de minuterie", it: "Ruota della minuteria", es: "Rueda de minutería", da: "Vekselhjul"}
+    swf: {main_frame: 12, clip_name: "MC31_041", depth: 147, sprite: 139, anim_frames: 24, lift_frames: 0, place_matrix: [1.0, 0.0, 0.0, 1.0, 239.95, 275.35], end_matrix: [1.5, 0.0, 0.0, 1.5, 370.8, 111.9]}
+  - step: 32
+    part: "Screw for setting lever"
+    catalog_no: "51.080.01"
+    side_up: "bridge"
+    differs_6497_1_vs_2: false
+    note: "Turn the screw for setting lever from the other side"
+    bbox_stage_px: [371.25, 289.0, 388.0, 305.5]
+    names: {en: "Screw for setting lever", de: "Schraube für Winkelhebel", fr: "Vis de tirette", it: "Vite del tiretto", es: "Tornillo de tirete", da: "Skrue for tirette"}
+    swf: {main_frame: 97, clip_name: "MC51_080_01", depth: 77, sprite: 193, anim_frames: 15, lift_frames: 0, place_matrix: [1.0, 0.0, 0.0, 1.0, 379.65, 297.3], end_matrix: [2.00002, 0.0, 0.0, 2.00002, 232.1, 66.45]}
+  - step: 33
+    part: "Setting lever"
+    catalog_no: "51.080"
+    side_up: "dial"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [343.25, 314.75, 388.75, 374.5]
+    names: {en: "Setting lever", de: "Winkelhebel", fr: "Tirette", it: "Tiretto", es: "Tirete", da: "Tirette"}
+    swf: {main_frame: 13, clip_name: "MC51_080", depth: 127, sprite: 120, anim_frames: 19, lift_frames: 0, place_matrix: [1.0, 0.0, 0.0, 1.0, 366.3, 345.25], end_matrix: [1.5, 0.0, 0.0, 1.5, 243.95, 36.8]}
+  - step: 34
+    part: "Winding stem, thread diameter 1.20 mm"
+    catalog_no: "51.010.23"
+    side_up: "dial"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [298.75, 309.25, 569.5, 327.25]
+    names: {en: "Winding stem, thread diameter 1.20 mm", de: "Aufzugwelle, Gewindedurchmesser 1,20 mm", fr: "Tige de remontoir, diamètre de filetage 1,20 mm", it: "Albero di carica, diametro vite 1.20 mm", es: "Tija de remontuar, diámetro de rosca 1,20 mm", da: "Optræksaksel, diameter 1.20 mm"}
+    swf: {main_frame: 14, clip_name: "MC51_010_23", depth: 106, sprite: 91, anim_frames: 0, lift_frames: 0, place_matrix: [1.0, 0.0, 0.0, 1.0, 434.2, 318.35], end_matrix: [1.0, 0.0, 0.0, 1.0, 0.0, 0.0]}
+  - step: 35
+    part: "Winding pinion"
+    catalog_no: "31.120"
+    side_up: "dial"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [357.25, 300.75, 370.25, 335.75]
+    names: {en: "Winding pinion", de: "Aufzugtrieb", fr: "Pignon de remontoir", it: "Pignone di carica", es: "Piñón de remontuar", da: "Transmissionshjul"}
+    swf: {main_frame: 15, clip_name: "MC31_120", depth: 117, sprite: 111, anim_frames: 19, lift_frames: 0, place_matrix: [1.0, 0.0, 0.0, 1.0, 363.75, 318.3], end_matrix: [1.5, 0.0, 0.0, 1.5, 246.7, 63.55]}
+  - step: 36
+    part: "Sliding pinion"
+    catalog_no: "31.121"
+    side_up: "dial"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [333.75, 305.75, 361.0, 330.5]
+    names: {en: "Sliding pinion", de: "Kupplungstrieb", fr: "Pignon coulant", it: "Pignone scorrevole", es: "Piñón corredizo", da: "Muffehjul"}
+    swf: {main_frame: 16, clip_name: "MC31_121", depth: 121, sprite: 115, anim_frames: 18, lift_frames: 0, place_matrix: [1.0, 0.0, 0.0, 1.0, 347.35, 318.05], end_matrix: [1.5, 0.0, 0.0, 1.5, 263.45, 63.85]}
+  - step: 37
+    part: "Main plate, jewelled"
+    catalog_no: "10.020.07"
+    side_up: "dial"
+    differs_6497_1_vs_2: true
+    bbox_stage_px: [36.25, 138.5, 396.0, 498.25]
+    names: {en: "Main plate, jewelled", de: "Werkplatte, mit Steinen", fr: "Platine, empierrée", it: "Platina principale con rubini", es: "Platina empedrada", da: "Værkplade, stenlejer"}
+    swf: {main_frame: 17, clip_name: "MC10_020_07", depth: 115, sprite: 107, anim_frames: 0, lift_frames: 0, place_matrix: [1.0, 0.0, 0.0, 1.0, 216.15, 318.45], end_matrix: [9e-05, -1.0, 1.0, 9e-05, 0.0, 0.0]}

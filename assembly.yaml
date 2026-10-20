@@ -1,0 +1,357 @@
+# ETA 6497 assembly sequence, extracted from the SwissLab assembly SWF
+# (idea and animation: tica international, www.tica.dk). part_id keys into parts.yaml.
+meta:
+  source: "6497assem.swf (ETA SwissLab, idea and animation: tica international)"
+  stage_px: [799.9, 600.0]
+  fps: 12
+  movement_depths: [45, 285]
+  oil_legend: ["Moebius D5", "Moebius 9010", "Moebius 9501", "Moebius 941"]
+steps:
+  - step: 1
+    part: "Main plate, jewelled"
+    part_id: "MC10_020_07"
+    disassembly_step: 37
+    catalog_no: "10.020.07"
+    side_up: "bridge"
+    differs_6497_1_vs_2: true
+    bbox_stage_px: [36.25, 138.75, 396.0, 498.5]
+    markers: [{char: 50, at_stage_px: [607.2, 380.1]}, {char: 54, at_stage_px: [345.4, 457.4]}, {char: 54, at_stage_px: [79.2, 185.8]}, {char: 53, at_stage_px: [552.6, 398.2]}]
+  - step: 2
+    part: "Escape wheel"
+    part_id: "MC30_040"
+    disassembly_step: 24
+    catalog_no: "30.040"
+    side_up: "bridge"
+    differs_6497_1_vs_2: true
+    bbox_stage_px: [81.5, 329.75, 144.75, 392.75]
+  - step: 3
+    part: "Third wheel"
+    part_id: "MC30_025"
+    disassembly_step: 23
+    catalog_no: "30.025"
+    side_up: "bridge"
+    differs_6497_1_vs_2: true
+    bbox_stage_px: [113.75, 254.0, 197.25, 337.5]
+  - step: 4
+    part: "Second wheel, with long lower pivot"
+    part_id: "MC30_027_13"
+    disassembly_step: 22
+    catalog_no: "30.027.13"
+    side_up: "bridge"
+    differs_6497_1_vs_2: true
+    bbox_stage_px: [76.75, 278.0, 157.75, 359.0]
+  - step: 5
+    part: "Centre wheel"
+    part_id: "MC30_015"
+    disassembly_step: 20
+    catalog_no: "30.015"
+    side_up: "bridge"
+    differs_6497_1_vs_2: true
+    bbox_stage_px: [155.75, 258.25, 276.25, 378.75]
+  - step: 6
+    part: "Train wheel bridge, jewelled"
+    part_id: "MC10_048_07"
+    disassembly_step: 19
+    catalog_no: "10.048.07"
+    side_up: "bridge"
+    differs_6497_1_vs_2: true
+    bbox_stage_px: [40.5, 201.5, 182.0, 436.25]
+  - step: 7
+    part: "Screw for train wheel bridge"
+    part_id: "MC10_048_01"
+    disassembly_step: 18
+    catalog_no: "10.048.01"
+    side_up: "bridge"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [67.0, 230.25, 101.75, 397.5]
+  - step: 8
+    part: "Barrel"
+    part_id: "MC20_010"
+    disassembly_step: 21
+    catalog_no: "20.010"
+    side_up: "bridge"
+    differs_6497_1_vs_2: true
+    bbox_stage_px: [175.5, 153.75, 343.25, 321.75]
+    oil:
+      - {type: "Moebius D5", point_stage_px: [624.9, 447.6], angle_deg: 49.9}
+      - {type: "Moebius D5", point_stage_px: [596.4, 454.2], angle_deg: -63.2}
+      - {type: "Moebius D5", point_stage_px: [625.1, 481.1], angle_deg: 105.6}
+      - {type: "Moebius D5", point_stage_px: [604.5, 487.4], angle_deg: -109.5}
+  - step: 9
+    part: "Screw for setting lever"
+    part_id: "MC51_080_01"
+    disassembly_step: 32
+    catalog_no: "51.080.01"
+    side_up: "bridge"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [371.25, 289.0, 388.0, 305.5]
+  - step: 10
+    part: "Barrel bridge, jewelled"
+    part_id: "MC10_041_07"
+    disassembly_step: 17
+    catalog_no: "10.041.07"
+    side_up: "bridge"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [121.0, 143.25, 391.5, 420.0]
+  - step: 11
+    part: "Screw for barrel bridge"
+    part_id: "MC10_041_01"
+    disassembly_step: 16
+    catalog_no: "10.041.01"
+    side_up: "bridge"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [131.5, 196.75, 365.0, 405.25]
+  - step: 12
+    part: "Crown wheel ring"
+    part_id: "MC81_067"
+    disassembly_step: 10
+    catalog_no: "81.067"
+    side_up: "bridge"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [310.75, 306.0, 336.0, 331.25]
+  - step: 13
+    part: "Crown wheel"
+    part_id: "MC31_023"
+    disassembly_step: 9
+    catalog_no: "31.023"
+    side_up: "bridge"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [280.5, 275.75, 366.25, 361.75]
+    oil:
+      - {type: "Moebius D5", point_stage_px: [324.0, 304.8], angle_deg: 1.7}
+  - step: 14
+    part: "Screw for crown wheel"
+    part_id: "MC31_023_01"
+    disassembly_step: 8
+    catalog_no: "31.023.01"
+    side_up: "bridge"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [308.0, 303.25, 339.0, 334.25]
+  - step: 15
+    part: "Click spring"
+    part_id: "MC61_080"
+    disassembly_step: 15
+    catalog_no: "61.080"
+    side_up: "bridge"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [169.25, 176.75, 214.0, 221.25]
+    oil:
+      - {type: "Moebius D5", point_stage_px: [186.2, 191.8], angle_deg: -24.1}
+  - step: 16
+    part: "Click"
+    part_id: "MC51_120"
+    disassembly_step: 14
+    catalog_no: "51.120"
+    side_up: "bridge"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [164.0, 175.75, 211.5, 215.75]
+  - step: 17
+    part: "Screw for click"
+    part_id: "MC51_120_01"
+    disassembly_step: 13
+    catalog_no: "51.120.01"
+    side_up: "bridge"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [178.25, 189.5, 199.75, 210.75]
+  - step: 18
+    part: "Ratchet wheel"
+    part_id: "MC31_020"
+    disassembly_step: 12
+    catalog_no: "31.020"
+    side_up: "bridge"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [192.75, 171.0, 326.25, 304.5]
+  - step: 19
+    part: "Screw for ratchet wheel"
+    part_id: "MC31_020_01"
+    disassembly_step: 11
+    catalog_no: "31.020.01"
+    side_up: "bridge"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [244.0, 222.25, 275.0, 253.25]
+  - step: 20
+    part: "Sliding pinion"
+    part_id: "MC31_121"
+    disassembly_step: 36
+    catalog_no: "31.121"
+    side_up: "dial"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [333.75, 305.75, 361.0, 330.5]
+    oil:
+      - {type: "Moebius D5", point_stage_px: [612.7, 369.2], angle_deg: -24.1}
+      - {type: "Moebius D5", point_stage_px: [631.2, 379.6], angle_deg: 44.1}
+  - step: 21
+    part: "Winding pinion"
+    part_id: "MC31_120"
+    disassembly_step: 35
+    catalog_no: "31.120"
+    side_up: "dial"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [357.25, 300.75, 370.25, 335.75]
+  - step: 22
+    part: "Winding stem, thread diameter 1.20 mm"
+    part_id: "MC51_010_23"
+    disassembly_step: 34
+    catalog_no: "51.010.23"
+    side_up: "dial"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [298.75, 309.25, 419.5, 327.25]
+    oil:
+      - {type: "Moebius D5", point_stage_px: [515.1, 380.2], angle_deg: -6.5}
+      - {type: "Moebius D5", point_stage_px: [535.9, 378.5], angle_deg: -6.5}
+      - {type: "Moebius D5", point_stage_px: [556.6, 376.6], angle_deg: -6.5}
+      - {type: "Moebius D5", point_stage_px: [565.0, 388.4], angle_deg: 172.4}
+  - step: 23
+    part: "Setting lever"
+    part_id: "MC51_080"
+    disassembly_step: 33
+    catalog_no: "51.080"
+    side_up: "dial"
+    differs_6497_1_vs_2: false
+    note: "Turn the screw for setting lever from the other side"
+    bbox_stage_px: [343.25, 314.75, 388.75, 374.5]
+  - step: 24
+    part: "Yoke"
+    part_id: "MC51_050"
+    disassembly_step: 28
+    catalog_no: "51.050"
+    side_up: "dial"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [330.5, 223.5, 359.75, 349.0]
+    oil:
+      - {type: "Moebius D5", point_stage_px: [347.1, 230.8], angle_deg: 23.5}
+  - step: 25
+    part: "Yoke spring"
+    part_id: "MC61_100"
+    disassembly_step: 27
+    catalog_no: "61.100"
+    side_up: "dial"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [297.5, 219.0, 336.25, 296.25]
+    oil:
+      - {type: "Moebius D5", point_stage_px: [343.6, 347.6], angle_deg: -162.8}
+  - step: 26
+    part: "Setting wheel"
+    part_id: "MC31_100"
+    disassembly_step: 29
+    catalog_no: "31.100"
+    side_up: "dial"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [293.25, 299.5, 331.25, 337.5]
+    oil:
+      - {type: "Moebius D5", point_stage_px: [309.4, 326.8], angle_deg: -166.5}
+  - step: 27
+    part: "Intermediate setting wheel"
+    part_id: "MC31_101"
+    disassembly_step: 30
+    catalog_no: "31.101"
+    side_up: "dial"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [271.25, 276.0, 308.75, 313.5]
+    oil:
+      - {type: "Moebius D5", point_stage_px: [287.0, 303.5], angle_deg: -166.5}
+  - step: 28
+    part: "Minute wheel"
+    part_id: "MC31_041"
+    disassembly_step: 31
+    catalog_no: "31.041"
+    side_up: "dial"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [200.25, 235.75, 279.5, 315.0]
+    oil:
+      - {type: "Moebius D5", point_stage_px: [237.4, 282.8], angle_deg: -166.5}
+  - step: 29
+    part: "Setting lever jumper"
+    part_id: "MC51_090"
+    disassembly_step: 26
+    catalog_no: "51.090"
+    side_up: "dial"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [243.0, 216.5, 366.75, 379.0]
+    oil:
+      - {type: "Moebius D5", point_stage_px: [673.6, 438.6], angle_deg: 0.0}
+  - step: 30
+    part: "Screw for setting lever jumper"
+    part_id: "MC51_090_01"
+    disassembly_step: 25
+    catalog_no: "51.090.01"
+    side_up: "dial"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [288.75, 256.5, 305.5, 273.0]
+    oil:
+      - {type: "Moebius D5", point_stage_px: [217.0, 326.2], angle_deg: 177.2}
+      - {type: "Moebius D5", point_stage_px: [156.8, 347.9], angle_deg: 172.4}
+      - {type: "Moebius 9010", point_stage_px: [108.7, 272.1], angle_deg: 0.0}
+      - {type: "Moebius 9010", point_stage_px: [115.6, 325.8], angle_deg: -116.0}
+  - step: 31
+    part: "Driver cannon pinion"
+    part_id: "MC31_080"
+    disassembly_step: 2
+    catalog_no: "31.080"
+    side_up: "dial"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [201.5, 304.0, 230.25, 333.25]
+    oil:
+      - {type: "Moebius 9501", point_stage_px: [669.8, 433.0], angle_deg: -179.2}
+      - {type: "magnified detail", point_stage_px: [193.5, 208.5], angle_deg: 0.0}
+      - {type: "Moebius D5", point_stage_px: [709.2, 459.0], angle_deg: 42.1}
+      - {type: "Moebius 9010", point_stage_px: [68.1, 166.0], angle_deg: 74.5}
+      - {type: "asterisk (meaning not given in the file)", point_stage_px: [173.4, 367.9], angle_deg: 0.0}
+      - {type: "asterisk (meaning not given in the file)", point_stage_px: [639.0, 441.4], angle_deg: 0.0}
+  - step: 32
+    part: "Pallet fork"
+    part_id: "MC40_010"
+    disassembly_step: 7
+    catalog_no: "40.010"
+    side_up: "bridge"
+    differs_6497_1_vs_2: true
+    note: "In order to test the freedom of gear train, before assembling the pallet fork turn the stem in the winding direction and check that the gear train at the end of its free motion forward turn slightly back before stopping definitively."
+    bbox_stage_px: [118.25, 366.5, 174.25, 416.5]
+    oil:
+      - {type: "Moebius D5", point_stage_px: [223.0, 321.2], angle_deg: 120.9}
+      - {type: "Moebius D5", point_stage_px: [156.8, 301.0], angle_deg: 172.4}
+      - {type: "Moebius 9010", point_stage_px: [112.1, 314.9], angle_deg: 0.0}
+      - {type: "Moebius 9010", point_stage_px: [107.8, 357.6], angle_deg: 0.0}
+  - step: 33
+    part: "Pallet bridge, jewelled"
+    part_id: "MC10_057_07"
+    disassembly_step: 6
+    catalog_no: "10.057.07"
+    side_up: "bridge"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [121.75, 362.5, 228.0, 469.25]
+  - step: 34
+    part: "Screw for pallet bridge"
+    part_id: "MC10_057_01"
+    disassembly_step: 5
+    catalog_no: "10.057.01"
+    side_up: "bridge"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [138.25, 377.0, 204.75, 449.75]
+  - step: 35
+    part: "Balance complete with bridge and ETACHRON system"
+    part_id: "MCBalanceComp"
+    disassembly_step: 4
+    side_up: "bridge"
+    differs_6497_1_vs_2: true
+    bbox_stage_px: [110.5, 352.25, 331.25, 494.25]
+    oil:
+      - {type: "magnified detail", point_stage_px: [646.1, 417.8], angle_deg: 88.5}
+      - {type: "Moebius 9010", point_stage_px: [701.4, 320.9], angle_deg: 89.5}
+      - {type: "Moebius 941", point_stage_px: [75.6, 272.9], angle_deg: -148.9}
+  - step: 36
+    part: "Screw for balance bridge"
+    part_id: "MC10_058_01"
+    disassembly_step: 3
+    catalog_no: "10.058.01"
+    side_up: "bridge"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [240.5, 457.25, 259.0, 475.75]
+  - step: 37
+    part: "Hour wheel"
+    part_id: "MC31_046"
+    disassembly_step: 1
+    catalog_no: "31.046"
+    side_up: "dial"
+    differs_6497_1_vs_2: false
+    bbox_stage_px: [173.75, 276.5, 258.25, 361.0]

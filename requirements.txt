@@ -1,0 +1,6 @@
+# Tested with Python 3.13. Manim needs the Cairo and Pango system libraries:
+#   macOS:  brew install cairo pango pkg-config ffmpeg
+#   Ubuntu: sudo apt install libcairo2-dev libpango1.0-dev pkg-config ffmpeg
+manim==0.22.0
+pillow==11.3.0        # Manim breaks with Pillow 12+
+CairoSVG==2.9.1
