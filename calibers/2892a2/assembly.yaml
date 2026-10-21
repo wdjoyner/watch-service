@@ -227,7 +227,7 @@ steps:
     tc: {item: "5445"}
     side_up: "dial"
     prompt: "TURN MOVEMENT"
-    bbox_stage_px: [282.8, 250.9, 287.6, 255.7]
+    bbox_stage_px: [278.2, 246.3, 292.2, 260.3]
     oil_marks_stage_px: []
   - step: 23
     code: "B23"

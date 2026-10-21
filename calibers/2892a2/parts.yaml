@@ -502,7 +502,7 @@ parts:
     disassembly_step: 52
     assembly_step: 22
     type: "screw"
-    geom: {pivot: [285.2, 253.3], bbox: [282.8, 250.9, 287.6, 255.7], z: 48, face: "dial", r: 2.4}
+    geom: {pivot: [285.2, 253.3], bbox: [278.2, 246.3, 292.2, 260.3], z: 48, face: "dial", r: 7, hand: true, note: "measured head was too small (r 2.4); set to the size of the other screws"}
     tc: {item: "5445"}
     names: {en: "Screw for combined setting lever jumper", fr: "Vis de sautoir de tirette combiné", de: "Schraube für kombinierte Winkelhebelraste"}
   MC51_091:

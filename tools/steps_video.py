@@ -244,7 +244,17 @@ def panel_copy(img):
     """bbox (video px) of the part's picture in the panel's lower box: not the prompt text at
     its top, not red warnings ("DO NOT WASH !")"""
     x0, y0, x1, y1 = PARTBOX_V
-    box = region((x0 + 2, y0 + 16, x1 - 2, y1 - 2))
+    top = y0 + 16                             # below a one-line prompt; lower for a longer one
+    dark = img.max(axis=-1) < 90
+    text_rows = [y for y in range(y0 + 2, y0 + 50) if dark[y, x0 + 4:x1 - 4].sum() > 2]
+    if text_rows and text_rows[0] < y0 + 20:
+        last = text_rows[0]
+        for y in text_rows:
+            if y - last > 6:                  # a gap: the prompt has ended
+                break
+            last = y
+        top = max(top, last + 5)
+    box = region((x0 + 2, top, x1 - 2, y1 - 2))
     r, g, b = img[..., 0], img[..., 1], img[..., 2]
     red = (r - g > 50) & (r - b > 50)
     ink = clean((img.min(axis=-1) < 225) & box & ~grow(red, 2))
@@ -275,9 +285,8 @@ def measure_disassembly(F, M):
     # tracking loses it as it lands there, so the path ends at the copy
     copy = panel_copy(after)
     if path and copy:
-        rb, cb = out['bbox_v'], copy
-        scale = round(math.hypot(cb[2] - cb[0], cb[3] - cb[1]) / math.hypot(rb[2] - rb[0], rb[3] - rb[1]), 3)
-        end = M.pt((cb[0] + cb[2]) / 2, (cb[1] + cb[3]) / 2) + [scale]
+        out['copy_stage_px'] = M.box(copy)
+        end = M.pt((copy[0] + copy[2]) / 2, (copy[1] + copy[3]) / 2) + [1.0]
         if math.dist(path[-1][:2], end[:2]) < 4:
             path[-1] = end
         else:
@@ -327,8 +336,14 @@ def measure_assembly(F, M, own=None):
         c, bb = centroid(d), bbox(d)
         pts.append((M.pt(*c), math.hypot(bb[2] - bb[0], bb[3] - bb[1])))
     c = centroid(fitted)
-    pts.append((M.pt(*c), math.hypot(out['bbox_v'][2] - out['bbox_v'][0], out['bbox_v'][3] - out['bbox_v'][1])))
-    path = to_path(pts[::-1])[::-1]          # scale relative to the fitted size
+    pts.append((M.pt(*c), 1.0))
+    copy = panel_copy(before)                 # the part waiting in the panel, where it starts
+    if copy:
+        out['copy_stage_px'] = M.box(copy)
+        first = M.pt((copy[0] + copy[2]) / 2, (copy[1] + copy[3]) / 2)
+        if not pts or math.dist(pts[0][0], first) >= 4:
+            pts.insert(0, (first, 1.0))
+    path = [p + [1.0] for p, _ in pts]
     out.update(start=start, path=path if moves(path) else [])
     return out
 
@@ -421,6 +436,8 @@ def step_record(n, tr, m, M, catalog, units):
     if 'oil_v' in m:
         s['oil_marks_stage_px'] = [M.pt(x, y) for x, y, _ in m['oil_v']]
     s['path'] = m.get('path', [])
+    if m.get('copy_stage_px'):
+        s['copy_stage_px'] = m['copy_stage_px']
     s['motion'] = phases_of(s['path']) if s['path'] else []
     s['video'] = {'t': tr['t'], 'motion_start_s': round(tr['t'][0] + m['start'] / FPS, 2) if m.get('start') else None,
                   'bbox_measured_stage_px': s['bbox_stage_px']}
@@ -446,6 +463,27 @@ def write(out, name, meta, steps, keys, header):
             if s.get(k) is not None:
                 L.append('    %s: %s' % (k, y(s[k])))
     open(os.path.join(out, name + '.yaml'), 'w').write('\n'.join(L) + '\n')
+
+
+SCALE_LIMITS = (0.3, 3.5)
+
+
+def scale_along(path, s0, s1):
+    """SwissLab resizes a part steadily between its place in the movement and its picture in
+    the panel: interpolate between the two measured end sizes along the path's length"""
+    d = [0.0]
+    for a, b in zip(path, path[1:]):
+        d.append(d[-1] + math.dist(a[:2], b[:2]))
+    L = d[-1] or 1.0
+    return [[p[0], p[1], round(s0 + (s1 - s0) * dk / L, 3)] for p, dk in zip(path, d)]
+
+
+def panel_scale(copy, bbox):
+    """size of the part's picture in the panel relative to the part in the movement"""
+    if not copy or not bbox:
+        return 1.0
+    s = math.hypot(copy[2] - copy[0], copy[3] - copy[1]) / math.hypot(bbox[2] - bbox[0], bbox[3] - bbox[1])
+    return round(min(max(s, SCALE_LIMITS[0]), SCALE_LIMITS[1]), 3)
 
 
 def area(b):
@@ -560,6 +598,21 @@ def main():
             s['bbox_stage_px'] = g['bbox']
             if g.get('heads'):
                 s['heads_stage_px'] = g['heads']
+    # sizes along each path, from the settled box of the part (in the movement) and its
+    # picture in the panel
+    # (in assembly SwissLab often draws an edge-on detail under the waiting part, so the panel
+    # size measured in disassembly, the same picture, is used when there is one)
+    dis_scale = {s['part_id']: panel_scale(s.get('copy_stage_px'), s['bbox_stage_px'])
+                 for s in dis if s.get('copy_stage_px')}
+    for seq, steps in (('disassembly', dis), ('assembly', asm)):
+        for s in steps:
+            if s['path']:
+                k = panel_scale(s.pop('copy_stage_px', None), s['bbox_stage_px'])
+                if seq == 'assembly' and s['part_id'] in dis_scale:
+                    k = dis_scale[s['part_id']]
+                s['path'] = scale_along(s['path'], 1.0, k) if seq == 'disassembly' else scale_along(s['path'], k, 1.0)
+                s['motion'] = phases_of(s['path'])
+            s.pop('copy_stage_px', None)
     write(out, 'steps', meta, dis, keys, [h % 'disassembly' if '%s' in h else h for h in head])
     write(out, 'assembly', dict(meta, oil_legend=tr['meta']['oil_legend']), asm,
           keys[:3] + ('disassembly_step',) + keys[3:] + ('oil_marks_stage_px',),

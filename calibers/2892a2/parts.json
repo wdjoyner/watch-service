@@ -2011,14 +2011,16 @@
     253.3
    ],
    "bbox": [
-    282.8,
-    250.9,
-    287.6,
-    255.7
+    278.2,
+    246.3,
+    292.2,
+    260.3
    ],
    "z": 48,
    "face": "dial",
-   "r": 2.4
+   "r": 7,
+   "hand": true,
+   "note": "measured head was too small (r 2.4); set to the size of the other screws"
   },
   "tc": {
    "item": "5445"

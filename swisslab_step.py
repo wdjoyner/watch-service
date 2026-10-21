@@ -168,7 +168,9 @@ class _StepScene(Scene):
             if turned:
                 # SwissLab's "TURN MOVEMENT" moment (or its own wording, e.g. "CONTINUE WITH
                 # DISASSEMBLING OF AUTOMATIC DEVICE", when the previous step gives one)
-                words = self.steps[STEP - 2].get("prompt") or "TURN MOVEMENT"
+                prev = self.steps[STEP - 2]
+                back = prev["side_up"] not in ("dial", "bridge") and s["side_up"] in ("dial", "bridge")
+                words = prev.get("prompt") or ("BACK TO THE MOVEMENT" if back else "TURN MOVEMENT")
                 card = T(_wrap(words, 30), 0.5, INK, "MEDIUM").move_to(window)
                 fit(card, (WINDOW[2] - WINDOW[0] - 30) * K)
                 sub = T(side_text(s["side_up"]), 0.32, MUTED).next_to(card, DOWN, buff=0.15)

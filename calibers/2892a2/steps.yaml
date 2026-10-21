@@ -423,7 +423,7 @@ steps:
     catalog_no: "51.091.01"
     tc: {item: "5445"}
     side_up: "dial"
-    bbox_stage_px: [282.8, 250.9, 287.6, 255.7]
+    bbox_stage_px: [278.2, 246.3, 292.2, 260.3]
   - step: 53
     code: "A53"
     part: "Combined setting lever jumper"
