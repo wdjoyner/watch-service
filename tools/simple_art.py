@@ -10,7 +10,8 @@ SwissLab stage coordinates, so they line up with the step data and the SWF's mot
     svg = SA.document(SA.scene(parts, ids), [x0, y0, x1, y1], '#ffffff')
 
 Automatic types: wheel, pinion, screw, jewel, balance, ring, stem, rotor, date_ring.
-Interim types (until hand-made outlines exist): plate (a disc, or a rounded box), bridge
+Interim types (until hand-made outlines exist): plate (a disc, a rounded box, or with
+outline: hull a rounded plate around the parts it carries), bridge
 (rounded hull of the arbors and screws it holds), lever and spring (a capsule from the pivot).
 
 Types for automatic calibers with a date (2892-A2):
@@ -423,6 +424,19 @@ def draw_bridge(parts, pid):
 def draw_plate(parts, pid):
     g, art = parts[pid]['geom'], parts[pid].get('art', {})
     x0, y0, x1, y1 = g['bbox']
+    if art.get('outline') == 'hull':         # a unit's base plate seen by itself (frame, barrel bridge):
+        # a rounded plate with art.corners corners around the parts it carries (art.around)
+        # and any extra points (art.points: [x, y, r]), each with a margin
+        circ = []
+        for k in art.get('around', []):
+            q = parts[k]['geom']
+            circ.append(tuple(q.get('center', q['pivot'])) + (min(q.get('r', 10), art.get('max_r', 40)) + art.get('margin', 8),))
+        circ += [tuple(c) for c in art.get('points', [])]
+        v = enclosing_polygon(circles_hull(circ), art.get('corners', 6), step=10.0)
+        out = shadowed(rounded_path(v, 12.0), PLATE, PLATE_EDGE)
+        for x, y, r in art.get('holes', []):
+            out += el(circle_path(x, y, r), HOLE)
+        return out
     if art.get('outline') == 'box':          # a unit's base plate seen by itself (frame, barrel bridge):
         c = art.get('chamfer', 0.22)         # its bounding box with the corners cut off
         w, h = x1 - x0 - 8, y1 - y0 - 8

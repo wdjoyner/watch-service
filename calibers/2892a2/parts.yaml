@@ -270,7 +270,7 @@ parts:
     disassembly_step: 28
     assembly_step: 48
     type: "plate"
-    art: {outline: "box"}
+    art: {outline: "hull", corners: 6, margin: 10, around: ["MC32_031", "MC32_032", "MC32_037", "MC52_040", "MC52_041", "MC12_051_07"], points: [[236.6, 313.8, 30]]}
     geom: {pivot: [214.2, 348.85], bbox: [73.8, 204.8, 354.6, 492.9], z: 72, face: "automatic device", r: 144.05}
     tc: {item: "1134"}
     names: {en: "Automatic device framework, jewelled", fr: "Bâti du dispositif automatique, empierré", de: "Gestell für Automatik, mit Steinen"}
@@ -462,7 +462,7 @@ parts:
     disassembly_step: 48
     assembly_step: 5
     type: "plate"
-    art: {outline: "box"}
+    art: {outline: "hull", corners: 5, margin: 10, around: ["MC32_033", "MC31_023", "MC31_024", "MC31_021", "MC81_036"]}
     geom: {pivot: [218.25, 323.35], bbox: [65.9, 215.9, 370.6, 430.8], z: 52, face: "barrel bridge", r: 152.35}
     tc: {item: "105"}
     names: {en: "Barrel bridge, jewelled", fr: "Pont de barillet, empierré", de: "Federhausbrücke, mit Steinen"}

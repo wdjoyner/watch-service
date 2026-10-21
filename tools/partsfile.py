@@ -68,7 +68,6 @@ def save(out, parts, header=None, vf=None, extra=()):
         cfg = caliber.load(out)
         header = header or '# %s parts (SwissLab), keyed by SwissLab clip name' % cfg['name']
         vf = vf or caliber.variant_flag(cfg)
-    json.dump(parts, open(os.path.join(out, 'parts.json'), 'w', encoding='utf-8'), indent=1, ensure_ascii=False)
     L = [header,
          '# type/art/geom drive the generated ("simple") drawings; see tools/simple_art.py.',
          '# Stage coordinates are SwissLab px (800 x 600, y down).',
@@ -79,4 +78,10 @@ def save(out, parts, header=None, vf=None, extra=()):
             if p.get(f) is not None:
                 L.append('    %s: %s' % (f, _y(p[f])))
         L.append('    names: %s' % _y(p['names']))
-    open(os.path.join(out, 'parts.yaml'), 'w', encoding='utf-8').write('\n'.join(L) + '\n')
+    text = '\n'.join(L) + '\n'
+    open(os.path.join(out, 'parts.yaml'), 'w', encoding='utf-8').write(text)
+    # parts.json is exactly what parts.yaml says (same rounding), whether the parts were just
+    # measured or read back from parts.yaml
+    import yaml
+    json.dump(yaml.safe_load(text)['parts'], open(os.path.join(out, 'parts.json'), 'w', encoding='utf-8'),
+              indent=1, ensure_ascii=False)

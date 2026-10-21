@@ -87,7 +87,7 @@ def inspect(path):
     notes = {}
     for k, v in V.items():
         m = re.match(r'^name(\d+)gb$', k)
-        if m and int(m.group(1)) > N:
+        if m and int(m.group(1)) > N and len(v) >= 25:     # shorter ones are the interface's words
             notes['name' + m.group(1)] = v
     rep['note_vars'] = notes
     rep['edit_text_vars'] = sorted({e.get('var', '') for e in swf['edittexts'].values()

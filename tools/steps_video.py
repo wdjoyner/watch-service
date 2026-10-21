@@ -41,7 +41,7 @@ FPS = 12                       # SwissLab's frame rate: one sample per Flash fra
 VW, VH = 640, 360
 WINDOW = [18, 122, 432, 512]   # SwissLab's movement window, stage px
 DIFF = 40                      # a pixel "changed" if a channel differs by more than this
-PARTBOX_V = (350, 163, 557, 305)   # lower box of the info panel, video px
+PARTBOX_V = (350, 163, 540, 305)   # lower box of the info panel, inside its frame lines, video px
 CODE_V = (83, 290, 97, 314)    # SwissLab's step code (A01, B12 ...) in the window's corner, video px
 LOOK_AHEAD = 1.6               # s of the next step that show where an assembly step's part ended
 
@@ -240,6 +240,17 @@ def window(M):
     return region(M.win_v) & ~region(CODE_V)
 
 
+def panel_copy(img):
+    """bbox (video px) of the part's picture in the panel's lower box: not the prompt text at
+    its top, not red warnings ("DO NOT WASH !")"""
+    x0, y0, x1, y1 = PARTBOX_V
+    box = region((x0 + 2, y0 + 16, x1 - 2, y1 - 2))
+    r, g, b = img[..., 0], img[..., 1], img[..., 2]
+    red = (r - g > 50) & (r - b > 50)
+    ink = clean((img.min(axis=-1) < 225) & box & ~grow(red, 2))
+    return bbox(ink)
+
+
 def measure_disassembly(F, M):
     win = window(M)
     arrow = grow(np.any(np.stack([green(f) for f in F]), axis=0), 2)
@@ -260,6 +271,17 @@ def measure_disassembly(F, M):
     area = win | region(PARTBOX_V)
     pts = track(F[:stop + 1], max(start - 1, 0), after, area, ignore, M, max(6, removed.sum() // 6))
     path = to_path(pts)
+    # the part comes to rest on the copy SwissLab shows in the panel, at that copy's size;
+    # tracking loses it as it lands there, so the path ends at the copy
+    copy = panel_copy(after)
+    if path and copy:
+        rb, cb = out['bbox_v'], copy
+        scale = round(math.hypot(cb[2] - cb[0], cb[3] - cb[1]) / math.hypot(rb[2] - rb[0], rb[3] - rb[1]), 3)
+        end = M.pt((cb[0] + cb[2]) / 2, (cb[1] + cb[3]) / 2) + [scale]
+        if math.dist(path[-1][:2], end[:2]) < 4:
+            path[-1] = end
+        else:
+            path.append(end)
     out.update(start=start, path=path if moves(path) else [])
     return out
 
