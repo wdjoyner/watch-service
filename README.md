@@ -33,9 +33,9 @@ the SWF:
 - **wheel / pinion**: tooth count, radius, number of arms, tooth form (normal, ratchet, escape)
 - **screw**: head positions and size
 - **jewel**, **balance** (rim, arms, hairspring, shock setting), **ring**, **stem**
-- **bridge**: a four-cornered plate around the arbors and screws it holds, laid out so bridges
-  don't overlap and trimmed to the edge of the main plate (`corners:` and `avoid:` in
-  `parts.yaml` adjust it)
+- **bridge**: a see-through, four-cornered plate around the arbors and screws it holds, laid
+  out so bridges don't overlap and trimmed to the edge of the main plate (`corners:` and
+  `avoid:` in `parts.yaml` adjust it). The wheels and pivots underneath stay visible.
 - **plate**, **lever**, **spring**: simple placeholders for now
 
 ## Setup
@@ -51,11 +51,14 @@ Manim also needs Cairo, Pango and ffmpeg (see the comment in `requirements.txt`)
     python build_all.py --disassembly --assembly          # generated art, no SWF needed
 
 This prepares the images, renders all 37 steps of each sequence, and joins them into
-`6497_disassembly_simple.mp4` and `6497_assembly_simple.mp4` (about 5½ minutes each). The steps
-flow into each other, with a "TURN MOVEMENT" card wherever the movement is turned over.
+`6497_disassembly_simple.mp4` and `6497_assembly_simple.mp4` (about 5½ minutes each). Each video
+opens with a title card and closes with end credits; the steps flow into each other, with a
+"TURN MOVEMENT" card wherever the movement is turned over. The text of the title card and the
+credits is in `credits.yaml`.
 
 Options: `-q l|m|h` (480p / 720p default / 1080p), `--steps 1-10` (only some steps; the file
-gets a `_partial` suffix), `--skip-prep` (reuse `assets/`), `--art original` (see below).
+gets a `_partial` suffix), `--skip-prep` (reuse `assets/`), `--no-titles` (leave out the title card and credits),
+`--art original` (see below).
 Finished clips are kept in `renders/<art>/`. On the next run a step is rendered again only if
 something it is made from has changed (for example after you edit `parts.yaml`); the rest are
 reused. Delete `renders/` to force a full rebuild. Steps with several separately moving
@@ -99,6 +102,7 @@ identical to the ones in the repository, so `git status` stays clean.
 - `swisslab_step.py`: the Manim scenes `DisassemblyStep` and `AssemblyStep` (env `STEP=n`,
   `ART=simple|original`, `CONTINUOUS=1` so the clips join seamlessly)
 - `build_all.py`: renders every step and joins them into one video per sequence
+- `credits.yaml`: the wording of the title card and the end credits
 - `tools/`: the SWF parser and renderer, the extraction and measuring scripts, the art generator
 - `tests/smoke_test.py`: builds disassembly step 4 at 480p in simple art
 

@@ -42,6 +42,7 @@ parts:
     type: "balance"
     art: {arms: 3, bridge: {screws: ["MC10_058_01"]}}
     geom: {pivot: [220.85, 423], bbox: [110.5, 352.25, 331.25, 494.25], z: 214, face: "bridge", center: [174.84, 416.46], r: 64.16}
+    components: [{item: "121/3", catalog_no: "10.058.61", part: "Balance bridge, for regulator with pointer, shock-absorber, stud support ETACHRON"}, {item: "721", catalog_no: "40.050.21", part: "Timed annular balance, for shock-absorber and stud support ETACHRON"}, {item: "303/5", catalog_no: "40.302.23", part: "Two-piece regulator, with pointer, for stud support ETACHRON"}, {item: "375", catalog_no: "40.200.00", part: "Stud support ETACHRON"}]
     names: {en: "Balance complete with bridge and ETACHRON system", de: "Unruh vollständig mit Brücke und System ETACHRON", fr: "Balancier complet avec pont et système ETACHRON", it: "Bilanciere completo di ponte e dispositivo ETACHRON", es: "Volante completo con puente y sistema ETACHRON", da: "Komplet balance med bro og ETACHRON system"}
   MC10_057_01:
     part: "Screw for pallet bridge"

@@ -11,6 +11,7 @@ Options:
   -q l|m|h     quality: 480p preview, 720p (default), 1080p
   --steps 3-9  only these steps (e.g. "1-5" or "4,8,35"); the joined file gets a _partial suffix
   --skip-prep  reuse the images already in assets/<art>/
+  --no-titles  leave out the title card and the end credits (their text is in credits.yaml)
 
 Writes renders/<art>/<sequence>_<quality>/stepNN.mp4 and 6497_<sequence>_<art>.mp4 in this
 folder. A step is rendered again only when something it is made from has changed (the scene
@@ -53,6 +54,16 @@ def fingerprint(step, prefix, k, art):
     return h.hexdigest()
 
 
+def card_fingerprint(seq, art, frame):
+    """hash of everything the title card / end credits are made from"""
+    h = hashlib.sha256((seq + art).encode())
+    for f in ("swisslab_step.py", "credits.yaml", os.path.join("assets", art, "hero.png"), frame):
+        f = os.path.join(HERE, f)
+        if os.path.exists(f):
+            h.update(open(f, "rb").read())
+    return h.hexdigest()
+
+
 def run(cmd, env=None):
     r = subprocess.run(cmd, cwd=HERE, env=env, capture_output=True, text=True)
     if r.returncode:
@@ -76,24 +87,44 @@ def build(seq, swf, args):
              *src, "."] + [str(k) for k in todo])
 
     media = os.path.join(HERE, "media")
+
+    def render(scene_name, clip, key, extra_env, label):
+        """render one clip unless its fingerprint is unchanged; True if it was rendered"""
+        keyfile = clip.replace(".mp4", ".key")
+        old = open(keyfile).read().strip() if os.path.exists(keyfile) else None
+        if os.path.exists(clip) and old == key:
+            return False
+        print(f"[{seq}] rendering {label}")
+        env = dict(os.environ, CONTINUOUS="1", ART=args.art, SEQ=seq, **extra_env)
+        name = f"{seq}_{args.art}_{os.path.basename(clip)[:-4]}"
+        run([sys.executable, "-m", "manim", qflag, "--disable_caching", "--media_dir", media,
+             "-o", name, "swisslab_step.py", scene_name], env=env)
+        shutil.move(os.path.join(media, "videos", "swisslab_step", qdir, f"{name}.mp4"), clip)
+        open(keyfile, "w").write(key + "\n")
+        return True
+
     prefix = "asm" if seq == "assembly" else "step"
     clips, redone = [], 0
     for k in todo:
         clip = os.path.join(outdir, f"step{k:02d}.mp4")
-        keyfile = clip.replace(".mp4", ".key")
-        key = fingerprint(steps[k - 1], prefix, k, args.art)
-        old = open(keyfile).read().strip() if os.path.exists(keyfile) else None
-        if not os.path.exists(clip) or old != key:
-            redone += 1
-            print(f"[{seq}] rendering step {k}/{len(steps)}: {steps[k - 1]['part']}")
-            env = dict(os.environ, STEP=str(k), CONTINUOUS="1", ART=args.art)
-            name = f"{seq}_{args.art}_{k:02d}"
-            run([sys.executable, "-m", "manim", qflag, "--disable_caching", "--media_dir", media,
-                 "-o", name, "swisslab_step.py", scene], env=env)
-            shutil.move(os.path.join(media, "videos", "swisslab_step", qdir, f"{name}.mp4"), clip)
-            open(keyfile, "w").write(key + "\n")
+        redone += render(scene, clip, fingerprint(steps[k - 1], prefix, k, args.art), {"STEP": str(k)},
+                         f"step {k}/{len(steps)}: {steps[k - 1]['part']}")
         clips.append(clip)
     print(f"[{seq}] {redone} of {len(todo)} steps rendered, {len(todo) - redone} unchanged")
+
+    if not args.no_titles:
+        # the cards cross-fade from/into the very first and last frames of the steps
+        first, last = os.path.join(outdir, "first_frame.png"), os.path.join(outdir, "last_frame.png")
+        run(["ffmpeg", "-y", "-loglevel", "error", "-i", clips[0], "-frames:v", "1", first])
+        run(["ffmpeg", "-y", "-loglevel", "error", "-sseof", "-0.3", "-i", clips[-1], "-update", "1", last])
+        cards = []
+        for scene_name, stem, frame_var, frame in (("TitleCard", "title", "FIRST_FRAME", first),
+                                                   ("EndCredits", "credits", "LAST_FRAME", last)):
+            clip = os.path.join(outdir, f"{stem}.mp4")
+            render(scene_name, clip, card_fingerprint(seq, args.art, frame), {frame_var: frame},
+                   "title card" if stem == "title" else "end credits")
+            cards.append(clip)
+        clips = [cards[0]] + clips + [cards[1]]
 
     listfile = os.path.join(outdir, "clips.txt")
     with open(listfile, "w") as f:
@@ -113,6 +144,7 @@ def main():
     ap.add_argument("-q", choices="lmh", default="m")
     ap.add_argument("--steps")
     ap.add_argument("--skip-prep", action="store_true")
+    ap.add_argument("--no-titles", action="store_true", help="leave out the title card and end credits")
     args = ap.parse_args()
     chosen = [seq for seq in ("disassembly", "assembly") if getattr(args, seq) is not None]
     if not chosen:

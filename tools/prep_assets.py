@@ -11,6 +11,7 @@ Writes OUT/assets/<art>/{step|asm}NN_bg.png (the movement at that step with the 
 not yet fitted, cropped to the movement window) and ..._part.png; for original art also the oil
 overlay, the edge-on detail drawing and the unmasked "free" drawing, when the step has them.
 For simple art, ..._part.json gives the image's stage bbox and a tight bbox for the highlight.
+Both styles also get hero.png: the complete movement in generated art, for the title card.
 """
 import json
 import os
@@ -22,6 +23,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 WINDOW = [18, 122, 432, 512]   # x0, y0, x1, y1 of SwissLab's movement window (stage px)
 SCALE = 4
 PAD = 4                        # stage px around a generated part (outline + shadow)
+HERO = [30, 130, 430, 506]     # stage px shown on the title card: the movement and a stub of the stem
 
 
 def parse_args(argv):
@@ -109,6 +111,17 @@ def prep_simple(out, asm, data, steps, dst, pre):
         print(pre, n, 'simple assets written')
 
 
+def prep_hero(out, dst):
+    """the complete movement, bridge side up, for the title card. Always the generated art, so the
+    title card is the same in both styles."""
+    import cairosvg
+    import simple_art as SA
+    parts = SA.load(out)
+    ids = [k for k in parts if SA.on_face(parts, k, 'bridge')]
+    cairosvg.svg2png(bytestring=SA.document(SA.scene(parts, ids, 'bridge'), HERO).encode(),
+                     write_to=f'{dst}/hero.png', scale=SCALE)
+
+
 def main():
     asm, art, swf, out, steps = parse_args(sys.argv[1:])
     data = json.load(open(f"{out}/{'assembly' if asm else 'steps'}.json"))
@@ -119,6 +132,7 @@ def main():
         prep_original(swf, out, asm, data, steps, dst, pre)
     else:
         prep_simple(out, asm, data, steps, dst, pre)
+    prep_hero(out, dst)
 
 
 if __name__ == '__main__':

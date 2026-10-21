@@ -2,17 +2,9 @@
  "MC31_046": {
   "part": "Hour wheel",
   "catalog_no": "31.046",
-  "names": {
-   "en": "Hour wheel",
-   "de": "Stundenrad",
-   "fr": "Roue des heures",
-   "it": "Ruota ore",
-   "es": "Rueda de horas",
-   "da": "Timehjul"
-  },
-  "differs_6497_1_vs_2": false,
   "disassembly_step": 1,
   "assembly_step": 37,
+  "differs_6497_1_vs_2": false,
   "type": "wheel",
   "art": {
    "hole": 0.32,
@@ -28,27 +20,27 @@
     173.75,
     276.5,
     258.25,
-    361.0
+    361
    ],
    "z": 166,
    "face": "dial",
    "r": 42.3
+  },
+  "names": {
+   "en": "Hour wheel",
+   "de": "Stundenrad",
+   "fr": "Roue des heures",
+   "it": "Ruota ore",
+   "es": "Rueda de horas",
+   "da": "Timehjul"
   }
  },
  "MC31_080": {
   "part": "Driver cannon pinion",
   "catalog_no": "31.080",
-  "names": {
-   "en": "Driver cannon pinion",
-   "de": "Mitnehmer-Minutenrohr",
-   "fr": "Chaussée entraîneuse",
-   "it": "Pignone calzante conduttore",
-   "es": "Cañón de minutos arrastrador",
-   "da": "Minutrør"
-  },
-  "differs_6497_1_vs_2": false,
   "disassembly_step": 2,
   "assembly_step": 31,
+  "differs_6497_1_vs_2": false,
   "oils": [
    "Moebius 9010",
    "Moebius 9501",
@@ -66,29 +58,29 @@
    ],
    "bbox": [
     201.5,
-    304.0,
+    304,
     230.25,
     333.25
    ],
    "z": 162,
    "face": "dial",
    "r": 14.65
+  },
+  "names": {
+   "en": "Driver cannon pinion",
+   "de": "Mitnehmer-Minutenrohr",
+   "fr": "Chaussée entraîneuse",
+   "it": "Pignone calzante conduttore",
+   "es": "Cañón de minutos arrastrador",
+   "da": "Minutrør"
   }
  },
  "MC10_058_01": {
   "part": "Screw for balance bridge",
   "catalog_no": "10.058.01",
-  "names": {
-   "en": "Screw for balance bridge",
-   "de": "Schraube für Unruhbrücke",
-   "fr": "Vis de pont de balancier",
-   "it": "Vite del ponte del bilanciere",
-   "es": "Tornillo de puente de volante",
-   "da": "Skrue for balancebro"
-  },
-  "differs_6497_1_vs_2": false,
   "disassembly_step": 3,
   "assembly_step": 36,
+  "differs_6497_1_vs_2": false,
   "type": "screw",
   "geom": {
    "pivot": [
@@ -98,28 +90,28 @@
    "bbox": [
     240.5,
     457.25,
-    259.0,
+    259,
     475.75
    ],
    "z": 242,
    "face": "bridge",
    "r": 9.3
+  },
+  "names": {
+   "en": "Screw for balance bridge",
+   "de": "Schraube für Unruhbrücke",
+   "fr": "Vis de pont de balancier",
+   "it": "Vite del ponte del bilanciere",
+   "es": "Tornillo de puente de volante",
+   "da": "Skrue for balancebro"
   }
  },
  "MCBalanceComp": {
   "part": "Balance complete with bridge and ETACHRON system",
   "catalog_no": "BalanceComp",
-  "names": {
-   "en": "Balance complete with bridge and ETACHRON system",
-   "de": "Unruh vollständig mit Brücke und System ETACHRON",
-   "fr": "Balancier complet avec pont et système ETACHRON",
-   "it": "Bilanciere completo di ponte e dispositivo ETACHRON",
-   "es": "Volante completo con puente y sistema ETACHRON",
-   "da": "Komplet balance med bro og ETACHRON system"
-  },
-  "differs_6497_1_vs_2": true,
   "disassembly_step": 4,
   "assembly_step": 35,
+  "differs_6497_1_vs_2": true,
   "oils": [
    "Moebius 9010",
    "Moebius 941"
@@ -136,7 +128,7 @@
   "geom": {
    "pivot": [
     220.85,
-    423.0
+    423
    ],
    "bbox": [
     110.5,
@@ -151,22 +143,44 @@
     416.46
    ],
    "r": 64.16
+  },
+  "components": [
+   {
+    "item": "121/3",
+    "catalog_no": "10.058.61",
+    "part": "Balance bridge, for regulator with pointer, shock-absorber, stud support ETACHRON"
+   },
+   {
+    "item": "721",
+    "catalog_no": "40.050.21",
+    "part": "Timed annular balance, for shock-absorber and stud support ETACHRON"
+   },
+   {
+    "item": "303/5",
+    "catalog_no": "40.302.23",
+    "part": "Two-piece regulator, with pointer, for stud support ETACHRON"
+   },
+   {
+    "item": "375",
+    "catalog_no": "40.200.00",
+    "part": "Stud support ETACHRON"
+   }
+  ],
+  "names": {
+   "en": "Balance complete with bridge and ETACHRON system",
+   "de": "Unruh vollständig mit Brücke und System ETACHRON",
+   "fr": "Balancier complet avec pont et système ETACHRON",
+   "it": "Bilanciere completo di ponte e dispositivo ETACHRON",
+   "es": "Volante completo con puente y sistema ETACHRON",
+   "da": "Komplet balance med bro og ETACHRON system"
   }
  },
  "MC10_057_01": {
   "part": "Screw for pallet bridge",
   "catalog_no": "10.057.01",
-  "names": {
-   "en": "Screw for pallet bridge",
-   "de": "Schraube für Ankerbrücke",
-   "fr": "Vis de pont d'ancre",
-   "it": "Vite del ponte dell’ancora",
-   "es": "Tornillo de puente de áncora",
-   "da": "Skrue for ankerbro"
-  },
-  "differs_6497_1_vs_2": false,
   "disassembly_step": 5,
   "assembly_step": 34,
+  "differs_6497_1_vs_2": false,
   "type": "screw",
   "geom": {
    "pivot": [
@@ -175,7 +189,7 @@
    ],
    "bbox": [
     138.25,
-    377.0,
+    377,
     204.75,
     449.75
    ],
@@ -194,22 +208,22 @@
      7.7
     ]
    ]
+  },
+  "names": {
+   "en": "Screw for pallet bridge",
+   "de": "Schraube für Ankerbrücke",
+   "fr": "Vis de pont d'ancre",
+   "it": "Vite del ponte dell’ancora",
+   "es": "Tornillo de puente de áncora",
+   "da": "Skrue for ankerbro"
   }
  },
  "MC10_057_07": {
   "part": "Pallet bridge, jewelled",
   "catalog_no": "10.057.07",
-  "names": {
-   "en": "Pallet bridge, jewelled",
-   "de": "Ankerbrücke, mit Steinen",
-   "fr": "Pont d'ancre, empierré",
-   "it": "Ponte dell’ancora con rubini",
-   "es": "Puente de áncora, empedrado",
-   "da": "Ankerbro, stenlejer"
-  },
-  "differs_6497_1_vs_2": false,
   "disassembly_step": 6,
   "assembly_step": 33,
+  "differs_6497_1_vs_2": false,
   "type": "bridge",
   "art": {
    "holds": [
@@ -230,27 +244,27 @@
    "bbox": [
     121.75,
     362.5,
-    228.0,
+    228,
     469.25
    ],
    "z": 194,
    "face": "bridge"
+  },
+  "names": {
+   "en": "Pallet bridge, jewelled",
+   "de": "Ankerbrücke, mit Steinen",
+   "fr": "Pont d'ancre, empierré",
+   "it": "Ponte dell’ancora con rubini",
+   "es": "Puente de áncora, empedrado",
+   "da": "Ankerbro, stenlejer"
   }
  },
  "MC40_010": {
   "part": "Pallet fork",
   "catalog_no": "40.010",
-  "names": {
-   "en": "Pallet fork",
-   "de": "Anker",
-   "fr": "Ancre",
-   "it": "Ancora",
-   "es": "Ancora",
-   "da": "Anker"
-  },
-  "differs_6497_1_vs_2": true,
   "disassembly_step": 7,
   "assembly_step": 32,
+  "differs_6497_1_vs_2": true,
   "oils": [
    "Moebius 9010",
    "Moebius D5"
@@ -269,22 +283,22 @@
    ],
    "z": 186,
    "face": "bridge"
+  },
+  "names": {
+   "en": "Pallet fork",
+   "de": "Anker",
+   "fr": "Ancre",
+   "it": "Ancora",
+   "es": "Ancora",
+   "da": "Anker"
   }
  },
  "MC31_023_01": {
   "part": "Screw for crown wheel",
   "catalog_no": "31.023.01",
-  "names": {
-   "en": "Screw for crown wheel",
-   "de": "Schraube für Kronrad",
-   "fr": "Vis de roue de couronne",
-   "it": "Vite della ruota a corona",
-   "es": "Tornillo de rueda de corona",
-   "da": "Skrue for kronhjul"
-  },
-  "differs_6497_1_vs_2": false,
   "disassembly_step": 8,
   "assembly_step": 14,
+  "differs_6497_1_vs_2": false,
   "type": "screw",
   "art": {
    "thread": "left"
@@ -295,30 +309,30 @@
     318.7
    ],
    "bbox": [
-    308.0,
+    308,
     303.25,
-    339.0,
+    339,
     334.25
    ],
    "z": 153,
    "face": "bridge",
    "r": 15.6
+  },
+  "names": {
+   "en": "Screw for crown wheel",
+   "de": "Schraube für Kronrad",
+   "fr": "Vis de roue de couronne",
+   "it": "Vite della ruota a corona",
+   "es": "Tornillo de rueda de corona",
+   "da": "Skrue for kronhjul"
   }
  },
  "MC31_023": {
   "part": "Crown wheel",
   "catalog_no": "31.023",
-  "names": {
-   "en": "Crown wheel",
-   "de": "Kronrad",
-   "fr": "Roue de couronne",
-   "it": "Ruota a corona",
-   "es": "Rueda de corona",
-   "da": "Kronhjul"
-  },
-  "differs_6497_1_vs_2": false,
   "disassembly_step": 9,
   "assembly_step": 13,
+  "differs_6497_1_vs_2": false,
   "oils": [
    "Moebius D5"
   ],
@@ -341,22 +355,22 @@
    "z": 148,
    "face": "bridge",
    "r": 43.2
+  },
+  "names": {
+   "en": "Crown wheel",
+   "de": "Kronrad",
+   "fr": "Roue de couronne",
+   "it": "Ruota a corona",
+   "es": "Rueda de corona",
+   "da": "Kronhjul"
   }
  },
  "MC81_067": {
   "part": "Crown wheel ring",
   "catalog_no": "81.067",
-  "names": {
-   "en": "Crown wheel ring",
-   "de": "Kronradring",
-   "fr": "Bague de roue de couronne",
-   "it": "Anello della ruota a corona",
-   "es": "Anillo de rueda de corona",
-   "da": "Ring for kronhjul"
-  },
-  "differs_6497_1_vs_2": false,
   "disassembly_step": 10,
   "assembly_step": 12,
+  "differs_6497_1_vs_2": false,
   "type": "ring",
   "geom": {
    "pivot": [
@@ -365,29 +379,29 @@
    ],
    "bbox": [
     310.75,
-    306.0,
-    336.0,
+    306,
+    336,
     331.25
    ],
    "z": 144,
    "face": "bridge",
    "r": 12.65
+  },
+  "names": {
+   "en": "Crown wheel ring",
+   "de": "Kronradring",
+   "fr": "Bague de roue de couronne",
+   "it": "Anello della ruota a corona",
+   "es": "Anillo de rueda de corona",
+   "da": "Ring for kronhjul"
   }
  },
  "MC31_020_01": {
   "part": "Screw for ratchet wheel",
   "catalog_no": "31.020.01",
-  "names": {
-   "en": "Screw for ratchet wheel",
-   "de": "Schraube für Sperrrad",
-   "fr": "Vis de rochet",
-   "it": "Vite del rocchetto",
-   "es": "Tornillo de rochete",
-   "da": "Skrue for spærhjul"
-  },
-  "differs_6497_1_vs_2": false,
   "disassembly_step": 11,
   "assembly_step": 19,
+  "differs_6497_1_vs_2": false,
   "type": "screw",
   "geom": {
    "pivot": [
@@ -395,30 +409,30 @@
     237.75
    ],
    "bbox": [
-    244.0,
+    244,
     222.25,
-    275.0,
+    275,
     253.25
    ],
    "z": 182,
    "face": "bridge",
    "r": 15.5
+  },
+  "names": {
+   "en": "Screw for ratchet wheel",
+   "de": "Schraube für Sperrrad",
+   "fr": "Vis de rochet",
+   "it": "Vite del rocchetto",
+   "es": "Tornillo de rochete",
+   "da": "Skrue for spærhjul"
   }
  },
  "MC31_020": {
   "part": "Ratchet wheel",
   "catalog_no": "31.020",
-  "names": {
-   "en": "Ratchet wheel",
-   "de": "Sperrrad",
-   "fr": "Rochet",
-   "it": "Rocchetto",
-   "es": "Rochete",
-   "da": "Spærhjul"
-  },
-  "differs_6497_1_vs_2": false,
   "disassembly_step": 12,
   "assembly_step": 18,
+  "differs_6497_1_vs_2": false,
   "type": "wheel",
   "art": {
    "tooth_form": "ratchet",
@@ -432,29 +446,29 @@
    ],
    "bbox": [
     192.75,
-    171.0,
+    171,
     326.25,
     304.5
    ],
    "z": 171,
    "face": "bridge",
    "r": 66.85
+  },
+  "names": {
+   "en": "Ratchet wheel",
+   "de": "Sperrrad",
+   "fr": "Rochet",
+   "it": "Rocchetto",
+   "es": "Rochete",
+   "da": "Spærhjul"
   }
  },
  "MC51_120_01": {
   "part": "Screw for click",
   "catalog_no": "51.120.01",
-  "names": {
-   "en": "Screw for click",
-   "de": "Schraube für Klinke",
-   "fr": "Vis de cliquet",
-   "it": "Vite del cricco",
-   "es": "Tornillo de trinquete",
-   "da": "Skrue for spærklinke"
-  },
-  "differs_6497_1_vs_2": false,
   "disassembly_step": 13,
   "assembly_step": 17,
+  "differs_6497_1_vs_2": false,
   "type": "screw",
   "geom": {
    "pivot": [
@@ -470,22 +484,22 @@
    "z": 167,
    "face": "bridge",
    "r": 10.8
+  },
+  "names": {
+   "en": "Screw for click",
+   "de": "Schraube für Klinke",
+   "fr": "Vis de cliquet",
+   "it": "Vite del cricco",
+   "es": "Tornillo de trinquete",
+   "da": "Skrue for spærklinke"
   }
  },
  "MC51_120": {
   "part": "Click",
   "catalog_no": "51.120",
-  "names": {
-   "en": "Click",
-   "de": "Klinke",
-   "fr": "Cliquet",
-   "it": "Cricco",
-   "es": "Trinquete",
-   "da": "Spærklinke"
-  },
-  "differs_6497_1_vs_2": false,
   "disassembly_step": 14,
   "assembly_step": 16,
+  "differs_6497_1_vs_2": false,
   "type": "lever",
   "geom": {
    "pivot": [
@@ -493,29 +507,29 @@
     199.55
    ],
    "bbox": [
-    164.0,
+    164,
     175.75,
     211.5,
     215.75
    ],
    "z": 163,
    "face": "bridge"
+  },
+  "names": {
+   "en": "Click",
+   "de": "Klinke",
+   "fr": "Cliquet",
+   "it": "Cricco",
+   "es": "Trinquete",
+   "da": "Spærklinke"
   }
  },
  "MC61_080": {
   "part": "Click spring",
   "catalog_no": "61.080",
-  "names": {
-   "en": "Click spring",
-   "de": "Klinkenfeder",
-   "fr": "Ressort de cliquet",
-   "it": "Molla del cricco",
-   "es": "Muelle de trinquete",
-   "da": "Spærfjeder"
-  },
-  "differs_6497_1_vs_2": false,
   "disassembly_step": 15,
   "assembly_step": 15,
+  "differs_6497_1_vs_2": false,
   "oils": [
    "Moebius D5"
   ],
@@ -528,27 +542,27 @@
    "bbox": [
     169.25,
     176.75,
-    214.0,
+    214,
     221.25
    ],
    "z": 159,
    "face": "bridge"
+  },
+  "names": {
+   "en": "Click spring",
+   "de": "Klinkenfeder",
+   "fr": "Ressort de cliquet",
+   "it": "Molla del cricco",
+   "es": "Muelle de trinquete",
+   "da": "Spærfjeder"
   }
  },
  "MC10_041_01": {
   "part": "Screw for barrel bridge",
   "catalog_no": "10.041.01",
-  "names": {
-   "en": "Screw for barrel bridge",
-   "de": "Schraube für Federhausbrücke",
-   "fr": "Vis de pont de barillet",
-   "it": "Vite del ponte del bariletto",
-   "es": "Tornillo de puente  de barrilete",
-   "da": "Skrue for fjederhusbro"
-  },
-  "differs_6497_1_vs_2": false,
   "disassembly_step": 16,
   "assembly_step": 11,
+  "differs_6497_1_vs_2": false,
   "type": "screw",
   "geom": {
    "pivot": [
@@ -558,7 +572,7 @@
    "bbox": [
     131.5,
     196.75,
-    365.0,
+    365,
     405.25
    ],
    "z": 130,
@@ -581,22 +595,22 @@
      9.2
     ]
    ]
+  },
+  "names": {
+   "en": "Screw for barrel bridge",
+   "de": "Schraube für Federhausbrücke",
+   "fr": "Vis de pont de barillet",
+   "it": "Vite del ponte del bariletto",
+   "es": "Tornillo de puente  de barrilete",
+   "da": "Skrue for fjederhusbro"
   }
  },
  "MC10_041_07": {
   "part": "Barrel bridge, jewelled",
   "catalog_no": "10.041.07",
-  "names": {
-   "en": "Barrel bridge, jewelled",
-   "de": "Federhausbrücke, mit Steinen",
-   "fr": "Pont de barillet, empierré",
-   "it": "Ponte del bariletto con rubini",
-   "es": "Puente de barrilete, empedrado",
-   "da": "Fjederhusbro, stenlejer"
-  },
-  "differs_6497_1_vs_2": false,
   "disassembly_step": 17,
   "assembly_step": 10,
+  "differs_6497_1_vs_2": false,
   "type": "bridge",
   "art": {
    "holds": [
@@ -620,29 +634,29 @@
     281.6
    ],
    "bbox": [
-    121.0,
+    121,
     143.25,
     391.5,
-    420.0
+    420
    ],
    "z": 126,
    "face": "bridge"
+  },
+  "names": {
+   "en": "Barrel bridge, jewelled",
+   "de": "Federhausbrücke, mit Steinen",
+   "fr": "Pont de barillet, empierré",
+   "it": "Ponte del bariletto con rubini",
+   "es": "Puente de barrilete, empedrado",
+   "da": "Fjederhusbro, stenlejer"
   }
  },
  "MC10_048_01": {
   "part": "Screw for train wheel bridge",
   "catalog_no": "10.048.01",
-  "names": {
-   "en": "Screw for train wheel bridge",
-   "de": "Schraube für Räderwerkbrücke",
-   "fr": "Vis de pont de rouage",
-   "it": "Vite del ponte del ruotismo",
-   "es": "Tornillo de puente de rodaje",
-   "da": "Skrue for løbeværksbro"
-  },
-  "differs_6497_1_vs_2": false,
   "disassembly_step": 18,
   "assembly_step": 7,
+  "differs_6497_1_vs_2": false,
   "type": "screw",
   "geom": {
    "pivot": [
@@ -650,7 +664,7 @@
     313.8
    ],
    "bbox": [
-    67.0,
+    67,
     230.25,
     101.75,
     397.5
@@ -670,22 +684,22 @@
      9.2
     ]
    ]
+  },
+  "names": {
+   "en": "Screw for train wheel bridge",
+   "de": "Schraube für Räderwerkbrücke",
+   "fr": "Vis de pont de rouage",
+   "it": "Vite del ponte del ruotismo",
+   "es": "Tornillo de puente de rodaje",
+   "da": "Skrue for løbeværksbro"
   }
  },
  "MC10_048_07": {
   "part": "Train wheel bridge, jewelled",
   "catalog_no": "10.048.07",
-  "names": {
-   "en": "Train wheel bridge, jewelled",
-   "de": "Räderwerkbrücke, mit Steinen",
-   "fr": "Pont de rouage, empierré",
-   "it": "Ponte del ruotismo con rubini",
-   "es": "Puente de rodaje empedrado",
-   "da": "Løbeværksbro, stenlejer"
-  },
-  "differs_6497_1_vs_2": true,
   "disassembly_step": 19,
   "assembly_step": 6,
+  "differs_6497_1_vs_2": true,
   "type": "bridge",
   "art": {
    "holds": [
@@ -710,27 +724,27 @@
    "bbox": [
     40.5,
     201.5,
-    182.0,
+    182,
     436.25
    ],
    "z": 112,
    "face": "bridge"
+  },
+  "names": {
+   "en": "Train wheel bridge, jewelled",
+   "de": "Räderwerkbrücke, mit Steinen",
+   "fr": "Pont de rouage, empierré",
+   "it": "Ponte del ruotismo con rubini",
+   "es": "Puente de rodaje empedrado",
+   "da": "Løbeværksbro, stenlejer"
   }
  },
  "MC30_015": {
   "part": "Centre wheel",
   "catalog_no": "30.015",
-  "names": {
-   "en": "Centre wheel",
-   "de": "Minutenrad",
-   "fr": "Roue de centre",
-   "it": "Ruota centro",
-   "es": "Rueda de centro",
-   "da": "Centrumhjul"
-  },
-  "differs_6497_1_vs_2": true,
   "disassembly_step": 20,
   "assembly_step": 5,
+  "differs_6497_1_vs_2": true,
   "type": "wheel",
   "art": {
    "teeth": 80,
@@ -750,22 +764,22 @@
    "z": 108,
    "face": "bridge",
    "r": 60.35
+  },
+  "names": {
+   "en": "Centre wheel",
+   "de": "Minutenrad",
+   "fr": "Roue de centre",
+   "it": "Ruota centro",
+   "es": "Rueda de centro",
+   "da": "Centrumhjul"
   }
  },
  "MC20_010": {
   "part": "Barrel",
   "catalog_no": "20.010",
-  "names": {
-   "en": "Barrel",
-   "de": "Federhaus",
-   "fr": "Barillet",
-   "it": "Bariletto",
-   "es": "Barrilete",
-   "da": "Fjederhus"
-  },
-  "differs_6497_1_vs_2": true,
   "disassembly_step": 21,
   "assembly_step": 8,
+  "differs_6497_1_vs_2": true,
   "oils": [
    "Moebius D5"
   ],
@@ -789,22 +803,22 @@
    "z": 100,
    "face": "bridge",
    "r": 84.15
+  },
+  "names": {
+   "en": "Barrel",
+   "de": "Federhaus",
+   "fr": "Barillet",
+   "it": "Bariletto",
+   "es": "Barrilete",
+   "da": "Fjederhus"
   }
  },
  "MC30_027_13": {
   "part": "Second wheel, with long lower pivot",
   "catalog_no": "30.027.13",
-  "names": {
-   "en": "Second wheel, with long lower pivot",
-   "de": "Sekundenrad, mit langem Zapfen unten",
-   "fr": "Roue de seconde, long pivot dessous",
-   "it": "Ruota dei secondi, perno lungo sotto",
-   "es": "Rueda de segundos, pivote largo abajo",
-   "da": "Sekundhjul med lang tap"
-  },
-  "differs_6497_1_vs_2": true,
   "disassembly_step": 22,
   "assembly_step": 4,
+  "differs_6497_1_vs_2": true,
   "type": "wheel",
   "art": {
    "teeth": 117,
@@ -817,29 +831,29 @@
    ],
    "bbox": [
     76.75,
-    278.0,
+    278,
     157.75,
-    359.0
+    359
    ],
    "z": 94,
    "face": "bridge",
    "r": 40.5
+  },
+  "names": {
+   "en": "Second wheel, with long lower pivot",
+   "de": "Sekundenrad, mit langem Zapfen unten",
+   "fr": "Roue de seconde, long pivot dessous",
+   "it": "Ruota dei secondi, perno lungo sotto",
+   "es": "Rueda de segundos, pivote largo abajo",
+   "da": "Sekundhjul med lang tap"
   }
  },
  "MC30_025": {
   "part": "Third wheel",
   "catalog_no": "30.025",
-  "names": {
-   "en": "Third wheel",
-   "de": "Kleinbodenrad",
-   "fr": "Roue moyenne",
-   "it": "Ruota mediana",
-   "es": "Rueda primera",
-   "da": "Lille bundhjul"
-  },
-  "differs_6497_1_vs_2": true,
   "disassembly_step": 23,
   "assembly_step": 3,
+  "differs_6497_1_vs_2": true,
   "type": "wheel",
   "art": {
    "teeth": 60,
@@ -852,29 +866,29 @@
    ],
    "bbox": [
     113.75,
-    254.0,
+    254,
     197.25,
     337.5
    ],
    "z": 86,
    "face": "bridge",
    "r": 41.85
+  },
+  "names": {
+   "en": "Third wheel",
+   "de": "Kleinbodenrad",
+   "fr": "Roue moyenne",
+   "it": "Ruota mediana",
+   "es": "Rueda primera",
+   "da": "Lille bundhjul"
   }
  },
  "MC30_040": {
   "part": "Escape wheel",
   "catalog_no": "30.040",
-  "names": {
-   "en": "Escape wheel",
-   "de": "Hemmungsrad",
-   "fr": "Roue d'échappement",
-   "it": "Ruota di scappamento",
-   "es": "Rueda de escape",
-   "da": "Ganghjul"
-  },
-  "differs_6497_1_vs_2": true,
   "disassembly_step": 24,
   "assembly_step": 2,
+  "differs_6497_1_vs_2": true,
   "type": "wheel",
   "art": {
    "tooth_form": "escape",
@@ -894,23 +908,23 @@
    ],
    "z": 81,
    "face": "bridge",
-   "r": 32.0
+   "r": 32
+  },
+  "names": {
+   "en": "Escape wheel",
+   "de": "Hemmungsrad",
+   "fr": "Roue d'échappement",
+   "it": "Ruota di scappamento",
+   "es": "Rueda de escape",
+   "da": "Ganghjul"
   }
  },
  "MC51_090_01": {
   "part": "Screw for setting lever jumper",
   "catalog_no": "51.090.01",
-  "names": {
-   "en": "Screw for setting lever jumper",
-   "de": "Schraube für Winkelhebelraste",
-   "fr": "Vis de sautoir de tirette",
-   "it": "Vite dello scatto del tiretto",
-   "es": "Tornillo de muelle flexible de tirete",
-   "da": "Skrue for tirettefjeder"
-  },
-  "differs_6497_1_vs_2": false,
   "disassembly_step": 25,
   "assembly_step": 30,
+  "differs_6497_1_vs_2": false,
   "oils": [
    "Moebius 9010",
    "Moebius D5"
@@ -925,27 +939,27 @@
     288.75,
     256.5,
     305.5,
-    273.0
+    273
    ],
    "z": 158,
    "face": "dial",
    "r": 8.45
+  },
+  "names": {
+   "en": "Screw for setting lever jumper",
+   "de": "Schraube für Winkelhebelraste",
+   "fr": "Vis de sautoir de tirette",
+   "it": "Vite dello scatto del tiretto",
+   "es": "Tornillo de muelle flexible de tirete",
+   "da": "Skrue for tirettefjeder"
   }
  },
  "MC51_090": {
   "part": "Setting lever jumper",
   "catalog_no": "51.090",
-  "names": {
-   "en": "Setting lever jumper",
-   "de": "Winkelhebelraste",
-   "fr": "Sautoir de tirette",
-   "it": "Scatto del tiretto",
-   "es": "Muelle flexible de tirete",
-   "da": "Tirettefjeder"
-  },
-  "differs_6497_1_vs_2": false,
   "disassembly_step": 26,
   "assembly_step": 29,
+  "differs_6497_1_vs_2": false,
   "oils": [
    "Moebius D5"
   ],
@@ -956,29 +970,29 @@
     253.75
    ],
    "bbox": [
-    243.0,
+    243,
     216.5,
     366.75,
-    379.0
+    379
    ],
    "z": 152,
    "face": "dial"
+  },
+  "names": {
+   "en": "Setting lever jumper",
+   "de": "Winkelhebelraste",
+   "fr": "Sautoir de tirette",
+   "it": "Scatto del tiretto",
+   "es": "Muelle flexible de tirete",
+   "da": "Tirettefjeder"
   }
  },
  "MC61_100": {
   "part": "Yoke spring",
   "catalog_no": "61.100",
-  "names": {
-   "en": "Yoke spring",
-   "de": "Kupplungshebelfeder",
-   "fr": "Ressort de bascule",
-   "it": "Molla della bascula",
-   "es": "Muelle de báscula",
-   "da": "Muffelederfjeder"
-  },
-  "differs_6497_1_vs_2": false,
   "disassembly_step": 27,
   "assembly_step": 25,
+  "differs_6497_1_vs_2": false,
   "oils": [
    "Moebius D5"
   ],
@@ -990,28 +1004,28 @@
    ],
    "bbox": [
     297.5,
-    219.0,
+    219,
     336.25,
     296.25
    ],
    "z": 135,
    "face": "dial"
+  },
+  "names": {
+   "en": "Yoke spring",
+   "de": "Kupplungshebelfeder",
+   "fr": "Ressort de bascule",
+   "it": "Molla della bascula",
+   "es": "Muelle de báscula",
+   "da": "Muffelederfjeder"
   }
  },
  "MC51_050": {
   "part": "Yoke",
   "catalog_no": "51.050",
-  "names": {
-   "en": "Yoke",
-   "de": "Kupplungstriebhebel",
-   "fr": "Bascule de pignon coulant",
-   "it": "Bascula del pignone scorrevole",
-   "es": "Báscula de piñón corredizo",
-   "da": "Muffeleder"
-  },
-  "differs_6497_1_vs_2": false,
   "disassembly_step": 28,
   "assembly_step": 24,
+  "differs_6497_1_vs_2": false,
   "oils": [
    "Moebius D5"
   ],
@@ -1025,26 +1039,26 @@
     330.5,
     223.5,
     359.75,
-    349.0
+    349
    ],
    "z": 131,
    "face": "dial"
+  },
+  "names": {
+   "en": "Yoke",
+   "de": "Kupplungstriebhebel",
+   "fr": "Bascule de pignon coulant",
+   "it": "Bascula del pignone scorrevole",
+   "es": "Báscula de piñón corredizo",
+   "da": "Muffeleder"
   }
  },
  "MC31_100": {
   "part": "Setting wheel",
   "catalog_no": "31.100",
-  "names": {
-   "en": "Setting wheel",
-   "de": "Zeigerstellrad",
-   "fr": "Renvoi",
-   "it": "Rinvio",
-   "es": "Rueda de transmisión",
-   "da": "Viserstilledriv"
-  },
-  "differs_6497_1_vs_2": false,
   "disassembly_step": 29,
   "assembly_step": 26,
+  "differs_6497_1_vs_2": false,
   "oils": [
    "Moebius D5"
   ],
@@ -1067,22 +1081,22 @@
    "z": 139,
    "face": "dial",
    "r": 19.1
+  },
+  "names": {
+   "en": "Setting wheel",
+   "de": "Zeigerstellrad",
+   "fr": "Renvoi",
+   "it": "Rinvio",
+   "es": "Rueda de transmisión",
+   "da": "Viserstilledriv"
   }
  },
  "MC31_101": {
   "part": "Intermediate setting wheel",
   "catalog_no": "31.101",
-  "names": {
-   "en": "Intermediate setting wheel",
-   "de": "Zwischen-Zeigerstellrad",
-   "fr": "Renvoi intermédiaire",
-   "it": "Rinvio intermedio",
-   "es": "Rueda de transmisión intermedia",
-   "da": "Viserstilledriv 1"
-  },
-  "differs_6497_1_vs_2": false,
   "disassembly_step": 30,
   "assembly_step": 27,
+  "differs_6497_1_vs_2": false,
   "oils": [
    "Moebius D5"
   ],
@@ -1098,29 +1112,29 @@
    ],
    "bbox": [
     271.25,
-    276.0,
+    276,
     308.75,
     313.5
    ],
    "z": 143,
    "face": "dial",
    "r": 18.85
+  },
+  "names": {
+   "en": "Intermediate setting wheel",
+   "de": "Zwischen-Zeigerstellrad",
+   "fr": "Renvoi intermédiaire",
+   "it": "Rinvio intermedio",
+   "es": "Rueda de transmisión intermedia",
+   "da": "Viserstilledriv 1"
   }
  },
  "MC31_041": {
   "part": "Minute wheel",
   "catalog_no": "31.041",
-  "names": {
-   "en": "Minute wheel",
-   "de": "Wechselrad",
-   "fr": "Roue de minuterie",
-   "it": "Ruota della minuteria",
-   "es": "Rueda de minutería",
-   "da": "Vekselhjul"
-  },
-  "differs_6497_1_vs_2": false,
   "disassembly_step": 31,
   "assembly_step": 28,
+  "differs_6497_1_vs_2": false,
   "oils": [
    "Moebius D5"
   ],
@@ -1138,27 +1152,27 @@
     200.25,
     235.75,
     279.5,
-    315.0
+    315
    ],
    "z": 147,
    "face": "dial",
    "r": 39.7
+  },
+  "names": {
+   "en": "Minute wheel",
+   "de": "Wechselrad",
+   "fr": "Roue de minuterie",
+   "it": "Ruota della minuteria",
+   "es": "Rueda de minutería",
+   "da": "Vekselhjul"
   }
  },
  "MC51_080_01": {
   "part": "Screw for setting lever",
   "catalog_no": "51.080.01",
-  "names": {
-   "en": "Screw for setting lever",
-   "de": "Schraube für Winkelhebel",
-   "fr": "Vis de tirette",
-   "it": "Vite del tiretto",
-   "es": "Tornillo de tirete",
-   "da": "Skrue for tirette"
-  },
-  "differs_6497_1_vs_2": false,
   "disassembly_step": 32,
   "assembly_step": 9,
+  "differs_6497_1_vs_2": false,
   "type": "screw",
   "geom": {
    "pivot": [
@@ -1167,29 +1181,29 @@
    ],
    "bbox": [
     371.25,
-    289.0,
-    388.0,
+    289,
+    388,
     305.5
    ],
    "z": 77,
    "face": "bridge",
    "r": 8.4
+  },
+  "names": {
+   "en": "Screw for setting lever",
+   "de": "Schraube für Winkelhebel",
+   "fr": "Vis de tirette",
+   "it": "Vite del tiretto",
+   "es": "Tornillo de tirete",
+   "da": "Skrue for tirette"
   }
  },
  "MC51_080": {
   "part": "Setting lever",
   "catalog_no": "51.080",
-  "names": {
-   "en": "Setting lever",
-   "de": "Winkelhebel",
-   "fr": "Tirette",
-   "it": "Tiretto",
-   "es": "Tirete",
-   "da": "Tirette"
-  },
-  "differs_6497_1_vs_2": false,
   "disassembly_step": 33,
   "assembly_step": 23,
+  "differs_6497_1_vs_2": false,
   "type": "lever",
   "geom": {
    "pivot": [
@@ -1204,22 +1218,22 @@
    ],
    "z": 127,
    "face": "dial"
+  },
+  "names": {
+   "en": "Setting lever",
+   "de": "Winkelhebel",
+   "fr": "Tirette",
+   "it": "Tiretto",
+   "es": "Tirete",
+   "da": "Tirette"
   }
  },
  "MC51_010_23": {
   "part": "Winding stem, thread diameter 1.20 mm",
   "catalog_no": "51.010.23",
-  "names": {
-   "en": "Winding stem, thread diameter 1.20 mm",
-   "de": "Aufzugwelle, Gewindedurchmesser 1,20 mm",
-   "fr": "Tige de remontoir, diamètre de filetage 1,20 mm",
-   "it": "Albero di carica, diametro vite 1.20 mm",
-   "es": "Tija de remontuar, diámetro de rosca 1,20 mm",
-   "da": "Optræksaksel, diameter 1.20 mm"
-  },
-  "differs_6497_1_vs_2": false,
   "disassembly_step": 34,
   "assembly_step": 22,
+  "differs_6497_1_vs_2": false,
   "oils": [
    "Moebius D5"
   ],
@@ -1240,22 +1254,22 @@
     "bridge": 45
    },
    "face": "both"
+  },
+  "names": {
+   "en": "Winding stem, thread diameter 1.20 mm",
+   "de": "Aufzugwelle, Gewindedurchmesser 1,20 mm",
+   "fr": "Tige de remontoir, diamètre de filetage 1,20 mm",
+   "it": "Albero di carica, diametro vite 1.20 mm",
+   "es": "Tija de remontuar, diámetro de rosca 1,20 mm",
+   "da": "Optræksaksel, diameter 1.20 mm"
   }
  },
  "MC31_120": {
   "part": "Winding pinion",
   "catalog_no": "31.120",
-  "names": {
-   "en": "Winding pinion",
-   "de": "Aufzugtrieb",
-   "fr": "Pignon de remontoir",
-   "it": "Pignone di carica",
-   "es": "Piñón de remontuar",
-   "da": "Transmissionshjul"
-  },
-  "differs_6497_1_vs_2": false,
   "disassembly_step": 35,
   "assembly_step": 21,
+  "differs_6497_1_vs_2": false,
   "type": "pinion",
   "art": {
    "view": "side"
@@ -1273,22 +1287,22 @@
    ],
    "z": 117,
    "face": "dial"
+  },
+  "names": {
+   "en": "Winding pinion",
+   "de": "Aufzugtrieb",
+   "fr": "Pignon de remontoir",
+   "it": "Pignone di carica",
+   "es": "Piñón de remontuar",
+   "da": "Transmissionshjul"
   }
  },
  "MC31_121": {
   "part": "Sliding pinion",
   "catalog_no": "31.121",
-  "names": {
-   "en": "Sliding pinion",
-   "de": "Kupplungstrieb",
-   "fr": "Pignon coulant",
-   "it": "Pignone scorrevole",
-   "es": "Piñón corredizo",
-   "da": "Muffehjul"
-  },
-  "differs_6497_1_vs_2": false,
   "disassembly_step": 36,
   "assembly_step": 20,
+  "differs_6497_1_vs_2": false,
   "oils": [
    "Moebius D5"
   ],
@@ -1304,27 +1318,27 @@
    "bbox": [
     333.75,
     305.75,
-    361.0,
+    361,
     330.5
    ],
    "z": 121,
    "face": "dial"
+  },
+  "names": {
+   "en": "Sliding pinion",
+   "de": "Kupplungstrieb",
+   "fr": "Pignon coulant",
+   "it": "Pignone scorrevole",
+   "es": "Piñón corredizo",
+   "da": "Muffehjul"
   }
  },
  "MC10_020_07": {
   "part": "Main plate, jewelled",
   "catalog_no": "10.020.07",
-  "names": {
-   "en": "Main plate, jewelled",
-   "de": "Werkplatte, mit Steinen",
-   "fr": "Platine, empierrée",
-   "it": "Platina principale con rubini",
-   "es": "Platina empedrada",
-   "da": "Værkplade, stenlejer"
-  },
-  "differs_6497_1_vs_2": true,
   "disassembly_step": 37,
   "assembly_step": 1,
+  "differs_6497_1_vs_2": true,
   "type": "plate",
   "art": {
    "jewels": [
@@ -1344,7 +1358,7 @@
    "bbox": [
     36.25,
     138.5,
-    396.0,
+    396,
     498.25
    ],
    "z": {
@@ -1352,6 +1366,14 @@
     "bridge": 70
    },
    "face": "both"
+  },
+  "names": {
+   "en": "Main plate, jewelled",
+   "de": "Werkplatte, mit Steinen",
+   "fr": "Platine, empierrée",
+   "it": "Platina principale con rubini",
+   "es": "Platina empedrada",
+   "da": "Værkplade, stenlejer"
   }
  }
 }

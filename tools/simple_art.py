@@ -21,6 +21,7 @@ import os
 LINE = 0.5               # outline width, stage px
 PLATE, PLATE_EDGE = '#e4e2dd', '#8b867c'
 BRIDGE, BRIDGE_EDGE = '#cdd2d9', '#5b6470'
+BRIDGE_OPACITY = 0.62    # see-through bridges: the wheels and pivots underneath stay visible
 GILT, GILT_EDGE = '#e5bd57', '#8a6614'
 STEEL, STEEL_EDGE = '#aeb5bf', '#4d5562'
 BLUE, BLUE_RIM, BLUE_SLOT = '#4569c0', '#283f80', '#141f45'
@@ -127,6 +128,14 @@ def el(d, fill, stroke=None, width=LINE, rule=None, extra=''):
     if stroke: s += ' stroke="%s" stroke-width="%g" stroke-linejoin="round"' % (stroke, width)
     if rule: s += ' fill-rule="%s"' % rule
     return s + extra + '/>'
+
+
+def see_through(d):
+    """a translucent bridge: a soft shadow along its edge only (a filled shadow would darken
+    the parts seen through it), a partly transparent fill, and a solid outline"""
+    dx, dy = SHADOW_OFF
+    return (el(d, 'none', SHADOW, 1.6, extra=' stroke-opacity="0.13" transform="translate(%g,%g)"' % (dx, dy)) +
+            el(d, BRIDGE, BRIDGE_EDGE, 0.7, extra=' fill-opacity="%g"' % BRIDGE_OPACITY))
 
 
 def shadowed(d, fill, stroke, rule=None):
@@ -361,7 +370,7 @@ def bridge_shape(parts, centers, heads, jewels, corners=4, outline=None):
     if outline is None:
         outline = enclosing_polygon(circles_hull(bridge_circles(centers, heads)), corners,
                                     step=5.0 if corners <= 4 else 10.0)
-    body = shadowed(rounded_path(outline, 5.0), BRIDGE, BRIDGE_EDGE)
+    body = see_through(rounded_path(outline, 5.0))
     pc = plate_circle(parts)
     if pc and any(math.dist(q, pc[:2]) > pc[2] - 3 for q in outline):
         cid = 'plateclip%d' % next(_clip_ids)

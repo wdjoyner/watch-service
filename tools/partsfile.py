@@ -8,13 +8,15 @@ across re-extraction because they are maintained by hand or by measure_parts.py:
     art    parameters for the placeholder drawing (tooth count, arms, ...); hand-editable
     geom   where the part sits: pivot, bounding box, stacking order, which face of the
            movement it is on, radius, screw-head positions (written by measure_parts.py)
+    components  for an assembled unit with no catalog number of its own (the balance
+           complete), its parts from ETA's Technical Communication: no, catalog_no, part
 """
 import json
 import os
 
-KEEP = ('type', 'art', 'geom')
+KEEP = ('type', 'art', 'geom', 'components')
 ORDER = ('part', 'catalog_no', 'disassembly_step', 'assembly_step', 'differs_6497_1_vs_2', 'oils',
-         'type', 'art', 'geom')
+         'type', 'art', 'geom', 'components')
 
 
 def load(out):
@@ -36,13 +38,21 @@ def merge_kept(new, old):
     return new
 
 
+# bare words YAML 1.1 reads as booleans or null, so a key spelled like this must be quoted
+_RISKY = {'y', 'n', 'yes', 'no', 'on', 'off', 'true', 'false', 'null', '~'}
+
+
+def _key(k):
+    return json.dumps(k) if str(k).lower() in _RISKY or not str(k).replace('_', '').isalnum() else str(k)
+
+
 def _y(v):
     if v is None: return 'null'
     if isinstance(v, bool): return 'true' if v else 'false'
     if isinstance(v, float): return ('%.2f' % v).rstrip('0').rstrip('.')
     if isinstance(v, int): return repr(v)
     if isinstance(v, list): return '[' + ', '.join(_y(x) for x in v) + ']'
-    if isinstance(v, dict): return '{' + ', '.join('%s: %s' % (k, _y(x)) for k, x in v.items()) + '}'
+    if isinstance(v, dict): return '{' + ', '.join('%s: %s' % (_key(k), _y(x)) for k, x in v.items()) + '}'
     return json.dumps(v, ensure_ascii=False)
 
 

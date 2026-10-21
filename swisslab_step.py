@@ -22,8 +22,13 @@ appear, with the oils named in the panel.
 import json
 import os
 
-from manim import (DOWN, LEFT, UP, FadeIn, FadeOut, ImageMobject, Rectangle, Scene, Text, VGroup,
-                   linear, there_and_back)
+import sys
+
+from manim import (DOWN, LEFT, RIGHT, UP, FadeIn, FadeOut, ImageMobject, LaggedStart, Rectangle, Scene, Text,
+                   VGroup, config, linear, there_and_back)
+
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "tools"))
+import partsfile  # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 STEP = int(os.environ.get("STEP", 4))
@@ -32,6 +37,11 @@ ASSETS = os.path.join(HERE, "assets", ART)
 # CONTINUOUS=1 (set by build_all.py): the frame stays on screen and each clip starts exactly
 # where the previous one ended, so the clips join seamlessly into one video
 CONTINUOUS = os.environ.get("CONTINUOUS") == "1"
+# title card / end credits (build_all.py sets these): which sequence, and the first frame of the
+# first step / last frame of the last step, so the cards cross-fade into and out of the steps
+SEQ = os.environ.get("SEQ", "disassembly")
+FIRST_FRAME = os.environ.get("FIRST_FRAME")
+LAST_FRAME = os.environ.get("LAST_FRAME")
 SPEED = 0.5            # SwissLab plays at 12 fps; 0.5 = twice as slow, easier to follow
 FPS_SWF = 12
 
@@ -115,9 +125,8 @@ class _StepScene(Scene):
         name = T(s["part"], 0.42, weight="MEDIUM")
         if name.width > (PANEL[2] - PANEL[0] - 44) * K:
             name = T(_wrap(s["part"], 28), 0.42, weight="MEDIUM")
-        cat = s.get("catalog_no")
         info = VGroup(T(f"Step {STEP} of {len(self.steps)}", 0.32, MUTED), name,
-                      T(f"Catalog no. {cat}" if cat and cat[0].isdigit() else "Catalog no. —", 0.3, MUTED),
+                      fit(T(self.catalog_line(s), 0.3, MUTED), (PANEL[2] - PANEL[0] - 44) * K),
                       T(f"{s['side_up'].capitalize()} side up", 0.3, MUTED))
         info.arrange(DOWN, aligned_edge=LEFT, buff=0.16)
         info.move_to(S(0, 150), aligned_edge=UP).set_x(x_text, direction=LEFT)
@@ -158,6 +167,18 @@ class _StepScene(Scene):
         self.play(FadeIn(info, shift=0.1 * UP), run_time=0.6)
         if len(extras):
             self.play(FadeIn(extras), run_time=0.4)
+
+    @staticmethod
+    def catalog_line(s):
+        cat = s.get("catalog_no")
+        if cat and cat[0].isdigit():
+            return f"Catalog no. {cat}"
+        # an assembled unit (the balance complete): list its parts' numbers instead
+        part = partsfile.load(HERE).get(s.get("part_id") or s["swf"]["clip_name"], {})
+        nos = [c["catalog_no"] for c in part.get("components", [])]
+        if not nos:
+            return "Catalog no. —"
+        return "Catalog nos. " + ", ".join(nos)
 
     def follow_motion(self):
         """the SWF's own tween, phase by phase (Flash tweens are linear)"""
@@ -253,3 +274,82 @@ class AssemblyStep(_StepScene):
                 self.add(rest)
         self.wait(1.5)
         self.end_step()
+
+
+# ---- title card and end credits ----------------------------------------------------------------
+
+LIGHT, DIM, GILT = "#f0f0f0", "#9a9a9a", "#e5bd57"
+
+
+def credits_text():
+    import yaml
+    return yaml.safe_load(open(os.path.join(HERE, "credits.yaml"), encoding="utf-8"))
+
+
+def by_art(v):
+    return v.get(ART, v.get("simple")) if isinstance(v, dict) else v
+
+
+def full_frame(path):
+    img = ImageMobject(path)
+    img.height = config.frame_height
+    return img
+
+
+def fit(m, width):
+    if m.width > width:
+        m.scale_to_fit_width(width)
+    return m
+
+
+class TitleCard(Scene):
+    """the complete movement and the title; cross-fades into the first step's opening frame"""
+    def construct(self):
+        self.camera.background_color = BG
+        c = credits_text()
+        hero = ImageMobject(os.path.join(ASSETS, "hero.png"))
+        hero.height = 6.2
+        hero.move_to([-3.55, -0.1, 0])
+        text = VGroup(T(c["title"], 1.15, LIGHT, "BOLD"),
+                      T(c["sequence"][SEQ], 0.8, GILT, "MEDIUM"),
+                      T(_wrap(c["subtitle"], 34), 0.44, LIGHT),
+                      T(_wrap(by_art(c["note"]), 46), 0.3, DIM))
+        text.arrange(DOWN, aligned_edge=LEFT, buff=0.32)
+        text[3].shift(0.25 * DOWN)
+        fit(text, 6.0).move_to([3.35, 0, 0])
+        self.play(FadeIn(hero, scale=0.96), run_time=1.2)
+        self.play(LaggedStart(*[FadeIn(m, shift=0.15 * RIGHT) for m in text], lag_ratio=0.25), run_time=1.6)
+        self.wait(4.5)
+        if FIRST_FRAME and os.path.exists(FIRST_FRAME):
+            nxt = full_frame(FIRST_FRAME)
+            self.play(FadeOut(hero), FadeOut(text), FadeIn(nxt), run_time=1.2)
+            self.wait(1 / config.frame_rate)
+        else:
+            self.play(FadeOut(hero), FadeOut(text), run_time=1.0)
+
+
+class EndCredits(Scene):
+    """cross-fades out of the last step's final frame into the credits, then to black"""
+    def construct(self):
+        self.camera.background_color = BG
+        c = credits_text()
+        rows = VGroup()
+        for sec in c["credits"]:
+            block = VGroup(T(sec["heading"].upper(), 0.3, GILT, "MEDIUM"),
+                           *[T(line, 0.36, LIGHT) for line in sec["lines"]])
+            block.arrange(DOWN, buff=0.14)
+            rows.add(block)
+        rows.add(VGroup(*[T(line, 0.28, DIM) for line in _wrap(by_art(c["disclaimer"]), 70).split("\n")])
+                 .arrange(DOWN, buff=0.08))                # centered lines
+        rows.arrange(DOWN, buff=0.55)
+        fit(rows, 12.5).move_to([0, 0, 0])
+        if LAST_FRAME and os.path.exists(LAST_FRAME):
+            prev = full_frame(LAST_FRAME)
+            self.add(prev)
+            self.wait(0.4)
+            self.play(FadeOut(prev), run_time=1.0)
+        self.play(LaggedStart(*[FadeIn(m, shift=0.1 * UP) for m in rows], lag_ratio=0.3), run_time=1.8)
+        self.wait(7.0)
+        self.play(FadeOut(rows), run_time=1.2)
+        self.wait(0.5)
+
