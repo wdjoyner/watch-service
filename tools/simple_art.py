@@ -9,9 +9,18 @@ SwissLab stage coordinates, so they line up with the step data and the SWF's mot
     parts = SA.load('.')
     svg = SA.document(SA.scene(parts, ids), [x0, y0, x1, y1], '#ffffff')
 
-Automatic types: wheel, pinion, screw, jewel, balance, ring, stem.
-Interim types (until hand-made outlines exist): plate (a disc), bridge (rounded hull of
-the arbors and screws it holds), lever and spring (a capsule from the pivot).
+Automatic types: wheel, pinion, screw, jewel, balance, ring, stem, rotor, date_ring.
+Interim types (until hand-made outlines exist): plate (a disc, or a rounded box), bridge
+(rounded hull of the arbors and screws it holds), lever and spring (a capsule from the pivot).
+
+Types for automatic calibers with a date (2892-A2):
+  rotor      the oscillating weight: a half-disc (art.opening degrees) turning about
+             geom.center (the ball bearing), with a heavy rim; its radius and the direction
+             it points are fitted to the part's measured bounding box. see_through: true
+             draws it translucent (the automatic device on the movement)
+  date_ring  the date indicator: a flat ring (art.inner = inner radius / outer radius) with
+             art.teeth internal teeth and art.days tick marks where the numerals go
+  wheel with art.pawls: a reversing wheel or reverser, with that many pawls around the hub
 """
 import json
 import math
@@ -162,6 +171,17 @@ def screw_head(x, y, r, slot_deg=45):
             el(circle_path(x, y, 0.80 * r), BLUE) + el(slot, BLUE_SLOT))
 
 
+def pawls(cx, cy, R, n):
+    """n hooked pawls around the hub of a reversing wheel / reverser (inside the tooth ring)"""
+    out = el(circle_path(cx, cy, 0.62 * R), 'none', GILT_EDGE, 0.35)
+    for k in range(n):
+        a = 2 * math.pi * k / n
+        pts = [pol(cx, cy, 0.22 * R, a - 0.25), pol(cx, cy, 0.50 * R, a + 0.15), pol(cx, cy, 0.56 * R, a + 0.42),
+               pol(cx, cy, 0.46 * R, a + 0.38), pol(cx, cy, 0.24 * R, a + 0.12)]
+        out += el(path(pts), STEEL, STEEL_EDGE, 0.3)
+    return out + el(circle_path(cx, cy, 0.2 * R), STEEL, STEEL_EDGE, 0.35)
+
+
 def toothed(cx, cy, R, art, fill=GILT, edge=GILT_EDGE):
     teeth, arms, form = art.get('teeth', 0), art.get('arms', 0), art.get('tooth_form', 'normal')
     d = [path(gear_points(cx, cy, R, teeth, form))]
@@ -173,7 +193,9 @@ def toothed(cx, cy, R, art, fill=GILT, edge=GILT_EDGE):
     if art.get('hole'):
         d.append(circle_path(cx, cy, art['hole'] * R))
     out = shadowed(' '.join(d), fill, edge, rule='evenodd')
-    if art.get('drum'):                      # barrel: cover edge and arbor
+    if art.get('pawls'):
+        out += pawls(cx, cy, R, art['pawls'])
+    elif art.get('drum'):                    # barrel: cover edge and arbor
         out += el(circle_path(cx, cy, 0.80 * R), 'none', edge, 0.4)
         out += el(circle_path(cx, cy, 0.18 * R), STEEL, STEEL_EDGE)
     elif arms:                               # pinion / arbor at the hub
@@ -401,6 +423,16 @@ def draw_bridge(parts, pid):
 def draw_plate(parts, pid):
     g, art = parts[pid]['geom'], parts[pid].get('art', {})
     x0, y0, x1, y1 = g['bbox']
+    if art.get('outline') == 'box':          # a unit's base plate seen by itself (frame, barrel bridge):
+        c = art.get('chamfer', 0.22)         # its bounding box with the corners cut off
+        w, h = x1 - x0 - 8, y1 - y0 - 8
+        a, b = c * w, c * h
+        X0, Y0, X1, Y1 = x0 + 4, y0 + 4, x1 - 4, y1 - 4
+        v = [(X0 + a, Y0), (X1 - a, Y0), (X1, Y0 + b), (X1, Y1 - b), (X1 - a, Y1), (X0 + a, Y1), (X0, Y1 - b), (X0, Y0 + b)]
+        out = shadowed(rounded_path(v, 10.0), PLATE, PLATE_EDGE)
+        for j in art.get('jewels', []):
+            out += jewel(*center(parts, j), 4.5)
+        return out
     cx, cy, r = (x0 + x1) / 2, (y0 + y1) / 2, min(x1 - x0, y1 - y0) / 2
     out = el(circle_path(cx, cy, r, 180), PLATE, PLATE_EDGE, 0.8)
     out += el(circle_path(cx, cy, r - 5, 180), 'none', PLATE_EDGE, 0.3)
@@ -452,9 +484,67 @@ def draw_balance(parts, pid):
     return out
 
 
+def fit_sector(cx, cy, bbox, opening):
+    """radius and middle direction of a sector about (cx, cy) whose bounding box best matches
+    the measured one"""
+    best = None
+    half = math.radians(opening) / 2
+    for R in range(40, 260, 2):
+        for deg in range(0, 360, 3):
+            m = math.radians(deg)
+            angs = [m - half + 2 * half * k / 24 for k in range(25)]
+            xs = [cx] + [cx + R * math.cos(a) for a in angs]
+            ys = [cy] + [cy + R * math.sin(a) for a in angs]
+            err = (abs(min(xs) - bbox[0]) + abs(min(ys) - bbox[1]) + abs(max(xs) - bbox[2]) + abs(max(ys) - bbox[3]))
+            if best is None or err < best[0]:
+                best = (err, R, m)
+    return best[1], best[2]
+
+
+def draw_rotor(parts, pid):
+    """oscillating weight: a half-disc about the ball bearing, with a heavy rim (the weight
+    segment) and the bearing's rings at the center"""
+    g, art = parts[pid]['geom'], parts[pid].get('art', {})
+    cx, cy = g.get('center', g['pivot'])
+    opening = art.get('opening', 180)
+    R, m = fit_sector(cx, cy, g['bbox'], opening)
+    half = math.radians(opening) / 2
+    arc = lambda r, n=48: [pol(cx, cy, r, m - half + 2 * half * k / n) for k in range(n + 1)]
+    body = path(arc(R) + arc(0.14 * R)[::-1])
+    rim = path(arc(R) + arc(0.80 * R)[::-1])
+    extra = ' fill-opacity="0.55"' if art.get('see_through') else ''
+    out = (el(body, SHADOW, extra=' fill-opacity="0.12" transform="translate(%g,%g)"' % SHADOW_OFF) +
+           el(body, STEEL, STEEL_EDGE, 0.6, extra=extra) + el(rim, '#7d838c', STEEL_EDGE, 0.5, extra=extra))
+    for f, fill in ((0.17, CHATON), (0.12, STEEL), (0.05, RUBY)):        # ball bearing
+        out += el(circle_path(cx, cy, f * R), fill, STEEL_EDGE, 0.4)
+    return out
+
+
+def draw_date_ring(parts, pid):
+    """date indicator: a flat ring with internal teeth and a tick where each date's numeral is"""
+    g, art = parts[pid]['geom'], parts[pid].get('art', {})
+    x0, y0, x1, y1 = g['bbox']
+    cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
+    R = min(x1 - x0, y1 - y0) / 2 - 1
+    ri = art.get('inner', 0.84) * R
+    n = art.get('teeth', 31)
+    teeth = []                                # internal teeth point inward from the inner edge
+    for i in range(n):
+        t = 2 * math.pi * i / n
+        p = 2 * math.pi / n
+        teeth += [pol(cx, cy, ri, t - 0.5 * p), pol(cx, cy, ri - 0.035 * R, t), pol(cx, cy, ri, t + 0.5 * p)]
+    d = circle_path(cx, cy, R, 180) + ' ' + path(teeth)
+    out = shadowed(d, '#f4f4f2', '#7a7a74', rule='evenodd')
+    for k in range(art.get('days', 31)):      # numerals omitted: a short tick for each date
+        a = 2 * math.pi * k / art.get('days', 31) - math.pi / 2
+        out += el('M%.2f,%.2f L%.2f,%.2f' % (pol(cx, cy, 0.9 * R, a) + pol(cx, cy, 0.97 * R, a)), 'none', '#30353d', 0.9)
+    return out
+
+
 DRAW = {'wheel': draw_wheel, 'pinion': draw_pinion, 'screw': draw_screw, 'ring': draw_ring,
         'jewel': draw_jewel, 'bridge': draw_bridge, 'plate': draw_plate, 'lever': draw_lever,
-        'spring': draw_spring, 'stem': draw_stem, 'balance': draw_balance}
+        'spring': draw_spring, 'stem': draw_stem, 'balance': draw_balance,
+        'rotor': draw_rotor, 'date_ring': draw_date_ring}
 
 
 def part(parts, pid):
@@ -472,7 +562,10 @@ def scene(parts, ids, side):
 
 
 def on_face(parts, pid, side):
-    return parts[pid]['geom']['face'] in (side, 'both')
+    """is the part seen with `side` up? ("both": plate and stem, seen from the dial and the
+    bridge side, but not in the view of a unit taken off the movement)"""
+    f = parts[pid]['geom']['face']
+    return f == side or (f == 'both' and side in ('dial', 'bridge'))
 
 
 def document(body, bbox, bg=None):

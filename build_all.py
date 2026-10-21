@@ -3,8 +3,10 @@
     python build_all.py --disassembly --assembly                         # generated art, no SWF needed
     python build_all.py --art original --disassembly D.swf --assembly A.swf   # ETA's drawings: private use only
     python build_all.py --disassembly -q h                                # 1080p
+    python build_all.py --caliber 2892a2 --disassembly                    # another caliber
 
 Options:
+  --caliber X  which caliber (a folder under calibers/, default 6497)
   --art simple|original   simple (default): generated drawings, safe to publish.
                           original: ETA/tica's drawings from your SWF (give its path after
                           --disassembly / --assembly); never publish these videos.
@@ -13,9 +15,9 @@ Options:
   --skip-prep  reuse the images already in assets/<art>/
   --no-titles  leave out the title card and the end credits (their text is in credits.yaml)
 
-Writes renders/<art>/<sequence>_<quality>/stepNN.mp4 and 6497_<sequence>_<art>.mp4 in this
-folder. A step is rendered again only when something it is made from has changed (the scene
-code, that step's data, or its prepared images, e.g. after editing parts.yaml); otherwise the
+Writes renders/<caliber>/<art>/<sequence>_<quality>/stepNN.mp4 and <caliber>_<sequence>_<art>.mp4
+in this folder. A step is rendered again only when something it is made from has changed (the scene
+code, that step's data, or its prepared images, e.g. after editing the caliber's parts.yaml); otherwise the
 clip from last time is reused. Delete renders/ to force a full rebuild.
 """
 import argparse
@@ -28,6 +30,8 @@ import subprocess
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.join(HERE, "tools"))
+import caliber  # noqa: E402
 QUALITY = {"l": ("-ql", "480p15"), "m": ("-qm", "720p30"), "h": ("-qh", "1080p60")}
 SEQ = {"disassembly": ("steps.json", "DisassemblyStep", []),
        "assembly": ("assembly.json", "AssemblyStep", ["--assembly"])}
@@ -43,22 +47,23 @@ def parse_steps(spec, n):
     return [k for k in out if 1 <= k <= n]
 
 
-def fingerprint(step, prefix, k, art):
+def fingerprint(step, prefix, k, art, cal):
     """hash of everything a step's clip is made from"""
     h = hashlib.sha256()
     h.update(open(os.path.join(HERE, "swisslab_step.py"), "rb").read())
+    h.update(open(os.path.join(cal, "caliber.yaml"), "rb").read())
     h.update(json.dumps(step, sort_keys=True).encode())
-    for f in sorted(glob.glob(os.path.join(HERE, "assets", art, f"{prefix}{k:02d}_*"))):
+    for f in sorted(glob.glob(os.path.join(cal, "assets", art, f"{prefix}{k:02d}_*"))):
         h.update(os.path.basename(f).encode())
         h.update(open(f, "rb").read())
     return h.hexdigest()
 
 
-def card_fingerprint(seq, art, frame):
+def card_fingerprint(seq, art, frame, cal):
     """hash of everything the title card / end credits are made from"""
     h = hashlib.sha256((seq + art).encode())
-    for f in ("swisslab_step.py", "credits.yaml", os.path.join("assets", art, "hero.png"), frame):
-        f = os.path.join(HERE, f)
+    for f in (os.path.join(HERE, "swisslab_step.py"), os.path.join(cal, "credits.yaml"),
+              os.path.join(cal, "assets", art, "hero.png"), frame):
         if os.path.exists(f):
             h.update(open(f, "rb").read())
     return h.hexdigest()
@@ -74,17 +79,19 @@ def run(cmd, env=None):
 
 def build(seq, swf, args):
     data_file, scene, prep_flag = SEQ[seq]
-    steps = json.load(open(os.path.join(HERE, data_file)))["steps"]
+    cal = caliber.folder(args.caliber)
+    slug = caliber.load(cal)["slug"]
+    steps = json.load(open(os.path.join(cal, data_file)))["steps"]
     todo = parse_steps(args.steps, len(steps))
     qflag, qdir = QUALITY[args.q]
-    outdir = os.path.join(HERE, "renders", args.art, f"{seq}_{qdir}")
+    outdir = os.path.join(HERE, "renders", args.caliber, args.art, f"{seq}_{qdir}")
     os.makedirs(outdir, exist_ok=True)
 
     if not args.skip_prep:
         print(f"[{seq}] preparing {args.art} images for {len(todo)} steps ...")
         src = [swf] if args.art == "original" else []
         run([sys.executable, "-I", os.path.join("tools", "prep_assets.py"), *prep_flag, "--art", args.art,
-             *src, "."] + [str(k) for k in todo])
+             *src, os.path.relpath(cal, HERE)] + [str(k) for k in todo])
 
     media = os.path.join(HERE, "media")
 
@@ -95,8 +102,8 @@ def build(seq, swf, args):
         if os.path.exists(clip) and old == key:
             return False
         print(f"[{seq}] rendering {label}")
-        env = dict(os.environ, CONTINUOUS="1", ART=args.art, SEQ=seq, **extra_env)
-        name = f"{seq}_{args.art}_{os.path.basename(clip)[:-4]}"
+        env = dict(os.environ, CONTINUOUS="1", ART=args.art, SEQ=seq, CALIBER=args.caliber, **extra_env)
+        name = f"{args.caliber}_{seq}_{args.art}_{os.path.basename(clip)[:-4]}"
         run([sys.executable, "-m", "manim", qflag, "--disable_caching", "--media_dir", media,
              "-o", name, "swisslab_step.py", scene_name], env=env)
         shutil.move(os.path.join(media, "videos", "swisslab_step", qdir, f"{name}.mp4"), clip)
@@ -107,7 +114,7 @@ def build(seq, swf, args):
     clips, redone = [], 0
     for k in todo:
         clip = os.path.join(outdir, f"step{k:02d}.mp4")
-        redone += render(scene, clip, fingerprint(steps[k - 1], prefix, k, args.art), {"STEP": str(k)},
+        redone += render(scene, clip, fingerprint(steps[k - 1], prefix, k, args.art, cal), {"STEP": str(k)},
                          f"step {k}/{len(steps)}: {steps[k - 1]['part']}")
         clips.append(clip)
     print(f"[{seq}] {redone} of {len(todo)} steps rendered, {len(todo) - redone} unchanged")
@@ -121,7 +128,7 @@ def build(seq, swf, args):
         for scene_name, stem, frame_var, frame in (("TitleCard", "title", "FIRST_FRAME", first),
                                                    ("EndCredits", "credits", "LAST_FRAME", last)):
             clip = os.path.join(outdir, f"{stem}.mp4")
-            render(scene_name, clip, card_fingerprint(seq, args.art, frame), {frame_var: frame},
+            render(scene_name, clip, card_fingerprint(seq, args.art, frame, cal), {frame_var: frame},
                    "title card" if stem == "title" else "end credits")
             cards.append(clip)
         clips = [cards[0]] + clips + [cards[1]]
@@ -129,7 +136,7 @@ def build(seq, swf, args):
     listfile = os.path.join(outdir, "clips.txt")
     with open(listfile, "w") as f:
         f.writelines(f"file '{c}'\n" for c in clips)
-    final = os.path.join(HERE, f"6497_{seq}_{args.art}{'' if len(todo) == len(steps) else '_partial'}.mp4")
+    final = os.path.join(HERE, f"{slug}_{seq}_{args.art}{'' if len(todo) == len(steps) else '_partial'}.mp4")
     run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", listfile, "-c", "copy", final])
     print(f"[{seq}] wrote {final}")
 
@@ -140,6 +147,7 @@ def main():
                     help="build the disassembly video (the SWF path is needed only with --art original)")
     ap.add_argument("--assembly", metavar="SWF", nargs="?", const="", default=None,
                     help="build the assembly video (the SWF path is needed only with --art original)")
+    ap.add_argument("--caliber", default=caliber.DEFAULT, choices=caliber.available())
     ap.add_argument("--art", choices=("simple", "original"), default="simple")
     ap.add_argument("-q", choices="lmh", default="m")
     ap.add_argument("--steps")

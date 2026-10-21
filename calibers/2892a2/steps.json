@@ -1,0 +1,6976 @@
+{
+ "meta": {
+  "source": "screen recording of ETA SwissLab (idea and animation: tica international): https://www.youtube.com/watch?v=ficKWEWxPDo",
+  "stage_px": [
+   800,
+   600
+  ],
+  "fps": 12,
+  "coordinates": "measured in the recording, movement window mapped onto SwissLab window [18, 122, 432, 512]",
+  "video_window_px": [
+   82,
+   70,
+   341.5,
+   315
+  ]
+ },
+ "steps": [
+  {
+   "step": 1,
+   "code": "A01",
+   "part": "Hour wheel, assembled",
+   "part_id": "MC31_046_06",
+   "catalog_no": "31.046.06",
+   "names": {
+    "en": "Hour wheel, assembled",
+    "fr": "Roue des heures, montée",
+    "de": "Stundenrad, montiert"
+   },
+   "tc": {
+    "item": "255/1",
+    "catalog_no": "31.046"
+   },
+   "side_up": "dial",
+   "bbox_stage_px": [
+    183.9,
+    286.0,
+    255.7,
+    352.8
+   ],
+   "pointer_stage_px": [
+    199.9,
+    327.3
+   ],
+   "path": [
+    [
+     218.3,
+     318.0,
+     1.0
+    ],
+    [
+     262.6,
+     325.0,
+     1.068
+    ],
+    [
+     306.7,
+     332.8,
+     1.136
+    ],
+    [
+     350.8,
+     341.0,
+     1.216
+    ],
+    [
+     440.8,
+     357.1,
+     1.318
+    ],
+    [
+     526.2,
+     372.0,
+     1.431
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      218.3,
+      318.0,
+      1.0
+     ],
+     "to": [
+      526.2,
+      372.0,
+      1.431
+     ],
+     "frames": 5
+    }
+   ],
+   "video": {
+    "t": [
+     4.25,
+     12.0
+    ],
+    "motion_start_s": 9.92,
+    "bbox_measured_stage_px": [
+     183.9,
+     286.0,
+     255.7,
+     352.8
+    ]
+   }
+  },
+  {
+   "step": 2,
+   "code": "A02",
+   "part": "Screw for additional indicator maintaining small plate",
+   "part_id": "MC53_251_01",
+   "catalog_no": "53.251.01",
+   "names": {
+    "en": "Screw for additional indicator maintaining small plate",
+    "fr": "Vis de plaquette supplémentaire de maintien de l'indicateur",
+    "de": "Schraube für Zusatzhalteplättchen für Anzeige"
+   },
+   "tc": {
+    "item": "52536"
+   },
+   "side_up": "dial",
+   "bbox_stage_px": [
+    172.8,
+    410.1,
+    187.1,
+    422.9
+   ],
+   "pointer_stage_px": [
+    180.7,
+    389.4
+   ],
+   "path": [
+    [
+     179.2,
+     415.0,
+     1.0
+    ],
+    [
+     207.8,
+     411.6,
+     1.057
+    ],
+    [
+     237.3,
+     410.4,
+     1.064
+    ],
+    [
+     294.8,
+     405.7,
+     1.292
+    ],
+    [
+     294.8,
+     405.7,
+     1.292
+    ],
+    [
+     351.2,
+     399.3,
+     1.409
+    ],
+    [
+     409.3,
+     395.2,
+     1.527
+    ],
+    [
+     447.4,
+     392.6,
+     0.867
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      179.2,
+      415.0,
+      1.0
+     ],
+     "to": [
+      447.4,
+      392.6,
+      0.867
+     ],
+     "frames": 7
+    }
+   ],
+   "video": {
+    "t": [
+     12.0,
+     18.75
+    ],
+    "motion_start_s": 16.33,
+    "bbox_measured_stage_px": [
+     172.8,
+     410.1,
+     187.1,
+     422.9
+    ]
+   }
+  },
+  {
+   "step": 3,
+   "code": "A03",
+   "part": "Additional indicator maintaining small plate",
+   "part_id": "MC53_251",
+   "catalog_no": "53.251",
+   "names": {
+    "en": "Additional indicator maintaining small plate",
+    "fr": "Plaquette supplémentaire de maintien de l'indicateur",
+    "de": "Zusatzhalteplättchen für Anzeige"
+   },
+   "tc": {
+    "item": "2536/1"
+   },
+   "side_up": "dial",
+   "bbox_stage_px": [
+    158.4,
+    386.2,
+    236.6,
+    438.8
+   ],
+   "pointer_stage_px": [
+    206.3,
+    378.3
+   ],
+   "path": [
+    [
+     195.0,
+     420.2,
+     1.0
+    ],
+    [
+     230.8,
+     413.0,
+     0.857
+    ],
+    [
+     261.3,
+     409.6,
+     0.719
+    ],
+    [
+     291.5,
+     406.2,
+     0.629
+    ],
+    [
+     346.6,
+     399.0,
+     0.677
+    ],
+    [
+     398.6,
+     389.4,
+     0.714
+    ],
+    [
+     434.7,
+     389.0,
+     0.754
+    ],
+    [
+     469.1,
+     379.2,
+     0.768
+    ],
+    [
+     496.2,
+     380.6,
+     0.755
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      195.0,
+      420.2,
+      1.0
+     ],
+     "to": [
+      496.2,
+      380.6,
+      0.755
+     ],
+     "frames": 8
+    }
+   ],
+   "video": {
+    "t": [
+     18.75,
+     24.0
+    ],
+    "motion_start_s": 21.67,
+    "bbox_measured_stage_px": [
+     156.8,
+     387.8,
+     314.7,
+     438.8
+    ]
+   }
+  },
+  {
+   "step": 4,
+   "code": "A04",
+   "part": "Screw for date jumper maintaining plate",
+   "part_id": "MC13_111_01",
+   "catalog_no": "13.111.01",
+   "names": {
+    "en": "Screw for date jumper maintaining plate",
+    "fr": "Vis de plaque de maintien du sautoir de quantième",
+    "de": "Schraube für Halteplatte für Datumraste"
+   },
+   "tc": {
+    "item": "52595"
+   },
+   "side_up": "dial",
+   "bbox_stage_px": [
+    115.3,
+    309.8,
+    132.9,
+    324.2
+   ],
+   "pointer_stage_px": [
+    123.3,
+    289.1
+   ],
+   "path": [
+    [
+     122.7,
+     315.2,
+     1.0
+    ],
+    [
+     173.4,
+     322.5,
+     1.095
+    ],
+    [
+     199.7,
+     328.3,
+     1.245
+    ],
+    [
+     252.6,
+     333.4,
+     1.344
+    ],
+    [
+     276.6,
+     339.4,
+     1.444
+    ],
+    [
+     330.3,
+     345.2,
+     1.444
+    ],
+    [
+     329.9,
+     345.0,
+     1.444
+    ],
+    [
+     380.0,
+     353.8,
+     1.694
+    ],
+    [
+     422.4,
+     363.5,
+     1.322
+    ],
+    [
+     457.9,
+     366.0,
+     1.794
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      122.7,
+      315.2,
+      1.0
+     ],
+     "to": [
+      330.3,
+      345.2,
+      1.444
+     ],
+     "frames": 5
+    },
+    {
+     "from": [
+      330.3,
+      345.2,
+      1.444
+     ],
+     "to": [
+      329.9,
+      345.0,
+      1.444
+     ],
+     "frames": 1
+    },
+    {
+     "from": [
+      329.9,
+      345.0,
+      1.444
+     ],
+     "to": [
+      457.9,
+      366.0,
+      1.794
+     ],
+     "frames": 3
+    }
+   ],
+   "video": {
+    "t": [
+     24.0,
+     29.75
+    ],
+    "motion_start_s": 27.17,
+    "bbox_measured_stage_px": [
+     115.3,
+     309.8,
+     132.9,
+     324.2
+    ]
+   }
+  },
+  {
+   "step": 5,
+   "code": "A05",
+   "part": "Date jumper maintaining plate",
+   "part_id": "MC13_111",
+   "catalog_no": "13.111",
+   "names": {
+    "en": "Date jumper maintaining plate",
+    "fr": "Plaque de maintien du sautoir de quantième",
+    "de": "Halteplatte für Datumraste"
+   },
+   "tc": {
+    "item": "2595"
+   },
+   "side_up": "dial",
+   "bbox_stage_px": [
+    97.8,
+    254.1,
+    147.2,
+    348.0
+   ],
+   "pointer_stage_px": [
+    211.0,
+    263.7
+   ],
+   "path": [
+    [
+     115.9,
+     306.9,
+     1.0
+    ],
+    [
+     142.4,
+     303.8,
+     1.022
+    ],
+    [
+     178.6,
+     300.9,
+     0.974
+    ],
+    [
+     226.8,
+     319.7,
+     1.128
+    ],
+    [
+     249.8,
+     324.5,
+     1.003
+    ],
+    [
+     301.4,
+     335.6,
+     1.189
+    ],
+    [
+     330.1,
+     345.8,
+     1.23
+    ],
+    [
+     380.9,
+     348.3,
+     1.297
+    ],
+    [
+     405.6,
+     350.8,
+     1.263
+    ],
+    [
+     464.2,
+     356.0,
+     1.346
+    ],
+    [
+     464.2,
+     356.0,
+     1.346
+    ],
+    [
+     514.2,
+     365.4,
+     1.431
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      115.9,
+      306.9,
+      1.0
+     ],
+     "to": [
+      178.6,
+      300.9,
+      0.974
+     ],
+     "frames": 2
+    },
+    {
+     "from": [
+      178.6,
+      300.9,
+      0.974
+     ],
+     "to": [
+      514.2,
+      365.4,
+      1.431
+     ],
+     "frames": 9
+    }
+   ],
+   "video": {
+    "t": [
+     29.75,
+     35.0
+    ],
+    "motion_start_s": 32.25,
+    "bbox_measured_stage_px": [
+     97.8,
+     254.1,
+     147.2,
+     348.0
+    ]
+   }
+  },
+  {
+   "step": 6,
+   "code": "A06",
+   "part": "Screw for minute train bridge",
+   "part_id": "MC10_062_01",
+   "catalog_no": "10.062.01",
+   "names": {
+    "en": "Screw for minute train bridge",
+    "fr": "Vis de pont du rouage de minuterie",
+    "de": "Schraube für Wechselradbrücke"
+   },
+   "tc": {
+    "item": "5462"
+   },
+   "side_up": "dial",
+   "bbox_stage_px": [
+    260.5,
+    246.2,
+    278.0,
+    262.1
+   ],
+   "pointer_stage_px": [
+    266.9,
+    227.1
+   ],
+   "path": [
+    [
+     268.0,
+     253.2,
+     1.0
+    ],
+    [
+     285.4,
+     258.9,
+     1.042
+    ],
+    [
+     320.4,
+     272.5,
+     1.133
+    ],
+    [
+     339.6,
+     278.9,
+     1.268
+    ],
+    [
+     358.0,
+     284.7,
+     1.271
+    ],
+    [
+     394.3,
+     297.9,
+     1.361
+    ],
+    [
+     423.7,
+     311.1,
+     0.945
+    ],
+    [
+     452.1,
+     317.2,
+     1.296
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      268.0,
+      253.2,
+      1.0
+     ],
+     "to": [
+      452.1,
+      317.2,
+      1.296
+     ],
+     "frames": 7
+    }
+   ],
+   "video": {
+    "t": [
+     35.0,
+     40.25
+    ],
+    "motion_start_s": 37.75,
+    "bbox_measured_stage_px": [
+     260.5,
+     246.2,
+     278.0,
+     262.1
+    ]
+   }
+  },
+  {
+   "step": 7,
+   "code": "A07",
+   "part": "Minute train bridge",
+   "part_id": "MC10_062",
+   "catalog_no": "10.062",
+   "names": {
+    "en": "Minute train bridge",
+    "fr": "Pont du rouage de minuterie",
+    "de": "Wechselradbrücke"
+   },
+   "tc": {
+    "item": "462"
+   },
+   "side_up": "dial",
+   "bbox_stage_px": [
+    230.2,
+    217.5,
+    327.5,
+    381.5
+   ],
+   "pointer_stage_px": [
+    266.9,
+    220.7
+   ],
+   "path": [
+    [
+     271.8,
+     287.2,
+     1.0
+    ],
+    [
+     271.8,
+     284.5,
+     0.981
+    ],
+    [
+     271.8,
+     281.7,
+     0.968
+    ],
+    [
+     272.0,
+     279.0,
+     0.972
+    ],
+    [
+     272.8,
+     272.5,
+     0.966
+    ],
+    [
+     306.8,
+     276.4,
+     0.931
+    ],
+    [
+     336.1,
+     286.9,
+     0.931
+    ],
+    [
+     360.9,
+     293.2,
+     0.899
+    ],
+    [
+     387.4,
+     301.4,
+     0.919
+    ],
+    [
+     447.6,
+     319.2,
+     0.866
+    ],
+    [
+     474.7,
+     326.3,
+     0.902
+    ],
+    [
+     528.1,
+     342.9,
+     0.938
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      271.8,
+      287.2,
+      1.0
+     ],
+     "to": [
+      272.8,
+      272.5,
+      0.966
+     ],
+     "frames": 4
+    },
+    {
+     "from": [
+      272.8,
+      272.5,
+      0.966
+     ],
+     "to": [
+      528.1,
+      342.9,
+      0.938
+     ],
+     "frames": 7
+    }
+   ],
+   "video": {
+    "t": [
+     40.25,
+     45.5
+    ],
+    "motion_start_s": 42.83,
+    "bbox_measured_stage_px": [
+     230.2,
+     208.0,
+     341.9,
+     383.1
+    ]
+   }
+  },
+  {
+   "step": 8,
+   "code": "A08",
+   "part": "Date indicator, for window opening at 3 o'clock",
+   "part_id": "MC91_440",
+   "catalog_no": "91.440",
+   "names": {
+    "en": "Date indicator, for window opening at 3 o'clock",
+    "fr": "Indicateur de quantième, pour ouverture de guichet à 3h",
+    "de": "Datumanzeiger, für Fenster auf 3 Uhr"
+   },
+   "tc": {
+    "item": "2557/1",
+    "catalog_no": "91.440.22"
+   },
+   "side_up": "dial",
+   "bbox_stage_px": [
+    54.7,
+    153.8,
+    384.9,
+    483.3
+   ],
+   "pointer_stage_px": [
+    185.5,
+    212.7
+   ],
+   "path": [
+    [
+     220.1,
+     321.5,
+     1.0
+    ],
+    [
+     279.9,
+     323.0,
+     0.872
+    ],
+    [
+     279.7,
+     323.3,
+     0.875
+    ],
+    [
+     355.4,
+     345.8,
+     0.8
+    ],
+    [
+     393.4,
+     356.6,
+     0.749
+    ],
+    [
+     452.0,
+     369.4,
+     0.696
+    ],
+    [
+     535.2,
+     378.4,
+     0.585
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      220.1,
+      321.5,
+      1.0
+     ],
+     "to": [
+      279.9,
+      323.0,
+      0.872
+     ],
+     "frames": 1
+    },
+    {
+     "from": [
+      279.9,
+      323.0,
+      0.872
+     ],
+     "to": [
+      279.7,
+      323.3,
+      0.875
+     ],
+     "frames": 1
+    },
+    {
+     "from": [
+      279.7,
+      323.3,
+      0.875
+     ],
+     "to": [
+      535.2,
+      378.4,
+      0.585
+     ],
+     "frames": 4
+    }
+   ],
+   "video": {
+    "t": [
+     45.5,
+     49.75
+    ],
+    "motion_start_s": 47.58,
+    "bbox_measured_stage_px": [
+     54.7,
+     153.8,
+     384.9,
+     483.3
+    ]
+   }
+  },
+  {
+   "step": 9,
+   "code": "A09",
+   "part": "Date jumper / Intermediate date wheel",
+   "part_id": "MC53_080",
+   "catalog_no": "53.080",
+   "names": {
+    "en": "Date jumper / Intermediate date wheel",
+    "fr": "Sautoir de quantième",
+    "de": "Datumraste"
+   },
+   "tc": {
+    "item": "2576"
+   },
+   "components": [
+    {
+     "item": "2576",
+     "catalog_no": "53.080",
+     "part": "Date jumper"
+    },
+    {
+     "item": "2543",
+     "catalog_no": "33.011",
+     "part": "Intermediate date wheel"
+    }
+   ],
+   "side_up": "dial",
+   "remark": "the date jumper and the intermediate date wheel (33.011) come off together",
+   "bbox_stage_px": [
+    101.0,
+    276.4,
+    188.7,
+    343.3
+   ],
+   "pointer_stage_px": [
+    148.8,
+    276.4
+   ],
+   "path": [
+    [
+     448.8,
+     366.4,
+     1.0
+    ],
+    [
+     457.2,
+     365.5,
+     0.909
+    ],
+    [
+     457.2,
+     365.5,
+     0.909
+    ],
+    [
+     483.7,
+     368.0,
+     0.818
+    ],
+    [
+     484.1,
+     368.2,
+     0.775
+    ],
+    [
+     515.0,
+     373.3,
+     0.679
+    ],
+    [
+     528.6,
+     374.3,
+     0.596
+    ],
+    [
+     534.5,
+     373.7,
+     0.555
+    ],
+    [
+     556.0,
+     376.0,
+     0.51
+    ],
+    [
+     571.3,
+     377.0,
+     0.428
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      448.8,
+      366.4,
+      1.0
+     ],
+     "to": [
+      483.7,
+      368.0,
+      0.818
+     ],
+     "frames": 3
+    },
+    {
+     "from": [
+      483.7,
+      368.0,
+      0.818
+     ],
+     "to": [
+      528.6,
+      374.3,
+      0.596
+     ],
+     "frames": 3
+    },
+    {
+     "from": [
+      528.6,
+      374.3,
+      0.596
+     ],
+     "to": [
+      571.3,
+      377.0,
+      0.428
+     ],
+     "frames": 3
+    }
+   ],
+   "video": {
+    "t": [
+     49.75,
+     55.25
+    ],
+    "motion_start_s": 51.83,
+    "bbox_measured_stage_px": [
+     101.0,
+     276.4,
+     188.7,
+     343.3
+    ]
+   }
+  },
+  {
+   "step": 10,
+   "code": "A10",
+   "part": "Date indicator driving wheel",
+   "part_id": "MC33_020",
+   "catalog_no": "33.020",
+   "names": {
+    "en": "Date indicator driving wheel",
+    "fr": "Roue entraîneuse de l'indicateur de quantième",
+    "de": "Datumanzeiger-Mitnehmerrad"
+   },
+   "tc": {
+    "item": "2556"
+   },
+   "side_up": "dial",
+   "bbox_stage_px": [
+    113.7,
+    212.7,
+    196.7,
+    298.7
+   ],
+   "pointer_stage_px": [
+    175.9,
+    254.1
+   ],
+   "path": [
+    [
+     154.0,
+     257.2,
+     1.0
+    ],
+    [
+     194.4,
+     268.1,
+     1.047
+    ],
+    [
+     212.4,
+     277.1,
+     1.066
+    ],
+    [
+     234.5,
+     283.5,
+     1.085
+    ],
+    [
+     285.7,
+     295.9,
+     1.141
+    ],
+    [
+     326.7,
+     304.0,
+     1.188
+    ],
+    [
+     326.7,
+     304.0,
+     1.188
+    ],
+    [
+     366.2,
+     314.1,
+     1.226
+    ],
+    [
+     410.7,
+     327.9,
+     1.283
+    ],
+    [
+     440.9,
+     335.0,
+     1.302
+    ],
+    [
+     470.8,
+     342.4,
+     1.311
+    ],
+    [
+     490.8,
+     346.8,
+     1.358
+    ],
+    [
+     502.9,
+     353.4,
+     1.368
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      154.0,
+      257.2,
+      1.0
+     ],
+     "to": [
+      502.9,
+      353.4,
+      1.368
+     ],
+     "frames": 12
+    }
+   ],
+   "video": {
+    "t": [
+     55.25,
+     60.0
+    ],
+    "motion_start_s": 57.17,
+    "bbox_measured_stage_px": [
+     113.7,
+     212.7,
+     196.7,
+     298.7
+    ]
+   }
+  },
+  {
+   "step": 11,
+   "code": "A11",
+   "part": "Minute wheel",
+   "part_id": "MC31_041",
+   "catalog_no": "31.041",
+   "names": {
+    "en": "Minute wheel",
+    "fr": "Roue de minuterie",
+    "de": "Wechselrad"
+   },
+   "tc": {
+    "item": "260"
+   },
+   "side_up": "dial",
+   "bbox_stage_px": [
+    222.2,
+    268.4,
+    281.2,
+    322.6
+   ],
+   "pointer_stage_px": [
+    250.9,
+    252.5
+   ],
+   "path": [
+    [
+     249.6,
+     294.8,
+     1.0
+    ],
+    [
+     271.4,
+     299.3,
+     1.055
+    ],
+    [
+     291.8,
+     304.8,
+     1.055
+    ],
+    [
+     335.0,
+     315.5,
+     1.098
+    ],
+    [
+     353.1,
+     318.8,
+     1.168
+    ],
+    [
+     398.6,
+     332.3,
+     1.169
+    ],
+    [
+     415.6,
+     338.1,
+     1.281
+    ],
+    [
+     470.4,
+     348.9,
+     1.194
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      249.6,
+      294.8,
+      1.0
+     ],
+     "to": [
+      470.4,
+      348.9,
+      1.194
+     ],
+     "frames": 7
+    }
+   ],
+   "video": {
+    "t": [
+     60.0,
+     64.75
+    ],
+    "motion_start_s": 62.25,
+    "bbox_measured_stage_px": [
+     222.2,
+     268.4,
+     281.2,
+     322.6
+    ]
+   }
+  },
+  {
+   "step": 12,
+   "code": "A12",
+   "part": "Cannon pinion with driving wheel",
+   "part_id": "MC31_083",
+   "catalog_no": "31.083",
+   "names": {
+    "en": "Cannon pinion with driving wheel",
+    "fr": "Chaussée avec roue entraîneuse",
+    "de": "Minutenrohr mit Mitnehmerrad"
+   },
+   "tc": {
+    "item": "242"
+   },
+   "side_up": "dial",
+   "bbox_stage_px": [
+    182.3,
+    284.4,
+    257.3,
+    356.0
+   ],
+   "pointer_stage_px": [
+    220.6,
+    268.4
+   ],
+   "path": [
+    [
+     220.0,
+     322.3,
+     1.0
+    ],
+    [
+     256.2,
+     327.3,
+     1.065
+    ],
+    [
+     293.4,
+     332.4,
+     1.087
+    ],
+    [
+     313.5,
+     336.5,
+     1.13
+    ],
+    [
+     336.5,
+     345.9,
+     1.163
+    ],
+    [
+     360.6,
+     349.3,
+     1.185
+    ],
+    [
+     382.1,
+     352.7,
+     1.217
+    ],
+    [
+     414.7,
+     358.3,
+     1.25
+    ],
+    [
+     460.4,
+     367.7,
+     1.326
+    ],
+    [
+     481.9,
+     372.3,
+     1.348
+    ],
+    [
+     515.3,
+     379.5,
+     1.402
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      220.0,
+      322.3,
+      1.0
+     ],
+     "to": [
+      515.3,
+      379.5,
+      1.402
+     ],
+     "frames": 10
+    }
+   ],
+   "video": {
+    "t": [
+     64.75,
+     69.75
+    ],
+    "motion_start_s": 67.25,
+    "bbox_measured_stage_px": [
+     182.3,
+     284.4,
+     257.3,
+     356.0
+    ]
+   }
+  },
+  {
+   "step": 13,
+   "code": "A13",
+   "part": "Setting wheel",
+   "part_id": "MC31_100",
+   "catalog_no": "31.100",
+   "names": {
+    "en": "Setting wheel",
+    "fr": "Renvoi",
+    "de": "Zeigerstellrad"
+   },
+   "tc": {
+    "item": "450"
+   },
+   "side_up": "dial",
+   "bbox_stage_px": [
+    278.0,
+    308.2,
+    294.0,
+    330.5
+   ],
+   "pointer_stage_px": [
+    258.9,
+    317.8
+   ],
+   "path": [
+    [
+     284.9,
+     320.1,
+     1.0
+    ],
+    [
+     303.6,
+     323.1,
+     0.986
+    ],
+    [
+     319.2,
+     324.8,
+     1.193
+    ],
+    [
+     355.5,
+     333.4,
+     1.193
+    ],
+    [
+     355.5,
+     333.4,
+     1.193
+    ],
+    [
+     388.8,
+     339.1,
+     1.357
+    ],
+    [
+     420.0,
+     346.0,
+     1.209
+    ],
+    [
+     447.1,
+     348.7,
+     1.362
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      284.9,
+      320.1,
+      1.0
+     ],
+     "to": [
+      447.1,
+      348.7,
+      1.362
+     ],
+     "frames": 7
+    }
+   ],
+   "video": {
+    "t": [
+     69.75,
+     75.25
+    ],
+    "motion_start_s": 72.58,
+    "bbox_measured_stage_px": [
+     278.0,
+     308.2,
+     294.0,
+     330.5
+    ]
+   }
+  },
+  {
+   "step": 14,
+   "code": "A14",
+   "part": "Intermediate setting wheel",
+   "part_id": "MC31_101",
+   "catalog_no": "31.101",
+   "names": {
+    "en": "Intermediate setting wheel",
+    "fr": "Renvoi intermédiaire",
+    "de": "Zwischen-Zeigerstellrad"
+   },
+   "tc": {
+    "item": "453"
+   },
+   "side_up": "dial",
+   "bbox_stage_px": [
+    270.1,
+    333.7,
+    305.2,
+    362.4
+   ],
+   "pointer_stage_px": [
+    286.0,
+    311.4
+   ],
+   "path": [
+    [
+     286.1,
+     348.2,
+     1.0
+    ],
+    [
+     304.3,
+     348.9,
+     1.095
+    ],
+    [
+     304.3,
+     348.9,
+     1.095
+    ],
+    [
+     339.5,
+     355.1,
+     1.095
+    ],
+    [
+     355.7,
+     355.2,
+     1.12
+    ],
+    [
+     373.4,
+     357.4,
+     1.219
+    ],
+    [
+     407.8,
+     359.9,
+     1.269
+    ],
+    [
+     445.0,
+     363.1,
+     1.271
+    ],
+    [
+     445.0,
+     363.1,
+     1.271
+    ],
+    [
+     475.5,
+     368.0,
+     1.368
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      286.1,
+      348.2,
+      1.0
+     ],
+     "to": [
+      475.5,
+      368.0,
+      1.368
+     ],
+     "frames": 9
+    }
+   ],
+   "video": {
+    "t": [
+     75.25,
+     79.75
+    ],
+    "motion_start_s": 77.08,
+    "bbox_measured_stage_px": [
+     270.1,
+     333.7,
+     305.2,
+     362.4
+    ]
+   }
+  },
+  {
+   "step": 15,
+   "code": "A15",
+   "part": "Date corrector",
+   "part_id": "MC53_200",
+   "catalog_no": "53.200",
+   "names": {
+    "en": "Date corrector",
+    "fr": "Correcteur de quantième",
+    "de": "Datumkorrektor"
+   },
+   "tc": {
+    "item": "2566"
+   },
+   "side_up": "dial",
+   "prompt": "TURN MOVEMENT",
+   "bbox_stage_px": [
+    281.2,
+    360.8,
+    321.1,
+    395.8
+   ],
+   "pointer_stage_px": [
+    209.4,
+    303.5
+   ],
+   "path": [
+    [
+     465.9,
+     331.5,
+     1.0
+    ],
+    [
+     482.5,
+     330.8,
+     0.921
+    ],
+    [
+     480.7,
+     334.5,
+     0.881
+    ],
+    [
+     494.5,
+     333.1,
+     0.843
+    ],
+    [
+     492.6,
+     341.9,
+     0.768
+    ],
+    [
+     512.1,
+     336.1,
+     0.732
+    ],
+    [
+     529.4,
+     333.3,
+     0.692
+    ],
+    [
+     526.2,
+     346.4,
+     0.621
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      465.9,
+      331.5,
+      1.0
+     ],
+     "to": [
+      482.5,
+      330.8,
+      0.921
+     ],
+     "frames": 1
+    },
+    {
+     "from": [
+      482.5,
+      330.8,
+      0.921
+     ],
+     "to": [
+      480.7,
+      334.5,
+      0.881
+     ],
+     "frames": 1
+    },
+    {
+     "from": [
+      480.7,
+      334.5,
+      0.881
+     ],
+     "to": [
+      494.5,
+      333.1,
+      0.843
+     ],
+     "frames": 1
+    },
+    {
+     "from": [
+      494.5,
+      333.1,
+      0.843
+     ],
+     "to": [
+      492.6,
+      341.9,
+      0.768
+     ],
+     "frames": 1
+    },
+    {
+     "from": [
+      492.6,
+      341.9,
+      0.768
+     ],
+     "to": [
+      529.4,
+      333.3,
+      0.692
+     ],
+     "frames": 2
+    },
+    {
+     "from": [
+      529.4,
+      333.3,
+      0.692
+     ],
+     "to": [
+      526.2,
+      346.4,
+      0.621
+     ],
+     "frames": 1
+    }
+   ],
+   "video": {
+    "t": [
+     79.75,
+     86.0
+    ],
+    "motion_start_s": 82.5,
+    "bbox_measured_stage_px": [
+     281.2,
+     360.8,
+     321.1,
+     395.8
+    ]
+   }
+  },
+  {
+   "step": 16,
+   "code": "A16",
+   "part": "Screw for automatic device framework",
+   "part_id": "MC12_030_01",
+   "catalog_no": "12.030.01",
+   "names": {
+    "en": "Screw for automatic device framework",
+    "fr": "Vis de bâti du dispositif automatique",
+    "de": "Schraube für Gestell für Automatik"
+   },
+   "tc": {
+    "item": "51134"
+   },
+   "side_up": "bridge",
+   "bbox_stage_px": [
+    88,
+    226,
+    321.5,
+    424.5
+   ],
+   "heads_stage_px": [
+    [
+     94.6,
+     232.4,
+     6.4
+    ],
+    [
+     314.7,
+     350.2,
+     6.4
+    ],
+    [
+     129.7,
+     418.1,
+     6.4
+    ]
+   ],
+   "pointer_stage_px": [
+    207.8,
+    303.5
+   ],
+   "path": [
+    [
+     234.1,
+     320.1,
+     1.0
+    ],
+    [
+     236.2,
+     324.0,
+     0.987
+    ],
+    [
+     239.3,
+     330.4,
+     0.969
+    ],
+    [
+     242.7,
+     333.8,
+     0.96
+    ],
+    [
+     244.2,
+     338.0,
+     0.958
+    ],
+    [
+     246.7,
+     339.2,
+     0.96
+    ],
+    [
+     246.7,
+     339.2,
+     0.96
+    ],
+    [
+     256.1,
+     331.0,
+     0.956
+    ],
+    [
+     272.7,
+     312.6,
+     0.937
+    ],
+    [
+     272.8,
+     312.4,
+     0.937
+    ],
+    [
+     283.1,
+     292.7,
+     0.867
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      234.1,
+      320.1,
+      1.0
+     ],
+     "to": [
+      244.2,
+      338.0,
+      0.958
+     ],
+     "frames": 4
+    },
+    {
+     "from": [
+      244.2,
+      338.0,
+      0.958
+     ],
+     "to": [
+      246.7,
+      339.2,
+      0.96
+     ],
+     "frames": 2
+    },
+    {
+     "from": [
+      246.7,
+      339.2,
+      0.96
+     ],
+     "to": [
+      283.1,
+      292.7,
+      0.867
+     ],
+     "frames": 4
+    }
+   ],
+   "video": {
+    "t": [
+     86.0,
+     94.5
+    ],
+    "motion_start_s": 90.75,
+    "bbox_measured_stage_px": [
+     41.9,
+     142.7,
+     396.1,
+     497.7
+    ]
+   }
+  },
+  {
+   "step": 17,
+   "code": "A17",
+   "part": "Automatic device",
+   "part_id": "MCAutomaticDevice",
+   "catalog_no": null,
+   "names": {
+    "en": "Automatic device"
+   },
+   "components": [
+    {
+     "item": "1134",
+     "catalog_no": "12.030.07",
+     "part": "Automatic device framework, jewelled"
+    },
+    {
+     "item": "1143",
+     "catalog_no": "22.010.06",
+     "part": "Oscillating weight, assembled"
+    },
+    {
+     "item": "51497",
+     "catalog_no": "22.040.01",
+     "part": "Screw for ball bearing"
+    },
+    {
+     "item": "1141",
+     "catalog_no": "12.051.07",
+     "part": "Automatic device lower bridge, jewelled"
+    },
+    {
+     "item": "51141",
+     "catalog_no": "12.051.01",
+     "part": "Screw for automatic device lower bridge"
+    },
+    {
+     "item": "1514",
+     "catalog_no": "52.041",
+     "part": "Auxiliary reverser"
+    },
+    {
+     "item": "1488",
+     "catalog_no": "32.037",
+     "part": "Reversing wheel"
+    },
+    {
+     "item": "1485",
+     "catalog_no": "52.040",
+     "part": "Reverser"
+    },
+    {
+     "item": "1481",
+     "catalog_no": "32.031",
+     "part": "Reduction wheel"
+    },
+    {
+     "item": "1490",
+     "catalog_no": "32.032",
+     "part": "Intermediate reduction wheel"
+    }
+   ],
+   "side_up": "bridge",
+   "bbox_stage_px": [
+    41.9,
+    169.8,
+    396.1,
+    496.1
+   ],
+   "pointer_stage_px": [
+    223.8,
+    219.1
+   ],
+   "path": [
+    [
+     224.6,
+     338.1,
+     1.0
+    ],
+    [
+     288.5,
+     349.3,
+     0.904
+    ],
+    [
+     460.6,
+     371.4,
+     0.689
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      224.6,
+      338.1,
+      1.0
+     ],
+     "to": [
+      460.6,
+      371.4,
+      0.689
+     ],
+     "frames": 2
+    }
+   ],
+   "video": {
+    "t": [
+     94.5,
+     99.5
+    ],
+    "motion_start_s": 97.83,
+    "bbox_measured_stage_px": [
+     41.9,
+     169.8,
+     396.1,
+     496.1
+    ]
+   }
+  },
+  {
+   "step": 18,
+   "code": "A18",
+   "part": "Stop lever",
+   "part_id": "MC56_070",
+   "catalog_no": "56.070",
+   "names": {
+    "en": "Stop lever",
+    "fr": "Levier stop",
+    "de": "Stopphebel"
+   },
+   "tc": {
+    "item": "9433"
+   },
+   "side_up": "bridge",
+   "prompt": "CONTINUE WITH DISASSEMBLING OF AUTOMATIC DEVICE",
+   "bbox_stage_px": [
+    260.5,
+    324.2,
+    310.0,
+    360.8
+   ],
+   "pointer_stage_px": [
+    325.9,
+    351.2
+   ],
+   "path": [
+    [
+     585.1,
+     301.7,
+     1.0
+    ],
+    [
+     576.4,
+     304.4,
+     1.021
+    ],
+    [
+     575.9,
+     305.9,
+     1.035
+    ],
+    [
+     567.4,
+     309.4,
+     1.046
+    ],
+    [
+     563.5,
+     312.4,
+     1.058
+    ],
+    [
+     560.0,
+     314.5,
+     1.005
+    ],
+    [
+     567.0,
+     314.9,
+     0.901
+    ],
+    [
+     565.7,
+     318.5,
+     0.846
+    ],
+    [
+     577.1,
+     313.0,
+     0.794
+    ],
+    [
+     580.3,
+     319.6,
+     0.695
+    ],
+    [
+     580.4,
+     322.1,
+     0.644
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      585.1,
+      301.7,
+      1.0
+     ],
+     "to": [
+      576.4,
+      304.4,
+      1.021
+     ],
+     "frames": 1
+    },
+    {
+     "from": [
+      576.4,
+      304.4,
+      1.021
+     ],
+     "to": [
+      575.9,
+      305.9,
+      1.035
+     ],
+     "frames": 1
+    },
+    {
+     "from": [
+      575.9,
+      305.9,
+      1.035
+     ],
+     "to": [
+      560.0,
+      314.5,
+      1.005
+     ],
+     "frames": 3
+    },
+    {
+     "from": [
+      560.0,
+      314.5,
+      1.005
+     ],
+     "to": [
+      567.0,
+      314.9,
+      0.901
+     ],
+     "frames": 1
+    },
+    {
+     "from": [
+      567.0,
+      314.9,
+      0.901
+     ],
+     "to": [
+      565.7,
+      318.5,
+      0.846
+     ],
+     "frames": 1
+    },
+    {
+     "from": [
+      565.7,
+      318.5,
+      0.846
+     ],
+     "to": [
+      577.1,
+      313.0,
+      0.794
+     ],
+     "frames": 1
+    },
+    {
+     "from": [
+      577.1,
+      313.0,
+      0.794
+     ],
+     "to": [
+      580.4,
+      322.1,
+      0.644
+     ],
+     "frames": 2
+    }
+   ],
+   "video": {
+    "t": [
+     99.5,
+     105.25
+    ],
+    "motion_start_s": 102.0,
+    "bbox_measured_stage_px": [
+     260.5,
+     324.2,
+     310.0,
+     360.8
+    ]
+   }
+  },
+  {
+   "step": 19,
+   "code": "A19",
+   "part": "Screw for ball bearing",
+   "part_id": "MC22_040_01",
+   "catalog_no": "22.040.01",
+   "names": {
+    "en": "Screw for ball bearing",
+    "fr": "Vis de roulement à billes",
+    "de": "Schraube für Kugellager"
+   },
+   "tc": {
+    "item": "51497"
+   },
+   "side_up": "automatic device",
+   "bbox_stage_px": [
+    212.6,
+    289.1,
+    260.5,
+    338.5
+   ],
+   "heads_stage_px": [
+    [
+     220.7,
+     333.1,
+     5.3
+    ],
+    [
+     225.5,
+     295.4,
+     5.9
+    ],
+    [
+     254.1,
+     318.6,
+     5.4
+    ]
+   ],
+   "pointer_stage_px": [
+    305.2,
+    327.3
+   ],
+   "path": [
+    [
+     232.9,
+     314.4,
+     1.0
+    ],
+    [
+     299.4,
+     332.8,
+     1.086
+    ],
+    [
+     325.3,
+     332.4,
+     1.043
+    ],
+    [
+     325.3,
+     332.4,
+     1.043
+    ],
+    [
+     393.0,
+     343.8,
+     1.145
+    ],
+    [
+     458.0,
+     353.3,
+     1.244
+    ],
+    [
+     458.0,
+     353.3,
+     1.244
+    ],
+    [
+     516.0,
+     364.5,
+     1.3
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      232.9,
+      314.4,
+      1.0
+     ],
+     "to": [
+      516.0,
+      364.5,
+      1.3
+     ],
+     "frames": 7
+    }
+   ],
+   "video": {
+    "t": [
+     105.25,
+     110.75
+    ],
+    "motion_start_s": 108.5,
+    "bbox_measured_stage_px": [
+     212.6,
+     289.1,
+     260.5,
+     338.5
+    ]
+   }
+  },
+  {
+   "step": 20,
+   "code": "A20",
+   "part": "Oscillating weight, assembled",
+   "part_id": "MC22_010_06",
+   "catalog_no": "22.010.06",
+   "names": {
+    "en": "Oscillating weight, assembled",
+    "fr": "Masse oscillante, montée",
+    "de": "Schwungmasse, montiert"
+   },
+   "tc": {
+    "item": "1143/1"
+   },
+   "side_up": "automatic device",
+   "note": "DO NOT WASH !",
+   "bbox_stage_px": [
+    140.8,
+    139.5,
+    410.5,
+    445.1
+   ],
+   "pointer_stage_px": [
+    408.9,
+    324.2
+   ],
+   "path": [
+    [
+     276.9,
+     254.2,
+     1.0
+    ],
+    [
+     355.0,
+     298.8,
+     0.982
+    ],
+    [
+     493.7,
+     363.9,
+     0.71
+    ],
+    [
+     542.3,
+     381.3,
+     0.624
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      276.9,
+      254.2,
+      1.0
+     ],
+     "to": [
+      542.3,
+      381.3,
+      0.624
+     ],
+     "frames": 3
+    }
+   ],
+   "video": {
+    "t": [
+     110.75,
+     115.5
+    ],
+    "motion_start_s": 113.67,
+    "bbox_measured_stage_px": [
+     140.8,
+     139.5,
+     410.5,
+     445.1
+    ]
+   }
+  },
+  {
+   "step": 21,
+   "code": "A21",
+   "part": "Screw for automatic device lower bridge",
+   "part_id": "MC12_051_01",
+   "catalog_no": "12.051.01",
+   "names": {
+    "en": "Screw for automatic device lower bridge",
+    "fr": "Vis de pont inférieur du dispositif automatique",
+    "de": "Schraube für Untere Brücke für Automatik"
+   },
+   "tc": {
+    "item": "51141"
+   },
+   "side_up": "automatic device",
+   "bbox_stage_px": [
+    211.0,
+    434.0,
+    225.4,
+    451.5
+   ],
+   "pointer_stage_px": [
+    190.3,
+    440.4
+   ],
+   "path": [
+    [
+     216.2,
+     442.3,
+     1.0
+    ],
+    [
+     240.0,
+     440.8,
+     1.055
+    ],
+    [
+     265.0,
+     436.7,
+     1.294
+    ],
+    [
+     289.5,
+     432.8,
+     1.393
+    ],
+    [
+     339.3,
+     424.1,
+     1.543
+    ],
+    [
+     363.4,
+     421.4,
+     1.543
+    ],
+    [
+     413.5,
+     414.3,
+     1.692
+    ],
+    [
+     439.6,
+     410.1,
+     1.416
+    ],
+    [
+     462.8,
+     406.7,
+     1.841
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      216.2,
+      442.3,
+      1.0
+     ],
+     "to": [
+      462.8,
+      406.7,
+      1.841
+     ],
+     "frames": 8
+    }
+   ],
+   "video": {
+    "t": [
+     115.5,
+     120.25
+    ],
+    "motion_start_s": 117.83,
+    "bbox_measured_stage_px": [
+     211.0,
+     434.0,
+     225.4,
+     451.5
+    ]
+   }
+  },
+  {
+   "step": 22,
+   "code": "A22",
+   "part": "Automatic device lower bridge, jewelled",
+   "part_id": "MC12_051_07",
+   "catalog_no": "12.051.07",
+   "names": {
+    "en": "Automatic device lower bridge, jewelled",
+    "fr": "Pont inférieur du dispositif automatique, empierré",
+    "de": "Untere Brücke für Automatik, mit Steinen"
+   },
+   "tc": {
+    "item": "1141"
+   },
+   "side_up": "automatic device",
+   "bbox_stage_px": [
+    182.3,
+    394.2,
+    303.6,
+    478.6
+   ],
+   "pointer_stage_px": [
+    247.7,
+    389.4
+   ],
+   "path": [
+    [
+     250.0,
+     429.8,
+     1.0
+    ],
+    [
+     272.0,
+     432.1,
+     1.015
+    ],
+    [
+     293.8,
+     431.1,
+     1.045
+    ],
+    [
+     311.5,
+     425.8,
+     1.084
+    ],
+    [
+     333.8,
+     419.8,
+     1.093
+    ],
+    [
+     381.2,
+     403.7,
+     1.123
+    ],
+    [
+     438.0,
+     395.9,
+     1.165
+    ],
+    [
+     472.6,
+     391.0,
+     1.195
+    ],
+    [
+     499.8,
+     386.8,
+     1.123
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      250.0,
+      429.8,
+      1.0
+     ],
+     "to": [
+      499.8,
+      386.8,
+      1.123
+     ],
+     "frames": 8
+    }
+   ],
+   "video": {
+    "t": [
+     120.25,
+     124.0
+    ],
+    "motion_start_s": 121.58,
+    "bbox_measured_stage_px": [
+     182.3,
+     394.2,
+     303.6,
+     478.6
+    ]
+   }
+  },
+  {
+   "step": 23,
+   "code": "A23",
+   "part": "Auxiliary reverser",
+   "part_id": "MC52_041",
+   "catalog_no": "52.041",
+   "names": {
+    "en": "Auxiliary reverser",
+    "fr": "Inverseur auxilaire",
+    "de": "Hilfswechsler"
+   },
+   "tc": {
+    "item": "1514"
+   },
+   "side_up": "automatic device",
+   "bbox_stage_px": [
+    211.0,
+    379.9,
+    241.4,
+    408.5
+   ],
+   "pointer_stage_px": [
+    244.5,
+    370.3
+   ],
+   "path": [
+    [
+     226.3,
+     392.7,
+     1.0
+    ],
+    [
+     222.0,
+     387.1,
+     0.92
+    ],
+    [
+     211.5,
+     365.3,
+     1.337
+    ],
+    [
+     215.6,
+     371.2,
+     1.24
+    ],
+    [
+     273.2,
+     365.8,
+     1.434
+    ],
+    [
+     305.4,
+     368.9,
+     1.648
+    ],
+    [
+     381.2,
+     375.8,
+     1.837
+    ],
+    [
+     412.3,
+     377.7,
+     1.891
+    ],
+    [
+     496.5,
+     382.6,
+     2.08
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      226.3,
+      392.7,
+      1.0
+     ],
+     "to": [
+      211.5,
+      365.3,
+      1.337
+     ],
+     "frames": 2
+    },
+    {
+     "from": [
+      211.5,
+      365.3,
+      1.337
+     ],
+     "to": [
+      215.6,
+      371.2,
+      1.24
+     ],
+     "frames": 1
+    },
+    {
+     "from": [
+      215.6,
+      371.2,
+      1.24
+     ],
+     "to": [
+      496.5,
+      382.6,
+      2.08
+     ],
+     "frames": 5
+    }
+   ],
+   "video": {
+    "t": [
+     124.0,
+     127.75
+    ],
+    "motion_start_s": 125.25,
+    "bbox_measured_stage_px": [
+     211.0,
+     379.9,
+     241.4,
+     408.5
+    ]
+   }
+  },
+  {
+   "step": 24,
+   "code": "A24",
+   "part": "Reversing wheel",
+   "part_id": "MC32_037",
+   "catalog_no": "32.037",
+   "names": {
+    "en": "Reversing wheel",
+    "fr": "Roue d'inversion",
+    "de": "Umkehrrad"
+   },
+   "tc": {
+    "item": "1488"
+   },
+   "side_up": "automatic device",
+   "bbox_stage_px": [
+    225.4,
+    395.8,
+    281.2,
+    449.9
+   ],
+   "pointer_stage_px": [
+    254.1,
+    376.7
+   ],
+   "path": [
+    [
+     331.1,
+     429.3,
+     1.0
+    ],
+    [
+     362.2,
+     425.9,
+     0.901
+    ],
+    [
+     373.7,
+     422.3,
+     0.857
+    ],
+    [
+     387.9,
+     420.2,
+     0.808
+    ],
+    [
+     421.0,
+     416.0,
+     0.715
+    ],
+    [
+     439.5,
+     414.7,
+     0.669
+    ],
+    [
+     462.1,
+     413.1,
+     0.622
+    ],
+    [
+     495.4,
+     408.2,
+     0.532
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      331.1,
+      429.3,
+      1.0
+     ],
+     "to": [
+      495.4,
+      408.2,
+      0.532
+     ],
+     "frames": 7
+    }
+   ],
+   "video": {
+    "t": [
+     127.75,
+     132.5
+    ],
+    "motion_start_s": 130.08,
+    "bbox_measured_stage_px": [
+     225.4,
+     395.8,
+     281.2,
+     449.9
+    ]
+   }
+  },
+  {
+   "step": 25,
+   "code": "A25",
+   "part": "Reverser",
+   "part_id": "MC52_040",
+   "catalog_no": "52.040",
+   "names": {
+    "en": "Reverser",
+    "fr": "Inverseur",
+    "de": "Wechsler"
+   },
+   "tc": {
+    "item": "1485"
+   },
+   "side_up": "automatic device",
+   "bbox_stage_px": [
+    198.3,
+    395.8,
+    231.8,
+    427.6
+   ],
+   "pointer_stage_px": [
+    215.8,
+    375.9
+   ],
+   "path": [
+    [
+     213.7,
+     410.1,
+     1.0
+    ],
+    [
+     255.4,
+     408.5,
+     0.98
+    ],
+    [
+     276.3,
+     406.5,
+     1.073
+    ],
+    [
+     296.7,
+     404.9,
+     1.098
+    ],
+    [
+     339.7,
+     401.6,
+     1.17
+    ],
+    [
+     360.5,
+     400.2,
+     1.219
+    ],
+    [
+     381.3,
+     398.9,
+     1.219
+    ],
+    [
+     417.2,
+     395.7,
+     1.071
+    ],
+    [
+     450.2,
+     394.4,
+     1.293
+    ],
+    [
+     486.1,
+     391.9,
+     1.365
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      213.7,
+      410.1,
+      1.0
+     ],
+     "to": [
+      486.1,
+      391.9,
+      1.365
+     ],
+     "frames": 9
+    }
+   ],
+   "video": {
+    "t": [
+     132.5,
+     137.25
+    ],
+    "motion_start_s": 134.67,
+    "bbox_measured_stage_px": [
+     198.3,
+     395.8,
+     231.8,
+     427.6
+    ]
+   }
+  },
+  {
+   "step": 26,
+   "code": "A26",
+   "part": "Reduction wheel",
+   "part_id": "MC32_031",
+   "catalog_no": "32.031",
+   "names": {
+    "en": "Reduction wheel",
+    "fr": "Roue de réduction",
+    "de": "Reduktionsrad"
+   },
+   "tc": {
+    "item": "1481"
+   },
+   "side_up": "automatic device",
+   "bbox_stage_px": [
+    255.7,
+    392.6,
+    303.6,
+    440.4
+   ],
+   "pointer_stage_px": [
+    279.6,
+    375.1
+   ],
+   "path": [
+    [
+     278.9,
+     414.8,
+     1.0
+    ],
+    [
+     297.2,
+     414.4,
+     1.017
+    ],
+    [
+     333.7,
+     409.1,
+     1.083
+    ],
+    [
+     349.3,
+     407.2,
+     1.133
+    ],
+    [
+     366.3,
+     405.6,
+     1.133
+    ],
+    [
+     384.3,
+     404.2,
+     1.167
+    ],
+    [
+     413.1,
+     399.9,
+     1.217
+    ],
+    [
+     436.4,
+     398.7,
+     1.218
+    ],
+    [
+     460.4,
+     397.6,
+     1.283
+    ],
+    [
+     489.4,
+     393.7,
+     1.317
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      278.9,
+      414.8,
+      1.0
+     ],
+     "to": [
+      489.4,
+      393.7,
+      1.317
+     ],
+     "frames": 9
+    }
+   ],
+   "video": {
+    "t": [
+     137.25,
+     141.25
+    ],
+    "motion_start_s": 138.58,
+    "bbox_measured_stage_px": [
+     255.7,
+     392.6,
+     303.6,
+     440.4
+    ]
+   }
+  },
+  {
+   "step": 27,
+   "code": "A27",
+   "part": "Intermediate reduction wheel",
+   "part_id": "MC32_032",
+   "catalog_no": "32.032",
+   "names": {
+    "en": "Intermediate reduction wheel",
+    "fr": "Roue intermédiaire de réduction",
+    "de": "Zwischen-Reduktionsrad"
+   },
+   "tc": {
+    "item": "1490"
+   },
+   "side_up": "automatic device",
+   "bbox_stage_px": [
+    274.9,
+    368.7,
+    327.5,
+    419.7
+   ],
+   "pointer_stage_px": [
+    302.0,
+    351.2
+   ],
+   "path": [
+    [
+     299.9,
+     393.0,
+     1.0
+    ],
+    [
+     332.1,
+     391.9,
+     1.062
+    ],
+    [
+     346.6,
+     392.0,
+     1.108
+    ],
+    [
+     362.1,
+     391.7,
+     1.123
+    ],
+    [
+     392.6,
+     391.0,
+     1.154
+    ],
+    [
+     403.8,
+     390.9,
+     1.097
+    ],
+    [
+     442.4,
+     390.3,
+     1.231
+    ],
+    [
+     463.6,
+     389.8,
+     1.277
+    ],
+    [
+     473.0,
+     390.0,
+     1.232
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      299.9,
+      393.0,
+      1.0
+     ],
+     "to": [
+      473.0,
+      390.0,
+      1.232
+     ],
+     "frames": 8
+    }
+   ],
+   "video": {
+    "t": [
+     141.25,
+     145.5
+    ],
+    "motion_start_s": 142.83,
+    "bbox_measured_stage_px": [
+     274.9,
+     368.7,
+     327.5,
+     419.7
+    ]
+   }
+  },
+  {
+   "step": 28,
+   "code": "A28",
+   "part": "Automatic device framework, jewelled",
+   "part_id": "MC12_030_07",
+   "catalog_no": "12.030.07",
+   "names": {
+    "en": "Automatic device framework, jewelled",
+    "fr": "Bâti du dispositif automatique, empierré",
+    "de": "Gestell für Automatik, mit Steinen"
+   },
+   "tc": {
+    "item": "1134"
+   },
+   "side_up": "automatic device",
+   "bbox_stage_px": [
+    73.8,
+    204.8,
+    354.6,
+    492.9
+   ],
+   "pointer_stage_px": [
+    231.8,
+    247.8
+   ],
+   "path": [],
+   "motion": [],
+   "video": {
+    "t": [
+     145.5,
+     151.0
+    ],
+    "motion_start_s": null,
+    "bbox_measured_stage_px": [
+     73.8,
+     204.8,
+     354.6,
+     492.9
+    ]
+   }
+  },
+  {
+   "step": 29,
+   "code": "A29",
+   "part": "Screw for balance bridge",
+   "part_id": "MC10_058_01",
+   "catalog_no": "10.058.01",
+   "names": {
+    "en": "Screw for balance bridge",
+    "fr": "Vis de pont de balancier",
+    "de": "Schraube für Unruhbrücke"
+   },
+   "tc": {
+    "item": "5121"
+   },
+   "side_up": "bridge",
+   "note": "MAKE SURE THERE IS NO FORCE ON THE MAIN SPRING !",
+   "bbox_stage_px": [
+    314.7,
+    400.6,
+    332.3,
+    413.3
+   ],
+   "pointer_stage_px": [
+    279.6,
+    314.6
+   ],
+   "path": [
+    [
+     597.0,
+     447.5,
+     1.0
+    ],
+    [
+     340.7,
+     402.7,
+     0.064
+    ],
+    [
+     354.4,
+     401.7,
+     0.069
+    ],
+    [
+     370.2,
+     401.1,
+     0.075
+    ],
+    [
+     402.6,
+     398.0,
+     0.08
+    ],
+    [
+     431.0,
+     395.6,
+     0.074
+    ],
+    [
+     431.0,
+     395.6,
+     0.074
+    ],
+    [
+     467.5,
+     392.6,
+     0.094
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      597.0,
+      447.5,
+      1.0
+     ],
+     "to": [
+      340.7,
+      402.7,
+      0.064
+     ],
+     "frames": 1
+    },
+    {
+     "from": [
+      340.7,
+      402.7,
+      0.064
+     ],
+     "to": [
+      467.5,
+      392.6,
+      0.094
+     ],
+     "frames": 6
+    }
+   ],
+   "video": {
+    "t": [
+     151.0,
+     159.0
+    ],
+    "motion_start_s": 156.42,
+    "bbox_measured_stage_px": [
+     314.7,
+     400.6,
+     332.3,
+     413.3
+    ]
+   }
+  },
+  {
+   "step": 30,
+   "code": "A30",
+   "part": "Balance complete with bridge and ETACHRON system",
+   "part_id": "MCBalanceComp",
+   "catalog_no": null,
+   "names": {
+    "en": "Balance complete with bridge and ETACHRON system"
+   },
+   "components": [
+    {
+     "item": "121/4",
+     "catalog_no": "10.058.24",
+     "part": "Balance bridge for regulator with pointer, shock-absorber, stud support ETACHRON, corrector"
+    },
+    {
+     "item": "721",
+     "catalog_no": "40.050.21",
+     "part": "Timed annular balance, for shock-absorber and stud support ETACHRON"
+    },
+    {
+     "item": "303/5",
+     "catalog_no": "40.302.23",
+     "part": "Two-piece regulator, with pointer, for stud support ETACHRON and corrector"
+    },
+    {
+     "item": "358",
+     "catalog_no": "40.380",
+     "part": "Regulator corrector"
+    },
+    {
+     "item": "375",
+     "catalog_no": "40.200",
+     "part": "Stud support ETACHRON"
+    },
+    {
+     "item": "3004",
+     "catalog_no": "70.500",
+     "part": "Jewelled shock-absorber for balance, top, to press-in, shouldered"
+    },
+    {
+     "item": "3005",
+     "catalog_no": "70.531",
+     "part": "Jewelled shock-absorber for balance, bottom, to press-in, cylindrical"
+    }
+   ],
+   "side_up": "bridge",
+   "bbox_stage_px": [
+    164.8,
+    348,
+    377,
+    481.8
+   ],
+   "pointer_stage_px": [
+    250.9,
+    376.7
+   ],
+   "path": [
+    [
+     262.9,
+     414.1,
+     1.0
+    ],
+    [
+     264.3,
+     417.9,
+     0.964
+    ],
+    [
+     274.1,
+     427.1,
+     0.995
+    ],
+    [
+     307.0,
+     429.0,
+     0.988
+    ],
+    [
+     406.9,
+     406.9,
+     1.018
+    ],
+    [
+     457.2,
+     402.9,
+     1.011
+    ],
+    [
+     529.2,
+     391.2,
+     1.022
+    ],
+    [
+     568.8,
+     385.6,
+     1.027
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      262.9,
+      414.1,
+      1.0
+     ],
+     "to": [
+      264.3,
+      417.9,
+      0.964
+     ],
+     "frames": 1
+    },
+    {
+     "from": [
+      264.3,
+      417.9,
+      0.964
+     ],
+     "to": [
+      274.1,
+      427.1,
+      0.995
+     ],
+     "frames": 1
+    },
+    {
+     "from": [
+      274.1,
+      427.1,
+      0.995
+     ],
+     "to": [
+      568.8,
+      385.6,
+      1.027
+     ],
+     "frames": 5
+    }
+   ],
+   "video": {
+    "t": [
+     159.0,
+     163.5
+    ],
+    "motion_start_s": 161.33,
+    "bbox_measured_stage_px": [
+     164.8,
+     348.0,
+     377.0,
+     481.8
+    ]
+   }
+  },
+  {
+   "step": 31,
+   "code": "A31",
+   "part": "Screw for pallet bridge",
+   "part_id": "MC10_057_01",
+   "catalog_no": "10.057.01",
+   "names": {
+    "en": "Screw for pallet bridge",
+    "fr": "Vis de pont d'ancre",
+    "de": "Schraube für Ankerbrücke"
+   },
+   "tc": {
+    "item": "5125"
+   },
+   "side_up": "bridge",
+   "bbox_stage_px": [
+    187.1,
+    414.9,
+    204.7,
+    429.2
+   ],
+   "pointer_stage_px": [
+    196.7,
+    395.8
+   ],
+   "path": [
+    [
+     195.8,
+     420.6,
+     1.0
+    ],
+    [
+     215.1,
+     419.7,
+     1.145
+    ],
+    [
+     257.1,
+     416.5,
+     1.245
+    ],
+    [
+     278.5,
+     414.6,
+     1.297
+    ],
+    [
+     299.5,
+     413.5,
+     1.344
+    ],
+    [
+     341.1,
+     411.6,
+     1.366
+    ],
+    [
+     361.6,
+     410.2,
+     1.543
+    ],
+    [
+     384.5,
+     407.5,
+     1.643
+    ],
+    [
+     421.3,
+     404.3,
+     1.425
+    ],
+    [
+     451.3,
+     403.2,
+     1.449
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      195.8,
+      420.6,
+      1.0
+     ],
+     "to": [
+      451.3,
+      403.2,
+      1.449
+     ],
+     "frames": 9
+    }
+   ],
+   "video": {
+    "t": [
+     163.5,
+     167.75
+    ],
+    "motion_start_s": 165.08,
+    "bbox_measured_stage_px": [
+     187.1,
+     414.9,
+     204.7,
+     429.2
+    ]
+   }
+  },
+  {
+   "step": 32,
+   "code": "A32",
+   "part": "Pallet bridge, jewelled",
+   "part_id": "MC10_057_07",
+   "catalog_no": "10.057.07",
+   "names": {
+    "en": "Pallet bridge, jewelled",
+    "fr": "Pont d'ancre, empierré",
+    "de": "Ankerbrücke, mit Steinen"
+   },
+   "tc": {
+    "item": "125"
+   },
+   "side_up": "bridge",
+   "bbox_stage_px": [
+    155.2,
+    362.4,
+    274.9,
+    475.4
+   ],
+   "pointer_stage_px": [
+    287.6,
+    408.5
+   ],
+   "path": [
+    [
+     197.2,
+     419.8,
+     1.0
+    ],
+    [
+     220.7,
+     415.9,
+     0.965
+    ],
+    [
+     247.5,
+     411.1,
+     1.058
+    ],
+    [
+     269.7,
+     409.5,
+     1.051
+    ],
+    [
+     307.7,
+     409.6,
+     1.044
+    ],
+    [
+     346.0,
+     407.2,
+     0.959
+    ],
+    [
+     361.2,
+     409.8,
+     0.972
+    ],
+    [
+     379.6,
+     409.2,
+     1.065
+    ],
+    [
+     418.8,
+     407.8,
+     1.058
+    ],
+    [
+     441.3,
+     403.2,
+     1.051
+    ],
+    [
+     463.7,
+     400.5,
+     1.028
+    ],
+    [
+     500.4,
+     398.9,
+     1.05
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      197.2,
+      419.8,
+      1.0
+     ],
+     "to": [
+      500.4,
+      398.9,
+      1.05
+     ],
+     "frames": 11
+    }
+   ],
+   "video": {
+    "t": [
+     167.75,
+     171.75
+    ],
+    "motion_start_s": 169.08,
+    "bbox_measured_stage_px": [
+     155.2,
+     362.4,
+     274.9,
+     475.4
+    ]
+   }
+  },
+  {
+   "step": 33,
+   "code": "A33",
+   "part": "Pallet fork",
+   "part_id": "MC40_010",
+   "catalog_no": "40.010",
+   "names": {
+    "en": "Pallet fork",
+    "fr": "Ancre",
+    "de": "Anker"
+   },
+   "tc": {
+    "item": "710"
+   },
+   "components": [
+    {
+     "item": "710",
+     "catalog_no": "40.010",
+     "part": "Pallet fork"
+    },
+    {
+     "item": "714",
+     "catalog_no": "40.020",
+     "part": "Pallet staff"
+    }
+   ],
+   "side_up": "bridge",
+   "bbox_stage_px": [
+    179.1,
+    357.6,
+    228.6,
+    408.5
+   ],
+   "pointer_stage_px": [
+    196.7,
+    351.2
+   ],
+   "path": [
+    [
+     207.1,
+     380.8,
+     1.0
+    ],
+    [
+     242.3,
+     391.6,
+     1.018
+    ],
+    [
+     272.6,
+     379.5,
+     1.079
+    ],
+    [
+     290.0,
+     379.6,
+     1.096
+    ],
+    [
+     325.9,
+     382.3,
+     1.175
+    ],
+    [
+     325.9,
+     382.3,
+     1.175
+    ],
+    [
+     365.5,
+     381.5,
+     1.206
+    ],
+    [
+     405.6,
+     379.6,
+     1.24
+    ],
+    [
+     409.7,
+     380.3,
+     1.208
+    ],
+    [
+     465.2,
+     379.7,
+     1.349
+    ],
+    [
+     483.4,
+     379.4,
+     1.337
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      207.1,
+      380.8,
+      1.0
+     ],
+     "to": [
+      242.3,
+      391.6,
+      1.018
+     ],
+     "frames": 1
+    },
+    {
+     "from": [
+      242.3,
+      391.6,
+      1.018
+     ],
+     "to": [
+      290.0,
+      379.6,
+      1.096
+     ],
+     "frames": 2
+    },
+    {
+     "from": [
+      290.0,
+      379.6,
+      1.096
+     ],
+     "to": [
+      483.4,
+      379.4,
+      1.337
+     ],
+     "frames": 7
+    }
+   ],
+   "video": {
+    "t": [
+     171.75,
+     177.75
+    ],
+    "motion_start_s": 174.92,
+    "bbox_measured_stage_px": [
+     179.1,
+     357.6,
+     228.6,
+     408.5
+    ]
+   }
+  },
+  {
+   "step": 34,
+   "code": "A34",
+   "part": "Screw for train wheel bridge",
+   "part_id": "MC10_048_01",
+   "catalog_no": "10.048.01",
+   "names": {
+    "en": "Screw for train wheel bridge",
+    "fr": "Vis de pont de rouage",
+    "de": "Schraube für Räderwerkbrücke"
+   },
+   "tc": {
+    "item": "5110"
+   },
+   "side_up": "bridge",
+   "bbox_stage_px": [
+    129.7,
+    357.6,
+    156.8,
+    381.5
+   ],
+   "pointer_stage_px": [
+    164.8,
+    306.7
+   ],
+   "path": [
+    [
+     143.6,
+     367.4,
+     1.0
+    ],
+    [
+     168.8,
+     369.7,
+     1.092
+    ],
+    [
+     192.8,
+     370.6,
+     1.123
+    ],
+    [
+     215.8,
+     370.9,
+     1.123
+    ],
+    [
+     264.5,
+     371.9,
+     1.31
+    ],
+    [
+     290.7,
+     372.8,
+     1.31
+    ],
+    [
+     340.1,
+     375.0,
+     1.466
+    ],
+    [
+     364.5,
+     376.5,
+     1.559
+    ],
+    [
+     390.5,
+     377.5,
+     1.591
+    ],
+    [
+     410.8,
+     379.2,
+     1.536
+    ],
+    [
+     438.1,
+     380.4,
+     1.685
+    ],
+    [
+     487.3,
+     382.2,
+     1.809
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      143.6,
+      367.4,
+      1.0
+     ],
+     "to": [
+      487.3,
+      382.2,
+      1.809
+     ],
+     "frames": 11
+    }
+   ],
+   "video": {
+    "t": [
+     177.75,
+     183.5
+    ],
+    "motion_start_s": 180.75,
+    "bbox_measured_stage_px": [
+     129.7,
+     357.6,
+     156.8,
+     381.5
+    ]
+   }
+  },
+  {
+   "step": 35,
+   "code": "A35",
+   "part": "Train wheel bridge, jewelled",
+   "part_id": "MC10_048_07",
+   "catalog_no": "10.048.07",
+   "names": {
+    "en": "Train wheel bridge, jewelled",
+    "fr": "Pont de rouage, empierré",
+    "de": "Räderwerkbrücke, mit Steinen"
+   },
+   "tc": {
+    "item": "110"
+   },
+   "side_up": "bridge",
+   "bbox_stage_px": [
+    80.2,
+    293.9,
+    228.6,
+    438.8
+   ],
+   "pointer_stage_px": [
+    183.9,
+    276.4
+   ],
+   "path": [
+    [
+     157.5,
+     345.8,
+     1.0
+    ],
+    [
+     181.3,
+     346.6,
+     0.995
+    ],
+    [
+     198.2,
+     352.6,
+     1.011
+    ],
+    [
+     237.9,
+     358.8,
+     1.022
+    ],
+    [
+     256.8,
+     366.1,
+     1.011
+    ],
+    [
+     311.8,
+     359.8,
+     1.005
+    ],
+    [
+     333.0,
+     363.9,
+     1.022
+    ],
+    [
+     362.6,
+     356.7,
+     0.978
+    ],
+    [
+     403.6,
+     369.4,
+     1.0
+    ],
+    [
+     403.0,
+     369.7,
+     1.0
+    ],
+    [
+     460.3,
+     351.4,
+     1.022
+    ],
+    [
+     509.8,
+     352.0,
+     1.011
+    ],
+    [
+     525.9,
+     357.3,
+     1.016
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      157.5,
+      345.8,
+      1.0
+     ],
+     "to": [
+      403.6,
+      369.4,
+      1.0
+     ],
+     "frames": 8
+    },
+    {
+     "from": [
+      403.6,
+      369.4,
+      1.0
+     ],
+     "to": [
+      403.0,
+      369.7,
+      1.0
+     ],
+     "frames": 1
+    },
+    {
+     "from": [
+      403.0,
+      369.7,
+      1.0
+     ],
+     "to": [
+      509.8,
+      352.0,
+      1.011
+     ],
+     "frames": 2
+    },
+    {
+     "from": [
+      509.8,
+      352.0,
+      1.011
+     ],
+     "to": [
+      525.9,
+      357.3,
+      1.016
+     ],
+     "frames": 1
+    }
+   ],
+   "video": {
+    "t": [
+     183.5,
+     189.25
+    ],
+    "motion_start_s": 186.58,
+    "bbox_measured_stage_px": [
+     80.2,
+     293.9,
+     228.6,
+     438.8
+    ]
+   }
+  },
+  {
+   "step": 36,
+   "code": "A36",
+   "part": "Second wheel",
+   "part_id": "MC30_027",
+   "catalog_no": "30.027",
+   "names": {
+    "en": "Second wheel",
+    "fr": "Roue de seconde",
+    "de": "Sekundenrad"
+   },
+   "tc": {
+    "item": "227"
+   },
+   "side_up": "bridge",
+   "bbox_stage_px": [
+    179.1,
+    279.6,
+    258.9,
+    359.2
+   ],
+   "pointer_stage_px": [
+    220.6,
+    266.9
+   ],
+   "path": [
+    [
+     218.7,
+     319.2,
+     1.0
+    ],
+    [
+     252.2,
+     323.9,
+     1.199
+    ],
+    [
+     268.3,
+     326.9,
+     1.334
+    ],
+    [
+     302.3,
+     330.0,
+     1.645
+    ],
+    [
+     325.7,
+     334.7,
+     1.784
+    ],
+    [
+     346.9,
+     334.5,
+     1.965
+    ],
+    [
+     366.3,
+     339.8,
+     2.132
+    ],
+    [
+     405.9,
+     350.0,
+     2.46
+    ],
+    [
+     430.6,
+     353.5,
+     1.16
+    ],
+    [
+     451.8,
+     355.7,
+     1.17
+    ],
+    [
+     485.4,
+     360.6,
+     1.143
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      218.7,
+      319.2,
+      1.0
+     ],
+     "to": [
+      485.4,
+      360.6,
+      1.143
+     ],
+     "frames": 10
+    }
+   ],
+   "video": {
+    "t": [
+     189.25,
+     194.25
+    ],
+    "motion_start_s": 191.58,
+    "bbox_measured_stage_px": [
+     179.1,
+     279.6,
+     258.9,
+     359.2
+    ]
+   }
+  },
+  {
+   "step": 37,
+   "code": "A37",
+   "part": "Third wheel",
+   "part_id": "MC30_025",
+   "catalog_no": "30.025",
+   "names": {
+    "en": "Third wheel",
+    "fr": "Roue moyenne",
+    "de": "Kleinbodenrad"
+   },
+   "tc": {
+    "item": "210"
+   },
+   "side_up": "bridge",
+   "bbox_stage_px": [
+    142.4,
+    260.5,
+    222.2,
+    338.5
+   ],
+   "pointer_stage_px": [
+    183.9,
+    271.6
+   ],
+   "path": [
+    [
+     181.4,
+     300.3,
+     1.0
+    ],
+    [
+     226.7,
+     308.9,
+     1.03
+    ],
+    [
+     226.7,
+     308.9,
+     1.03
+    ],
+    [
+     266.2,
+     316.5,
+     1.101
+    ],
+    [
+     288.2,
+     321.1,
+     1.121
+    ],
+    [
+     309.8,
+     325.6,
+     1.141
+    ],
+    [
+     353.2,
+     334.4,
+     1.192
+    ],
+    [
+     390.6,
+     343.9,
+     1.127
+    ],
+    [
+     390.6,
+     343.9,
+     1.127
+    ],
+    [
+     442.6,
+     351.1,
+     1.293
+    ],
+    [
+     465.2,
+     356.6,
+     1.323
+    ],
+    [
+     504.8,
+     365.8,
+     1.374
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      181.4,
+      300.3,
+      1.0
+     ],
+     "to": [
+      504.8,
+      365.8,
+      1.374
+     ],
+     "frames": 11
+    }
+   ],
+   "video": {
+    "t": [
+     194.25,
+     199.0
+    ],
+    "motion_start_s": 196.17,
+    "bbox_measured_stage_px": [
+     142.4,
+     260.5,
+     222.2,
+     338.5
+    ]
+   }
+  },
+  {
+   "step": 38,
+   "code": "A38",
+   "part": "Escape wheel",
+   "part_id": "MC30_040",
+   "catalog_no": "30.040",
+   "names": {
+    "en": "Escape wheel",
+    "fr": "Roue d'échappement",
+    "de": "Hemmungsrad"
+   },
+   "tc": {
+    "item": "705"
+   },
+   "side_up": "bridge",
+   "bbox_stage_px": [
+    150.4,
+    311.4,
+    219.0,
+    378.3
+   ],
+   "pointer_stage_px": [
+    185.5,
+    295.5
+   ],
+   "path": [
+    [
+     184.7,
+     343.3,
+     1.0
+    ],
+    [
+     229.4,
+     349.6,
+     1.059
+    ],
+    [
+     250.3,
+     353.6,
+     1.059
+    ],
+    [
+     270.6,
+     353.4,
+     1.106
+    ],
+    [
+     318.1,
+     356.0,
+     1.165
+    ],
+    [
+     339.0,
+     358.9,
+     1.132
+    ],
+    [
+     382.1,
+     363.1,
+     1.223
+    ],
+    [
+     398.8,
+     368.5,
+     1.157
+    ],
+    [
+     447.0,
+     369.0,
+     1.306
+    ],
+    [
+     447.0,
+     368.9,
+     1.306
+    ],
+    [
+     488.4,
+     374.7,
+     1.342
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      184.7,
+      343.3,
+      1.0
+     ],
+     "to": [
+      447.0,
+      369.0,
+      1.306
+     ],
+     "frames": 8
+    },
+    {
+     "from": [
+      447.0,
+      369.0,
+      1.306
+     ],
+     "to": [
+      447.0,
+      368.9,
+      1.306
+     ],
+     "frames": 1
+    },
+    {
+     "from": [
+      447.0,
+      368.9,
+      1.306
+     ],
+     "to": [
+      488.4,
+      374.7,
+      1.342
+     ],
+     "frames": 1
+    }
+   ],
+   "video": {
+    "t": [
+     199.0,
+     203.75
+    ],
+    "motion_start_s": 201.08,
+    "bbox_measured_stage_px": [
+     150.4,
+     311.4,
+     219.0,
+     378.3
+    ]
+   }
+  },
+  {
+   "step": 39,
+   "code": "A39",
+   "part": "Screw for barrel bridge",
+   "part_id": "MC10_041_01",
+   "catalog_no": "10.041.01",
+   "names": {
+    "en": "Screw for barrel bridge",
+    "fr": "Vis de pont de barillet",
+    "de": "Schraube für Federhausbrücke"
+   },
+   "tc": {
+    "item": "5105"
+   },
+   "side_up": "bridge",
+   "bbox_stage_px": [
+    129.7,
+    204.8,
+    357.8,
+    365.6
+   ],
+   "heads_stage_px": [
+    [
+     139.0,
+     209.6,
+     5.4
+    ],
+    [
+     348.1,
+     360.5,
+     5.5
+    ],
+    [
+     350.2,
+     289.0,
+     4.6
+    ]
+   ],
+   "pointer_stage_px": [
+    247.7,
+    258.9
+   ],
+   "path": [
+    [
+     293.3,
+     293.6,
+     1.0
+    ],
+    [
+     304.0,
+     291.0,
+     0.966
+    ],
+    [
+     342.2,
+     304.0,
+     0.903
+    ],
+    [
+     342.6,
+     304.0,
+     0.903
+    ],
+    [
+     334.6,
+     286.9,
+     0.834
+    ],
+    [
+     400.0,
+     324.0,
+     0.795
+    ],
+    [
+     446.5,
+     332.2,
+     0.73
+    ],
+    [
+     461.3,
+     334.9,
+     0.707
+    ],
+    [
+     498.8,
+     344.9,
+     0.641
+    ],
+    [
+     498.8,
+     344.9,
+     0.641
+    ],
+    [
+     530.5,
+     352.1,
+     0.568
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      293.3,
+      293.6,
+      1.0
+     ],
+     "to": [
+      304.0,
+      291.0,
+      0.966
+     ],
+     "frames": 1
+    },
+    {
+     "from": [
+      304.0,
+      291.0,
+      0.966
+     ],
+     "to": [
+      342.6,
+      304.0,
+      0.903
+     ],
+     "frames": 2
+    },
+    {
+     "from": [
+      342.6,
+      304.0,
+      0.903
+     ],
+     "to": [
+      334.6,
+      286.9,
+      0.834
+     ],
+     "frames": 1
+    },
+    {
+     "from": [
+      334.6,
+      286.9,
+      0.834
+     ],
+     "to": [
+      530.5,
+      352.1,
+      0.568
+     ],
+     "frames": 6
+    }
+   ],
+   "video": {
+    "t": [
+     203.75,
+     208.25
+    ],
+    "motion_start_s": 205.67,
+    "bbox_measured_stage_px": [
+     129.7,
+     204.8,
+     361.0,
+     367.1
+    ]
+   }
+  },
+  {
+   "step": 40,
+   "code": "A40",
+   "part": "Barrel bridge, assembled",
+   "part_id": "MCBarrelBridgeComp",
+   "catalog_no": null,
+   "names": {
+    "en": "Barrel bridge, assembled"
+   },
+   "components": [
+    {
+     "item": "105",
+     "catalog_no": "10.041.07",
+     "part": "Barrel bridge, jewelled"
+    },
+    {
+     "item": "1482",
+     "catalog_no": "32.033",
+     "part": "Ratchet wheel driving wheel"
+    },
+    {
+     "item": "425",
+     "catalog_no": "51.120",
+     "part": "Click"
+    },
+    {
+     "item": "5511",
+     "catalog_no": "81.036.01",
+     "part": "Screw for click plate"
+    },
+    {
+     "item": "511",
+     "catalog_no": "81.036",
+     "part": "Click plate"
+    },
+    {
+     "item": "420",
+     "catalog_no": "31.023",
+     "part": "Crown wheel"
+    },
+    {
+     "item": "516",
+     "catalog_no": "31.024",
+     "part": "Intermediate crown wheel"
+    },
+    {
+     "item": "417",
+     "catalog_no": "31.021",
+     "part": "Intermediate ratchet wheel"
+    }
+   ],
+   "side_up": "bridge",
+   "prompt": "CONTINUE WITH DISASSEMBLING OF BARREL BRIDGE, COMPLETE",
+   "bbox_stage_px": [
+    93.0,
+    160.2,
+    392.9,
+    375.1
+   ],
+   "pointer_stage_px": [
+    203.1,
+    250.9
+   ],
+   "path": [
+    [
+     320.7,
+     252.7,
+     1.0
+    ],
+    [
+     353.6,
+     263.4,
+     0.941
+    ],
+    [
+     391.3,
+     278.9,
+     0.889
+    ],
+    [
+     484.2,
+     308.0,
+     0.776
+    ],
+    [
+     511.2,
+     315.7,
+     0.71
+    ],
+    [
+     525.2,
+     326.0,
+     0.64
+    ],
+    [
+     550.8,
+     338.3,
+     0.53
+    ],
+    [
+     550.8,
+     338.3,
+     0.53
+    ],
+    [
+     589.6,
+     353.9,
+     0.476
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      320.7,
+      252.7,
+      1.0
+     ],
+     "to": [
+      589.6,
+      353.9,
+      0.476
+     ],
+     "frames": 8
+    }
+   ],
+   "video": {
+    "t": [
+     208.25,
+     213.25
+    ],
+    "motion_start_s": 210.25,
+    "bbox_measured_stage_px": [
+     93.0,
+     160.2,
+     394.5,
+     375.1
+    ]
+   }
+  },
+  {
+   "step": 41,
+   "code": "A41",
+   "part": "Ratchet wheel driving wheel",
+   "part_id": "MC32_033",
+   "catalog_no": "32.033",
+   "names": {
+    "en": "Ratchet wheel driving wheel",
+    "fr": "Roue entraîneuse de rochet",
+    "de": "Mitnehmerrad für Sperrad"
+   },
+   "tc": {
+    "item": "1482"
+   },
+   "side_up": "barrel bridge",
+   "bbox_stage_px": [
+    131.3,
+    335.3,
+    198.3,
+    399.0
+   ],
+   "pointer_stage_px": [
+    164.8,
+    319.4
+   ],
+   "path": [
+    [
+     163.1,
+     364.1,
+     1.0
+    ],
+    [
+     188.5,
+     365.3,
+     1.036
+    ],
+    [
+     230.7,
+     368.0,
+     1.084
+    ],
+    [
+     274.8,
+     373.1,
+     1.133
+    ],
+    [
+     295.2,
+     373.5,
+     1.133
+    ],
+    [
+     322.1,
+     374.9,
+     1.205
+    ],
+    [
+     348.1,
+     375.8,
+     1.205
+    ],
+    [
+     369.2,
+     375.9,
+     1.241
+    ],
+    [
+     405.3,
+     377.4,
+     1.301
+    ],
+    [
+     432.2,
+     379.2,
+     1.314
+    ],
+    [
+     432.2,
+     379.2,
+     1.314
+    ],
+    [
+     481.7,
+     381.2,
+     1.292
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      163.1,
+      364.1,
+      1.0
+     ],
+     "to": [
+      481.7,
+      381.2,
+      1.292
+     ],
+     "frames": 11
+    }
+   ],
+   "video": {
+    "t": [
+     213.25,
+     218.25
+    ],
+    "motion_start_s": 215.58,
+    "bbox_measured_stage_px": [
+     131.3,
+     335.3,
+     198.3,
+     399.0
+    ]
+   }
+  },
+  {
+   "step": 42,
+   "code": "A42",
+   "part": "Click",
+   "part_id": "MC51_120",
+   "catalog_no": "51.120",
+   "names": {
+    "en": "Click",
+    "fr": "Cliquet",
+    "de": "Klinke"
+   },
+   "tc": {
+    "item": "425"
+   },
+   "side_up": "barrel bridge",
+   "bbox_stage_px": [
+    220.6,
+    340.1,
+    262.1,
+    384.7
+   ],
+   "pointer_stage_px": [
+    225.4,
+    399.8
+   ],
+   "path": [
+    [
+     235.9,
+     366.1,
+     1.0
+    ],
+    [
+     232.4,
+     375.3,
+     0.995
+    ],
+    [
+     223.7,
+     390.0,
+     1.351
+    ],
+    [
+     218.1,
+     401.0,
+     1.437
+    ],
+    [
+     216.0,
+     409.3,
+     1.711
+    ],
+    [
+     237.2,
+     411.5,
+     1.817
+    ],
+    [
+     270.8,
+     406.6,
+     1.87
+    ],
+    [
+     337.2,
+     403.0,
+     2.017
+    ],
+    [
+     370.5,
+     401.7,
+     2.11
+    ],
+    [
+     393.7,
+     409.3,
+     2.148
+    ],
+    [
+     438.4,
+     396.0,
+     2.226
+    ],
+    [
+     505.6,
+     395.2,
+     2.379
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      235.9,
+      366.1,
+      1.0
+     ],
+     "to": [
+      216.0,
+      409.3,
+      1.711
+     ],
+     "frames": 4
+    },
+    {
+     "from": [
+      216.0,
+      409.3,
+      1.711
+     ],
+     "to": [
+      505.6,
+      395.2,
+      2.379
+     ],
+     "frames": 7
+    }
+   ],
+   "video": {
+    "t": [
+     218.25,
+     222.5
+    ],
+    "motion_start_s": 220.08,
+    "bbox_measured_stage_px": [
+     220.6,
+     340.1,
+     262.1,
+     384.7
+    ]
+   }
+  },
+  {
+   "step": 43,
+   "code": "A43",
+   "part": "Screw for click plate",
+   "part_id": "MC81_036_01",
+   "catalog_no": "81.036.01",
+   "names": {
+    "en": "Screw for click plate",
+    "fr": "Vis de plaque de cliquet",
+    "de": "Schraube für Klinkenplatte"
+   },
+   "tc": {
+    "item": "5511"
+   },
+   "side_up": "barrel bridge",
+   "bbox_stage_px": [
+    250.9,
+    303.5,
+    265.3,
+    314.6
+   ],
+   "pointer_stage_px": [
+    284.4,
+    295.5
+   ],
+   "path": [
+    [
+     257.0,
+     307.8,
+     1.0
+    ],
+    [
+     272.2,
+     309.3,
+     1.033
+    ],
+    [
+     287.0,
+     315.0,
+     1.047
+    ],
+    [
+     321.7,
+     325.0,
+     0.924
+    ],
+    [
+     337.5,
+     323.3,
+     1.275
+    ],
+    [
+     369.3,
+     331.1,
+     1.455
+    ],
+    [
+     369.3,
+     331.1,
+     1.455
+    ],
+    [
+     402.0,
+     338.4,
+     1.576
+    ],
+    [
+     427.2,
+     345.7,
+     0.707
+    ],
+    [
+     451.5,
+     349.4,
+     1.46
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      257.0,
+      307.8,
+      1.0
+     ],
+     "to": [
+      451.5,
+      349.4,
+      1.46
+     ],
+     "frames": 9
+    }
+   ],
+   "video": {
+    "t": [
+     222.5,
+     227.5
+    ],
+    "motion_start_s": 224.67,
+    "bbox_measured_stage_px": [
+     250.9,
+     303.5,
+     265.3,
+     314.6
+    ]
+   }
+  },
+  {
+   "step": 44,
+   "code": "A44",
+   "part": "Click plate",
+   "part_id": "MC81_036",
+   "catalog_no": "81.036",
+   "names": {
+    "en": "Click plate",
+    "fr": "Plaque de cliquet",
+    "de": "Klinkenplatte"
+   },
+   "tc": {
+    "item": "511"
+   },
+   "side_up": "barrel bridge",
+   "bbox_stage_px": [
+    230.2,
+    257.3,
+    300.4,
+    371.9
+   ],
+   "pointer_stage_px": [
+    292.4,
+    274.8
+   ],
+   "path": [
+    [
+     268.4,
+     312.3,
+     1.0
+    ],
+    [
+     285.6,
+     317.7,
+     1.042
+    ],
+    [
+     305.7,
+     332.9,
+     1.055
+    ],
+    [
+     343.6,
+     334.4,
+     1.081
+    ],
+    [
+     362.5,
+     338.2,
+     1.107
+    ],
+    [
+     381.1,
+     338.3,
+     1.124
+    ],
+    [
+     397.5,
+     342.0,
+     1.14
+    ],
+    [
+     438.8,
+     353.3,
+     1.166
+    ],
+    [
+     464.6,
+     354.3,
+     1.183
+    ],
+    [
+     497.9,
+     363.9,
+     1.209
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      268.4,
+      312.3,
+      1.0
+     ],
+     "to": [
+      497.9,
+      363.9,
+      1.209
+     ],
+     "frames": 9
+    }
+   ],
+   "video": {
+    "t": [
+     227.5,
+     232.75
+    ],
+    "motion_start_s": 230.17,
+    "bbox_measured_stage_px": [
+     230.2,
+     257.3,
+     300.4,
+     371.9
+    ]
+   }
+  },
+  {
+   "step": 45,
+   "code": "A45",
+   "part": "Crown wheel",
+   "part_id": "MC31_023",
+   "catalog_no": "31.023",
+   "names": {
+    "en": "Crown wheel",
+    "fr": "Roue de couronne",
+    "de": "Kronrad"
+   },
+   "tc": {
+    "item": "420"
+   },
+   "side_up": "barrel bridge",
+   "bbox_stage_px": [
+    247.7,
+    257.3,
+    287.6,
+    303.5
+   ],
+   "pointer_stage_px": [
+    279.6,
+    260.5
+   ],
+   "path": [
+    [
+     258.7,
+     281.2,
+     1.0
+    ],
+    [
+     314.4,
+     293.8,
+     1.09
+    ],
+    [
+     327.0,
+     295.7,
+     1.183
+    ],
+    [
+     341.9,
+     304.7,
+     1.219
+    ],
+    [
+     377.4,
+     312.0,
+     1.311
+    ],
+    [
+     377.2,
+     312.3,
+     1.311
+    ],
+    [
+     408.4,
+     324.8,
+     1.261
+    ],
+    [
+     423.0,
+     329.4,
+     1.404
+    ],
+    [
+     468.6,
+     341.5,
+     1.29
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      258.7,
+      281.2,
+      1.0
+     ],
+     "to": [
+      377.4,
+      312.0,
+      1.311
+     ],
+     "frames": 4
+    },
+    {
+     "from": [
+      377.4,
+      312.0,
+      1.311
+     ],
+     "to": [
+      377.2,
+      312.3,
+      1.311
+     ],
+     "frames": 1
+    },
+    {
+     "from": [
+      377.2,
+      312.3,
+      1.311
+     ],
+     "to": [
+      468.6,
+      341.5,
+      1.29
+     ],
+     "frames": 3
+    }
+   ],
+   "video": {
+    "t": [
+     232.75,
+     237.25
+    ],
+    "motion_start_s": 234.58,
+    "bbox_measured_stage_px": [
+     247.7,
+     257.3,
+     287.6,
+     303.5
+    ]
+   }
+  },
+  {
+   "step": 46,
+   "code": "A46",
+   "part": "Intermediate crown wheel",
+   "part_id": "MC31_024",
+   "catalog_no": "31.024",
+   "names": {
+    "en": "Intermediate crown wheel",
+    "fr": "Roue de couronne intermédiaire",
+    "de": "Zwischen-Kronrad"
+   },
+   "tc": {
+    "item": "516"
+   },
+   "side_up": "barrel bridge",
+   "bbox_stage_px": [
+    266.9,
+    298.7,
+    302.0,
+    332.1
+   ],
+   "pointer_stage_px": [
+    286.0,
+    281.2
+   ],
+   "path": [
+    [
+     283.1,
+     315.5,
+     1.0
+    ],
+    [
+     321.2,
+     324.7,
+     1.046
+    ],
+    [
+     321.2,
+     324.7,
+     1.046
+    ],
+    [
+     357.3,
+     332.5,
+     1.117
+    ],
+    [
+     393.3,
+     338.9,
+     1.209
+    ],
+    [
+     393.3,
+     338.9,
+     1.209
+    ],
+    [
+     423.6,
+     346.7,
+     1.232
+    ],
+    [
+     466.1,
+     355.8,
+     1.302
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      283.1,
+      315.5,
+      1.0
+     ],
+     "to": [
+      466.1,
+      355.8,
+      1.302
+     ],
+     "frames": 7
+    }
+   ],
+   "video": {
+    "t": [
+     237.25,
+     241.25
+    ],
+    "motion_start_s": 238.67,
+    "bbox_measured_stage_px": [
+     266.9,
+     298.7,
+     302.0,
+     332.1
+    ]
+   }
+  },
+  {
+   "step": 47,
+   "code": "A47",
+   "part": "Intermediate ratchet wheel",
+   "part_id": "MC31_021",
+   "catalog_no": "31.021",
+   "names": {
+    "en": "Intermediate ratchet wheel",
+    "fr": "Rochet intermédiaire",
+    "de": "Zwischensperrad"
+   },
+   "tc": {
+    "item": "417"
+   },
+   "side_up": "barrel bridge",
+   "bbox_stage_px": [
+    231.8,
+    317.8,
+    278.0,
+    360.8
+   ],
+   "pointer_stage_px": [
+    255.7,
+    300.3
+   ],
+   "path": [
+    [
+     253.4,
+     337.3,
+     1.0
+    ],
+    [
+     293.2,
+     344.0,
+     1.089
+    ],
+    [
+     311.3,
+     345.8,
+     1.106
+    ],
+    [
+     329.7,
+     348.7,
+     1.142
+    ],
+    [
+     367.0,
+     352.8,
+     1.214
+    ],
+    [
+     403.7,
+     358.8,
+     1.233
+    ],
+    [
+     403.7,
+     358.8,
+     1.233
+    ],
+    [
+     445.2,
+     363.6,
+     1.285
+    ],
+    [
+     465.4,
+     365.7,
+     1.222
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      253.4,
+      337.3,
+      1.0
+     ],
+     "to": [
+      465.4,
+      365.7,
+      1.222
+     ],
+     "frames": 8
+    }
+   ],
+   "video": {
+    "t": [
+     241.25,
+     245.75
+    ],
+    "motion_start_s": 243.08,
+    "bbox_measured_stage_px": [
+     231.8,
+     317.8,
+     278.0,
+     360.8
+    ]
+   }
+  },
+  {
+   "step": 48,
+   "code": "A48",
+   "part": "Barrel bridge, jewelled",
+   "part_id": "MC10_041_07",
+   "catalog_no": "10.041.07",
+   "names": {
+    "en": "Barrel bridge, jewelled",
+    "fr": "Pont de barillet, empierré",
+    "de": "Federhausbrücke, mit Steinen"
+   },
+   "tc": {
+    "item": "105"
+   },
+   "side_up": "barrel bridge",
+   "bbox_stage_px": [
+    65.9,
+    215.9,
+    370.6,
+    430.8
+   ],
+   "pointer_stage_px": [
+    310.0,
+    206.4
+   ],
+   "path": [],
+   "motion": [],
+   "video": {
+    "t": [
+     245.75,
+     248.75
+    ],
+    "motion_start_s": null,
+    "bbox_measured_stage_px": [
+     65.9,
+     214.3,
+     370.6,
+     430.8
+    ]
+   }
+  },
+  {
+   "step": 49,
+   "code": "A49",
+   "part": "Ratchet wheel",
+   "part_id": "MC31_020",
+   "catalog_no": "31.020",
+   "names": {
+    "en": "Ratchet wheel",
+    "fr": "Rochet",
+    "de": "Sperrad"
+   },
+   "tc": {
+    "item": "415"
+   },
+   "side_up": "bridge",
+   "bbox_stage_px": [
+    196.7,
+    187.3,
+    282.8,
+    271.6
+   ],
+   "pointer_stage_px": [
+    241.4,
+    159.4
+   ],
+   "path": [
+    [
+     232.8,
+     229.9,
+     1.0
+    ],
+    [
+     249.0,
+     233.5,
+     1.037
+    ],
+    [
+     283.0,
+     248.5,
+     1.084
+    ],
+    [
+     306.3,
+     251.4,
+     1.103
+    ],
+    [
+     324.0,
+     261.6,
+     1.131
+    ],
+    [
+     333.8,
+     271.6,
+     1.14
+    ],
+    [
+     387.9,
+     288.6,
+     1.196
+    ],
+    [
+     396.3,
+     298.8,
+     1.215
+    ],
+    [
+     439.5,
+     316.3,
+     1.28
+    ],
+    [
+     458.9,
+     323.7,
+     1.262
+    ],
+    [
+     476.4,
+     330.9,
+     1.327
+    ],
+    [
+     490.5,
+     338.1,
+     1.266
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      232.8,
+      229.9,
+      1.0
+     ],
+     "to": [
+      324.0,
+      261.6,
+      1.131
+     ],
+     "frames": 4
+    },
+    {
+     "from": [
+      324.0,
+      261.6,
+      1.131
+     ],
+     "to": [
+      333.8,
+      271.6,
+      1.14
+     ],
+     "frames": 1
+    },
+    {
+     "from": [
+      333.8,
+      271.6,
+      1.14
+     ],
+     "to": [
+      387.9,
+      288.6,
+      1.196
+     ],
+     "frames": 1
+    },
+    {
+     "from": [
+      387.9,
+      288.6,
+      1.196
+     ],
+     "to": [
+      396.3,
+      298.8,
+      1.215
+     ],
+     "frames": 1
+    },
+    {
+     "from": [
+      396.3,
+      298.8,
+      1.215
+     ],
+     "to": [
+      490.5,
+      338.1,
+      1.266
+     ],
+     "frames": 4
+    }
+   ],
+   "video": {
+    "t": [
+     248.75,
+     255.25
+    ],
+    "motion_start_s": 252.33,
+    "bbox_measured_stage_px": [
+     196.7,
+     187.3,
+     282.8,
+     271.6
+    ]
+   }
+  },
+  {
+   "step": 50,
+   "code": "A50",
+   "part": "Barrel",
+   "part_id": "MC20_010",
+   "catalog_no": "20.010",
+   "names": {
+    "en": "Barrel"
+   },
+   "components": [
+    {
+     "item": "182",
+     "catalog_no": "20.030",
+     "part": "Barrel, drum and cover"
+    },
+    {
+     "item": "195",
+     "catalog_no": "20.060",
+     "part": "Barrel arbor"
+    },
+    {
+     "item": "771",
+     "catalog_no": "20.102",
+     "part": "Mainspring with sliding attachment"
+    }
+   ],
+   "side_up": "bridge",
+   "bbox_stage_px": [
+    152.0,
+    142.7,
+    327.5,
+    316.2
+   ],
+   "pointer_stage_px": [
+    241.4,
+    142.7
+   ],
+   "path": [
+    [
+     227.1,
+     233.8,
+     1.0
+    ],
+    [
+     253.1,
+     238.1,
+     1.005
+    ],
+    [
+     268.3,
+     246.6,
+     1.005
+    ],
+    [
+     311.1,
+     265.5,
+     1.005
+    ],
+    [
+     341.8,
+     281.3,
+     0.973
+    ],
+    [
+     341.8,
+     281.3,
+     0.973
+    ],
+    [
+     378.6,
+     301.3,
+     0.995
+    ],
+    [
+     412.7,
+     320.5,
+     1.005
+    ],
+    [
+     412.8,
+     320.5,
+     1.005
+    ],
+    [
+     487.0,
+     346.2,
+     0.947
+    ],
+    [
+     487.0,
+     346.2,
+     0.947
+    ],
+    [
+     530.7,
+     356.7,
+     0.941
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      227.1,
+      233.8,
+      1.0
+     ],
+     "to": [
+      530.7,
+      356.7,
+      0.941
+     ],
+     "frames": 11
+    }
+   ],
+   "video": {
+    "t": [
+     255.25,
+     259.75
+    ],
+    "motion_start_s": 257.0,
+    "bbox_measured_stage_px": [
+     152.0,
+     142.7,
+     327.5,
+     316.2
+    ]
+   }
+  },
+  {
+   "step": 51,
+   "code": "A51",
+   "part": "Intermediate wheel",
+   "part_id": "MC30_012",
+   "catalog_no": "30.012",
+   "names": {
+    "en": "Intermediate wheel",
+    "fr": "Roue intermédiaire",
+    "de": "Zwischenrad"
+   },
+   "tc": {
+    "item": "203"
+   },
+   "side_up": "bridge",
+   "prompt": "TURN MOVEMENT",
+   "bbox_stage_px": [
+    112.1,
+    235.0,
+    187.1,
+    309.8
+   ],
+   "pointer_stage_px": [
+    209.4,
+    238.2
+   ],
+   "path": [
+    [
+     253.3,
+     276.8,
+     1.0
+    ],
+    [
+     270.3,
+     279.2,
+     0.965
+    ],
+    [
+     316.1,
+     287.8,
+     0.893
+    ],
+    [
+     344.9,
+     294.3,
+     0.854
+    ],
+    [
+     373.3,
+     300.6,
+     0.779
+    ],
+    [
+     373.3,
+     300.6,
+     0.779
+    ],
+    [
+     392.6,
+     307.6,
+     0.709
+    ],
+    [
+     425.7,
+     311.9,
+     0.675
+    ],
+    [
+     446.4,
+     322.9,
+     0.602
+    ],
+    [
+     458.5,
+     326.2,
+     0.568
+    ],
+    [
+     487.3,
+     337.4,
+     0.506
+    ],
+    [
+     505.9,
+     341.8,
+     0.448
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      253.3,
+      276.8,
+      1.0
+     ],
+     "to": [
+      505.9,
+      341.8,
+      0.448
+     ],
+     "frames": 11
+    }
+   ],
+   "video": {
+    "t": [
+     259.75,
+     264.5
+    ],
+    "motion_start_s": 260.83,
+    "bbox_measured_stage_px": [
+     112.1,
+     235.0,
+     187.1,
+     309.8
+    ]
+   }
+  },
+  {
+   "step": 52,
+   "code": "A52",
+   "part": "Screw for combined setting lever jumper",
+   "part_id": "MC51_091_01",
+   "catalog_no": "51.091.01",
+   "names": {
+    "en": "Screw for combined setting lever jumper",
+    "fr": "Vis de sautoir de tirette combiné",
+    "de": "Schraube für kombinierte Winkelhebelraste"
+   },
+   "tc": {
+    "item": "5445"
+   },
+   "side_up": "dial",
+   "bbox_stage_px": [
+    282.8,
+    250.9,
+    287.6,
+    255.7
+   ],
+   "pointer_stage_px": [
+    270.1,
+    255.7
+   ],
+   "path": [
+    [
+     294.6,
+     255.5,
+     1.0
+    ],
+    [
+     307.3,
+     261.7,
+     1.334
+    ],
+    [
+     339.4,
+     275.6,
+     1.581
+    ],
+    [
+     355.3,
+     280.7,
+     1.527
+    ],
+    [
+     370.6,
+     288.2,
+     1.638
+    ],
+    [
+     403.2,
+     300.3,
+     1.823
+    ],
+    [
+     418.4,
+     307.0,
+     1.759
+    ],
+    [
+     453.7,
+     320.5,
+     1.835
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      294.6,
+      255.5,
+      1.0
+     ],
+     "to": [
+      453.7,
+      320.5,
+      1.835
+     ],
+     "frames": 7
+    }
+   ],
+   "video": {
+    "t": [
+     264.5,
+     270.0
+    ],
+    "motion_start_s": 267.25,
+    "bbox_measured_stage_px": [
+     290.8,
+     246.2,
+     300.4,
+     263.7
+    ]
+   }
+  },
+  {
+   "step": 53,
+   "code": "A53",
+   "part": "Combined setting lever jumper",
+   "part_id": "MC51_091",
+   "catalog_no": "51.091",
+   "names": {
+    "en": "Combined setting lever jumper",
+    "fr": "Sautoir de tirette combiné",
+    "de": "Kombinierte Winkelhebelraste"
+   },
+   "tc": {
+    "item": "445/2"
+   },
+   "side_up": "dial",
+   "bbox_stage_px": [
+    271.7,
+    195.2,
+    333.9,
+    344.9
+   ],
+   "pointer_stage_px": [
+    290.8,
+    249.3
+   ],
+   "path": [
+    [
+     305.2,
+     268.1,
+     1.0
+    ],
+    [
+     321.9,
+     280.9,
+     0.999
+    ],
+    [
+     334.6,
+     278.3,
+     0.983
+    ],
+    [
+     348.2,
+     277.9,
+     1.008
+    ],
+    [
+     364.3,
+     285.4,
+     1.0
+    ],
+    [
+     398.7,
+     299.9,
+     1.0
+    ],
+    [
+     407.5,
+     293.9,
+     0.979
+    ],
+    [
+     446.3,
+     320.5,
+     0.999
+    ],
+    [
+     463.8,
+     331.2,
+     0.901
+    ],
+    [
+     476.1,
+     330.4,
+     0.908
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      305.2,
+      268.1,
+      1.0
+     ],
+     "to": [
+      321.9,
+      280.9,
+      0.999
+     ],
+     "frames": 1
+    },
+    {
+     "from": [
+      321.9,
+      280.9,
+      0.999
+     ],
+     "to": [
+      348.2,
+      277.9,
+      1.008
+     ],
+     "frames": 2
+    },
+    {
+     "from": [
+      348.2,
+      277.9,
+      1.008
+     ],
+     "to": [
+      398.7,
+      299.9,
+      1.0
+     ],
+     "frames": 2
+    },
+    {
+     "from": [
+      398.7,
+      299.9,
+      1.0
+     ],
+     "to": [
+      407.5,
+      293.9,
+      0.979
+     ],
+     "frames": 1
+    },
+    {
+     "from": [
+      407.5,
+      293.9,
+      0.979
+     ],
+     "to": [
+      463.8,
+      331.2,
+      0.901
+     ],
+     "frames": 2
+    },
+    {
+     "from": [
+      463.8,
+      331.2,
+      0.901
+     ],
+     "to": [
+      476.1,
+      330.4,
+      0.908
+     ],
+     "frames": 1
+    }
+   ],
+   "video": {
+    "t": [
+     270.0,
+     275.0
+    ],
+    "motion_start_s": 272.08,
+    "bbox_measured_stage_px": [
+     271.7,
+     195.2,
+     333.9,
+     346.4
+    ]
+   }
+  },
+  {
+   "step": 54,
+   "code": "A54",
+   "part": "Yoke",
+   "part_id": "MC51_050",
+   "catalog_no": "51.050",
+   "names": {
+    "en": "Yoke",
+    "fr": "Bascule de pignon coulant",
+    "de": "Kupplungstriebhebel"
+   },
+   "tc": {
+    "item": "435"
+   },
+   "side_up": "dial",
+   "bbox_stage_px": [
+    303.6,
+    250.9,
+    329.1,
+    341.7
+   ],
+   "pointer_stage_px": [
+    330.7,
+    278.0
+   ],
+   "path": [
+    [
+     314.1,
+     282.2,
+     1.0
+    ],
+    [
+     327.3,
+     280.8,
+     1.107
+    ],
+    [
+     359.8,
+     284.5,
+     1.172
+    ],
+    [
+     373.2,
+     283.0,
+     1.209
+    ],
+    [
+     389.0,
+     297.3,
+     1.237
+    ],
+    [
+     416.7,
+     304.6,
+     1.275
+    ],
+    [
+     431.9,
+     303.7,
+     1.316
+    ],
+    [
+     452.7,
+     311.1,
+     1.206
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      314.1,
+      282.2,
+      1.0
+     ],
+     "to": [
+      373.2,
+      283.0,
+      1.209
+     ],
+     "frames": 3
+    },
+    {
+     "from": [
+      373.2,
+      283.0,
+      1.209
+     ],
+     "to": [
+      389.0,
+      297.3,
+      1.237
+     ],
+     "frames": 1
+    },
+    {
+     "from": [
+      389.0,
+      297.3,
+      1.237
+     ],
+     "to": [
+      452.7,
+      311.1,
+      1.206
+     ],
+     "frames": 3
+    }
+   ],
+   "video": {
+    "t": [
+     275.0,
+     279.5
+    ],
+    "motion_start_s": 276.75,
+    "bbox_measured_stage_px": [
+     303.6,
+     250.9,
+     329.1,
+     341.7
+    ]
+   }
+  },
+  {
+   "step": 55,
+   "code": "A55",
+   "part": "Setting lever, assembled",
+   "part_id": "MC51_080_06",
+   "catalog_no": "51.080.06",
+   "names": {
+    "en": "Setting lever, assembled",
+    "fr": "Tirette, montée",
+    "de": "Winkelhebel, montiert"
+   },
+   "tc": {
+    "item": "443/1"
+   },
+   "side_up": "dial",
+   "bbox_stage_px": [
+    306.8,
+    287.6,
+    337.1,
+    356.0
+   ],
+   "pointer_stage_px": [
+    333.9,
+    289.1
+   ],
+   "path": [
+    [
+     324.8,
+     330.5,
+     1.0
+    ],
+    [
+     335.8,
+     334.8,
+     1.0
+    ],
+    [
+     370.9,
+     341.1,
+     1.113
+    ],
+    [
+     385.6,
+     335.5,
+     1.113
+    ],
+    [
+     400.1,
+     343.8,
+     1.132
+    ],
+    [
+     420.4,
+     356.8,
+     1.137
+    ],
+    [
+     444.9,
+     350.2,
+     1.208
+    ],
+    [
+     459.1,
+     351.1,
+     1.164
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      324.8,
+      330.5,
+      1.0
+     ],
+     "to": [
+      370.9,
+      341.1,
+      1.113
+     ],
+     "frames": 2
+    },
+    {
+     "from": [
+      370.9,
+      341.1,
+      1.113
+     ],
+     "to": [
+      385.6,
+      335.5,
+      1.113
+     ],
+     "frames": 1
+    },
+    {
+     "from": [
+      385.6,
+      335.5,
+      1.113
+     ],
+     "to": [
+      420.4,
+      356.8,
+      1.137
+     ],
+     "frames": 2
+    },
+    {
+     "from": [
+      420.4,
+      356.8,
+      1.137
+     ],
+     "to": [
+      459.1,
+      351.1,
+      1.164
+     ],
+     "frames": 2
+    }
+   ],
+   "video": {
+    "t": [
+     279.5,
+     284.25
+    ],
+    "motion_start_s": 281.42,
+    "bbox_measured_stage_px": [
+     306.8,
+     287.6,
+     337.1,
+     356.0
+    ]
+   }
+  },
+  {
+   "step": 56,
+   "code": "A56",
+   "part": "Date corrector operating lever",
+   "part_id": "MC53_022",
+   "catalog_no": "53.022",
+   "names": {
+    "en": "Date corrector operating lever",
+    "fr": "Commande du correcteur de quantième",
+    "de": "Schalthebel für Datumkorrektor"
+   },
+   "tc": {
+    "item": "2539"
+   },
+   "side_up": "dial",
+   "bbox_stage_px": [
+    274.9,
+    266.9,
+    364.2,
+    336.9
+   ],
+   "pointer_stage_px": [
+    311.5,
+    252.5
+   ],
+   "path": [
+    [
+     320.4,
+     295.4,
+     1.0
+    ],
+    [
+     329.1,
+     299.0,
+     1.018
+    ],
+    [
+     354.9,
+     309.3,
+     1.057
+    ],
+    [
+     372.6,
+     310.4,
+     1.088
+    ],
+    [
+     392.0,
+     309.9,
+     1.043
+    ],
+    [
+     416.1,
+     323.1,
+     1.167
+    ],
+    [
+     416.1,
+     323.1,
+     1.167
+    ],
+    [
+     451.0,
+     331.2,
+     1.226
+    ],
+    [
+     486.5,
+     330.7,
+     1.266
+    ],
+    [
+     496.0,
+     337.2,
+     1.232
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      320.4,
+      295.4,
+      1.0
+     ],
+     "to": [
+      496.0,
+      337.2,
+      1.232
+     ],
+     "frames": 9
+    }
+   ],
+   "video": {
+    "t": [
+     284.25,
+     288.75
+    ],
+    "motion_start_s": 285.92,
+    "bbox_measured_stage_px": [
+     274.9,
+     266.9,
+     364.2,
+     336.9
+    ]
+   }
+  },
+  {
+   "step": 57,
+   "code": "A57",
+   "part": "Winding stem, thread diameter 0.90 mm",
+   "part_id": "MC51_010_21",
+   "catalog_no": "51.010.21",
+   "names": {
+    "en": "Winding stem, thread diameter 0.90 mm",
+    "fr": "Tige de remontoir, diamètre de filetage 0,90 mm",
+    "de": "Aufzugwelle, Gewindedurchmesser 0,90 mm"
+   },
+   "tc": {
+    "item": "401"
+   },
+   "side_up": "dial",
+   "bbox_stage_px": [
+    282.8,
+    313.0,
+    346.6,
+    324.2
+   ],
+   "pointer_stage_px": [
+    361.0,
+    293.9
+   ],
+   "path": [
+    [
+     302.6,
+     317.4,
+     1.0
+    ],
+    [
+     454.3,
+     317.6,
+     3.922
+    ],
+    [
+     476.7,
+     317.6,
+     3.604
+    ],
+    [
+     486.3,
+     317.6,
+     3.751
+    ],
+    [
+     495.9,
+     317.5,
+     3.653
+    ],
+    [
+     510.7,
+     316.5,
+     2.695
+    ],
+    [
+     515.9,
+     316.6,
+     2.843
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      302.6,
+      317.4,
+      1.0
+     ],
+     "to": [
+      515.9,
+      316.6,
+      2.843
+     ],
+     "frames": 6
+    }
+   ],
+   "video": {
+    "t": [
+     288.75,
+     293.5
+    ],
+    "motion_start_s": 290.83,
+    "bbox_measured_stage_px": [
+     282.8,
+     313.0,
+     346.6,
+     324.2
+    ]
+   }
+  },
+  {
+   "step": 58,
+   "code": "A58",
+   "part": "Sliding pinion",
+   "part_id": "MC31_121",
+   "catalog_no": "31.121",
+   "names": {
+    "en": "Sliding pinion",
+    "fr": "Pignon coulant",
+    "de": "Kupplungstrieb"
+   },
+   "tc": {
+    "item": "407"
+   },
+   "side_up": "dial",
+   "bbox_stage_px": [
+    297.2,
+    306.7,
+    316.3,
+    328.9
+   ],
+   "pointer_stage_px": [
+    311.5,
+    292.3
+   ],
+   "path": [
+    [
+     305.4,
+     317.3,
+     1.0
+    ],
+    [
+     303.7,
+     318.4,
+     1.039
+    ],
+    [
+     298.1,
+     323.2,
+     1.113
+    ],
+    [
+     294.7,
+     331.9,
+     1.148
+    ],
+    [
+     292.5,
+     340.9,
+     1.187
+    ],
+    [
+     315.1,
+     350.4,
+     1.222
+    ],
+    [
+     336.6,
+     351.6,
+     1.296
+    ],
+    [
+     358.9,
+     353.3,
+     1.296
+    ],
+    [
+     405.3,
+     357.1,
+     1.374
+    ],
+    [
+     421.7,
+     358.6,
+     1.148
+    ],
+    [
+     455.9,
+     360.5,
+     1.205
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      305.4,
+      317.3,
+      1.0
+     ],
+     "to": [
+      298.1,
+      323.2,
+      1.113
+     ],
+     "frames": 2
+    },
+    {
+     "from": [
+      298.1,
+      323.2,
+      1.113
+     ],
+     "to": [
+      292.5,
+      340.9,
+      1.187
+     ],
+     "frames": 2
+    },
+    {
+     "from": [
+      292.5,
+      340.9,
+      1.187
+     ],
+     "to": [
+      455.9,
+      360.5,
+      1.205
+     ],
+     "frames": 6
+    }
+   ],
+   "video": {
+    "t": [
+     293.5,
+     298.5
+    ],
+    "motion_start_s": 295.83,
+    "bbox_measured_stage_px": [
+     297.2,
+     306.7,
+     317.9,
+     328.9
+    ]
+   }
+  },
+  {
+   "step": 59,
+   "code": "A59",
+   "part": "Winding pinion",
+   "part_id": "MC31_120",
+   "catalog_no": "31.120",
+   "names": {
+    "en": "Winding pinion",
+    "fr": "Pignon de remontoir",
+    "de": "Aufzugtrieb"
+   },
+   "tc": {
+    "item": "410"
+   },
+   "side_up": "dial",
+   "bbox_stage_px": [
+    314.7,
+    305.1,
+    324.3,
+    336.9
+   ],
+   "pointer_stage_px": [
+    319.5,
+    282.8
+   ],
+   "path": [
+    [
+     319.3,
+     320.4,
+     1.0
+    ],
+    [
+     333.7,
+     320.8,
+     1.231
+    ],
+    [
+     361.8,
+     327.5,
+     1.231
+    ],
+    [
+     378.1,
+     330.1,
+     1.278
+    ],
+    [
+     407.0,
+     336.6,
+     1.325
+    ],
+    [
+     421.3,
+     338.1,
+     1.371
+    ]
+   ],
+   "motion": [
+    {
+     "from": [
+      319.3,
+      320.4,
+      1.0
+     ],
+     "to": [
+      421.3,
+      338.1,
+      1.371
+     ],
+     "frames": 5
+    }
+   ],
+   "video": {
+    "t": [
+     298.5,
+     302.5
+    ],
+    "motion_start_s": 299.75,
+    "bbox_measured_stage_px": [
+     314.7,
+     305.1,
+     324.3,
+     336.9
+    ]
+   }
+  },
+  {
+   "step": 60,
+   "code": "A60",
+   "part": "Main plate, jewelled",
+   "part_id": "MC10_020_07",
+   "catalog_no": "10.020.07",
+   "names": {
+    "en": "Main plate, jewelled",
+    "fr": "Platine, empierrée",
+    "de": "Werkplatte, mit Steinen"
+   },
+   "tc": {
+    "item": "100"
+   },
+   "side_up": "dial",
+   "bbox_stage_px": [
+    34.0,
+    133.1,
+    405.7,
+    504.0
+   ],
+   "pointer_stage_px": [
+    321.9,
+    292.3
+   ],
+   "path": [],
+   "motion": [],
+   "video": {
+    "t": [
+     302.5,
+     305.75
+    ],
+    "motion_start_s": null,
+    "bbox_measured_stage_px": [
+     34.0,
+     133.1,
+     405.7,
+     504.0
+    ]
+   }
+  }
+ ]
+}

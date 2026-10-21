@@ -1,0 +1,28 @@
+# Text of the title card and the end credits (swisslab_step.py: TitleCard, EndCredits).
+# Edit freely; build_all.py re-renders the two cards when this file changes.
+# Entries with "simple:" / "original:" differ by art style (--art).
+
+title: "ETA 2892-A2"
+sequence:
+  disassembly: "Disassembly"
+  assembly: "Assembly"
+subtitle: "A part-by-part guide for beginning watchmakers"
+note:
+  simple: "For educational purposes only. Simplified drawings, with see-through bridges so the parts underneath stay visible."
+  original: "Private copy with ETA SwissLab drawings. Not for distribution."
+
+credits:
+  - heading: "Sources"
+    lines:
+      - "Step sequence and part data: ETA SwissLab training animation for the 2892-A2"
+      - "Part numbers: ETA Technical Communications 2892-2 and 2892 A2"
+  - heading: "Animation"
+    lines:
+      - "David Joyner"
+      - "Code developed with Claude (Anthropic)"
+      - "Made with Manim · code under the MIT License"
+      - "github.com/wdjoyner/watch-service"
+
+disclaimer:
+  simple: "Not affiliated with or endorsed by ETA SA or the Swatch Group. All drawings are generated illustrations, not ETA artwork."
+  original: "Drawings by ETA SA / tica international, from a private copy of SwissLab. Not for distribution."

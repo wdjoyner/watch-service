@@ -1,0 +1,89 @@
+# ETA 2892 parts, from two ETA Technical Communications (transcribed by hand):
+#   TC 2892-2:  "ETA 2892-2 Technical Communication" (ETA SA Fabriques d'Ebauches, Marin),
+#               interchangeability table with ISO (CS) numbers for calibers 2890 / 2892 / 2892-2
+#   TC 2892A2:  "ETA 2892 A2 Technical Communication" (1993 sheet, reissued 2014),
+#               item numbers only, column "Cal. 2892A2"
+#
+# item:  ETA item number (No / Nr / No)
+# cs:    ISO / CS catalog number, as SwissLab shows it ("CS no.")  (TC 2892-2)
+# en, fr, de: names as printed
+# cal:   the caliber each part comes from, per column of TC 2892-2: [2890, 2892, 2892-2]
+#        ("-": not used in that caliber)
+# a2:    where TC 2892A2 differs from TC 2892-2 (its item number or caliber column)
+# qty, identical: screws used more than once; screws marked 1) or 2) are identical
+parts:
+  - {item: "100", cs: "10.020.07", en: "Main plate, jewelled", fr: "Platine, empierrée", de: "Werkplatte, mit Steinen", cal: ["2890", "2892", "2892-2"], a2: {cal: "2892A2"}}
+  - {item: "105", cs: "10.041.07", en: "Barrel bridge, jewelled", fr: "Pont de barillet, empierré", de: "Federhausbrücke, mit Steinen", cal: ["2890", "2890", "2892-2"]}
+  - {item: "110", cs: "10.048.07", en: "Train wheel bridge, jewelled", fr: "Pont de rouage, empierré", de: "Räderwerkbrücke, mit Steinen", cal: ["2890", "2890", "2892-2"]}
+  - {item: "121/4", cs: "10.058.24", en: "Balance bridge for regulator with pointer, shock-absorber, stud support ETACHRON, corrector", fr: "Pont de balancier, pour raquette à flèche, amortisseur, porte-piton ETACHRON, correcteur", de: "Unruhbrücke, für Rücker mit Stiel, Stossicherung, Spiralklötzchenträger ETACHRON, Korrektor", cal: ["2890", "2890", "2892-2"]}
+  - {item: "125", cs: "10.057.07", en: "Pallet bridge, jewelled", fr: "Pont d'ancre, empierré", de: "Ankerbrücke, mit Steinen", cal: ["2890", "2890", "2890"]}
+  - {item: "144", cs: "10.300", en: "Dial fastener", fr: "Fixateur de cadran", de: "Zifferblatthalter", cal: ["2850", "2850", "2892-2"]}
+  - {item: "161", cs: "80.400", en: "Centre tube", fr: "Tube de centre", de: "Zentrumlagerrohr", cal: ["2890", "2890", "2890"]}
+  - {item: "166", cs: "93.030", en: "Casing clamp", fr: "Bride d'emboîtage", de: "Befestigungsplättchen", cal: ["2890", "2890", "954.101"]}
+  - {item: "166/1", cs: "93.030.18", en: "Casing clamp, for water-resistant case", fr: "Bride d'emboîtage, pour boîte étanche", de: "Befestigungsplättchen, für wasserdichte Gehäuse", cal: ["2890", "2890", "954.101"]}
+  - {item: "182", cs: "20.030", en: "Barrel, drum and cover", fr: "Barillet, tambour et couvercle", de: "Federhaus, Trommel und Deckel", cal: ["2890", "2890", "2892-2"]}
+  - {item: "195", cs: "20.060", en: "Barrel arbor", fr: "Arbre de barillet", de: "Federwelle", cal: ["2890", "2890", "2890"]}
+  - {item: "203", cs: "30.012", en: "Intermediate wheel", fr: "Roue intermédiaire", de: "Zwischenrad", cal: ["2890", "2890", "2890"]}
+  - {item: "210", cs: "30.025", en: "Third wheel", fr: "Roue moyenne", de: "Kleinbodenrad", cal: ["2890", "2890", "2890"]}
+  - {item: "227", cs: "30.027", en: "Second wheel", fr: "Roue de seconde", de: "Sekundenrad", cal: ["2890", "2890", "2890"]}
+  - {item: "242", cs: "31.083", en: "Cannon pinion with driving wheel", fr: "Chaussée avec roue entraîneuse", de: "Minutenrohr mit Mitnehmerrad", cal: ["2890", "2890", "2890"]}
+  - {item: "255", cs: "31.046", en: "Hour wheel", fr: "Roue des heures", de: "Stundenrad", cal: ["2890", "2890", "2890"], a2: {item: "255/1", en: "Hour wheel, assembled", fr: "Roue des heures, montée", de: "Stundenrad, montiert"}}
+  - {item: "260", cs: "31.041", en: "Minute wheel", fr: "Roue de minuterie", de: "Wechselrad", cal: ["2890", "2890", "2890"]}
+  - {item: "303/5", cs: "40.302.23", en: "Two-piece regulator, with pointer, for stud support ETACHRON and corrector", fr: "Raquette en 2 pièces, à flèche, pour porte-piton ETACHRON et correcteur", de: "Rücker, zweiteilig, mit Stiel für Spiralklötzchenträger ETACHRON und Korrektor", cal: ["2890", "2890", "2890"]}
+  - {item: "358", cs: "40.380", en: "Regulator corrector", fr: "Correcteur de raquette", de: "Rückerkorrektor", cal: ["2640", "2640", "2640"]}
+  - {item: "375", cs: "40.200", en: "Stud support ETACHRON", fr: "Porte-piton ETACHRON", de: "Spiralklötzchenträger ETACHRON", cal: ["2890", "2890", "2890"]}
+  - {item: "401", cs: "51.010.21", en: "Winding stem, thread diameter 0.90 mm", fr: "Tige de remontoir, diamètre de filetage 0,90 mm", de: "Aufzugwelle, Gewindedurchmesser 0,90 mm", cal: ["2890", "2890", "954.101 No 405"]}
+  - {item: "407", cs: "31.121", en: "Sliding pinion", fr: "Pignon coulant", de: "Kupplungstrieb", cal: ["2890", "2890", "2890"]}
+  - {item: "410", cs: "31.120", en: "Winding pinion", fr: "Pignon de remontoir", de: "Aufzugtrieb", cal: ["2890", "2890", "2890"]}
+  - {item: "415", cs: "31.020", en: "Ratchet wheel", fr: "Rochet", de: "Sperrad", cal: ["2890", "2890", "2890"]}
+  - {item: "417", cs: "31.021", en: "Intermediate ratchet wheel", fr: "Rochet intermédiaire", de: "Zwischensperrad", cal: ["2890", "2890", "2890"]}
+  - {item: "420", cs: "31.023", en: "Crown wheel", fr: "Roue de couronne", de: "Kronrad", cal: ["2890", "2890", "2890"]}
+  - {item: "425", cs: "51.120", en: "Click", fr: "Cliquet", de: "Klinke", cal: ["2890", "2890", "2890"]}
+  - {item: "435", cs: "51.050", en: "Yoke", fr: "Bascule de pignon coulant", de: "Kupplungstriebhebel", cal: ["2890", "2890", "2890"]}
+  - {item: "443/1", cs: "51.080.06", en: "Setting lever, assembled", fr: "Tirette, montée", de: "Winkelhebel, montiert", cal: ["2890", "2890", "2890"]}
+  - {item: "445/2", cs: "51.091", en: "Combined setting lever jumper", fr: "Sautoir de tirette combiné", de: "Kombinierte Winkelhebelraste", cal: ["2890", "2892", "2892"]}
+  - {item: "450", cs: "31.100", en: "Setting wheel", fr: "Renvoi", de: "Zeigerstellrad", cal: ["2890", "2890", "2890"]}
+  - {item: "453", cs: "31.101", en: "Intermediate setting wheel", fr: "Renvoi intermédiaire", de: "Zwischen-Zeigerstellrad", cal: ["-", "2892", "2892"]}
+  - {item: "462", cs: "10.062", en: "Minute train bridge", fr: "Pont du rouage de minuterie", de: "Wechselradbrücke", cal: ["2890", "2890", "2890"]}
+  - {item: "511", cs: "81.036", en: "Click plate", fr: "Plaque de cliquet", de: "Klinkenplatte", cal: ["2890", "2890", "2890"]}
+  - {item: "516", cs: "31.024", en: "Intermediate crown wheel", fr: "Roue de couronne intermédiaire", de: "Zwischen-Kronrad", cal: ["2890", "2890", "2890"]}
+  - {item: "705", cs: "30.040", en: "Escape wheel", fr: "Roue d'échappement", de: "Hemmungsrad", cal: ["2890", "2890", "2890"]}
+  - {item: "710", cs: "40.010", en: "Pallet fork", fr: "Ancre", de: "Anker", cal: ["2890", "2890", "2890"]}
+  - {item: "714", cs: "40.020", en: "Pallet staff", fr: "Tige d'ancre", de: "Ankerwelle", cal: ["2890", "2890", "2890"]}
+  - {item: "721", cs: "40.050.21", en: "Timed annular balance, for shock-absorber and stud support ETACHRON", fr: "Balancier annulaire, réglé, pour amortisseur et porte-piton ETACHRON", de: "Unruh mit glattem Reif, reguliert, für Stossicherung und Spiralklötzchenträger ETACHRON", cal: ["2890", "2890", "2892-2"]}
+  - {item: "728", cs: "40.100.21", en: "Balance staff, for shock-absorber", fr: "Axe de balancier, pour amortisseur", de: "Unruhwelle, für Stossicherung", cal: ["2890", "2890", "2890"]}
+  - {item: "730", cs: "40.120", en: "Double roller", fr: "Plateau double", de: "Doppelscheibe", cal: ["2890", "2890", "2890"]}
+  - {item: "771", cs: "20.102", en: "Mainspring with sliding attachment", fr: "Ressort-moteur avec ressort de freinage", de: "Triebfeder mit Schleppfeder", cal: ["2890", "2890", "2892-2"]}
+  - {item: "1134", cs: "12.030.07", en: "Automatic device framework, jewelled", fr: "Bâti du dispositif automatique, empierré", de: "Gestell für Automatik, mit Steinen", cal: ["2890", "2890", "2892-2"]}
+  - {item: "1141", cs: "12.051.07", en: "Automatic device lower bridge, jewelled", fr: "Pont inférieur du dispositif automatique, empierré", de: "Untere Brücke für Automatik, mit Steinen", cal: ["2890", "2890", "2890"]}
+  - {item: "1143", cs: "22.010.06", en: "Oscillating weight, assembled", fr: "Masse oscillante, montée", de: "Schwungmasse, montiert", cal: ["2890", "2890", "2892-2"], a2: {item: "1143/1", cal: "2892A2"}}
+  - {item: "1481", cs: "32.031", en: "Reduction wheel", fr: "Roue de réduction", de: "Reduktionsrad", cal: ["2890", "2890", "2890"]}
+  - {item: "1482", cs: "32.033", en: "Ratchet wheel driving wheel", fr: "Roue entraîneuse de rochet", de: "Mitnehmerrad für Sperrad", cal: ["2890", "2890", "2890"]}
+  - {item: "1485", cs: "52.040", en: "Reverser", fr: "Inverseur", de: "Wechsler", cal: ["2890", "2890", "2890"]}
+  - {item: "1488", cs: "32.037", en: "Reversing wheel", fr: "Roue d'inversion", de: "Umkehrrad", cal: ["2890", "2890", "2890"]}
+  - {item: "1490", cs: "32.032", en: "Intermediate reduction wheel", fr: "Roue intermédiaire de réduction", de: "Zwischen-Reduktionsrad", cal: ["2890", "2890", "2890"], a2: {cal: "2892-2"}}
+  - {item: "1514", cs: "52.041", en: "Auxiliary reverser", fr: "Inverseur auxilaire", de: "Hilfswechsler", cal: ["2890", "2890", "2890"]}
+  - {item: "2536/1", cs: "53.251", en: "Additional indicator maintaining small plate", fr: "Plaquette supplémentaire de maintien de l'indicateur", de: "Zusatzhalteplättchen für Anzeige", cal: ["-", "2892", "2892"]}
+  - {item: "2539", cs: "53.022", en: "Date corrector operating lever", fr: "Commande du correcteur de quantième", de: "Schalthebel für Datumkorrektor", cal: ["2890", "2890", "2890"]}
+  - {item: "2543", cs: "33.011", en: "Intermediate date wheel", fr: "Roue intermédiaire de quantième", de: "Datum-Zwischenrad", cal: ["-", "2892", "2892"]}
+  - {item: "2556", cs: "33.020", en: "Date indicator driving wheel", fr: "Roue entraîneuse de l'indicateur de quantième", de: "Datumanzeiger-Mitnehmerrad", cal: ["-", "2892", "2892"]}
+  - {item: "2557/1", cs: "91.440.22", en: "Date indicator, for window opening at 3 o'clock", fr: "Indicateur de quantième, pour ouverture de guichet à 3h", de: "Datumanzeiger, für Fenster auf 3 Uhr", cal: ["-", "2892", "2802"]}
+  - {item: "2566", cs: "53.200", en: "Date corrector", fr: "Correcteur de quantième", de: "Datumkorrektor", cal: ["-", "2892", "2892"]}
+  - {item: "2576", cs: "53.080", en: "Date jumper", fr: "Sautoir de quantième", de: "Datumraste", cal: ["-", "2892", "2892"]}
+  - {item: "2595", cs: "13.111", en: "Date jumper maintaining plate", fr: "Plaque de maintien du sautoir de quantième", de: "Halteplatte für Datumraste", cal: ["-", "2892", "2892"]}
+  - {item: "3004", cs: "70.500", en: "Jewelled shock-absorber for balance, top, to press-in, shouldered", fr: "Amortisseur empierré, de balancier, dessus, à chasser, à portée", de: "Stossicherung, mit Stein, für Unruh, oben, zum Einpressen, mit Auflage", cal: ["2890", "2890", "2890"], a2: {item: "3024"}}
+  - {item: "3005", cs: "70.531", en: "Jewelled shock-absorber for balance, bottom, to press-in, cylindrical", fr: "Amortisseur, empierré, de balancier, dessous, à chasser, cylindrique", de: "Stossicherung, mit Stein, für Unruh, unten, zum Einpressen, zylindrisch", cal: ["2890", "2890", "2892-2"], a2: {item: "3025"}}
+  - {item: "9433", cs: "56.070", en: "Stop lever", fr: "Levier stop", de: "Stopphebel", cal: ["2890", "2890", "2890"]}
+  - {item: "5105", cs: "10.041.01", qty: 3, identical: "1)", en: "Screw for barrel bridge", fr: "Vis de pont de barillet", de: "Schraube für Federhausbrücke", cal: ["2890", "2890", "2890"]}
+  - {item: "5110", cs: "10.048.01", qty: 1, en: "Screw for train wheel bridge", fr: "Vis de pont de rouage", de: "Schraube für Räderwerkbrücke", cal: ["2890", "2890", "2890"]}
+  - {item: "5121", cs: "10.058.01", qty: 1, identical: "1)", en: "Screw for balance bridge", fr: "Vis de pont de balancier", de: "Schraube für Unruhbrücke", cal: ["2890", "2890", "2890"]}
+  - {item: "5125", cs: "10.057.01", qty: 1, identical: "1)", en: "Screw for pallet bridge", fr: "Vis de pont d'ancre", de: "Schraube für Ankerbrücke", cal: ["2890", "2890", "2890"]}
+  - {item: "5166", cs: "93.030.01", qty: 2, en: "Screw for casing clamp", fr: "Vis de bride d'emboîtage", de: "Schraube für Befestigungsplättchen", cal: ["2890", "2890", "940.111"]}
+  - {item: "5445", cs: "51.091.01", qty: 1, identical: "1)", en: "Screw for combined setting lever jumper", fr: "Vis de sautoir de tirette combiné", de: "Schraube für kombinierte Winkelhebelraste", cal: ["2890", "2890", "2890"]}
+  - {item: "5462", cs: "10.062.01", qty: 1, identical: "1)", en: "Screw for minute train bridge", fr: "Vis de pont du rouage de minuterie", de: "Schraube für Wechselradbrücke", cal: ["2890", "2890", "2890"]}
+  - {item: "5511", cs: "81.036.01", qty: 1, identical: "2)", en: "Screw for click plate", fr: "Vis de plaque de cliquet", de: "Schraube für Klinkenplatte", cal: ["2890", "2890", "2890"]}
+  - {item: "51134", cs: "12.030.01", qty: 3, en: "Screw for automatic device framework", fr: "Vis de bâti du dispositif automatique", de: "Schraube für Gestell für Automatik", cal: ["2890", "2890", "2890"]}
+  - {item: "51141", cs: "12.051.01", qty: 1, identical: "1)", en: "Screw for automatic device lower bridge", fr: "Vis de pont inférieur du dispositif automatique", de: "Schraube für Untere Brücke für Automatik", cal: ["2890", "2890", "2890"]}
+  - {item: "51497", cs: "22.040.01", qty: 3, identical: "2)", en: "Screw for ball bearing", fr: "Vis de roulement à billes", de: "Schraube für Kugellager", cal: ["2890", "2890", "2890"]}
+  - {item: "52536", cs: "53.251.01", qty: 1, en: "Screw for additional indicator maintaining small plate", fr: "Vis de plaquette supplémentaire de maintien de l'indicateur", de: "Schraube für Zusatzhalteplättchen für Anzeige", cal: ["-", "2892", "2892"]}
+  - {item: "52595", cs: "13.111.01", qty: 1, identical: "1)", en: "Screw for date jumper maintaining plate", fr: "Vis de plaque de maintien du sautoir de quantième", de: "Schraube für Halteplatte für Datumraste", cal: ["-", "2892", "2892"]}

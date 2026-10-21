@@ -1,0 +1,52 @@
+# Settings for one caliber. The tools read this file from the caliber's folder
+# (tools/steps.py, steps_assembly.py, prep_assets.py, build_all.py, swisslab_step.py).
+#
+# The values under "swisslab:" are specific to how tica built this caliber's SWF files.
+# For a new caliber, `python -I tools/inspect_swf.py its.swf` prints the candidates
+# (frame labels, note variables, depth ranges, oil-symbol IDs) to fill them in.
+
+name: "ETA 6497"           # used in titles, file headers and output names
+slug: "6497"               # output files: 6497_disassembly_simple.mp4, ...
+source: swf                # where the facts come from: swf (SwissLab Flash files) or video
+
+# a per-step yes/no flag in the fact files, and the warning the scenes show for it
+variant_flag: differs_6497_1_vs_2
+variant_warning: "differs between 6497-1 and 6497-2"
+
+swisslab:
+  disassembly:
+    source: "6497disassem.swf (ETA SwissLab, idea and animation: tica international)"
+    # side up from the frame labels of the main timeline (vend = turn, tilbage = back)
+    side_labels: {start: dial, vend1: bridge, vend2: dial, tilbage1: bridge, tilbage2: dial,
+                  vend3: bridge, vend4: dial}
+    start_side: dial
+    # main-timeline depths that hold the movement (the user interface lies outside)
+    movement_depths: [44, 245]
+    # text variables (English: <var>gb) shown with a step, and the one shown before the pallet fork
+    notes: {3: name214, 32: name215}
+    assembly_note: name216
+
+  assembly:
+    source: "6497assem.swf (ETA SwissLab, idea and animation: tica international)"
+    movement_depths: [45, 285]
+    note_pattern: 'name(21\d)'        # edit-text variables that hold notes
+    # side up and the parts SwissLab hides when the movement is turned, decoded from the
+    # "turnmovement" script (sprite 43, frame 15). Rows are tried in order: the first whose
+    # "upto" is >= the step number applies; hide_steps are ranges of step numbers whose
+    # parts are hidden, hide_clips extra clip names.
+    sides:
+      - {upto: 19, side: bridge}
+      - {upto: 31, side: dial, hide_steps: [[1, 18]]}
+      - {upto: 36, side: bridge, hide_steps: [[20, 31]], hide_clips: [VP1, fup1]}
+      - {side: dial, hide_steps: [[1, 19], [32, 36]], hide_clips: [fup2]}
+    # character IDs of the oil symbols in this SWF, and what each one means
+    oil_symbols:
+      150: Moebius D5
+      302: Moebius D5
+      312: Moebius 9010
+      323: Moebius 9501
+      379: Moebius 941
+      53: asterisk (meaning not given in the file)
+      329: magnified detail
+      375: magnified detail
+    oil_legend: [Moebius D5, Moebius 9010, Moebius 9501, Moebius 941]

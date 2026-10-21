@@ -1,15 +1,18 @@
-"""One SwissLab step as a Manim scene, driven by steps.json (disassembly) or
+"""One SwissLab step as a Manim scene, driven by the caliber's steps.json (disassembly) or
 assembly.json (assembly).
 
-    python -I tools/prep_assets.py --art simple . 4                  # generated drawings, no SWF
+    python -I tools/prep_assets.py --art simple calibers/6497 4              # generated drawings, no SWF
     ART=simple STEP=4 manim -qm swisslab_step.py DisassemblyStep
 
-    python -I tools/prep_assets.py 6497disassem.swf . 4              # assets/original/step04_*.png
+    python -I tools/prep_assets.py 6497disassem.swf calibers/6497 4          # calibers/6497/assets/original/
     STEP=4 manim -qm swisslab_step.py DisassemblyStep
 
-    python -I tools/prep_assets.py --assembly 6497assem.swf . 35     # assets/original/asm35_*.png
+    python -I tools/prep_assets.py --assembly 6497assem.swf calibers/6497 35
     STEP=35 manim -qm swisslab_step.py AssemblyStep
 
+    CALIBER=2892a2 ART=simple STEP=7 manim -qm swisslab_step.py DisassemblyStep
+
+CALIBER picks the caliber (a folder under calibers/, default 6497).
 ART=original (default) uses ETA/tica's drawings from your SWF, for private use only.
 ART=simple uses the generated placeholder drawings, which can be published.
 
@@ -28,12 +31,16 @@ from manim import (DOWN, LEFT, RIGHT, UP, FadeIn, FadeOut, ImageMobject, LaggedS
                    VGroup, config, linear, there_and_back)
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "tools"))
+import caliber  # noqa: E402
 import partsfile  # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 STEP = int(os.environ.get("STEP", 4))
 ART = os.environ.get("ART", "original")
-ASSETS = os.path.join(HERE, "assets", ART)
+CAL = caliber.folder()                       # env CALIBER, default 6497
+CFG = caliber.load(CAL)
+VF = caliber.variant_flag(CFG)
+ASSETS = os.path.join(CAL, "assets", ART)
 # CONTINUOUS=1 (set by build_all.py): the frame stays on screen and each clip starts exactly
 # where the previous one ended, so the clips join seamlessly into one video
 CONTINUOUS = os.environ.get("CONTINUOUS") == "1"
@@ -91,6 +98,13 @@ def _wrap(text, width):
     return "\n".join(lines)
 
 
+def side_text(side):
+    """'Dial side up', or for a unit worked on by itself: 'Automatic device, off the movement'"""
+    if side in ("dial", "bridge"):
+        return f"{side.capitalize()} side up"
+    return f"{side[0].upper() + side[1:]}, off the movement"
+
+
 def T(text, size, color=INK, weight="NORMAL"):
     return Text(text, font="Inter", weight=weight, color=color, line_spacing=0.8).scale(size)
 
@@ -98,7 +112,7 @@ def T(text, size, color=INK, weight="NORMAL"):
 class _StepScene(Scene):
     DATA = "steps.json"
     PREFIX = "step"
-    TITLE = "ETA 6497 · disassembly"
+    TITLE = CFG["name"] + " · disassembly"
     PART_AT_START = True       # disassembly: the part is in the movement when the step starts
 
     def end_step(self, leaving=()):
@@ -108,7 +122,7 @@ class _StepScene(Scene):
             self.play(*[FadeOut(m) for m in gone], run_time=0.5)
 
     def setup_step(self):
-        data = json.load(open(os.path.join(HERE, self.DATA)))
+        data = json.load(open(os.path.join(CAL, self.DATA)))
         self.steps = data["steps"]
         s = self.s = self.steps[STEP - 1]
         self.camera.background_color = BG
@@ -127,13 +141,13 @@ class _StepScene(Scene):
             name = T(_wrap(s["part"], 28), 0.42, weight="MEDIUM")
         info = VGroup(T(f"Step {STEP} of {len(self.steps)}", 0.32, MUTED), name,
                       fit(T(self.catalog_line(s), 0.3, MUTED), (PANEL[2] - PANEL[0] - 44) * K),
-                      T(f"{s['side_up'].capitalize()} side up", 0.3, MUTED))
+                      T(side_text(s["side_up"]), 0.3, MUTED))
         info.arrange(DOWN, aligned_edge=LEFT, buff=0.16)
         info.move_to(S(0, 150), aligned_edge=UP).set_x(x_text, direction=LEFT)
         self.info = info
         extras = VGroup()
-        if s.get("differs_6497_1_vs_2"):
-            extras.add(T("⚠ differs between 6497-1 and 6497-2", 0.27, "#b25a00"))
+        if VF and s.get(VF):
+            extras.add(T("⚠ " + CFG["variant_warning"], 0.27, "#b25a00"))
         if s.get("note"):
             extras.add(T(_wrap(s["note"], 46), 0.25, "#b00020"))
         if len(extras):
@@ -152,9 +166,12 @@ class _StepScene(Scene):
         if CONTINUOUS:
             self.add(window, panel, title, self.partbox)
             if turned:
-                # SwissLab's "TURN MOVEMENT" moment
-                card = T("TURN MOVEMENT", 0.55, INK, "MEDIUM").move_to(window)
-                sub = T(f"{s['side_up'].capitalize()} side up", 0.32, MUTED).next_to(card, DOWN, buff=0.15)
+                # SwissLab's "TURN MOVEMENT" moment (or its own wording, e.g. "CONTINUE WITH
+                # DISASSEMBLING OF AUTOMATIC DEVICE", when the previous step gives one)
+                words = self.steps[STEP - 2].get("prompt") or "TURN MOVEMENT"
+                card = T(_wrap(words, 30), 0.5, INK, "MEDIUM").move_to(window)
+                fit(card, (WINDOW[2] - WINDOW[0] - 30) * K)
+                sub = T(side_text(s["side_up"]), 0.32, MUTED).next_to(card, DOWN, buff=0.15)
                 self.play(FadeIn(card, scale=0.9), FadeIn(sub), run_time=0.6)
                 self.wait(0.8)
                 self.play(FadeOut(card), FadeOut(sub), run_time=0.4)
@@ -174,7 +191,7 @@ class _StepScene(Scene):
         if cat and cat[0].isdigit():
             return f"Catalog no. {cat}"
         # an assembled unit (the balance complete): list its parts' numbers instead
-        part = partsfile.load(HERE).get(s.get("part_id") or s["swf"]["clip_name"], {})
+        part = partsfile.load(CAL).get(s.get("part_id") or s["swf"]["clip_name"], {})
         nos = [c["catalog_no"] for c in part.get("components", [])]
         if not nos:
             return "Catalog no. —"
@@ -220,7 +237,7 @@ class AssemblyStep(_StepScene):
     parts) while the oil symbols show where to oil; then the symbols clear and the part is fitted."""
     DATA = "assembly.json"
     PREFIX = "asm"
-    TITLE = "ETA 6497 · assembly"
+    TITLE = CFG["name"] + " · assembly"
     PART_AT_START = False      # assembly: the part arrives during the step
 
     def construct(self):
@@ -283,7 +300,7 @@ LIGHT, DIM, GILT = "#f0f0f0", "#9a9a9a", "#e5bd57"
 
 def credits_text():
     import yaml
-    return yaml.safe_load(open(os.path.join(HERE, "credits.yaml"), encoding="utf-8"))
+    return yaml.safe_load(open(os.path.join(CAL, "credits.yaml"), encoding="utf-8"))
 
 
 def by_art(v):

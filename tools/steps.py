@@ -1,11 +1,19 @@
-"""Reconstruct the disassembly sequence from the SwissLab 6497 SWF and export
-steps.yaml plus one SVG (and preview PNG) per part, in stage coordinates."""
+"""Reconstruct the disassembly sequence from a SwissLab disassembly SWF and export
+steps.json / steps.yaml plus one SVG (and preview PNG) per part, in stage coordinates.
+
+    python -I tools/steps.py /path/to/6497disassem.swf calibers/6497
+
+The caliber-specific values (frame labels that turn the movement, note variables, the
+source line) come from calibers/<caliber>/caliber.yaml, section swisslab.disassembly.
+"""
 import sys, os, io, re, json
 sys.path.insert(0, os.path.dirname(__file__))
-import swfparse as P, render as Rn
+import swfparse as P, render as Rn, caliber
 from PIL import Image
 
 swf = P.parse(sys.argv[1]); out = sys.argv[2]
+CFG = caliber.load(out); D = CFG['swisslab']['disassembly']
+VF = caliber.variant_flag(CFG)
 os.makedirs(f'{out}/parts', exist_ok=True)
 main = swf['main']['frames']
 
@@ -24,8 +32,7 @@ for fr in main[:2]:
 LANGS = {'gb': 'en', 'd': 'de', 'f': 'fr', 'i': 'it', 'e': 'es', 'dk': 'da'}
 
 # ---- which main frame shows which step (counter = N), and which side is up
-side = 'dial'; label_side = {'start': 'dial', 'vend1': 'bridge', 'vend2': 'dial', 'tilbage1': 'bridge',
-                            'tilbage2': 'dial', 'vend3': 'bridge', 'vend4': 'dial'}
+side = D['start_side']; label_side = D['side_labels']
 step_frame = {}; frame_side = {}
 for i, fr in enumerate(main):
     if fr['label'] in label_side: side = label_side[fr['label']]
@@ -34,16 +41,13 @@ for i, fr in enumerate(main):
             m = re.match(r'counter = (\d+)', line)
             if m: step_frame[int(m.group(1))] = i + 1
     frame_side[i + 1] = side
-# frames 75..96 (vend1..tilbage1) and 97 (vend3) are bridge side; 5,6..12 etc. Use the label that
-# introduced the frame's block: blocks start at labelled frames.
+# the side up is set by the last side label at or before the frame
 def side_of(frame):
-    s = 'dial'
+    s = D['start_side']
     for i in range(frame):
         lab = main[i]['label']
         if lab in label_side: s = label_side[lab]
     return s
-
-UI_DEPTHS = set(range(0, 44)) | set(range(246, 300))
 
 def mat_mul(A, B):  # A then B? returns A*B where (A*B)(p) = A(B(p))
     a1, b1, c1, d1, e1, f1 = A; a2, b2, c2, d2, e2, f2 = B
@@ -131,7 +135,7 @@ for n in sorted(step_frame):
         'names': {LANGS[l]: str(V.get('name%d%s' % (n, l), '')).strip() for l in LANGS},
         'catalog_no': V.get('cs%d' % n) or None,
         'side_up': side_of(fr),
-        'differs_6497_1_vs_2': bool(V.get('warn%d' % n)),
+        **({VF: bool(V.get('warn%d' % n))} if VF else {}),
         'swf': {'main_frame': fr, 'clip_name': mcname, 'depth': depth, 'sprite': place['id'],
                 'anim_frames': max(len(mats) - 2, 0), 'lift_frames': lift,
                 'place_matrix': [round(v, 5) for v in G],
@@ -143,13 +147,13 @@ for n in sorted(step_frame):
     })
     print(n, steps[-1]['side_up'], steps[-1]['part'], bbox)
 
-notes = {3: V.get('name214gb'), 32: V.get('name215gb')}
+notes = {int(k): V.get(v + 'gb') for k, v in (D.get('notes') or {}).items()}
 for s in steps:
     if notes.get(s['step']): s['note'] = notes[s['step']]
 
-meta = {'source': '6497disassem.swf (ETA SwissLab, idea and animation: tica international)',
+meta = {'source': D['source'],
         'stage_px': [W, H], 'fps': swf['fps'],
-        'assembly_note_before_pallet_fork': V.get('name216gb')}
+        'assembly_note_before_pallet_fork': V.get(D['assembly_note'] + 'gb') if D.get('assembly_note') else None}
 json.dump({'meta': meta, 'steps': steps}, open(f'{out}/steps.json', 'w'), indent=1, ensure_ascii=False)
 
 # YAML (hand-rolled, no dependency)
@@ -159,11 +163,11 @@ def y(v):
     if isinstance(v, (int, float)): return repr(v)
     if isinstance(v, list): return '[' + ', '.join(y(x) for x in v) + ']'
     return json.dumps(v, ensure_ascii=False)
-L = ['# ETA 6497 disassembly sequence, extracted from the SwissLab SWF', '# (idea and animation: tica international, www.tica.dk)',
+L = ['# %s disassembly sequence, extracted from the SwissLab SWF' % CFG['name'], '# (idea and animation: tica international, www.tica.dk)',
      'meta:'] + ['  %s: %s' % (k, y(v)) for k, v in meta.items()] + ['steps:']
 for s in steps:
     L.append('  - step: %d' % s['step'])
-    for k in ('part', 'catalog_no', 'side_up', 'differs_6497_1_vs_2', 'note', 'bbox_stage_px'):
+    for k in ('part', 'catalog_no', 'side_up', VF, 'note', 'bbox_stage_px'):
         if k in s: L.append('    %s: %s' % (k, y(s[k])))
     L.append('    names: {%s}' % ', '.join('%s: %s' % (k, y(v)) for k, v in s['names'].items()))
     L.append('    swf: {%s}' % ', '.join('%s: %s' % (k, y(v)) for k, v in s['swf'].items()))

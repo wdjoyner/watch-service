@@ -1,6 +1,6 @@
 """Measure each part in the SwissLab SWF and record the numbers in parts.yaml.
 
-    python -I tools/measure_parts.py 6497disassem.swf .  [--force]
+    python -I tools/measure_parts.py /path/to/6497disassem.swf calibers/6497  [--force]
 
 Only facts are taken: where a part sits (pivot, bounding box, stacking order, which face
 of the movement it is on), its radius, how many teeth and arms its drawing has, where the

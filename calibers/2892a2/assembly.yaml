@@ -1,0 +1,613 @@
+# ETA 2892-A2 assembly sequence, from a screen recording of ETA SwissLab
+# (idea and animation: tica international, www.tica.dk); transcript.yaml says what each
+# screen shows, tools/steps_video.py measured positions and motion. part_id keys into parts.yaml.
+meta:
+  source: "screen recording of ETA SwissLab (idea and animation: tica international): https://www.youtube.com/watch?v=ficKWEWxPDo"
+  stage_px: [800, 600]
+  fps: 12
+  coordinates: "measured in the recording, movement window mapped onto SwissLab window [18, 122, 432, 512]"
+  video_window_px: [82, 70, 341.5, 315]
+  oil_legend: ["Moebius D5", "Jismaa 124 / Moebius 9501", "Moebius 9010", "Moebius 941 / 9415", "Moebius 9010 (small quantity)", "Treated (ETA)"]
+steps:
+  - step: 1
+    code: "B01"
+    part: "Main plate, jewelled"
+    part_id: "MC10_020_07"
+    disassembly_step: 60
+    catalog_no: "10.020.07"
+    tc: {item: "100"}
+    side_up: "bridge"
+    remark: "no caption on screen; shows the main plate (bridge side) with two red asterisks, and the oil-symbol legend"
+    bbox_stage_px: [34.0, 133.1, 405.7, 504.0]
+  - step: 2
+    code: "B02"
+    part: "Intermediate wheel"
+    part_id: "MC30_012"
+    disassembly_step: 51
+    catalog_no: "30.012"
+    tc: {item: "203"}
+    side_up: "bridge"
+    bbox_stage_px: [112.1, 235.0, 187.1, 309.8]
+    oil_marks_stage_px: []
+  - step: 3
+    code: "B03"
+    part: "Barrel"
+    part_id: "MC20_010"
+    disassembly_step: 50
+    catalog_no: "20.010"
+    side_up: "bridge"
+    bbox_stage_px: [152.0, 142.7, 327.5, 316.2]
+    oil_marks_stage_px: [[220.2, 298.7]]
+  - step: 4
+    code: "B04"
+    part: "Ratchet wheel"
+    part_id: "MC31_020"
+    disassembly_step: 49
+    catalog_no: "31.020"
+    tc: {item: "415"}
+    side_up: "bridge"
+    prompt: "CONTINUE WITH ASSEMBLING OF BARREL BRIDGE, COMPLETE"
+    bbox_stage_px: [196.7, 187.3, 282.8, 271.6]
+    oil_marks_stage_px: []
+  - step: 5
+    code: "B05"
+    part: "Barrel bridge, jewelled"
+    part_id: "MC10_041_07"
+    disassembly_step: 48
+    catalog_no: "10.041.07"
+    tc: {item: "105"}
+    side_up: "barrel bridge"
+    bbox_stage_px: [65.9, 215.9, 370.6, 430.8]
+  - step: 6
+    code: "B06"
+    part: "Intermediate ratchet wheel"
+    part_id: "MC31_021"
+    disassembly_step: 47
+    catalog_no: "31.021"
+    tc: {item: "417"}
+    side_up: "barrel bridge"
+    bbox_stage_px: [231.8, 317.8, 278.0, 360.8]
+    oil_marks_stage_px: [[261.3, 342.5], [274.5, 354.0]]
+  - step: 7
+    code: "B07"
+    part: "Intermediate crown wheel"
+    part_id: "MC31_024"
+    disassembly_step: 46
+    catalog_no: "31.024"
+    tc: {item: "516"}
+    side_up: "barrel bridge"
+    bbox_stage_px: [266.9, 298.7, 302.0, 332.1]
+    oil_marks_stage_px: [[252.0, 304.0], [271.9, 311.2], [293.2, 313.8], [313.1, 316.8]]
+  - step: 8
+    code: "B08"
+    part: "Crown wheel"
+    part_id: "MC31_023"
+    disassembly_step: 45
+    catalog_no: "31.023"
+    tc: {item: "420"}
+    side_up: "barrel bridge"
+    bbox_stage_px: [247.7, 257.3, 287.6, 303.5]
+    oil_marks_stage_px: [[270.6, 240.3], [270.8, 261.6]]
+  - step: 9
+    code: "B09"
+    part: "Click"
+    part_id: "MC51_120"
+    disassembly_step: 42
+    catalog_no: "51.120"
+    tc: {item: "425"}
+    side_up: "barrel bridge"
+    bbox_stage_px: [220.6, 340.1, 262.1, 384.7]
+    oil_marks_stage_px: []
+  - step: 10
+    code: "B10"
+    part: "Click plate"
+    part_id: "MC81_036"
+    disassembly_step: 44
+    catalog_no: "81.036"
+    tc: {item: "511"}
+    side_up: "barrel bridge"
+    bbox_stage_px: [230.2, 257.3, 300.4, 371.9]
+    oil_marks_stage_px: []
+  - step: 11
+    code: "B11"
+    part: "Screw for click plate"
+    part_id: "MC81_036_01"
+    disassembly_step: 43
+    catalog_no: "81.036.01"
+    tc: {item: "5511"}
+    side_up: "barrel bridge"
+    bbox_stage_px: [250.9, 303.5, 265.3, 314.6]
+    oil_marks_stage_px: []
+  - step: 12
+    code: "B12"
+    part: "Ratchet wheel driving wheel"
+    part_id: "MC32_033"
+    disassembly_step: 41
+    catalog_no: "32.033"
+    tc: {item: "1482"}
+    side_up: "barrel bridge"
+    prompt: "TURN BARREL BRIDGE, ASSEMBLED"
+    bbox_stage_px: [131.3, 335.3, 198.3, 399.0]
+    oil_marks_stage_px: [[164.0, 390.1]]
+  - step: 13
+    code: "B13"
+    part: "Barrel bridge, assembled"
+    part_id: "MCBarrelBridgeComp"
+    disassembly_step: 40
+    side_up: "bridge"
+    bbox_stage_px: [93.0, 160.2, 392.9, 375.1]
+    oil_marks_stage_px: []
+  - step: 14
+    code: "B14"
+    part: "Screw for barrel bridge"
+    part_id: "MC10_041_01"
+    disassembly_step: 39
+    catalog_no: "10.041.01"
+    tc: {item: "5105"}
+    side_up: "bridge"
+    prompt: "TURN MOVEMENT"
+    bbox_stage_px: [129.7, 204.8, 357.8, 365.6]
+    oil_marks_stage_px: []
+  - step: 15
+    code: "B15"
+    part: "Winding pinion"
+    part_id: "MC31_120"
+    disassembly_step: 59
+    catalog_no: "31.120"
+    tc: {item: "410"}
+    side_up: "dial"
+    bbox_stage_px: [314.7, 305.1, 324.3, 336.9]
+    oil_marks_stage_px: []
+  - step: 16
+    code: "B16"
+    part: "Sliding pinion"
+    part_id: "MC31_121"
+    disassembly_step: 58
+    catalog_no: "31.121"
+    tc: {item: "407"}
+    side_up: "dial"
+    bbox_stage_px: [297.2, 306.7, 316.3, 328.9]
+    oil_marks_stage_px: []
+  - step: 17
+    code: "B17"
+    part: "Winding stem, thread diameter 0.90 mm"
+    part_id: "MC51_010_21"
+    disassembly_step: 57
+    catalog_no: "51.010.21"
+    tc: {item: "401"}
+    side_up: "dial"
+    bbox_stage_px: [282.8, 278.0, 333.9, 324.2]
+    oil_marks_stage_px: []
+  - step: 18
+    code: "B18"
+    part: "Date corrector operating lever"
+    part_id: "MC53_022"
+    disassembly_step: 56
+    catalog_no: "53.022"
+    tc: {item: "2539"}
+    side_up: "dial"
+    bbox_stage_px: [274.9, 266.9, 364.2, 336.9]
+    oil_marks_stage_px: []
+  - step: 19
+    code: "B19"
+    part: "Setting lever, assembled"
+    part_id: "MC51_080_06"
+    disassembly_step: 55
+    catalog_no: "51.080.06"
+    tc: {item: "443/1"}
+    side_up: "dial"
+    bbox_stage_px: [306.8, 287.6, 337.1, 356.0]
+    oil_marks_stage_px: []
+  - step: 20
+    code: "B20"
+    part: "Yoke"
+    part_id: "MC51_050"
+    disassembly_step: 54
+    catalog_no: "51.050"
+    tc: {item: "435"}
+    side_up: "dial"
+    bbox_stage_px: [303.6, 250.9, 329.1, 341.7]
+    oil_marks_stage_px: [[341.9, 240.6], [277.6, 324.6], [264.0, 339.1]]
+  - step: 21
+    code: "B21"
+    part: "Combined setting lever jumper"
+    part_id: "MC51_091"
+    disassembly_step: 53
+    catalog_no: "51.091"
+    tc: {item: "445/2"}
+    side_up: "dial"
+    bbox_stage_px: [271.7, 195.2, 333.9, 344.9]
+    oil_marks_stage_px: []
+  - step: 22
+    code: "B22"
+    part: "Screw for combined setting lever jumper"
+    part_id: "MC51_091_01"
+    disassembly_step: 52
+    catalog_no: "51.091.01"
+    tc: {item: "5445"}
+    side_up: "dial"
+    prompt: "TURN MOVEMENT"
+    bbox_stage_px: [282.8, 250.9, 287.6, 255.7]
+    oil_marks_stage_px: []
+  - step: 23
+    code: "B23"
+    part: "Escape wheel"
+    part_id: "MC30_040"
+    disassembly_step: 38
+    catalog_no: "30.040"
+    tc: {item: "705"}
+    side_up: "bridge"
+    bbox_stage_px: [150.4, 311.4, 219.0, 378.3]
+    oil_marks_stage_px: []
+  - step: 24
+    code: "B24"
+    part: "Third wheel"
+    part_id: "MC30_025"
+    disassembly_step: 37
+    catalog_no: "30.025"
+    tc: {item: "210"}
+    side_up: "bridge"
+    bbox_stage_px: [142.4, 260.5, 222.2, 338.5]
+    oil_marks_stage_px: []
+  - step: 25
+    code: "B25"
+    part: "Second wheel"
+    part_id: "MC30_027"
+    disassembly_step: 36
+    catalog_no: "30.027"
+    tc: {item: "227"}
+    side_up: "bridge"
+    bbox_stage_px: [179.1, 279.6, 258.9, 359.2]
+    oil_marks_stage_px: []
+  - step: 26
+    code: "B26"
+    part: "Train wheel bridge, jewelled"
+    part_id: "MC10_048_07"
+    disassembly_step: 35
+    catalog_no: "10.048.07"
+    tc: {item: "110"}
+    side_up: "bridge"
+    bbox_stage_px: [80.2, 293.9, 228.6, 438.8]
+    oil_marks_stage_px: []
+  - step: 27
+    code: "B27"
+    part: "Screw for train wheel bridge"
+    part_id: "MC10_048_01"
+    disassembly_step: 34
+    catalog_no: "10.048.01"
+    tc: {item: "5110"}
+    side_up: "bridge"
+    bbox_stage_px: [129.7, 357.6, 156.8, 381.5]
+    oil_marks_stage_px: []
+  - step: 28
+    code: "B28"
+    part: "Pallet fork"
+    part_id: "MC40_010"
+    disassembly_step: 33
+    catalog_no: "40.010"
+    tc: {item: "710"}
+    side_up: "bridge"
+    note: "In order to test the freedom of gear train, before assembling the pallet fork turn the stem in the winding direction and check that the gear train at the end of its free motion forward turn slightly back before stopping definitively."
+    bbox_stage_px: [179.1, 357.6, 228.6, 408.5]
+    oil_marks_stage_px: []
+  - step: 29
+    code: "B29"
+    part: "Pallet bridge, jewelled"
+    part_id: "MC10_057_07"
+    disassembly_step: 32
+    catalog_no: "10.057.07"
+    tc: {item: "125"}
+    side_up: "bridge"
+    bbox_stage_px: [155.2, 362.4, 274.9, 475.4]
+    oil_marks_stage_px: []
+  - step: 30
+    code: "B30"
+    part: "Screw for pallet bridge"
+    part_id: "MC10_057_01"
+    disassembly_step: 31
+    catalog_no: "10.057.01"
+    tc: {item: "5125"}
+    side_up: "bridge"
+    bbox_stage_px: [187.1, 414.9, 204.7, 429.2]
+    oil_marks_stage_px: []
+  - step: 31
+    code: "B31"
+    part: "Balance complete with bridge and ETACHRON system"
+    part_id: "MCBalanceComp"
+    disassembly_step: 30
+    side_up: "bridge"
+    bbox_stage_px: [164.8, 348, 377, 481.8]
+    oil_marks_stage_px: []
+  - step: 32
+    code: "B32"
+    part: "Screw for balance bridge"
+    part_id: "MC10_058_01"
+    disassembly_step: 29
+    catalog_no: "10.058.01"
+    tc: {item: "5121"}
+    side_up: "bridge"
+    prompt: "TURN MOVEMENT"
+    bbox_stage_px: [314.7, 400.6, 332.3, 413.3]
+    oil_marks_stage_px: [[276.9, 228.2], [264.5, 240.6], [137.1, 246.7], [146.7, 263.1], [223.0, 312.2], [165.7, 322.3], [189.8, 336.4]]
+  - step: 33
+    code: "B33"
+    part: "Cannon pinion with driving wheel"
+    part_id: "MC31_083"
+    disassembly_step: 12
+    catalog_no: "31.083"
+    tc: {item: "242"}
+    side_up: "dial"
+    bbox_stage_px: [182.3, 284.4, 257.3, 356.0]
+    oil_marks_stage_px: [[395.2, 158.4], [168.5, 278.5], [181.5, 288.3], [232.6, 302.4], [222.7, 313.6], [147.9, 386.9]]
+  - step: 34
+    code: "B34"
+    part: "Minute wheel"
+    part_id: "MC31_041"
+    disassembly_step: 11
+    catalog_no: "31.041"
+    tc: {item: "260"}
+    side_up: "dial"
+    bbox_stage_px: [222.2, 268.4, 281.2, 322.6]
+    oil_marks_stage_px: [[267.7, 278.8], [181.5, 291.5]]
+  - step: 35
+    code: "B35"
+    part: "Setting wheel"
+    part_id: "MC31_100"
+    disassembly_step: 13
+    catalog_no: "31.100"
+    tc: {item: "450"}
+    side_up: "dial"
+    bbox_stage_px: [278.0, 308.2, 294.0, 330.5]
+    oil_marks_stage_px: []
+  - step: 36
+    code: "B36"
+    part: "Intermediate setting wheel"
+    part_id: "MC31_101"
+    disassembly_step: 14
+    catalog_no: "31.101"
+    tc: {item: "453"}
+    side_up: "dial"
+    bbox_stage_px: [270.1, 333.7, 305.2, 362.4]
+    oil_marks_stage_px: [[279.1, 354.9], [263.7, 371.1]]
+  - step: 37
+    code: "B37"
+    part: "Date corrector"
+    part_id: "MC53_200"
+    disassembly_step: 15
+    catalog_no: "53.200"
+    tc: {item: "2566"}
+    side_up: "dial"
+    bbox_stage_px: [281.2, 360.8, 321.1, 395.8]
+    oil_marks_stage_px: []
+  - step: 38
+    code: "B38"
+    part: "Minute train bridge"
+    part_id: "MC10_062"
+    disassembly_step: 7
+    catalog_no: "10.062"
+    tc: {item: "462"}
+    side_up: "dial"
+    bbox_stage_px: [230.2, 217.5, 327.5, 381.5]
+    oil_marks_stage_px: [[305.7, 380.4]]
+  - step: 39
+    code: "B39"
+    part: "Screw for minute train bridge"
+    part_id: "MC10_062_01"
+    disassembly_step: 6
+    catalog_no: "10.062.01"
+    tc: {item: "5462"}
+    side_up: "dial"
+    bbox_stage_px: [260.5, 246.2, 278.0, 262.1]
+  - step: 40
+    code: "B40"
+    part: "Date indicator driving wheel"
+    part_id: "MC33_020"
+    disassembly_step: 10
+    catalog_no: "33.020"
+    tc: {item: "2556"}
+    side_up: "dial"
+    bbox_stage_px: [113.7, 212.7, 196.7, 298.7]
+    oil_marks_stage_px: []
+  - step: 41
+    code: "B41"
+    part: "Date indicator driving wheel"
+    part_id: "MC53_080"
+    disassembly_step: 9
+    catalog_no: "53.080"
+    tc: {item: "2576"}
+    side_up: "dial"
+    remark: "caption as on screen; the parts fitted are the date jumper and the intermediate date wheel (A09)"
+    bbox_stage_px: [101.0, 276.4, 188.7, 343.3]
+    oil_marks_stage_px: [[162.1, 313.6], [159.5, 326.3]]
+  - step: 42
+    code: "B42"
+    part: "Date indicator, for window opening at 3 o'clock"
+    part_id: "MC91_440"
+    disassembly_step: 8
+    catalog_no: "91.440"
+    tc: {item: "2557/1", catalog_no: "91.440.22"}
+    side_up: "dial"
+    bbox_stage_px: [54.7, 153.8, 384.9, 483.3]
+    oil_marks_stage_px: []
+  - step: 43
+    code: "B43"
+    part: "Date jumper maintaining plate"
+    part_id: "MC13_111"
+    disassembly_step: 5
+    catalog_no: "13.111"
+    tc: {item: "2595"}
+    side_up: "dial"
+    bbox_stage_px: [97.8, 254.1, 147.2, 348.0]
+    oil_marks_stage_px: []
+  - step: 44
+    code: "B44"
+    part: "Screw for date jumper maintaining plate"
+    part_id: "MC13_111_01"
+    disassembly_step: 4
+    catalog_no: "13.111.01"
+    tc: {item: "52595"}
+    side_up: "dial"
+    bbox_stage_px: [115.3, 309.8, 132.9, 324.2]
+    oil_marks_stage_px: []
+  - step: 45
+    code: "B45"
+    part: "Additional indicator maintaining small plate"
+    part_id: "MC53_251"
+    disassembly_step: 3
+    catalog_no: "53.251"
+    tc: {item: "2536/1"}
+    side_up: "dial"
+    bbox_stage_px: [158.4, 386.2, 236.6, 438.8]
+    oil_marks_stage_px: []
+  - step: 46
+    code: "B46"
+    part: "Screw for additional indicator maintaining small plate"
+    part_id: "MC53_251_01"
+    disassembly_step: 2
+    catalog_no: "53.251.01"
+    tc: {item: "52536"}
+    side_up: "dial"
+    prompt: "TURN MOVEMENT"
+    bbox_stage_px: [172.8, 410.1, 187.1, 422.9]
+    oil_marks_stage_px: []
+  - step: 47
+    code: "B47"
+    part: "Stop lever"
+    part_id: "MC56_070"
+    disassembly_step: 18
+    catalog_no: "56.070"
+    tc: {item: "9433"}
+    side_up: "bridge"
+    prompt: "CONTINUE WITH ASSEMBLING OF AUTOMATIC DEVICE"
+    bbox_stage_px: [260.5, 324.2, 310.0, 360.8]
+    oil_marks_stage_px: []
+  - step: 48
+    code: "B48"
+    part: "Automatic device framework, jewelled"
+    part_id: "MC12_030_07"
+    disassembly_step: 28
+    catalog_no: "12.030.07"
+    tc: {item: "1134"}
+    side_up: "automatic device"
+    bbox_stage_px: [73.8, 204.8, 354.6, 492.9]
+  - step: 49
+    code: "B49"
+    part: "Intermediate reduction wheel"
+    part_id: "MC32_032"
+    disassembly_step: 27
+    catalog_no: "32.032"
+    tc: {item: "1490"}
+    side_up: "automatic device"
+    bbox_stage_px: [274.9, 368.7, 327.5, 419.7]
+    oil_marks_stage_px: [[312.9, 370.6], [302.8, 387.0]]
+  - step: 50
+    code: "B50"
+    part: "Reduction wheel"
+    part_id: "MC32_031"
+    disassembly_step: 26
+    catalog_no: "32.031"
+    tc: {item: "1481"}
+    side_up: "automatic device"
+    bbox_stage_px: [255.7, 392.6, 303.6, 440.4]
+    oil_marks_stage_px: [[267.7, 434.8]]
+  - step: 51
+    code: "B51"
+    part: "Reverser"
+    part_id: "MC52_040"
+    disassembly_step: 25
+    catalog_no: "52.040"
+    tc: {item: "1485"}
+    side_up: "automatic device"
+    bbox_stage_px: [198.3, 395.8, 231.8, 427.6]
+    oil_marks_stage_px: []
+  - step: 52
+    code: "B52"
+    part: "Reversing wheel"
+    part_id: "MC32_037"
+    disassembly_step: 24
+    catalog_no: "32.037"
+    tc: {item: "1488"}
+    side_up: "automatic device"
+    bbox_stage_px: [225.4, 395.8, 281.2, 449.9]
+    oil_marks_stage_px: []
+  - step: 53
+    code: "B53"
+    part: "Automatic device lower bridge, jewelled"
+    part_id: "MC12_051_07"
+    disassembly_step: 22
+    catalog_no: "12.051.07"
+    tc: {item: "1141"}
+    side_up: "automatic device"
+    bbox_stage_px: [182.3, 394.2, 303.6, 478.6]
+    oil_marks_stage_px: [[251.6, 421.6]]
+  - step: 54
+    code: "B54"
+    part: "Screw for automatic device lower bridge"
+    part_id: "MC12_051_01"
+    disassembly_step: 21
+    catalog_no: "12.051.01"
+    tc: {item: "51141"}
+    side_up: "automatic device"
+    prompt: "TURN DEVICE"
+    bbox_stage_px: [211.0, 434.0, 225.4, 451.5]
+    oil_marks_stage_px: [[223.3, 418.6], [258.0, 427.0], [225.9, 428.2]]
+  - step: 55
+    code: "B55"
+    part: "Auxiliary reverser"
+    part_id: "MC52_041"
+    disassembly_step: 23
+    catalog_no: "52.041"
+    tc: {item: "1514"}
+    side_up: "automatic device"
+    bbox_stage_px: [211.0, 379.9, 241.4, 408.5]
+    oil_marks_stage_px: [[219.7, 375.3], [235.8, 414.1], [194.6, 421.8], [254.6, 431.3]]
+  - step: 56
+    code: "B56"
+    part: "Oscillating weight, assembled"
+    part_id: "MC22_010_06"
+    disassembly_step: 20
+    catalog_no: "22.010.06"
+    tc: {item: "1143/1"}
+    side_up: "automatic device"
+    prompt: "TURN DEVICE"
+    bbox_stage_px: [140.8, 139.5, 410.5, 445.1]
+    oil_marks_stage_px: []
+  - step: 57
+    code: "B57"
+    part: "Screw for ball bearing"
+    part_id: "MC22_040_01"
+    disassembly_step: 19
+    catalog_no: "22.040.01"
+    tc: {item: "51497"}
+    side_up: "automatic device"
+    prompt: "TURN DEVICE"
+    bbox_stage_px: [212.6, 289.1, 260.5, 338.5]
+    oil_marks_stage_px: []
+  - step: 58
+    code: "B58"
+    part: "Automatic device"
+    part_id: "MCAutomaticDevice"
+    disassembly_step: 17
+    side_up: "bridge"
+    bbox_stage_px: [41.9, 169.8, 396.1, 496.1]
+  - step: 59
+    code: "B59"
+    part: "Screw for automatic device framework"
+    part_id: "MC12_030_01"
+    disassembly_step: 16
+    catalog_no: "12.030.01"
+    tc: {item: "51134"}
+    side_up: "bridge"
+    prompt: "TURN MOVEMENT"
+    bbox_stage_px: [88, 226, 321.5, 424.5]
+    oil_marks_stage_px: []
+  - step: 60
+    code: "B60"
+    part: "Hour wheel, assembled"
+    part_id: "MC31_046_06"
+    disassembly_step: 1
+    catalog_no: "31.046.06"
+    tc: {item: "255/1", catalog_no: "31.046"}
+    side_up: "dial"
+    bbox_stage_px: [183.9, 286.0, 255.7, 352.8]
+    oil_marks_stage_px: []

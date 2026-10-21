@@ -1,13 +1,15 @@
 """Render the images a Manim step scene needs.
 
-    python -I tools/prep_assets.py [--assembly] [--art original|simple] SWF OUT STEP [STEP ...]
-    python -I tools/prep_assets.py [--assembly] --art simple OUT STEP [STEP ...]
+    python -I tools/prep_assets.py [--assembly] [--art original|simple] SWF CALIBER_DIR STEP [STEP ...]
+    python -I tools/prep_assets.py [--assembly] --art simple CALIBER_DIR STEP [STEP ...]
+
+    e.g.  python -I tools/prep_assets.py --art simple calibers/6497 4
 
 --art original (default) draws ETA/tica's artwork straight from your SWF: for private use only.
 --art simple draws generated placeholders from parts.yaml (tools/simple_art.py) and needs no SWF;
     this is the version that can be published.
 
-Writes OUT/assets/<art>/{step|asm}NN_bg.png (the movement at that step with the part removed /
+Writes CALIBER_DIR/assets/<art>/{step|asm}NN_bg.png (the movement at that step with the part removed /
 not yet fitted, cropped to the movement window) and ..._part.png; for original art also the oil
 overlay, the edge-on detail drawing and the unmasked "free" drawing, when the step has them.
 For simple art, ..._part.json gives the image's stage bbox and a tight bbox for the highlight.
@@ -46,10 +48,11 @@ def parse_args(argv):
 
 
 def prep_original(swf_path, out, asm, data, steps, dst, pre):
+    import caliber
     import render as Rn
     import swfparse as P
     swf = P.parse(swf_path)
-    lo, hi = data['meta'].get('movement_depths', [44, 245])
+    lo, hi = data['meta'].get('movement_depths') or caliber.load(out)['swisslab']['disassembly']['movement_depths']
     for n in steps:
         s = data['steps'][n - 1]; fr = s['swf']['main_frame']
         skip = {s['swf']['depth'], s['swf'].get('oil_depth')}
@@ -79,6 +82,11 @@ def prep_original(swf_path, out, asm, data, steps, dst, pre):
         print(pre, n, 'original assets written')
 
 
+def part_key(s):
+    """the step's key into parts.yaml"""
+    return s.get('part_id') or s['swf']['clip_name']
+
+
 def tight_bbox(png_path, img_bbox):
     from PIL import Image
     im = Image.open(png_path).getchannel('A')
@@ -95,7 +103,7 @@ def prep_simple(out, asm, data, steps, dst, pre):
     seq = 'assembly_step' if asm else 'disassembly_step'
     for n in steps:
         s = data['steps'][n - 1]; side = s['side_up']
-        cur = s['part_id'] if asm else s['swf']['clip_name']
+        cur = part_key(s)
         if asm:   # already fitted
             ids = [k for k, p in parts.items() if p.get(seq) and p[seq] < n]
         else:     # still in the movement

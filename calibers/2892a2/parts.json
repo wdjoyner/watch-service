@@ -1,0 +1,2255 @@
+{
+ "MC31_046_06": {
+  "part": "Hour wheel, assembled",
+  "catalog_no": "31.046.06",
+  "disassembly_step": 1,
+  "assembly_step": 60,
+  "names": {
+   "en": "Hour wheel, assembled",
+   "fr": "Roue des heures, montée",
+   "de": "Stundenrad, montiert"
+  },
+  "tc": {
+   "item": "255/1",
+   "catalog_no": "31.046"
+  },
+  "geom": {
+   "pivot": [
+    219.8,
+    319.4
+   ],
+   "bbox": [
+    183.9,
+    286.0,
+    255.7,
+    352.8
+   ],
+   "z": 99,
+   "face": "dial",
+   "r": 35.9
+  },
+  "type": "wheel",
+  "art": {
+   "teeth": 32,
+   "arms": 0,
+   "hole": 0.32,
+   "estimated": true
+  }
+ },
+ "MC53_251_01": {
+  "part": "Screw for additional indicator maintaining small plate",
+  "catalog_no": "53.251.01",
+  "disassembly_step": 2,
+  "assembly_step": 46,
+  "names": {
+   "en": "Screw for additional indicator maintaining small plate",
+   "fr": "Vis de plaquette supplémentaire de maintien de l'indicateur",
+   "de": "Schraube für Zusatzhalteplättchen für Anzeige"
+  },
+  "tc": {
+   "item": "52536"
+  },
+  "geom": {
+   "pivot": [
+    179.95,
+    416.5
+   ],
+   "bbox": [
+    172.8,
+    410.1,
+    187.1,
+    422.9
+   ],
+   "z": 98,
+   "face": "dial",
+   "r": 7.15
+  },
+  "type": "screw"
+ },
+ "MC53_251": {
+  "part": "Additional indicator maintaining small plate",
+  "catalog_no": "53.251",
+  "disassembly_step": 3,
+  "assembly_step": 45,
+  "names": {
+   "en": "Additional indicator maintaining small plate",
+   "fr": "Plaquette supplémentaire de maintien de l'indicateur",
+   "de": "Zusatzhalteplättchen für Anzeige"
+  },
+  "tc": {
+   "item": "2536/1"
+  },
+  "geom": {
+   "pivot": [
+    197.5,
+    412.5
+   ],
+   "bbox": [
+    158.4,
+    386.2,
+    236.6,
+    438.8
+   ],
+   "z": 97,
+   "face": "dial",
+   "r": 39.1
+  },
+  "type": "bridge",
+  "art": {
+   "holds": [],
+   "screws": [
+    "MC53_251_01"
+   ],
+   "corners": 4
+  }
+ },
+ "MC13_111_01": {
+  "part": "Screw for date jumper maintaining plate",
+  "catalog_no": "13.111.01",
+  "disassembly_step": 4,
+  "assembly_step": 44,
+  "names": {
+   "en": "Screw for date jumper maintaining plate",
+   "fr": "Vis de plaque de maintien du sautoir de quantième",
+   "de": "Schraube für Halteplatte für Datumraste"
+  },
+  "tc": {
+   "item": "52595"
+  },
+  "geom": {
+   "pivot": [
+    124.1,
+    317.0
+   ],
+   "bbox": [
+    115.3,
+    309.8,
+    132.9,
+    324.2
+   ],
+   "z": 96,
+   "face": "dial",
+   "r": 8.8
+  },
+  "type": "screw"
+ },
+ "MC13_111": {
+  "part": "Date jumper maintaining plate",
+  "catalog_no": "13.111",
+  "disassembly_step": 5,
+  "assembly_step": 43,
+  "names": {
+   "en": "Date jumper maintaining plate",
+   "fr": "Plaque de maintien du sautoir de quantième",
+   "de": "Halteplatte für Datumraste"
+  },
+  "tc": {
+   "item": "2595"
+  },
+  "geom": {
+   "pivot": [
+    122.5,
+    301.05
+   ],
+   "bbox": [
+    97.8,
+    254.1,
+    147.2,
+    348.0
+   ],
+   "z": 95,
+   "face": "dial",
+   "r": 46.95
+  },
+  "type": "bridge",
+  "art": {
+   "holds": [
+    "MC53_080"
+   ],
+   "screws": [
+    "MC13_111_01"
+   ],
+   "corners": 4
+  }
+ },
+ "MC10_062_01": {
+  "part": "Screw for minute train bridge",
+  "catalog_no": "10.062.01",
+  "disassembly_step": 6,
+  "assembly_step": 39,
+  "names": {
+   "en": "Screw for minute train bridge",
+   "fr": "Vis de pont du rouage de minuterie",
+   "de": "Schraube für Wechselradbrücke"
+  },
+  "tc": {
+   "item": "5462"
+  },
+  "geom": {
+   "pivot": [
+    269.25,
+    254.15
+   ],
+   "bbox": [
+    260.5,
+    246.2,
+    278.0,
+    262.1
+   ],
+   "z": 94,
+   "face": "dial",
+   "r": 8.75
+  },
+  "type": "screw"
+ },
+ "MC10_062": {
+  "part": "Minute train bridge",
+  "catalog_no": "10.062",
+  "disassembly_step": 7,
+  "assembly_step": 38,
+  "names": {
+   "en": "Minute train bridge",
+   "fr": "Pont du rouage de minuterie",
+   "de": "Wechselradbrücke"
+  },
+  "tc": {
+   "item": "462"
+  },
+  "geom": {
+   "pivot": [
+    278.85,
+    299.5
+   ],
+   "bbox": [
+    230.2,
+    217.5,
+    327.5,
+    381.5
+   ],
+   "z": 93,
+   "face": "dial",
+   "r": 82.0
+  },
+  "type": "bridge",
+  "art": {
+   "holds": [
+    "MC31_041",
+    "MC31_101"
+   ],
+   "screws": [
+    "MC10_062_01"
+   ],
+   "corners": 4
+  }
+ },
+ "MC91_440": {
+  "part": "Date indicator, for window opening at 3 o'clock",
+  "catalog_no": "91.440",
+  "disassembly_step": 8,
+  "assembly_step": 42,
+  "names": {
+   "en": "Date indicator, for window opening at 3 o'clock",
+   "fr": "Indicateur de quantième, pour ouverture de guichet à 3h",
+   "de": "Datumanzeiger, für Fenster auf 3 Uhr"
+  },
+  "tc": {
+   "item": "2557/1",
+   "catalog_no": "91.440.22"
+  },
+  "geom": {
+   "pivot": [
+    219.8,
+    318.55
+   ],
+   "bbox": [
+    54.7,
+    153.8,
+    384.9,
+    483.3
+   ],
+   "z": 92,
+   "face": "dial",
+   "r": 165.1
+  },
+  "type": "date_ring",
+  "art": {
+   "days": 31,
+   "inner": 0.84,
+   "teeth": 31
+  }
+ },
+ "MC53_080": {
+  "part": "Date jumper / Intermediate date wheel",
+  "catalog_no": "53.080",
+  "disassembly_step": 9,
+  "assembly_step": 41,
+  "names": {
+   "en": "Date jumper / Intermediate date wheel",
+   "fr": "Sautoir de quantième",
+   "de": "Datumraste"
+  },
+  "tc": {
+   "item": "2576"
+  },
+  "components": [
+   {
+    "item": "2576",
+    "catalog_no": "53.080",
+    "part": "Date jumper"
+   },
+   {
+    "item": "2543",
+    "catalog_no": "33.011",
+    "part": "Intermediate date wheel"
+   }
+  ],
+  "geom": {
+   "pivot": [
+    144.85,
+    309.85
+   ],
+   "bbox": [
+    101.0,
+    276.4,
+    188.7,
+    343.3
+   ],
+   "z": 91,
+   "face": "dial",
+   "r": 43.85
+  },
+  "type": "lever",
+  "art": {
+   "with": "intermediate date wheel"
+  }
+ },
+ "MC33_020": {
+  "part": "Date indicator driving wheel",
+  "catalog_no": "33.020",
+  "disassembly_step": 10,
+  "assembly_step": 40,
+  "names": {
+   "en": "Date indicator driving wheel",
+   "fr": "Roue entraîneuse de l'indicateur de quantième",
+   "de": "Datumanzeiger-Mitnehmerrad"
+  },
+  "tc": {
+   "item": "2556"
+  },
+  "geom": {
+   "pivot": [
+    155.2,
+    255.7
+   ],
+   "bbox": [
+    113.7,
+    212.7,
+    196.7,
+    298.7
+   ],
+   "z": 90,
+   "face": "dial",
+   "r": 43.0
+  },
+  "type": "wheel",
+  "art": {
+   "teeth": 48,
+   "arms": 0,
+   "hole": 0.3,
+   "estimated": true
+  }
+ },
+ "MC31_041": {
+  "part": "Minute wheel",
+  "catalog_no": "31.041",
+  "disassembly_step": 11,
+  "assembly_step": 34,
+  "names": {
+   "en": "Minute wheel",
+   "fr": "Roue de minuterie",
+   "de": "Wechselrad"
+  },
+  "tc": {
+   "item": "260"
+  },
+  "geom": {
+   "pivot": [
+    251.7,
+    295.5
+   ],
+   "bbox": [
+    222.2,
+    268.4,
+    281.2,
+    322.6
+   ],
+   "z": 89,
+   "face": "dial",
+   "r": 29.5
+  },
+  "type": "wheel",
+  "art": {
+   "teeth": 30,
+   "arms": 0,
+   "hole": 0.2,
+   "estimated": true
+  }
+ },
+ "MC31_083": {
+  "part": "Cannon pinion with driving wheel",
+  "catalog_no": "31.083",
+  "disassembly_step": 12,
+  "assembly_step": 33,
+  "names": {
+   "en": "Cannon pinion with driving wheel",
+   "fr": "Chaussée avec roue entraîneuse",
+   "de": "Minutenrohr mit Mitnehmerrad"
+  },
+  "tc": {
+   "item": "242"
+  },
+  "geom": {
+   "pivot": [
+    219.8,
+    320.2
+   ],
+   "bbox": [
+    182.3,
+    284.4,
+    257.3,
+    356.0
+   ],
+   "z": 88,
+   "face": "dial",
+   "r": 37.5
+  },
+  "type": "wheel",
+  "art": {
+   "teeth": 40,
+   "arms": 0,
+   "hole": 0.3,
+   "estimated": true
+  }
+ },
+ "MC31_100": {
+  "part": "Setting wheel",
+  "catalog_no": "31.100",
+  "disassembly_step": 13,
+  "assembly_step": 35,
+  "names": {
+   "en": "Setting wheel",
+   "fr": "Renvoi",
+   "de": "Zeigerstellrad"
+  },
+  "tc": {
+   "item": "450"
+  },
+  "geom": {
+   "pivot": [
+    286.0,
+    319.35
+   ],
+   "bbox": [
+    278.0,
+    308.2,
+    294.0,
+    330.5
+   ],
+   "z": 87,
+   "face": "dial",
+   "r": 11.15
+  },
+  "type": "pinion",
+  "art": {
+   "teeth": 16,
+   "estimated": true
+  }
+ },
+ "MC31_101": {
+  "part": "Intermediate setting wheel",
+  "catalog_no": "31.101",
+  "disassembly_step": 14,
+  "assembly_step": 36,
+  "names": {
+   "en": "Intermediate setting wheel",
+   "fr": "Renvoi intermédiaire",
+   "de": "Zwischen-Zeigerstellrad"
+  },
+  "tc": {
+   "item": "453"
+  },
+  "geom": {
+   "pivot": [
+    287.65,
+    348.05
+   ],
+   "bbox": [
+    270.1,
+    333.7,
+    305.2,
+    362.4
+   ],
+   "z": 86,
+   "face": "dial",
+   "r": 17.55
+  },
+  "type": "pinion",
+  "art": {
+   "teeth": 14,
+   "estimated": true
+  }
+ },
+ "MC53_200": {
+  "part": "Date corrector",
+  "catalog_no": "53.200",
+  "disassembly_step": 15,
+  "assembly_step": 37,
+  "names": {
+   "en": "Date corrector",
+   "fr": "Correcteur de quantième",
+   "de": "Datumkorrektor"
+  },
+  "tc": {
+   "item": "2566"
+  },
+  "geom": {
+   "pivot": [
+    301.15,
+    378.3
+   ],
+   "bbox": [
+    281.2,
+    360.8,
+    321.1,
+    395.8
+   ],
+   "z": 85,
+   "face": "dial",
+   "r": 19.95
+  },
+  "type": "lever"
+ },
+ "MC12_030_01": {
+  "part": "Screw for automatic device framework",
+  "catalog_no": "12.030.01",
+  "disassembly_step": 16,
+  "assembly_step": 59,
+  "names": {
+   "en": "Screw for automatic device framework",
+   "fr": "Vis de bâti du dispositif automatique",
+   "de": "Schraube für Gestell für Automatik"
+  },
+  "tc": {
+   "item": "51134"
+  },
+  "geom": {
+   "pivot": [
+    204.7,
+    325
+   ],
+   "bbox": [
+    88,
+    226,
+    321.5,
+    424.5
+   ],
+   "z": 84,
+   "face": "bridge",
+   "r": 6.4,
+   "heads": [
+    [
+     94.6,
+     232.4,
+     6.4
+    ],
+    [
+     314.7,
+     350.2,
+     6.4
+    ],
+    [
+     129.7,
+     418.1,
+     6.4
+    ]
+   ],
+   "hand": true,
+   "note": "from SwissLab's arrows at A16: the device is drawn see-through there, so the screws could not be measured"
+  },
+  "type": "screw"
+ },
+ "MCAutomaticDevice": {
+  "part": "Automatic device",
+  "catalog_no": null,
+  "disassembly_step": 17,
+  "assembly_step": 58,
+  "names": {
+   "en": "Automatic device"
+  },
+  "components": [
+   {
+    "item": "1134",
+    "catalog_no": "12.030.07",
+    "part": "Automatic device framework, jewelled"
+   },
+   {
+    "item": "1143",
+    "catalog_no": "22.010.06",
+    "part": "Oscillating weight, assembled"
+   },
+   {
+    "item": "51497",
+    "catalog_no": "22.040.01",
+    "part": "Screw for ball bearing"
+   },
+   {
+    "item": "1141",
+    "catalog_no": "12.051.07",
+    "part": "Automatic device lower bridge, jewelled"
+   },
+   {
+    "item": "51141",
+    "catalog_no": "12.051.01",
+    "part": "Screw for automatic device lower bridge"
+   },
+   {
+    "item": "1514",
+    "catalog_no": "52.041",
+    "part": "Auxiliary reverser"
+   },
+   {
+    "item": "1488",
+    "catalog_no": "32.037",
+    "part": "Reversing wheel"
+   },
+   {
+    "item": "1485",
+    "catalog_no": "52.040",
+    "part": "Reverser"
+   },
+   {
+    "item": "1481",
+    "catalog_no": "32.031",
+    "part": "Reduction wheel"
+   },
+   {
+    "item": "1490",
+    "catalog_no": "32.032",
+    "part": "Intermediate reduction wheel"
+   }
+  ],
+  "geom": {
+   "pivot": [
+    219,
+    332.95
+   ],
+   "bbox": [
+    41.9,
+    169.8,
+    396.1,
+    496.1
+   ],
+   "z": 83,
+   "face": "bridge",
+   "r": 177.1,
+   "center": [
+    213.4,
+    317
+   ],
+   "hand": true,
+   "note": "center: the ball bearing, read from the recording by eye"
+  },
+  "type": "rotor",
+  "art": {
+   "opening": 180,
+   "see_through": true
+  }
+ },
+ "MC56_070": {
+  "part": "Stop lever",
+  "catalog_no": "56.070",
+  "disassembly_step": 18,
+  "assembly_step": 47,
+  "names": {
+   "en": "Stop lever",
+   "fr": "Levier stop",
+   "de": "Stopphebel"
+  },
+  "tc": {
+   "item": "9433"
+  },
+  "geom": {
+   "pivot": [
+    285.25,
+    342.5
+   ],
+   "bbox": [
+    260.5,
+    324.2,
+    310.0,
+    360.8
+   ],
+   "z": 82,
+   "face": "bridge",
+   "r": 24.75
+  },
+  "type": "spring"
+ },
+ "MC22_040_01": {
+  "part": "Screw for ball bearing",
+  "catalog_no": "22.040.01",
+  "disassembly_step": 19,
+  "assembly_step": 57,
+  "names": {
+   "en": "Screw for ball bearing",
+   "fr": "Vis de roulement à billes",
+   "de": "Schraube für Kugellager"
+  },
+  "tc": {
+   "item": "51497"
+  },
+  "geom": {
+   "pivot": [
+    236.55,
+    313.8
+   ],
+   "bbox": [
+    212.6,
+    289.1,
+    260.5,
+    338.5
+   ],
+   "z": 81,
+   "face": "automatic device",
+   "r": 24.7,
+   "heads": [
+    [
+     220.7,
+     333.1,
+     5.3
+    ],
+    [
+     225.5,
+     295.4,
+     5.9
+    ],
+    [
+     254.1,
+     318.6,
+     5.4
+    ]
+   ]
+  },
+  "type": "screw"
+ },
+ "MC22_010_06": {
+  "part": "Oscillating weight, assembled",
+  "catalog_no": "22.010.06",
+  "disassembly_step": 20,
+  "assembly_step": 56,
+  "names": {
+   "en": "Oscillating weight, assembled",
+   "fr": "Masse oscillante, montée",
+   "de": "Schwungmasse, montiert"
+  },
+  "tc": {
+   "item": "1143/1"
+  },
+  "geom": {
+   "pivot": [
+    275.65,
+    292.3
+   ],
+   "bbox": [
+    140.8,
+    139.5,
+    410.5,
+    445.1
+   ],
+   "z": 80,
+   "face": "automatic device",
+   "r": 152.8,
+   "center": [
+    236.6,
+    313.8
+   ],
+   "hand": true,
+   "note": "center: the ball bearing, between its three screws"
+  },
+  "type": "rotor",
+  "art": {
+   "opening": 180
+  }
+ },
+ "MC12_051_01": {
+  "part": "Screw for automatic device lower bridge",
+  "catalog_no": "12.051.01",
+  "disassembly_step": 21,
+  "assembly_step": 54,
+  "names": {
+   "en": "Screw for automatic device lower bridge",
+   "fr": "Vis de pont inférieur du dispositif automatique",
+   "de": "Schraube für Untere Brücke für Automatik"
+  },
+  "tc": {
+   "item": "51141"
+  },
+  "geom": {
+   "pivot": [
+    218.2,
+    442.75
+   ],
+   "bbox": [
+    211.0,
+    434.0,
+    225.4,
+    451.5
+   ],
+   "z": 79,
+   "face": "automatic device",
+   "r": 8.75
+  },
+  "type": "screw"
+ },
+ "MC12_051_07": {
+  "part": "Automatic device lower bridge, jewelled",
+  "catalog_no": "12.051.07",
+  "disassembly_step": 22,
+  "assembly_step": 53,
+  "names": {
+   "en": "Automatic device lower bridge, jewelled",
+   "fr": "Pont inférieur du dispositif automatique, empierré",
+   "de": "Untere Brücke für Automatik, mit Steinen"
+  },
+  "tc": {
+   "item": "1141"
+  },
+  "geom": {
+   "pivot": [
+    242.95,
+    436.4
+   ],
+   "bbox": [
+    182.3,
+    394.2,
+    303.6,
+    478.6
+   ],
+   "z": 78,
+   "face": "automatic device",
+   "r": 60.65
+  },
+  "type": "bridge",
+  "art": {
+   "holds": [
+    "MC32_037",
+    "MC52_040",
+    "MC32_031"
+   ],
+   "screws": [
+    "MC12_051_01"
+   ],
+   "corners": 4
+  }
+ },
+ "MC52_041": {
+  "part": "Auxiliary reverser",
+  "catalog_no": "52.041",
+  "disassembly_step": 23,
+  "assembly_step": 55,
+  "names": {
+   "en": "Auxiliary reverser",
+   "fr": "Inverseur auxilaire",
+   "de": "Hilfswechsler"
+  },
+  "tc": {
+   "item": "1514"
+  },
+  "geom": {
+   "pivot": [
+    226.2,
+    394.2
+   ],
+   "bbox": [
+    211.0,
+    379.9,
+    241.4,
+    408.5
+   ],
+   "z": 77,
+   "face": "automatic device",
+   "r": 15.2
+  },
+  "type": "wheel",
+  "art": {
+   "teeth": 18,
+   "arms": 0,
+   "pawls": 2,
+   "estimated": true
+  }
+ },
+ "MC32_037": {
+  "part": "Reversing wheel",
+  "catalog_no": "32.037",
+  "disassembly_step": 24,
+  "assembly_step": 52,
+  "names": {
+   "en": "Reversing wheel",
+   "fr": "Roue d'inversion",
+   "de": "Umkehrrad"
+  },
+  "tc": {
+   "item": "1488"
+  },
+  "geom": {
+   "pivot": [
+    253.3,
+    422.85
+   ],
+   "bbox": [
+    225.4,
+    395.8,
+    281.2,
+    449.9
+   ],
+   "z": 76,
+   "face": "automatic device",
+   "r": 27.9
+  },
+  "type": "wheel",
+  "art": {
+   "teeth": 30,
+   "arms": 0,
+   "pawls": 4,
+   "estimated": true
+  }
+ },
+ "MC52_040": {
+  "part": "Reverser",
+  "catalog_no": "52.040",
+  "disassembly_step": 25,
+  "assembly_step": 51,
+  "names": {
+   "en": "Reverser",
+   "fr": "Inverseur",
+   "de": "Wechsler"
+  },
+  "tc": {
+   "item": "1485"
+  },
+  "geom": {
+   "pivot": [
+    215.05,
+    411.7
+   ],
+   "bbox": [
+    198.3,
+    395.8,
+    231.8,
+    427.6
+   ],
+   "z": 75,
+   "face": "automatic device",
+   "r": 16.75
+  },
+  "type": "wheel",
+  "art": {
+   "teeth": 18,
+   "arms": 0,
+   "pawls": 2,
+   "estimated": true
+  }
+ },
+ "MC32_031": {
+  "part": "Reduction wheel",
+  "catalog_no": "32.031",
+  "disassembly_step": 26,
+  "assembly_step": 50,
+  "names": {
+   "en": "Reduction wheel",
+   "fr": "Roue de réduction",
+   "de": "Reduktionsrad"
+  },
+  "tc": {
+   "item": "1481"
+  },
+  "geom": {
+   "pivot": [
+    279.65,
+    416.5
+   ],
+   "bbox": [
+    255.7,
+    392.6,
+    303.6,
+    440.4
+   ],
+   "z": 74,
+   "face": "automatic device",
+   "r": 23.95
+  },
+  "type": "wheel",
+  "art": {
+   "teeth": 32,
+   "arms": 0,
+   "hole": 0.15,
+   "estimated": true
+  }
+ },
+ "MC32_032": {
+  "part": "Intermediate reduction wheel",
+  "catalog_no": "32.032",
+  "disassembly_step": 27,
+  "assembly_step": 49,
+  "names": {
+   "en": "Intermediate reduction wheel",
+   "fr": "Roue intermédiaire de réduction",
+   "de": "Zwischen-Reduktionsrad"
+  },
+  "tc": {
+   "item": "1490"
+  },
+  "geom": {
+   "pivot": [
+    301.2,
+    394.2
+   ],
+   "bbox": [
+    274.9,
+    368.7,
+    327.5,
+    419.7
+   ],
+   "z": 73,
+   "face": "automatic device",
+   "r": 26.3
+  },
+  "type": "wheel",
+  "art": {
+   "teeth": 36,
+   "arms": 4,
+   "estimated": true
+  }
+ },
+ "MC12_030_07": {
+  "part": "Automatic device framework, jewelled",
+  "catalog_no": "12.030.07",
+  "disassembly_step": 28,
+  "assembly_step": 48,
+  "names": {
+   "en": "Automatic device framework, jewelled",
+   "fr": "Bâti du dispositif automatique, empierré",
+   "de": "Gestell für Automatik, mit Steinen"
+  },
+  "tc": {
+   "item": "1134"
+  },
+  "geom": {
+   "pivot": [
+    214.2,
+    348.85
+   ],
+   "bbox": [
+    73.8,
+    204.8,
+    354.6,
+    492.9
+   ],
+   "z": 72,
+   "face": "automatic device",
+   "r": 144.05
+  },
+  "type": "plate",
+  "art": {
+   "outline": "box"
+  }
+ },
+ "MC10_058_01": {
+  "part": "Screw for balance bridge",
+  "catalog_no": "10.058.01",
+  "disassembly_step": 29,
+  "assembly_step": 32,
+  "names": {
+   "en": "Screw for balance bridge",
+   "fr": "Vis de pont de balancier",
+   "de": "Schraube für Unruhbrücke"
+  },
+  "tc": {
+   "item": "5121"
+  },
+  "geom": {
+   "pivot": [
+    323.5,
+    406.95
+   ],
+   "bbox": [
+    314.7,
+    400.6,
+    332.3,
+    413.3
+   ],
+   "z": 71,
+   "face": "bridge",
+   "r": 8.8
+  },
+  "type": "screw"
+ },
+ "MCBalanceComp": {
+  "part": "Balance complete with bridge and ETACHRON system",
+  "catalog_no": null,
+  "disassembly_step": 30,
+  "assembly_step": 31,
+  "names": {
+   "en": "Balance complete with bridge and ETACHRON system"
+  },
+  "components": [
+   {
+    "item": "121/4",
+    "catalog_no": "10.058.24",
+    "part": "Balance bridge for regulator with pointer, shock-absorber, stud support ETACHRON, corrector"
+   },
+   {
+    "item": "721",
+    "catalog_no": "40.050.21",
+    "part": "Timed annular balance, for shock-absorber and stud support ETACHRON"
+   },
+   {
+    "item": "303/5",
+    "catalog_no": "40.302.23",
+    "part": "Two-piece regulator, with pointer, for stud support ETACHRON and corrector"
+   },
+   {
+    "item": "358",
+    "catalog_no": "40.380",
+    "part": "Regulator corrector"
+   },
+   {
+    "item": "375",
+    "catalog_no": "40.200",
+    "part": "Stud support ETACHRON"
+   },
+   {
+    "item": "3004",
+    "catalog_no": "70.500",
+    "part": "Jewelled shock-absorber for balance, top, to press-in, shouldered"
+   },
+   {
+    "item": "3005",
+    "catalog_no": "70.531",
+    "part": "Jewelled shock-absorber for balance, bottom, to press-in, cylindrical"
+   }
+  ],
+  "geom": {
+   "pivot": [
+    270.9,
+    414.9
+   ],
+   "bbox": [
+    164.8,
+    348,
+    377,
+    481.8
+   ],
+   "z": 70,
+   "face": "bridge",
+   "r": 40,
+   "center": [
+    227,
+    407
+   ],
+   "hand": true,
+   "note": "balance center and rim radius read from the recording by eye"
+  },
+  "type": "balance",
+  "art": {
+   "arms": 3,
+   "bridge": {
+    "screws": [
+     "MC10_058_01"
+    ]
+   },
+   "estimated": true
+  }
+ },
+ "MC10_057_01": {
+  "part": "Screw for pallet bridge",
+  "catalog_no": "10.057.01",
+  "disassembly_step": 31,
+  "assembly_step": 30,
+  "names": {
+   "en": "Screw for pallet bridge",
+   "fr": "Vis de pont d'ancre",
+   "de": "Schraube für Ankerbrücke"
+  },
+  "tc": {
+   "item": "5125"
+  },
+  "geom": {
+   "pivot": [
+    195.9,
+    422.05
+   ],
+   "bbox": [
+    187.1,
+    414.9,
+    204.7,
+    429.2
+   ],
+   "z": 69,
+   "face": "bridge",
+   "r": 8.8
+  },
+  "type": "screw"
+ },
+ "MC10_057_07": {
+  "part": "Pallet bridge, jewelled",
+  "catalog_no": "10.057.07",
+  "disassembly_step": 32,
+  "assembly_step": 29,
+  "names": {
+   "en": "Pallet bridge, jewelled",
+   "fr": "Pont d'ancre, empierré",
+   "de": "Ankerbrücke, mit Steinen"
+  },
+  "tc": {
+   "item": "125"
+  },
+  "geom": {
+   "pivot": [
+    215.05,
+    418.9
+   ],
+   "bbox": [
+    155.2,
+    362.4,
+    274.9,
+    475.4
+   ],
+   "z": 68,
+   "face": "bridge",
+   "r": 59.85
+  },
+  "type": "bridge",
+  "art": {
+   "holds": [
+    "MC40_010"
+   ],
+   "screws": [
+    "MC10_057_01"
+   ],
+   "corners": 4
+  }
+ },
+ "MC40_010": {
+  "part": "Pallet fork",
+  "catalog_no": "40.010",
+  "disassembly_step": 33,
+  "assembly_step": 28,
+  "names": {
+   "en": "Pallet fork",
+   "fr": "Ancre",
+   "de": "Anker"
+  },
+  "tc": {
+   "item": "710"
+  },
+  "components": [
+   {
+    "item": "710",
+    "catalog_no": "40.010",
+    "part": "Pallet fork"
+   },
+   {
+    "item": "714",
+    "catalog_no": "40.020",
+    "part": "Pallet staff"
+   }
+  ],
+  "geom": {
+   "pivot": [
+    203.85,
+    383.05
+   ],
+   "bbox": [
+    179.1,
+    357.6,
+    228.6,
+    408.5
+   ],
+   "z": 67,
+   "face": "bridge",
+   "r": 25.45
+  },
+  "type": "lever"
+ },
+ "MC10_048_01": {
+  "part": "Screw for train wheel bridge",
+  "catalog_no": "10.048.01",
+  "disassembly_step": 34,
+  "assembly_step": 27,
+  "names": {
+   "en": "Screw for train wheel bridge",
+   "fr": "Vis de pont de rouage",
+   "de": "Schraube für Räderwerkbrücke"
+  },
+  "tc": {
+   "item": "5110"
+  },
+  "geom": {
+   "pivot": [
+    143.25,
+    369.55
+   ],
+   "bbox": [
+    129.7,
+    357.6,
+    156.8,
+    381.5
+   ],
+   "z": 66,
+   "face": "bridge",
+   "r": 13.55
+  },
+  "type": "screw"
+ },
+ "MC10_048_07": {
+  "part": "Train wheel bridge, jewelled",
+  "catalog_no": "10.048.07",
+  "disassembly_step": 35,
+  "assembly_step": 26,
+  "names": {
+   "en": "Train wheel bridge, jewelled",
+   "fr": "Pont de rouage, empierré",
+   "de": "Räderwerkbrücke, mit Steinen"
+  },
+  "tc": {
+   "item": "110"
+  },
+  "geom": {
+   "pivot": [
+    154.4,
+    366.35
+   ],
+   "bbox": [
+    80.2,
+    293.9,
+    228.6,
+    438.8
+   ],
+   "z": 65,
+   "face": "bridge",
+   "r": 74.2
+  },
+  "type": "bridge",
+  "art": {
+   "holds": [
+    "MC30_025",
+    "MC30_027",
+    "MC30_040"
+   ],
+   "screws": [
+    "MC10_048_01"
+   ],
+   "corners": 4
+  }
+ },
+ "MC30_027": {
+  "part": "Second wheel",
+  "catalog_no": "30.027",
+  "disassembly_step": 36,
+  "assembly_step": 25,
+  "names": {
+   "en": "Second wheel",
+   "fr": "Roue de seconde",
+   "de": "Sekundenrad"
+  },
+  "tc": {
+   "item": "227"
+  },
+  "geom": {
+   "pivot": [
+    219.0,
+    319.4
+   ],
+   "bbox": [
+    179.1,
+    279.6,
+    258.9,
+    359.2
+   ],
+   "z": 64,
+   "face": "bridge",
+   "r": 39.9
+  },
+  "type": "wheel",
+  "art": {
+   "teeth": 70,
+   "arms": 4,
+   "estimated": true
+  }
+ },
+ "MC30_025": {
+  "part": "Third wheel",
+  "catalog_no": "30.025",
+  "disassembly_step": 37,
+  "assembly_step": 24,
+  "names": {
+   "en": "Third wheel",
+   "fr": "Roue moyenne",
+   "de": "Kleinbodenrad"
+  },
+  "tc": {
+   "item": "210"
+  },
+  "geom": {
+   "pivot": [
+    182.3,
+    299.5
+   ],
+   "bbox": [
+    142.4,
+    260.5,
+    222.2,
+    338.5
+   ],
+   "z": 63,
+   "face": "bridge",
+   "r": 39.9
+  },
+  "type": "wheel",
+  "art": {
+   "teeth": 75,
+   "arms": 4,
+   "estimated": true
+  }
+ },
+ "MC30_040": {
+  "part": "Escape wheel",
+  "catalog_no": "30.040",
+  "disassembly_step": 38,
+  "assembly_step": 23,
+  "names": {
+   "en": "Escape wheel",
+   "fr": "Roue d'échappement",
+   "de": "Hemmungsrad"
+  },
+  "tc": {
+   "item": "705"
+  },
+  "geom": {
+   "pivot": [
+    184.7,
+    344.85
+   ],
+   "bbox": [
+    150.4,
+    311.4,
+    219.0,
+    378.3
+   ],
+   "z": 62,
+   "face": "bridge",
+   "r": 34.3
+  },
+  "type": "wheel",
+  "art": {
+   "teeth": 20,
+   "arms": 4,
+   "tooth_form": "escape"
+  }
+ },
+ "MC10_041_01": {
+  "part": "Screw for barrel bridge",
+  "catalog_no": "10.041.01",
+  "disassembly_step": 39,
+  "assembly_step": 14,
+  "names": {
+   "en": "Screw for barrel bridge",
+   "fr": "Vis de pont de barillet",
+   "de": "Schraube für Federhausbrücke"
+  },
+  "tc": {
+   "item": "5105"
+  },
+  "geom": {
+   "pivot": [
+    243.75,
+    285.2
+   ],
+   "bbox": [
+    129.7,
+    204.8,
+    357.8,
+    365.6
+   ],
+   "z": 61,
+   "face": "bridge",
+   "r": 114.05,
+   "heads": [
+    [
+     139.0,
+     209.6,
+     5.4
+    ],
+    [
+     348.1,
+     360.5,
+     5.5
+    ],
+    [
+     350.2,
+     289.0,
+     4.6
+    ]
+   ]
+  },
+  "type": "screw"
+ },
+ "MCBarrelBridgeComp": {
+  "part": "Barrel bridge, assembled",
+  "catalog_no": null,
+  "disassembly_step": 40,
+  "assembly_step": 13,
+  "names": {
+   "en": "Barrel bridge, assembled"
+  },
+  "components": [
+   {
+    "item": "105",
+    "catalog_no": "10.041.07",
+    "part": "Barrel bridge, jewelled"
+   },
+   {
+    "item": "1482",
+    "catalog_no": "32.033",
+    "part": "Ratchet wheel driving wheel"
+   },
+   {
+    "item": "425",
+    "catalog_no": "51.120",
+    "part": "Click"
+   },
+   {
+    "item": "5511",
+    "catalog_no": "81.036.01",
+    "part": "Screw for click plate"
+   },
+   {
+    "item": "511",
+    "catalog_no": "81.036",
+    "part": "Click plate"
+   },
+   {
+    "item": "420",
+    "catalog_no": "31.023",
+    "part": "Crown wheel"
+   },
+   {
+    "item": "516",
+    "catalog_no": "31.024",
+    "part": "Intermediate crown wheel"
+   },
+   {
+    "item": "417",
+    "catalog_no": "31.021",
+    "part": "Intermediate ratchet wheel"
+   }
+  ],
+  "geom": {
+   "pivot": [
+    242.95,
+    267.65
+   ],
+   "bbox": [
+    93.0,
+    160.2,
+    392.9,
+    375.1
+   ],
+   "z": 60,
+   "face": "bridge",
+   "r": 149.95
+  },
+  "type": "bridge",
+  "art": {
+   "holds": [
+    "MC20_010",
+    "MC31_020"
+   ],
+   "screws": [
+    "MC10_041_01"
+   ],
+   "corners": 5
+  }
+ },
+ "MC32_033": {
+  "part": "Ratchet wheel driving wheel",
+  "catalog_no": "32.033",
+  "disassembly_step": 41,
+  "assembly_step": 12,
+  "names": {
+   "en": "Ratchet wheel driving wheel",
+   "fr": "Roue entraîneuse de rochet",
+   "de": "Mitnehmerrad für Sperrad"
+  },
+  "tc": {
+   "item": "1482"
+  },
+  "geom": {
+   "pivot": [
+    164.8,
+    367.15
+   ],
+   "bbox": [
+    131.3,
+    335.3,
+    198.3,
+    399.0
+   ],
+   "z": 59,
+   "face": "barrel bridge",
+   "r": 33.5
+  },
+  "type": "wheel",
+  "art": {
+   "teeth": 30,
+   "arms": 0,
+   "hole": 0.2,
+   "estimated": true
+  }
+ },
+ "MC51_120": {
+  "part": "Click",
+  "catalog_no": "51.120",
+  "disassembly_step": 42,
+  "assembly_step": 9,
+  "names": {
+   "en": "Click",
+   "fr": "Cliquet",
+   "de": "Klinke"
+  },
+  "tc": {
+   "item": "425"
+  },
+  "geom": {
+   "pivot": [
+    241.35,
+    362.4
+   ],
+   "bbox": [
+    220.6,
+    340.1,
+    262.1,
+    384.7
+   ],
+   "z": 58,
+   "face": "barrel bridge",
+   "r": 22.3
+  },
+  "type": "spring"
+ },
+ "MC81_036_01": {
+  "part": "Screw for click plate",
+  "catalog_no": "81.036.01",
+  "disassembly_step": 43,
+  "assembly_step": 11,
+  "names": {
+   "en": "Screw for click plate",
+   "fr": "Vis de plaque de cliquet",
+   "de": "Schraube für Klinkenplatte"
+  },
+  "tc": {
+   "item": "5511"
+  },
+  "geom": {
+   "pivot": [
+    258.1,
+    309.05
+   ],
+   "bbox": [
+    250.9,
+    303.5,
+    265.3,
+    314.6
+   ],
+   "z": 57,
+   "face": "barrel bridge",
+   "r": 7.2
+  },
+  "type": "screw"
+ },
+ "MC81_036": {
+  "part": "Click plate",
+  "catalog_no": "81.036",
+  "disassembly_step": 44,
+  "assembly_step": 10,
+  "names": {
+   "en": "Click plate",
+   "fr": "Plaque de cliquet",
+   "de": "Klinkenplatte"
+  },
+  "tc": {
+   "item": "511"
+  },
+  "geom": {
+   "pivot": [
+    265.3,
+    314.6
+   ],
+   "bbox": [
+    230.2,
+    257.3,
+    300.4,
+    371.9
+   ],
+   "z": 56,
+   "face": "barrel bridge",
+   "r": 57.3
+  },
+  "type": "bridge",
+  "art": {
+   "holds": [],
+   "screws": [
+    "MC81_036_01"
+   ],
+   "corners": 4
+  }
+ },
+ "MC31_023": {
+  "part": "Crown wheel",
+  "catalog_no": "31.023",
+  "disassembly_step": 45,
+  "assembly_step": 8,
+  "names": {
+   "en": "Crown wheel",
+   "fr": "Roue de couronne",
+   "de": "Kronrad"
+  },
+  "tc": {
+   "item": "420"
+  },
+  "geom": {
+   "pivot": [
+    267.65,
+    280.4
+   ],
+   "bbox": [
+    247.7,
+    257.3,
+    287.6,
+    303.5
+   ],
+   "z": 55,
+   "face": "barrel bridge",
+   "r": 23.1
+  },
+  "type": "wheel",
+  "art": {
+   "teeth": 22,
+   "arms": 0,
+   "hole": 0.3,
+   "estimated": true
+  }
+ },
+ "MC31_024": {
+  "part": "Intermediate crown wheel",
+  "catalog_no": "31.024",
+  "disassembly_step": 46,
+  "assembly_step": 7,
+  "names": {
+   "en": "Intermediate crown wheel",
+   "fr": "Roue de couronne intermédiaire",
+   "de": "Zwischen-Kronrad"
+  },
+  "tc": {
+   "item": "516"
+  },
+  "geom": {
+   "pivot": [
+    284.45,
+    315.4
+   ],
+   "bbox": [
+    266.9,
+    298.7,
+    302.0,
+    332.1
+   ],
+   "z": 54,
+   "face": "barrel bridge",
+   "r": 17.55
+  },
+  "type": "wheel",
+  "art": {
+   "teeth": 18,
+   "arms": 0,
+   "hole": 0.35,
+   "estimated": true
+  }
+ },
+ "MC31_021": {
+  "part": "Intermediate ratchet wheel",
+  "catalog_no": "31.021",
+  "disassembly_step": 47,
+  "assembly_step": 6,
+  "names": {
+   "en": "Intermediate ratchet wheel",
+   "fr": "Rochet intermédiaire",
+   "de": "Zwischensperrad"
+  },
+  "tc": {
+   "item": "417"
+  },
+  "geom": {
+   "pivot": [
+    254.9,
+    339.3
+   ],
+   "bbox": [
+    231.8,
+    317.8,
+    278.0,
+    360.8
+   ],
+   "z": 53,
+   "face": "barrel bridge",
+   "r": 23.1
+  },
+  "type": "wheel",
+  "art": {
+   "teeth": 26,
+   "arms": 0,
+   "hole": 0.3,
+   "estimated": true
+  }
+ },
+ "MC10_041_07": {
+  "part": "Barrel bridge, jewelled",
+  "catalog_no": "10.041.07",
+  "disassembly_step": 48,
+  "assembly_step": 5,
+  "names": {
+   "en": "Barrel bridge, jewelled",
+   "fr": "Pont de barillet, empierré",
+   "de": "Federhausbrücke, mit Steinen"
+  },
+  "tc": {
+   "item": "105"
+  },
+  "geom": {
+   "pivot": [
+    218.25,
+    323.35
+   ],
+   "bbox": [
+    65.9,
+    215.9,
+    370.6,
+    430.8
+   ],
+   "z": 52,
+   "face": "barrel bridge",
+   "r": 152.35
+  },
+  "type": "plate",
+  "art": {
+   "outline": "box"
+  }
+ },
+ "MC31_020": {
+  "part": "Ratchet wheel",
+  "catalog_no": "31.020",
+  "disassembly_step": 49,
+  "assembly_step": 4,
+  "names": {
+   "en": "Ratchet wheel",
+   "fr": "Rochet",
+   "de": "Sperrad"
+  },
+  "tc": {
+   "item": "415"
+  },
+  "geom": {
+   "pivot": [
+    239.75,
+    229.45
+   ],
+   "bbox": [
+    196.7,
+    187.3,
+    282.8,
+    271.6
+   ],
+   "z": 51,
+   "face": "bridge",
+   "r": 43.05
+  },
+  "type": "wheel",
+  "art": {
+   "teeth": 60,
+   "arms": 0,
+   "hole": 0.12,
+   "tooth_form": "ratchet",
+   "estimated": true
+  }
+ },
+ "MC20_010": {
+  "part": "Barrel",
+  "catalog_no": "20.010",
+  "disassembly_step": 50,
+  "assembly_step": 3,
+  "names": {
+   "en": "Barrel"
+  },
+  "components": [
+   {
+    "item": "182",
+    "catalog_no": "20.030",
+    "part": "Barrel, drum and cover"
+   },
+   {
+    "item": "195",
+    "catalog_no": "20.060",
+    "part": "Barrel arbor"
+   },
+   {
+    "item": "771",
+    "catalog_no": "20.102",
+    "part": "Mainspring with sliding attachment"
+   }
+  ],
+  "geom": {
+   "pivot": [
+    239.75,
+    229.45
+   ],
+   "bbox": [
+    152.0,
+    142.7,
+    327.5,
+    316.2
+   ],
+   "z": 50,
+   "face": "bridge",
+   "r": 87.75
+  },
+  "type": "wheel",
+  "art": {
+   "teeth": 80,
+   "arms": 0,
+   "drum": true,
+   "estimated": true
+  }
+ },
+ "MC30_012": {
+  "part": "Intermediate wheel",
+  "catalog_no": "30.012",
+  "disassembly_step": 51,
+  "assembly_step": 2,
+  "names": {
+   "en": "Intermediate wheel",
+   "fr": "Roue intermédiaire",
+   "de": "Zwischenrad"
+  },
+  "tc": {
+   "item": "203"
+  },
+  "geom": {
+   "pivot": [
+    149.6,
+    272.4
+   ],
+   "bbox": [
+    112.1,
+    235.0,
+    187.1,
+    309.8
+   ],
+   "z": 49,
+   "face": "bridge",
+   "r": 37.5
+  },
+  "type": "wheel",
+  "art": {
+   "teeth": 60,
+   "arms": 4,
+   "estimated": true
+  }
+ },
+ "MC51_091_01": {
+  "part": "Screw for combined setting lever jumper",
+  "catalog_no": "51.091.01",
+  "disassembly_step": 52,
+  "assembly_step": 22,
+  "names": {
+   "en": "Screw for combined setting lever jumper",
+   "fr": "Vis de sautoir de tirette combiné",
+   "de": "Schraube für kombinierte Winkelhebelraste"
+  },
+  "tc": {
+   "item": "5445"
+  },
+  "geom": {
+   "pivot": [
+    285.2,
+    253.3
+   ],
+   "bbox": [
+    282.8,
+    250.9,
+    287.6,
+    255.7
+   ],
+   "z": 48,
+   "face": "dial",
+   "r": 2.4
+  },
+  "type": "screw"
+ },
+ "MC51_091": {
+  "part": "Combined setting lever jumper",
+  "catalog_no": "51.091",
+  "disassembly_step": 53,
+  "assembly_step": 21,
+  "names": {
+   "en": "Combined setting lever jumper",
+   "fr": "Sautoir de tirette combiné",
+   "de": "Kombinierte Winkelhebelraste"
+  },
+  "tc": {
+   "item": "445/2"
+  },
+  "geom": {
+   "pivot": [
+    302.8,
+    270.05
+   ],
+   "bbox": [
+    271.7,
+    195.2,
+    333.9,
+    344.9
+   ],
+   "z": 47,
+   "face": "dial",
+   "r": 74.85
+  },
+  "type": "spring"
+ },
+ "MC51_050": {
+  "part": "Yoke",
+  "catalog_no": "51.050",
+  "disassembly_step": 54,
+  "assembly_step": 20,
+  "names": {
+   "en": "Yoke",
+   "fr": "Bascule de pignon coulant",
+   "de": "Kupplungstriebhebel"
+  },
+  "tc": {
+   "item": "435"
+  },
+  "geom": {
+   "pivot": [
+    316.35,
+    296.3
+   ],
+   "bbox": [
+    303.6,
+    250.9,
+    329.1,
+    341.7
+   ],
+   "z": 46,
+   "face": "dial",
+   "r": 45.4
+  },
+  "type": "lever"
+ },
+ "MC51_080_06": {
+  "part": "Setting lever, assembled",
+  "catalog_no": "51.080.06",
+  "disassembly_step": 55,
+  "assembly_step": 19,
+  "names": {
+   "en": "Setting lever, assembled",
+   "fr": "Tirette, montée",
+   "de": "Winkelhebel, montiert"
+  },
+  "tc": {
+   "item": "443/1"
+  },
+  "geom": {
+   "pivot": [
+    321.95,
+    321.8
+   ],
+   "bbox": [
+    306.8,
+    287.6,
+    337.1,
+    356.0
+   ],
+   "z": 45,
+   "face": "dial",
+   "r": 34.2
+  },
+  "type": "lever"
+ },
+ "MC53_022": {
+  "part": "Date corrector operating lever",
+  "catalog_no": "53.022",
+  "disassembly_step": 56,
+  "assembly_step": 18,
+  "names": {
+   "en": "Date corrector operating lever",
+   "fr": "Commande du correcteur de quantième",
+   "de": "Schalthebel für Datumkorrektor"
+  },
+  "tc": {
+   "item": "2539"
+  },
+  "geom": {
+   "pivot": [
+    319.55,
+    301.9
+   ],
+   "bbox": [
+    274.9,
+    266.9,
+    364.2,
+    336.9
+   ],
+   "z": 44,
+   "face": "dial",
+   "r": 44.65
+  },
+  "type": "lever"
+ },
+ "MC51_010_21": {
+  "part": "Winding stem, thread diameter 0.90 mm",
+  "catalog_no": "51.010.21",
+  "disassembly_step": 57,
+  "assembly_step": 17,
+  "names": {
+   "en": "Winding stem, thread diameter 0.90 mm",
+   "fr": "Tige de remontoir, diamètre de filetage 0,90 mm",
+   "de": "Aufzugwelle, Gewindedurchmesser 0,90 mm"
+  },
+  "tc": {
+   "item": "401"
+  },
+  "geom": {
+   "pivot": [
+    314.7,
+    318.6
+   ],
+   "bbox": [
+    282.8,
+    313.0,
+    346.6,
+    324.2
+   ],
+   "z": 43,
+   "face": "both",
+   "r": 31.9
+  },
+  "type": "stem"
+ },
+ "MC31_121": {
+  "part": "Sliding pinion",
+  "catalog_no": "31.121",
+  "disassembly_step": 58,
+  "assembly_step": 16,
+  "names": {
+   "en": "Sliding pinion",
+   "fr": "Pignon coulant",
+   "de": "Kupplungstrieb"
+  },
+  "tc": {
+   "item": "407"
+  },
+  "geom": {
+   "pivot": [
+    306.75,
+    317.8
+   ],
+   "bbox": [
+    297.2,
+    306.7,
+    316.3,
+    328.9
+   ],
+   "z": 42,
+   "face": "dial",
+   "r": 11.1
+  },
+  "type": "pinion",
+  "art": {
+   "view": "side"
+  }
+ },
+ "MC31_120": {
+  "part": "Winding pinion",
+  "catalog_no": "31.120",
+  "disassembly_step": 59,
+  "assembly_step": 15,
+  "names": {
+   "en": "Winding pinion",
+   "fr": "Pignon de remontoir",
+   "de": "Aufzugtrieb"
+  },
+  "tc": {
+   "item": "410"
+  },
+  "geom": {
+   "pivot": [
+    319.5,
+    321.0
+   ],
+   "bbox": [
+    314.7,
+    305.1,
+    324.3,
+    336.9
+   ],
+   "z": 41,
+   "face": "dial",
+   "r": 15.9
+  },
+  "type": "pinion",
+  "art": {
+   "view": "side"
+  }
+ },
+ "MC10_020_07": {
+  "part": "Main plate, jewelled",
+  "catalog_no": "10.020.07",
+  "disassembly_step": 60,
+  "assembly_step": 1,
+  "names": {
+   "en": "Main plate, jewelled",
+   "fr": "Platine, empierrée",
+   "de": "Werkplatte, mit Steinen"
+  },
+  "tc": {
+   "item": "100"
+  },
+  "geom": {
+   "pivot": [
+    219.85,
+    318.55
+   ],
+   "bbox": [
+    34.0,
+    133.1,
+    405.7,
+    504.0
+   ],
+   "z": 40,
+   "face": "both",
+   "r": 185.85
+  },
+  "type": "plate"
+ }
+}

@@ -1,0 +1,490 @@
+# ETA 2892-A2 disassembly sequence, from a screen recording of ETA SwissLab
+# (idea and animation: tica international, www.tica.dk); transcript.yaml says what each
+# screen shows, tools/steps_video.py measured positions and motion. part_id keys into parts.yaml.
+meta:
+  source: "screen recording of ETA SwissLab (idea and animation: tica international): https://www.youtube.com/watch?v=ficKWEWxPDo"
+  stage_px: [800, 600]
+  fps: 12
+  coordinates: "measured in the recording, movement window mapped onto SwissLab window [18, 122, 432, 512]"
+  video_window_px: [82, 70, 341.5, 315]
+steps:
+  - step: 1
+    code: "A01"
+    part: "Hour wheel, assembled"
+    part_id: "MC31_046_06"
+    catalog_no: "31.046.06"
+    tc: {item: "255/1", catalog_no: "31.046"}
+    side_up: "dial"
+    bbox_stage_px: [183.9, 286.0, 255.7, 352.8]
+  - step: 2
+    code: "A02"
+    part: "Screw for additional indicator maintaining small plate"
+    part_id: "MC53_251_01"
+    catalog_no: "53.251.01"
+    tc: {item: "52536"}
+    side_up: "dial"
+    bbox_stage_px: [172.8, 410.1, 187.1, 422.9]
+  - step: 3
+    code: "A03"
+    part: "Additional indicator maintaining small plate"
+    part_id: "MC53_251"
+    catalog_no: "53.251"
+    tc: {item: "2536/1"}
+    side_up: "dial"
+    bbox_stage_px: [158.4, 386.2, 236.6, 438.8]
+  - step: 4
+    code: "A04"
+    part: "Screw for date jumper maintaining plate"
+    part_id: "MC13_111_01"
+    catalog_no: "13.111.01"
+    tc: {item: "52595"}
+    side_up: "dial"
+    bbox_stage_px: [115.3, 309.8, 132.9, 324.2]
+  - step: 5
+    code: "A05"
+    part: "Date jumper maintaining plate"
+    part_id: "MC13_111"
+    catalog_no: "13.111"
+    tc: {item: "2595"}
+    side_up: "dial"
+    bbox_stage_px: [97.8, 254.1, 147.2, 348.0]
+  - step: 6
+    code: "A06"
+    part: "Screw for minute train bridge"
+    part_id: "MC10_062_01"
+    catalog_no: "10.062.01"
+    tc: {item: "5462"}
+    side_up: "dial"
+    bbox_stage_px: [260.5, 246.2, 278.0, 262.1]
+  - step: 7
+    code: "A07"
+    part: "Minute train bridge"
+    part_id: "MC10_062"
+    catalog_no: "10.062"
+    tc: {item: "462"}
+    side_up: "dial"
+    bbox_stage_px: [230.2, 217.5, 327.5, 381.5]
+  - step: 8
+    code: "A08"
+    part: "Date indicator, for window opening at 3 o'clock"
+    part_id: "MC91_440"
+    catalog_no: "91.440"
+    tc: {item: "2557/1", catalog_no: "91.440.22"}
+    side_up: "dial"
+    bbox_stage_px: [54.7, 153.8, 384.9, 483.3]
+  - step: 9
+    code: "A09"
+    part: "Date jumper / Intermediate date wheel"
+    part_id: "MC53_080"
+    catalog_no: "53.080"
+    tc: {item: "2576"}
+    side_up: "dial"
+    remark: "the date jumper and the intermediate date wheel (33.011) come off together"
+    bbox_stage_px: [101.0, 276.4, 188.7, 343.3]
+  - step: 10
+    code: "A10"
+    part: "Date indicator driving wheel"
+    part_id: "MC33_020"
+    catalog_no: "33.020"
+    tc: {item: "2556"}
+    side_up: "dial"
+    bbox_stage_px: [113.7, 212.7, 196.7, 298.7]
+  - step: 11
+    code: "A11"
+    part: "Minute wheel"
+    part_id: "MC31_041"
+    catalog_no: "31.041"
+    tc: {item: "260"}
+    side_up: "dial"
+    bbox_stage_px: [222.2, 268.4, 281.2, 322.6]
+  - step: 12
+    code: "A12"
+    part: "Cannon pinion with driving wheel"
+    part_id: "MC31_083"
+    catalog_no: "31.083"
+    tc: {item: "242"}
+    side_up: "dial"
+    bbox_stage_px: [182.3, 284.4, 257.3, 356.0]
+  - step: 13
+    code: "A13"
+    part: "Setting wheel"
+    part_id: "MC31_100"
+    catalog_no: "31.100"
+    tc: {item: "450"}
+    side_up: "dial"
+    bbox_stage_px: [278.0, 308.2, 294.0, 330.5]
+  - step: 14
+    code: "A14"
+    part: "Intermediate setting wheel"
+    part_id: "MC31_101"
+    catalog_no: "31.101"
+    tc: {item: "453"}
+    side_up: "dial"
+    bbox_stage_px: [270.1, 333.7, 305.2, 362.4]
+  - step: 15
+    code: "A15"
+    part: "Date corrector"
+    part_id: "MC53_200"
+    catalog_no: "53.200"
+    tc: {item: "2566"}
+    side_up: "dial"
+    prompt: "TURN MOVEMENT"
+    bbox_stage_px: [281.2, 360.8, 321.1, 395.8]
+  - step: 16
+    code: "A16"
+    part: "Screw for automatic device framework"
+    part_id: "MC12_030_01"
+    catalog_no: "12.030.01"
+    tc: {item: "51134"}
+    side_up: "bridge"
+    bbox_stage_px: [88, 226, 321.5, 424.5]
+  - step: 17
+    code: "A17"
+    part: "Automatic device"
+    part_id: "MCAutomaticDevice"
+    side_up: "bridge"
+    bbox_stage_px: [41.9, 169.8, 396.1, 496.1]
+  - step: 18
+    code: "A18"
+    part: "Stop lever"
+    part_id: "MC56_070"
+    catalog_no: "56.070"
+    tc: {item: "9433"}
+    side_up: "bridge"
+    prompt: "CONTINUE WITH DISASSEMBLING OF AUTOMATIC DEVICE"
+    bbox_stage_px: [260.5, 324.2, 310.0, 360.8]
+  - step: 19
+    code: "A19"
+    part: "Screw for ball bearing"
+    part_id: "MC22_040_01"
+    catalog_no: "22.040.01"
+    tc: {item: "51497"}
+    side_up: "automatic device"
+    bbox_stage_px: [212.6, 289.1, 260.5, 338.5]
+  - step: 20
+    code: "A20"
+    part: "Oscillating weight, assembled"
+    part_id: "MC22_010_06"
+    catalog_no: "22.010.06"
+    tc: {item: "1143/1"}
+    side_up: "automatic device"
+    note: "DO NOT WASH !"
+    bbox_stage_px: [140.8, 139.5, 410.5, 445.1]
+  - step: 21
+    code: "A21"
+    part: "Screw for automatic device lower bridge"
+    part_id: "MC12_051_01"
+    catalog_no: "12.051.01"
+    tc: {item: "51141"}
+    side_up: "automatic device"
+    bbox_stage_px: [211.0, 434.0, 225.4, 451.5]
+  - step: 22
+    code: "A22"
+    part: "Automatic device lower bridge, jewelled"
+    part_id: "MC12_051_07"
+    catalog_no: "12.051.07"
+    tc: {item: "1141"}
+    side_up: "automatic device"
+    bbox_stage_px: [182.3, 394.2, 303.6, 478.6]
+  - step: 23
+    code: "A23"
+    part: "Auxiliary reverser"
+    part_id: "MC52_041"
+    catalog_no: "52.041"
+    tc: {item: "1514"}
+    side_up: "automatic device"
+    bbox_stage_px: [211.0, 379.9, 241.4, 408.5]
+  - step: 24
+    code: "A24"
+    part: "Reversing wheel"
+    part_id: "MC32_037"
+    catalog_no: "32.037"
+    tc: {item: "1488"}
+    side_up: "automatic device"
+    bbox_stage_px: [225.4, 395.8, 281.2, 449.9]
+  - step: 25
+    code: "A25"
+    part: "Reverser"
+    part_id: "MC52_040"
+    catalog_no: "52.040"
+    tc: {item: "1485"}
+    side_up: "automatic device"
+    bbox_stage_px: [198.3, 395.8, 231.8, 427.6]
+  - step: 26
+    code: "A26"
+    part: "Reduction wheel"
+    part_id: "MC32_031"
+    catalog_no: "32.031"
+    tc: {item: "1481"}
+    side_up: "automatic device"
+    bbox_stage_px: [255.7, 392.6, 303.6, 440.4]
+  - step: 27
+    code: "A27"
+    part: "Intermediate reduction wheel"
+    part_id: "MC32_032"
+    catalog_no: "32.032"
+    tc: {item: "1490"}
+    side_up: "automatic device"
+    bbox_stage_px: [274.9, 368.7, 327.5, 419.7]
+  - step: 28
+    code: "A28"
+    part: "Automatic device framework, jewelled"
+    part_id: "MC12_030_07"
+    catalog_no: "12.030.07"
+    tc: {item: "1134"}
+    side_up: "automatic device"
+    bbox_stage_px: [73.8, 204.8, 354.6, 492.9]
+  - step: 29
+    code: "A29"
+    part: "Screw for balance bridge"
+    part_id: "MC10_058_01"
+    catalog_no: "10.058.01"
+    tc: {item: "5121"}
+    side_up: "bridge"
+    note: "MAKE SURE THERE IS NO FORCE ON THE MAIN SPRING !"
+    bbox_stage_px: [314.7, 400.6, 332.3, 413.3]
+  - step: 30
+    code: "A30"
+    part: "Balance complete with bridge and ETACHRON system"
+    part_id: "MCBalanceComp"
+    side_up: "bridge"
+    bbox_stage_px: [164.8, 348, 377, 481.8]
+  - step: 31
+    code: "A31"
+    part: "Screw for pallet bridge"
+    part_id: "MC10_057_01"
+    catalog_no: "10.057.01"
+    tc: {item: "5125"}
+    side_up: "bridge"
+    bbox_stage_px: [187.1, 414.9, 204.7, 429.2]
+  - step: 32
+    code: "A32"
+    part: "Pallet bridge, jewelled"
+    part_id: "MC10_057_07"
+    catalog_no: "10.057.07"
+    tc: {item: "125"}
+    side_up: "bridge"
+    bbox_stage_px: [155.2, 362.4, 274.9, 475.4]
+  - step: 33
+    code: "A33"
+    part: "Pallet fork"
+    part_id: "MC40_010"
+    catalog_no: "40.010"
+    tc: {item: "710"}
+    side_up: "bridge"
+    bbox_stage_px: [179.1, 357.6, 228.6, 408.5]
+  - step: 34
+    code: "A34"
+    part: "Screw for train wheel bridge"
+    part_id: "MC10_048_01"
+    catalog_no: "10.048.01"
+    tc: {item: "5110"}
+    side_up: "bridge"
+    bbox_stage_px: [129.7, 357.6, 156.8, 381.5]
+  - step: 35
+    code: "A35"
+    part: "Train wheel bridge, jewelled"
+    part_id: "MC10_048_07"
+    catalog_no: "10.048.07"
+    tc: {item: "110"}
+    side_up: "bridge"
+    bbox_stage_px: [80.2, 293.9, 228.6, 438.8]
+  - step: 36
+    code: "A36"
+    part: "Second wheel"
+    part_id: "MC30_027"
+    catalog_no: "30.027"
+    tc: {item: "227"}
+    side_up: "bridge"
+    bbox_stage_px: [179.1, 279.6, 258.9, 359.2]
+  - step: 37
+    code: "A37"
+    part: "Third wheel"
+    part_id: "MC30_025"
+    catalog_no: "30.025"
+    tc: {item: "210"}
+    side_up: "bridge"
+    bbox_stage_px: [142.4, 260.5, 222.2, 338.5]
+  - step: 38
+    code: "A38"
+    part: "Escape wheel"
+    part_id: "MC30_040"
+    catalog_no: "30.040"
+    tc: {item: "705"}
+    side_up: "bridge"
+    bbox_stage_px: [150.4, 311.4, 219.0, 378.3]
+  - step: 39
+    code: "A39"
+    part: "Screw for barrel bridge"
+    part_id: "MC10_041_01"
+    catalog_no: "10.041.01"
+    tc: {item: "5105"}
+    side_up: "bridge"
+    bbox_stage_px: [129.7, 204.8, 357.8, 365.6]
+  - step: 40
+    code: "A40"
+    part: "Barrel bridge, assembled"
+    part_id: "MCBarrelBridgeComp"
+    side_up: "bridge"
+    prompt: "CONTINUE WITH DISASSEMBLING OF BARREL BRIDGE, COMPLETE"
+    bbox_stage_px: [93.0, 160.2, 392.9, 375.1]
+  - step: 41
+    code: "A41"
+    part: "Ratchet wheel driving wheel"
+    part_id: "MC32_033"
+    catalog_no: "32.033"
+    tc: {item: "1482"}
+    side_up: "barrel bridge"
+    bbox_stage_px: [131.3, 335.3, 198.3, 399.0]
+  - step: 42
+    code: "A42"
+    part: "Click"
+    part_id: "MC51_120"
+    catalog_no: "51.120"
+    tc: {item: "425"}
+    side_up: "barrel bridge"
+    bbox_stage_px: [220.6, 340.1, 262.1, 384.7]
+  - step: 43
+    code: "A43"
+    part: "Screw for click plate"
+    part_id: "MC81_036_01"
+    catalog_no: "81.036.01"
+    tc: {item: "5511"}
+    side_up: "barrel bridge"
+    bbox_stage_px: [250.9, 303.5, 265.3, 314.6]
+  - step: 44
+    code: "A44"
+    part: "Click plate"
+    part_id: "MC81_036"
+    catalog_no: "81.036"
+    tc: {item: "511"}
+    side_up: "barrel bridge"
+    bbox_stage_px: [230.2, 257.3, 300.4, 371.9]
+  - step: 45
+    code: "A45"
+    part: "Crown wheel"
+    part_id: "MC31_023"
+    catalog_no: "31.023"
+    tc: {item: "420"}
+    side_up: "barrel bridge"
+    bbox_stage_px: [247.7, 257.3, 287.6, 303.5]
+  - step: 46
+    code: "A46"
+    part: "Intermediate crown wheel"
+    part_id: "MC31_024"
+    catalog_no: "31.024"
+    tc: {item: "516"}
+    side_up: "barrel bridge"
+    bbox_stage_px: [266.9, 298.7, 302.0, 332.1]
+  - step: 47
+    code: "A47"
+    part: "Intermediate ratchet wheel"
+    part_id: "MC31_021"
+    catalog_no: "31.021"
+    tc: {item: "417"}
+    side_up: "barrel bridge"
+    bbox_stage_px: [231.8, 317.8, 278.0, 360.8]
+  - step: 48
+    code: "A48"
+    part: "Barrel bridge, jewelled"
+    part_id: "MC10_041_07"
+    catalog_no: "10.041.07"
+    tc: {item: "105"}
+    side_up: "barrel bridge"
+    bbox_stage_px: [65.9, 215.9, 370.6, 430.8]
+  - step: 49
+    code: "A49"
+    part: "Ratchet wheel"
+    part_id: "MC31_020"
+    catalog_no: "31.020"
+    tc: {item: "415"}
+    side_up: "bridge"
+    bbox_stage_px: [196.7, 187.3, 282.8, 271.6]
+  - step: 50
+    code: "A50"
+    part: "Barrel"
+    part_id: "MC20_010"
+    catalog_no: "20.010"
+    side_up: "bridge"
+    bbox_stage_px: [152.0, 142.7, 327.5, 316.2]
+  - step: 51
+    code: "A51"
+    part: "Intermediate wheel"
+    part_id: "MC30_012"
+    catalog_no: "30.012"
+    tc: {item: "203"}
+    side_up: "bridge"
+    prompt: "TURN MOVEMENT"
+    bbox_stage_px: [112.1, 235.0, 187.1, 309.8]
+  - step: 52
+    code: "A52"
+    part: "Screw for combined setting lever jumper"
+    part_id: "MC51_091_01"
+    catalog_no: "51.091.01"
+    tc: {item: "5445"}
+    side_up: "dial"
+    bbox_stage_px: [282.8, 250.9, 287.6, 255.7]
+  - step: 53
+    code: "A53"
+    part: "Combined setting lever jumper"
+    part_id: "MC51_091"
+    catalog_no: "51.091"
+    tc: {item: "445/2"}
+    side_up: "dial"
+    bbox_stage_px: [271.7, 195.2, 333.9, 344.9]
+  - step: 54
+    code: "A54"
+    part: "Yoke"
+    part_id: "MC51_050"
+    catalog_no: "51.050"
+    tc: {item: "435"}
+    side_up: "dial"
+    bbox_stage_px: [303.6, 250.9, 329.1, 341.7]
+  - step: 55
+    code: "A55"
+    part: "Setting lever, assembled"
+    part_id: "MC51_080_06"
+    catalog_no: "51.080.06"
+    tc: {item: "443/1"}
+    side_up: "dial"
+    bbox_stage_px: [306.8, 287.6, 337.1, 356.0]
+  - step: 56
+    code: "A56"
+    part: "Date corrector operating lever"
+    part_id: "MC53_022"
+    catalog_no: "53.022"
+    tc: {item: "2539"}
+    side_up: "dial"
+    bbox_stage_px: [274.9, 266.9, 364.2, 336.9]
+  - step: 57
+    code: "A57"
+    part: "Winding stem, thread diameter 0.90 mm"
+    part_id: "MC51_010_21"
+    catalog_no: "51.010.21"
+    tc: {item: "401"}
+    side_up: "dial"
+    bbox_stage_px: [282.8, 313.0, 346.6, 324.2]
+  - step: 58
+    code: "A58"
+    part: "Sliding pinion"
+    part_id: "MC31_121"
+    catalog_no: "31.121"
+    tc: {item: "407"}
+    side_up: "dial"
+    bbox_stage_px: [297.2, 306.7, 316.3, 328.9]
+  - step: 59
+    code: "A59"
+    part: "Winding pinion"
+    part_id: "MC31_120"
+    catalog_no: "31.120"
+    tc: {item: "410"}
+    side_up: "dial"
+    bbox_stage_px: [314.7, 305.1, 324.3, 336.9]
+  - step: 60
+    code: "A60"
+    part: "Main plate, jewelled"
+    part_id: "MC10_020_07"
+    catalog_no: "10.020.07"
+    tc: {item: "100"}
+    side_up: "dial"
+    bbox_stage_px: [34.0, 133.1, 405.7, 504.0]

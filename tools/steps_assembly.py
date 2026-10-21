@@ -1,18 +1,24 @@
-"""Reconstruct the ASSEMBLY sequence from the SwissLab 6497 assembly SWF.
+"""Reconstruct the ASSEMBLY sequence from a SwissLab assembly SWF.
 
 Writes assembly.json / assembly.yaml next to the disassembly steps.json, and
 parts.json / parts.yaml: one shared parts list keyed by SwissLab clip name, with
 each part's step number in both sequences.
 
-Usage: python -I steps_assembly.py 6497assem.swf swisslab6497/
+Usage: python -I tools/steps_assembly.py /path/to/6497assem.swf calibers/6497
+
+Run tools/steps.py first. The caliber-specific values (sides and hidden parts when the
+movement is turned, the movement's depth range, the oil-symbol IDs, note variables) come
+from calibers/<caliber>/caliber.yaml, section swisslab.assembly.
 """
 import sys, os, io, re, json, math
 sys.path.insert(0, os.path.dirname(__file__))
-import swfparse as P, render as Rn
+import swfparse as P, render as Rn, caliber
 from PIL import Image
 import cairosvg
 
 swf = P.parse(sys.argv[1]); out = sys.argv[2]
+CFG = caliber.load(out); A = CFG['swisslab']['assembly']
+VF = caliber.variant_flag(CFG)
 main = swf['main']['frames']
 dis = json.load(open(f'{out}/steps.json'))
 dis_by_clip = {s['swf']['clip_name']: s for s in dis['steps']}
@@ -35,20 +41,23 @@ for i, fr in enumerate(main):
             if m: step_frame[int(m.group(1))] = i + 1
 N = max(step_frame)
 
-# ---- side up and visibility, decoded from the "turnmovement" script (sprite 43, frame 15):
-# going forward it hides/shows whole index ranges of parts when the movement is turned.
+# ---- side up and visibility, decoded from the "turnmovement" script: going forward it
+# hides/shows whole index ranges of parts when the movement is turned (caliber.yaml: sides)
 clip = {i: V.get('mcname%d' % i) for i in range(1, N + 1)}
 def rng(a, b): return {clip[i] for i in range(a, b + 1)}
 def side_and_hidden(n):
-    if n <= 19: return 'bridge', set()
-    if n <= 31: return 'dial', rng(1, 18)
-    if n <= 36: return 'bridge', rng(20, 31) | {'VP1', 'fup1'}
-    return 'dial', rng(1, 19) | rng(32, 36) | {'fup2'}
+    for row in A['sides']:
+        if row.get('upto') is None or n <= row['upto']:
+            hidden = set(row.get('hide_clips', []))
+            for a, b in row.get('hide_steps', []):
+                hidden |= rng(a, b)
+            return row['side'], hidden
+    raise SystemExit('caliber.yaml swisslab.assembly.sides: no row for step %d' % n)
 
-MOVEMENT_DEPTHS = (45, 285)   # main-timeline depths that hold the movement (UI lies outside)
+MOVEMENT_DEPTHS = tuple(A['movement_depths'])   # main-timeline depths that hold the movement (UI lies outside)
 
-OIL = {150: 'Moebius D5', 302: 'Moebius D5', 312: 'Moebius 9010', 323: 'Moebius 9501', 379: 'Moebius 941',
-       53: 'asterisk (meaning not given in the file)', 329: 'magnified detail', 375: 'magnified detail'}
+OIL = {int(k): v for k, v in A['oil_symbols'].items()}
+NOTE_RE = re.compile(A['note_pattern'])
 
 def mat_mul(A, B):
     a1, b1, c1, d1, e1, f1 = A; a2, b2, c2, d2, e2, f2 = B
@@ -79,7 +88,7 @@ def find_notes(cid, seen=None):
     seen.add(cid)
     if cid in swf['edittexts']:
         v = swf['edittexts'][cid].get('var', '')
-        m = re.search(r'name(21\d)', v)
+        m = NOTE_RE.search(v)
         if m: res.append(m.group(1))
     if cid in swf['sprites']:
         for f in swf['sprites'][cid]['frames']:
@@ -177,7 +186,7 @@ for n in range(1, N + 1):
         'names': {LANGS[l]: str(V.get('name%d%s' % (n, l), '')).strip() for l in LANGS},
         'catalog_no': V.get('cs%d' % n) or None,
         'side_up': side,
-        'differs_6497_1_vs_2': d.get('differs_6497_1_vs_2', False),
+        **({VF: d.get(VF, False)} if VF else {}),
         'note': ' '.join(V.get('name%sgb' % m, '') for m in notes) or None,
         'oil': oil,
         'markers': markers,
@@ -197,20 +206,20 @@ for n in range(1, N + 1):
     print(n, side, s['part'][:30].ljust(30), 'dis', s['disassembly_step'], 'oil', len(oil), 'movers', len(movers),
           'same' if same_drawing else 'DIFF', 'detail' if detail_bbox else '', s['note'] and s['note'][:40])
 
-meta = {'source': '6497assem.swf (ETA SwissLab, idea and animation: tica international)',
+meta = {'source': A['source'],
         'stage_px': [W, H], 'fps': swf['fps'], 'movement_depths': list(MOVEMENT_DEPTHS),
-        'oil_legend': ['Moebius D5', 'Moebius 9010', 'Moebius 9501', 'Moebius 941']}
+        'oil_legend': list(A['oil_legend'])}
 json.dump({'meta': meta, 'steps': steps}, open(f'{out}/assembly.json', 'w'), indent=1, ensure_ascii=False)
 
 # ---- shared parts list
 parts = {}
 for s in dis['steps']:
     parts[s['swf']['clip_name']] = {'part': s['part'], 'catalog_no': s['catalog_no'], 'names': s['names'],
-                                    'differs_6497_1_vs_2': s['differs_6497_1_vs_2'],
+                                    **({VF: s[VF]} if VF else {}),
                                     'disassembly_step': s['step'], 'assembly_step': None}
 for s in steps:
     parts.setdefault(s['part_id'], {'part': s['part'], 'catalog_no': s['catalog_no'], 'names': s['names'],
-                                    'differs_6497_1_vs_2': False, 'disassembly_step': None})
+                                    **({VF: False} if VF else {}), 'disassembly_step': None})
     parts[s['part_id']]['assembly_step'] = s['step']
     if s['oil']:
         parts[s['part_id']]['oils'] = sorted({o['type'] for o in s['oil'] if o['type'].startswith('Moebius')})
@@ -224,16 +233,16 @@ def y(v):
     if isinstance(v, list): return '[' + ', '.join(y(x) for x in v) + ']'
     if isinstance(v, dict): return '{' + ', '.join('%s: %s' % (k, y(x)) for k, x in v.items()) + '}'
     return json.dumps(v, ensure_ascii=False)
-L = ['# ETA 6497 assembly sequence, extracted from the SwissLab assembly SWF',
+L = ['# %s assembly sequence, extracted from the SwissLab assembly SWF' % CFG['name'],
      '# (idea and animation: tica international, www.tica.dk). part_id keys into parts.yaml.',
      'meta:'] + ['  %s: %s' % (k, y(v)) for k, v in meta.items()] + ['steps:']
 for s in steps:
     L.append('  - step: %d' % s['step'])
-    for k in ('part', 'part_id', 'disassembly_step', 'catalog_no', 'side_up', 'differs_6497_1_vs_2', 'note', 'bbox_stage_px'):
+    for k in ('part', 'part_id', 'disassembly_step', 'catalog_no', 'side_up', VF, 'note', 'bbox_stage_px'):
         if s.get(k) is not None: L.append('    %s: %s' % (k, y(s[k])))
     if s['oil']:
         L.append('    oil:')
         for o in s['oil']: L.append('      - %s' % y(o))
     if s['markers']: L.append('    markers: %s' % y(s['markers']))
 open(f'{out}/assembly.yaml', 'w').write('\n'.join(L) + '\n')
-partsfile.save(out, parts)
+partsfile.save(out, parts, '# %s parts (SwissLab), keyed by SwissLab clip name' % CFG['name'], VF)

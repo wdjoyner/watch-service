@@ -1,0 +1,176 @@
+# ETA 2892-A2 in SwissLab: what each screen of the recording shows, transcribed by hand.
+# tools/steps_video.py reads this file and the recording, and writes steps.json,
+# assembly.json and parts.yaml.
+#
+# Recording: "ETA 2892-A2 disassembly and assembly (Swisslab)", YouTube, channel Chris H.,
+#   https://www.youtube.com/watch?v=ficKWEWxPDo  (downloaded at 640 x 360, 23.976 fps)
+#   SwissLab "the worldwide training system", version 2007-1; idea and animation tica
+#   international (www.tica.dk). The recording stays on your own computer: never commit it.
+#
+# Per step:
+#   code    SwissLab's step code, printed in the lower-left corner of the screen
+#           (A = disassembly, B = assembly)
+#   t       start and end of the step in the recording, seconds
+#   cs      the "CS no." on screen (null: none shown)
+#   part    the "Name" on screen
+#   view    what the movement window shows: dial or bridge (side of the movement up), or a
+#           unit taken off the movement and worked on by itself: automatic device, barrel bridge
+#   note    a warning shown with the step
+#   prompt  the instruction shown at the end of the step (TURN MOVEMENT ...)
+#   shows   the part a step shows when the screen gives no caption (its CS number)
+#   remark  ours, not on screen
+meta:
+  video: "https://www.youtube.com/watch?v=ficKWEWxPDo"
+  title: "ETA 2892-A2 disassembly and assembly (Swisslab)"
+  resolution: [640, 360]
+  swisslab_version: "2007-1"
+  # the movement window's frame lines in the recording (video px), mapped onto the
+  # standard SwissLab window [18, 122, 432, 512] (stage px), as used for the 6497
+  window_video_px: [82, 70, 341.5, 315]
+  oil_legend: [Moebius D5, Jismaa 124 / Moebius 9501, Moebius 9010, Moebius 941 / 9415,
+               Moebius 9010 (small quantity), Treated (ETA)]
+
+disassembly:
+  - {code: A01, t: [4.25, 12.0], cs: "31.046.06", part: "Hour wheel, assembled", view: dial}
+  - {code: A02, t: [12.0, 18.75], cs: "53.251.01", part: "Screw for additional indicator maintaining small plate", view: dial}
+  - {code: A03, t: [18.75, 24.0], cs: "53.251", part: "Additional indicator maintaining small plate", view: dial}
+  - {code: A04, t: [24.0, 29.75], cs: "13.111.01", part: "Screw for date jumper maintaining plate", view: dial}
+  - {code: A05, t: [29.75, 35.0], cs: "13.111", part: "Date jumper maintaining plate", view: dial}
+  - {code: A06, t: [35.0, 40.25], cs: "10.062.01", part: "Screw for minute train bridge", view: dial}
+  - {code: A07, t: [40.25, 45.5], cs: "10.062", part: "Minute train bridge", view: dial}
+  - {code: A08, t: [45.5, 49.75], cs: "91.440", part: "Date indicator, for window opening at 3 o'clock", view: dial}
+  - {code: A09, t: [49.75, 55.25], cs: "53.080", part: "Date jumper / Intermediate date wheel", view: dial,
+     remark: "the date jumper and the intermediate date wheel (33.011) come off together"}
+  - {code: A10, t: [55.25, 60.0], cs: "33.020", part: "Date indicator driving wheel", view: dial}
+  - {code: A11, t: [60.0, 64.75], cs: "31.041", part: "Minute wheel", view: dial}
+  - {code: A12, t: [64.75, 69.75], cs: "31.083", part: "Cannon pinion with driving wheel", view: dial}
+  - {code: A13, t: [69.75, 75.25], cs: "31.100", part: "Setting wheel", view: dial}
+  - {code: A14, t: [75.25, 79.75], cs: "31.101", part: "Intermediate setting wheel", view: dial}
+  - {code: A15, t: [79.75, 86.0], cs: "53.200", part: "Date corrector", view: dial, prompt: "TURN MOVEMENT"}
+  - {code: A16, t: [86.0, 94.5], cs: "12.030.01", part: "Screw for automatic device framework", view: bridge}
+  - {code: A17, t: [94.5, 99.5], cs: null, part: "Automatic device", view: bridge}
+  - {code: A18, t: [99.5, 105.25], cs: "56.070", part: "Stop lever", view: bridge,
+     prompt: "CONTINUE WITH DISASSEMBLING OF AUTOMATIC DEVICE"}
+  - {code: A19, t: [105.25, 110.75], cs: "22.040.01", part: "Screw for ball bearing", view: automatic device}
+  - {code: A20, t: [110.75, 115.5], cs: "22.010.06", part: "Oscillating weight, assembled", view: automatic device,
+     note: "DO NOT WASH !"}
+  - {code: A21, t: [115.5, 120.25], cs: "12.051.01", part: "Screw for automatic device lower bridge", view: automatic device}
+  - {code: A22, t: [120.25, 124.0], cs: "12.051.07", part: "Automatic device lower bridge, jewelled", view: automatic device}
+  - {code: A23, t: [124.0, 127.75], cs: "52.041", part: "Auxiliary reverser", view: automatic device}
+  - {code: A24, t: [127.75, 132.5], cs: "32.037", part: "Reversing wheel", view: automatic device}
+  - {code: A25, t: [132.5, 137.25], cs: "52.040", part: "Reverser", view: automatic device}
+  - {code: A26, t: [137.25, 141.25], cs: "32.031", part: "Reduction wheel", view: automatic device}
+  - {code: A27, t: [141.25, 145.5], cs: "32.032", part: "Intermediate reduction wheel", view: automatic device}
+  - {code: A28, t: [145.5, 151.0], cs: "12.030.07", part: "Automatic device framework, jewelled", view: automatic device}
+  - {code: A29, t: [151.0, 159.0], cs: "10.058.01", part: "Screw for balance bridge", view: bridge,
+     note: "MAKE SURE THERE IS NO FORCE ON THE MAIN SPRING !"}
+  - {code: A30, t: [159.0, 163.5], cs: null, part: "Balance complete with bridge and ETACHRON system", view: bridge}
+  - {code: A31, t: [163.5, 167.75], cs: "10.057.01", part: "Screw for pallet bridge", view: bridge}
+  - {code: A32, t: [167.75, 171.75], cs: "10.057.07", part: "Pallet bridge, jewelled", view: bridge}
+  - {code: A33, t: [171.75, 177.75], cs: "40.010", part: "Pallet fork", view: bridge}
+  - {code: A34, t: [177.75, 183.5], cs: "10.048.01", part: "Screw for train wheel bridge", view: bridge}
+  - {code: A35, t: [183.5, 189.25], cs: "10.048.07", part: "Train wheel bridge, jewelled", view: bridge}
+  - {code: A36, t: [189.25, 194.25], cs: "30.027", part: "Second wheel", view: bridge}
+  - {code: A37, t: [194.25, 199.0], cs: "30.025", part: "Third wheel", view: bridge}
+  - {code: A38, t: [199.0, 203.75], cs: "30.040", part: "Escape wheel", view: bridge}
+  - {code: A39, t: [203.75, 208.25], cs: "10.041.01", part: "Screw for barrel bridge", view: bridge}
+  - {code: A40, t: [208.25, 213.25], cs: null, part: "Barrel bridge, assembled", view: bridge,
+     prompt: "CONTINUE WITH DISASSEMBLING OF BARREL BRIDGE, COMPLETE"}
+  - {code: A41, t: [213.25, 218.25], cs: "32.033", part: "Ratchet wheel driving wheel", view: barrel bridge}
+  - {code: A42, t: [218.25, 222.5], cs: "51.120", part: "Click", view: barrel bridge}
+  - {code: A43, t: [222.5, 227.5], cs: "81.036.01", part: "Screw for click plate", view: barrel bridge}
+  - {code: A44, t: [227.5, 232.75], cs: "81.036", part: "Click plate", view: barrel bridge}
+  - {code: A45, t: [232.75, 237.25], cs: "31.023", part: "Crown wheel", view: barrel bridge}
+  - {code: A46, t: [237.25, 241.25], cs: "31.024", part: "Intermediate crown wheel", view: barrel bridge}
+  - {code: A47, t: [241.25, 245.75], cs: "31.021", part: "Intermediate ratchet wheel", view: barrel bridge}
+  - {code: A48, t: [245.75, 248.75], cs: "10.041.07", part: "Barrel bridge, jewelled", view: barrel bridge}
+  - {code: A49, t: [248.75, 255.25], cs: "31.020", part: "Ratchet wheel", view: bridge}
+  - {code: A50, t: [255.25, 259.75], cs: "20.010", part: "Barrel", view: bridge}
+  - {code: A51, t: [259.75, 264.5], cs: "30.012", part: "Intermediate wheel", view: bridge, prompt: "TURN MOVEMENT"}
+  - {code: A52, t: [264.5, 270.0], cs: "51.091.01", part: "Screw for combined setting lever jumper", view: dial}
+  - {code: A53, t: [270.0, 275.0], cs: "51.091", part: "Combined setting lever jumper", view: dial}
+  - {code: A54, t: [275.0, 279.5], cs: "51.050", part: "Yoke", view: dial}
+  - {code: A55, t: [279.5, 284.25], cs: "51.080.06", part: "Setting lever, assembled", view: dial}
+  - {code: A56, t: [284.25, 288.75], cs: "53.022", part: "Date corrector operating lever", view: dial}
+  - {code: A57, t: [288.75, 293.5], cs: "51.010.21", part: "Winding stem, thread diameter 0.90 mm", view: dial}
+  - {code: A58, t: [293.5, 298.5], cs: "31.121", part: "Sliding pinion", view: dial}
+  - {code: A59, t: [298.5, 302.5], cs: "31.120", part: "Winding pinion", view: dial}
+  - {code: A60, t: [302.5, 305.75], cs: "10.020.07", part: "Main plate, jewelled", view: dial}
+
+assembly:
+  - {code: B01, t: [310.75, 324.0], cs: null, part: "", view: bridge, shows: "10.020.07",
+     remark: "no caption on screen; shows the main plate (bridge side) with two red asterisks, and the oil-symbol legend"}
+  - {code: B02, t: [324.0, 328.5], cs: "30.012", part: "Intermediate wheel", view: bridge}
+  - {code: B03, t: [328.5, 332.5], cs: "20.010", part: "Barrel", view: bridge}
+  - {code: B04, t: [332.5, 340.25], cs: "31.020", part: "Ratchet wheel", view: bridge,
+     prompt: "CONTINUE WITH ASSEMBLING OF BARREL BRIDGE, COMPLETE"}
+  - {code: B05, t: [340.25, 343.75], cs: "10.041.07", part: "Barrel bridge, jewelled", view: barrel bridge}
+  - {code: B06, t: [343.75, 348.75], cs: "31.021", part: "Intermediate ratchet wheel", view: barrel bridge}
+  - {code: B07, t: [348.75, 352.25], cs: "31.024", part: "Intermediate crown wheel", view: barrel bridge}
+  - {code: B08, t: [352.25, 356.75], cs: "31.023", part: "Crown wheel", view: barrel bridge}
+  - {code: B09, t: [356.75, 359.75], cs: "51.120", part: "Click", view: barrel bridge}
+  - {code: B10, t: [359.75, 363.5], cs: "81.036", part: "Click plate", view: barrel bridge}
+  - {code: B11, t: [363.5, 368.25], cs: "81.036.01", part: "Screw for click plate", view: barrel bridge}
+  - {code: B12, t: [368.25, 374.75], cs: "32.033", part: "Ratchet wheel driving wheel", view: barrel bridge,
+     prompt: "TURN BARREL BRIDGE, ASSEMBLED"}
+  - {code: B13, t: [374.75, 377.5], cs: null, part: "Barrel bridge, assembled", view: bridge}
+  - {code: B14, t: [377.5, 383.75], cs: "10.041.01", part: "Screw for barrel bridge", view: bridge, prompt: "TURN MOVEMENT"}
+  - {code: B15, t: [383.75, 387.75], cs: "31.120", part: "Winding pinion", view: dial}
+  - {code: B16, t: [387.75, 393.0], cs: "31.121", part: "Sliding pinion", view: dial}
+  - {code: B17, t: [393.0, 397.5], cs: "51.010.21", part: "Winding stem, thread diameter 0.90 mm", view: dial}
+  - {code: B18, t: [397.5, 404.5], cs: "53.022", part: "Date corrector operating lever", view: dial}
+  - {code: B19, t: [404.5, 408.5], cs: "51.080.06", part: "Setting lever, assembled", view: dial}
+  - {code: B20, t: [408.5, 412.25], cs: "51.050", part: "Yoke", view: dial}
+  - {code: B21, t: [412.25, 415.5], cs: "51.091", part: "Combined setting lever jumper", view: dial}
+  - {code: B22, t: [415.5, 423.25], cs: "51.091.01", part: "Screw for combined setting lever jumper", view: dial, prompt: "TURN MOVEMENT"}
+  - {code: B23, t: [423.25, 426.25], cs: "30.040", part: "Escape wheel", view: bridge}
+  - {code: B24, t: [426.25, 429.25], cs: "30.025", part: "Third wheel", view: bridge}
+  - {code: B25, t: [429.25, 432.5], cs: "30.027", part: "Second wheel", view: bridge}
+  - {code: B26, t: [432.5, 437.0], cs: "10.048.07", part: "Train wheel bridge, jewelled", view: bridge}
+  - {code: B27, t: [437.0, 440.25], cs: "10.048.01", part: "Screw for train wheel bridge", view: bridge}
+  - {code: B28, t: [440.25, 450.25], cs: "40.010", part: "Pallet fork", view: bridge,
+     note: "In order to test the freedom of gear train, before assembling the pallet fork turn the stem in the winding direction and check that the gear train at the end of its free motion forward turn slightly back before stopping definitively."}
+  - {code: B29, t: [450.25, 454.0], cs: "10.057.07", part: "Pallet bridge, jewelled", view: bridge}
+  - {code: B30, t: [454.0, 457.75], cs: "10.057.01", part: "Screw for pallet bridge", view: bridge}
+  - {code: B31, t: [457.75, 462.5], cs: null, part: "Balance complete with bridge and ETACHRON system", view: bridge}
+  - {code: B32, t: [462.5, 470.75], cs: "10.058.01", part: "Screw for balance bridge", view: bridge, prompt: "TURN MOVEMENT"}
+  - {code: B33, t: [470.75, 479.0], cs: "31.083", part: "Cannon pinion with driving wheel", view: dial}
+  - {code: B34, t: [479.0, 484.25], cs: "31.041", part: "Minute wheel", view: dial}
+  - {code: B35, t: [484.25, 488.25], cs: "31.100", part: "Setting wheel", view: dial}
+  - {code: B36, t: [488.25, 493.25], cs: "31.101", part: "Intermediate setting wheel", view: dial}
+  - {code: B37, t: [493.25, 497.5], cs: "53.200", part: "Date corrector", view: dial}
+  - {code: B38, t: [497.5, 501.0], cs: "10.062", part: "Minute train bridge", view: dial}
+  - {code: B39, t: [501.0, 506.5], cs: "10.062.01", part: "Screw for minute train bridge", view: dial}
+  - {code: B40, t: [506.5, 512.25], cs: "33.020", part: "Date indicator driving wheel", view: dial}
+  - {code: B41, t: [512.25, 517.0], cs: "53.080", part: "Date indicator driving wheel", view: dial,
+     remark: "caption as on screen; the parts fitted are the date jumper and the intermediate date wheel (A09)"}
+  - {code: B42, t: [517.0, 520.0], cs: "91.440", part: "Date indicator, for window opening at 3 o'clock", view: dial}
+  - {code: B43, t: [520.0, 524.75], cs: "13.111", part: "Date jumper maintaining plate", view: dial}
+  - {code: B44, t: [524.75, 529.0], cs: "13.111.01", part: "Screw for date jumper maintaining plate", view: dial}
+  - {code: B45, t: [529.0, 532.5], cs: "53.251", part: "Additional indicator maintaining small plate", view: dial}
+  - {code: B46, t: [532.5, 538.5], cs: "53.251.01", part: "Screw for additional indicator maintaining small plate", view: dial, prompt: "TURN MOVEMENT"}
+  - {code: B47, t: [538.5, 544.75], cs: "56.070", part: "Stop lever", view: bridge,
+     prompt: "CONTINUE WITH ASSEMBLING OF AUTOMATIC DEVICE"}
+  - {code: B48, t: [544.75, 547.75], cs: "12.030.07", part: "Automatic device framework, jewelled", view: automatic device}
+  - {code: B49, t: [547.75, 552.5], cs: "32.032", part: "Intermediate reduction wheel", view: automatic device}
+  - {code: B50, t: [552.5, 556.5], cs: "32.031", part: "Reduction wheel", view: automatic device}
+  - {code: B51, t: [556.5, 559.75], cs: "52.040", part: "Reverser", view: automatic device}
+  - {code: B52, t: [559.75, 563.75], cs: "32.037", part: "Reversing wheel", view: automatic device}
+  - {code: B53, t: [563.75, 566.75], cs: "12.051.07", part: "Automatic device lower bridge, jewelled", view: automatic device}
+  - {code: B54, t: [566.75, 573.0], cs: "12.051.01", part: "Screw for automatic device lower bridge", view: automatic device, prompt: "TURN DEVICE"}
+  - {code: B55, t: [573.0, 576.5], cs: "52.041", part: "Auxiliary reverser", view: automatic device}
+  - {code: B56, t: [576.5, 582.5], cs: "22.010.06", part: "Oscillating weight, assembled", view: automatic device, prompt: "TURN DEVICE"}
+  - {code: B57, t: [582.5, 588.0], cs: "22.040.01", part: "Screw for ball bearing", view: automatic device, prompt: "TURN DEVICE"}
+  - {code: B58, t: [588.0, 591.0], cs: null, part: "Automatic device", view: bridge}
+  - {code: B59, t: [591.0, 600.0], cs: "12.030.01", part: "Screw for automatic device framework", view: bridge, prompt: "TURN MOVEMENT"}
+  - {code: B60, t: [600.0, 608.75], cs: "31.046.06", part: "Hour wheel, assembled", view: dial}
+
+# assembled units with no CS number of their own, and steps that move more than one part:
+# what they consist of (catalog numbers from catalog.yaml)
+units:
+  "Automatic device": ["12.030.07", "22.010.06", "22.040.01", "12.051.07", "12.051.01", "52.041", "32.037", "52.040", "32.031", "32.032"]
+  "Balance complete with bridge and ETACHRON system": ["10.058.24", "40.050.21", "40.302.23", "40.380", "40.200", "70.500", "70.531"]
+  "Barrel bridge, assembled": ["10.041.07", "32.033", "51.120", "81.036.01", "81.036", "31.023", "31.024", "31.021"]
+  "53.080": ["53.080", "33.011"]
+  "20.010": ["20.030", "20.060", "20.102"]
+  "40.010": ["40.010", "40.020"]

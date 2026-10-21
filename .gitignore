@@ -1,5 +1,9 @@
 # ETA/tica material: never commit it. Bring your own SWF; everything drawn from it stays local.
 *.swf
+# screen recordings of SwissLab (tools/steps_video.py)
+*.mov
+*.webm
+*.mkv
 parts/
 parts_assembly/
 contact_sheet.png

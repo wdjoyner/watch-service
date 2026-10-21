@@ -1,0 +1,10 @@
+# Settings for one caliber (see calibers/6497/caliber.yaml for the full list of keys).
+
+name: "ETA 2892-A2"
+slug: "2892a2"
+# The SwissLab SWFs for this caliber (2892A2disasm.swf, 2892A2asm.swf) were not available.
+# The facts come from a screen recording of SwissLab instead: transcript.yaml (what each
+# screen says, transcribed by hand) plus tools/steps_video.py (where each part sits and how it
+# moves, measured from the recording). --art original is not available for this caliber.
+source: video
+variant_flag: null

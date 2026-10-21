@@ -15,8 +15,12 @@ import json
 import os
 
 KEEP = ('type', 'art', 'geom', 'components')
-ORDER = ('part', 'catalog_no', 'disassembly_step', 'assembly_step', 'differs_6497_1_vs_2', 'oils',
-         'type', 'art', 'geom', 'components')
+
+
+def order(vf):
+    """the order of the keys in parts.yaml; vf is the caliber's variant flag (or None)"""
+    return ('part', 'catalog_no', 'disassembly_step', 'assembly_step') + ((vf,) if vf else ()) + (
+        'oils', 'type', 'art', 'geom', 'components')
 
 
 def load(out):
@@ -56,7 +60,14 @@ def _y(v):
     return json.dumps(v, ensure_ascii=False)
 
 
-def save(out, parts, header='# ETA 6497 parts (SwissLab), keyed by SwissLab clip name'):
+def save(out, parts, header=None, vf=None, extra=()):
+    """write parts.yaml and parts.json. header and vf default to the caliber's (caliber.yaml);
+    extra: more keys to write, after the usual ones and before names"""
+    if header is None or vf is None:
+        import caliber
+        cfg = caliber.load(out)
+        header = header or '# %s parts (SwissLab), keyed by SwissLab clip name' % cfg['name']
+        vf = vf or caliber.variant_flag(cfg)
     json.dump(parts, open(os.path.join(out, 'parts.json'), 'w', encoding='utf-8'), indent=1, ensure_ascii=False)
     L = [header,
          '# type/art/geom drive the generated ("simple") drawings; see tools/simple_art.py.',
@@ -64,7 +75,7 @@ def save(out, parts, header='# ETA 6497 parts (SwissLab), keyed by SwissLab clip
          'parts:']
     for k, p in sorted(parts.items(), key=lambda kv: kv[1].get('disassembly_step') or 99):
         L.append('  %s:' % k)
-        for f in ORDER:
+        for f in order(vf) + tuple(extra):
             if p.get(f) is not None:
                 L.append('    %s: %s' % (f, _y(p[f])))
         L.append('    names: %s' % _y(p['names']))
