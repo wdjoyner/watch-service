@@ -117,6 +117,10 @@ identical to the ones in the repository, so `git status` stays clean.
 - other SwissLab calibers (2824, 2892, 7750): generalize the turn-script index ranges and
   oil-symbol IDs that are specific to the 6497 files
 
+## Credits
+
+Written by David Joyner, with code developed together with Claude (Anthropic).
+
 ## License
 
 The code and this repository's own files are released under the MIT License (see `LICENSE`).

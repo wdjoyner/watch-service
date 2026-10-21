@@ -20,6 +20,7 @@ credits:
   - heading: "Animation"
     lines:
       - "David Joyner"
+      - "Code developed with Claude (Anthropic)"
       - "Made with Manim · code under the MIT License"
       - "github.com/wdjoyner/watch-service"
 
