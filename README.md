@@ -56,8 +56,9 @@ flow into each other, with a "TURN MOVEMENT" card wherever the movement is turne
 
 Options: `-q l|m|h` (480p / 720p default / 1080p), `--steps 1-10` (only some steps; the file
 gets a `_partial` suffix), `--skip-prep` (reuse `assets/`), `--art original` (see below).
-Finished clips are kept in `renders/<art>/` and reused, so delete `renders/` after changing
-`swisslab_step.py`, `parts.yaml` or the drawing code. Steps with several separately moving
+Finished clips are kept in `renders/<art>/`. On the next run a step is rendered again only if
+something it is made from has changed (for example after you edit `parts.yaml`); the rest are
+reused. Delete `renders/` to force a full rebuild. Steps with several separately moving
 screws, or no recorded motion, are shown with a simple fade.
 
 ## Rendering a single step (simple art)
@@ -91,9 +92,10 @@ identical to the ones in the repository, so `git status` stays clean.
 - `steps.json` / `.yaml`: the disassembly sequence
 - `assembly.json` / `.yaml`: the assembly sequence (not a pure reversal), with the oiling points
   and the parts SwissLab hides when the movement is turned over
-- `parts.json` / `.yaml`: the shared parts list, keyed by SwissLab's clip name (e.g. `MC31_046`),
-  with `type`, `art` and `geom` for the generated drawings. `type` and `art` are edited by hand;
-  `geom` and missing tooth/arm counts are filled in by `tools/measure_parts.py`.
+- `parts.yaml`: the shared parts list, keyed by SwissLab's clip name (e.g. `MC31_046`), with
+  `type`, `art` and `geom` for the generated drawings. **This is the file to edit**: `type` and
+  `art` by hand; `geom` and missing tooth/arm counts are filled in by `tools/measure_parts.py`.
+  `parts.json` is a generated copy of it for other programs; the tools read `parts.yaml`.
 - `swisslab_step.py`: the Manim scenes `DisassemblyStep` and `AssemblyStep` (env `STEP=n`,
   `ART=simple|original`, `CONTINUOUS=1` so the clips join seamlessly)
 - `build_all.py`: renders every step and joins them into one video per sequence

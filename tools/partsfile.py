@@ -1,4 +1,4 @@
-"""Read and write the shared parts list (parts.yaml + parts.json).
+"""Read and write the shared parts list (parts.yaml, plus a generated parts.json copy).
 
 parts.yaml is written by the extraction scripts, but three keys per part are kept
 across re-extraction because they are maintained by hand or by measure_parts.py:
@@ -18,8 +18,13 @@ ORDER = ('part', 'catalog_no', 'disassembly_step', 'assembly_step', 'differs_649
 
 
 def load(out):
-    p = os.path.join(out, 'parts.json')
-    return json.load(open(p, encoding='utf-8')) if os.path.exists(p) else {}
+    """the parts list. parts.yaml is the file to edit by hand, so it wins; parts.json is a
+    generated copy for other programs (rewritten by save())."""
+    py, pj = os.path.join(out, 'parts.yaml'), os.path.join(out, 'parts.json')
+    if os.path.exists(py):
+        import yaml
+        return yaml.safe_load(open(py, encoding='utf-8'))['parts']
+    return json.load(open(pj, encoding='utf-8')) if os.path.exists(pj) else {}
 
 
 def merge_kept(new, old):

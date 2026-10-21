@@ -13,10 +13,13 @@ Options:
   --skip-prep  reuse the images already in assets/<art>/
 
 Writes renders/<art>/<sequence>_<quality>/stepNN.mp4 and 6497_<sequence>_<art>.mp4 in this
-folder. A step whose clip already exists is not rendered again; delete renders/ to start over
-(or after changing swisslab_step.py or the drawings).
+folder. A step is rendered again only when something it is made from has changed (the scene
+code, that step's data, or its prepared images, e.g. after editing parts.yaml); otherwise the
+clip from last time is reused. Delete renders/ to force a full rebuild.
 """
 import argparse
+import glob
+import hashlib
 import json
 import os
 import shutil
@@ -37,6 +40,17 @@ def parse_steps(spec, n):
         a, _, b = part.partition("-")
         out += list(range(int(a), int(b or a) + 1))
     return [k for k in out if 1 <= k <= n]
+
+
+def fingerprint(step, prefix, k, art):
+    """hash of everything a step's clip is made from"""
+    h = hashlib.sha256()
+    h.update(open(os.path.join(HERE, "swisslab_step.py"), "rb").read())
+    h.update(json.dumps(step, sort_keys=True).encode())
+    for f in sorted(glob.glob(os.path.join(HERE, "assets", art, f"{prefix}{k:02d}_*"))):
+        h.update(os.path.basename(f).encode())
+        h.update(open(f, "rb").read())
+    return h.hexdigest()
 
 
 def run(cmd, env=None):
@@ -62,17 +76,24 @@ def build(seq, swf, args):
              *src, "."] + [str(k) for k in todo])
 
     media = os.path.join(HERE, "media")
-    clips = []
+    prefix = "asm" if seq == "assembly" else "step"
+    clips, redone = [], 0
     for k in todo:
         clip = os.path.join(outdir, f"step{k:02d}.mp4")
-        if not os.path.exists(clip):
+        keyfile = clip.replace(".mp4", ".key")
+        key = fingerprint(steps[k - 1], prefix, k, args.art)
+        old = open(keyfile).read().strip() if os.path.exists(keyfile) else None
+        if not os.path.exists(clip) or old != key:
+            redone += 1
             print(f"[{seq}] rendering step {k}/{len(steps)}: {steps[k - 1]['part']}")
             env = dict(os.environ, STEP=str(k), CONTINUOUS="1", ART=args.art)
             name = f"{seq}_{args.art}_{k:02d}"
             run([sys.executable, "-m", "manim", qflag, "--disable_caching", "--media_dir", media,
                  "-o", name, "swisslab_step.py", scene], env=env)
             shutil.move(os.path.join(media, "videos", "swisslab_step", qdir, f"{name}.mp4"), clip)
+            open(keyfile, "w").write(key + "\n")
         clips.append(clip)
+    print(f"[{seq}] {redone} of {len(todo)} steps rendered, {len(todo) - redone} unchanged")
 
     listfile = os.path.join(outdir, "clips.txt")
     with open(listfile, "w") as f:

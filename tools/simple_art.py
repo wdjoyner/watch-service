@@ -34,7 +34,9 @@ INTERIM = {'plate', 'bridge', 'lever', 'spring'}
 
 
 def load(out):
-    return json.load(open(os.path.join(out, 'parts.json'), encoding='utf-8'))
+    """the parts list from parts.yaml (see partsfile.py)"""
+    import partsfile
+    return partsfile.load(out)
 
 
 def center(parts, pid):
@@ -325,8 +327,9 @@ def bridge_outlines(parts):
         # bridges already placed, plus the least area each other bridge must still cover
         polys = [done[o] if o in done else circles_hull(_held(parts, o))
                  for o in bridges if o != k and face(o) == face(k)]
-        done[k] = enclosing_polygon(circles_hull(mine), art.get('corners', 4), avoid=avoid,
-                                    avoid_polys=polys)
+        n = art.get('corners', 4)
+        done[k] = enclosing_polygon(circles_hull(mine), n, step=5.0 if n <= 4 else 10.0,
+                                    avoid=avoid, avoid_polys=polys)
     _OUTLINES[key] = done
     return done
 
@@ -356,7 +359,8 @@ def bridge_shape(parts, centers, heads, jewels, corners=4, outline=None):
     """interim bridge: a plate with `corners` vertices (rounded) that encloses the arbors it
     holds and its screws, each with a margin; trimmed to the main plate's edge"""
     if outline is None:
-        outline = enclosing_polygon(circles_hull(bridge_circles(centers, heads)), corners)
+        outline = enclosing_polygon(circles_hull(bridge_circles(centers, heads)), corners,
+                                    step=5.0 if corners <= 4 else 10.0)
     body = shadowed(rounded_path(outline, 5.0), BRIDGE, BRIDGE_EDGE)
     pc = plate_circle(parts)
     if pc and any(math.dist(q, pc[:2]) > pc[2] - 3 for q in outline):
